@@ -14,3 +14,12 @@ notebooks/test.ipynb
 __pycache__
 build/*
 training_sets/*
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/

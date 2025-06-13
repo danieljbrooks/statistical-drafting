@@ -18,12 +18,12 @@ class DraftModel:
         # Get data from set.
         self.set = set
         self.pick_table = pd.read_csv(
-            f"../data/cards/{self.set}.csv"
+            f"data/cards/{self.set}.csv"
         )  # will be sorted.
         self.cardnames = self.pick_table["name"].tolist()
 
         # Load model.
-        model_path = f"../data/models/{set}_{draft_mode}.pt"
+        model_path = f"data/models/{set}_{draft_mode}.pt"
         self.network = sd.DraftNet(cardnames=self.cardnames)
         self.network.load_state_dict(torch.load(model_path))
 
@@ -166,7 +166,7 @@ def parse_cardnames(card_str, set="FDN"):
     return pool_cardnames
 
 
-def list_sets(model_path: str = "../data/models"):
+def list_sets(model_path: str = "data/models"):
     """
     List currently available sets.
     """
