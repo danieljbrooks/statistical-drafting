@@ -3,6 +3,7 @@ import warnings
 import json
 import os
 from datetime import datetime
+from typing import Dict
 
 warnings.filterwarnings("ignore")
 
@@ -172,7 +173,7 @@ def default_training_pipeline(
     draft_mode: str,
     overwrite_dataset: str = True,
     dropout_input: float=0.6
-) -> None:
+) -> Dict:
     """
     End to end training pipeline using default values.
 
