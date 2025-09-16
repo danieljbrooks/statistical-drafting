@@ -206,5 +206,181 @@
     "validation_accuracy": 69.35246556338718,
     "num_epochs": 84,
     "training_date": "2025-09-07 11:15:08"
+  },
+  {
+    "experiment_name": "NEO_Premier",
+    "training_picks": 234737,
+    "validation_picks": 58685,
+    "validation_accuracy": 69.30902274857289,
+    "num_epochs": 44,
+    "training_date": "2025-09-15 08:08:07"
+  },
+  {
+    "experiment_name": "PIO_Premier",
+    "training_picks": 126382,
+    "validation_picks": 31596,
+    "validation_accuracy": 67.32497784529687,
+    "num_epochs": 40,
+    "training_date": "2025-09-15 08:14:42"
+  },
+  {
+    "experiment_name": "FDN_Premier",
+    "training_picks": 174025,
+    "validation_picks": 43507,
+    "validation_accuracy": 71.33334865653802,
+    "num_epochs": 76,
+    "training_date": "2025-09-15 08:27:09"
+  },
+  {
+    "experiment_name": "WOE_Premier",
+    "training_picks": 328188,
+    "validation_picks": 82047,
+    "validation_accuracy": 69.02994625031994,
+    "num_epochs": 78,
+    "training_date": "2025-09-15 08:51:31"
+  },
+  {
+    "experiment_name": "SNC_Premier",
+    "training_picks": 259092,
+    "validation_picks": 64774,
+    "validation_accuracy": 70.27819804242444,
+    "num_epochs": 86,
+    "training_date": "2025-09-15 09:11:19"
+  },
+  {
+    "experiment_name": "LTR_Premier",
+    "training_picks": 525738,
+    "validation_picks": 131435,
+    "validation_accuracy": 71.70007988739681,
+    "num_epochs": 90,
+    "training_date": "2025-09-15 09:53:25"
+  },
+  {
+    "experiment_name": "DFT_Premier",
+    "training_picks": 249644,
+    "validation_picks": 62411,
+    "validation_accuracy": 70.11424268157857,
+    "num_epochs": 54,
+    "training_date": "2025-09-15 10:07:46"
+  },
+  {
+    "experiment_name": "ONE_Premier",
+    "training_picks": 151528,
+    "validation_picks": 37883,
+    "validation_accuracy": 69.51666974632421,
+    "num_epochs": 84,
+    "training_date": "2025-09-15 10:18:44"
+  },
+  {
+    "experiment_name": "DSK_Premier",
+    "training_picks": 234996,
+    "validation_picks": 58749,
+    "validation_accuracy": 70.81992884985276,
+    "num_epochs": 58,
+    "training_date": "2025-09-15 10:32:33"
+  },
+  {
+    "experiment_name": "BRO_Premier",
+    "training_picks": 212388,
+    "validation_picks": 53098,
+    "validation_accuracy": 67.07785603977551,
+    "num_epochs": 62,
+    "training_date": "2025-09-15 10:46:00"
+  },
+  {
+    "experiment_name": "OTJ_Premier",
+    "training_picks": 262541,
+    "validation_picks": 65636,
+    "validation_accuracy": 69.08860990919618,
+    "num_epochs": 90,
+    "training_date": "2025-09-15 11:07:36"
+  },
+  {
+    "experiment_name": "MOM_Premier",
+    "training_picks": 504732,
+    "validation_picks": 126183,
+    "validation_accuracy": 69.18206097493324,
+    "num_epochs": 96,
+    "training_date": "2025-09-15 11:51:02"
+  },
+  {
+    "experiment_name": "MH3_Premier",
+    "training_picks": 234338,
+    "validation_picks": 58585,
+    "validation_accuracy": 69.90185200990014,
+    "num_epochs": 88,
+    "training_date": "2025-09-15 12:09:31"
+  },
+  {
+    "experiment_name": "DMU_Premier",
+    "training_picks": 515771,
+    "validation_picks": 128943,
+    "validation_accuracy": 67.59420829358709,
+    "num_epochs": 102,
+    "training_date": "2025-09-15 12:54:59"
+  },
+  {
+    "experiment_name": "KTK_Premier",
+    "training_picks": 36889,
+    "validation_picks": 9223,
+    "validation_accuracy": 68.86045755177274,
+    "num_epochs": 62,
+    "training_date": "2025-09-15 12:57:10"
+  },
+  {
+    "experiment_name": "SIR_Premier",
+    "training_picks": 75873,
+    "validation_picks": 18969,
+    "validation_accuracy": 67.69993146713058,
+    "num_epochs": 50,
+    "training_date": "2025-09-15 13:01:21"
+  },
+  {
+    "experiment_name": "BLB_Premier",
+    "training_picks": 195811,
+    "validation_picks": 48953,
+    "validation_accuracy": 71.1212795947133,
+    "num_epochs": 90,
+    "training_date": "2025-09-15 13:16:51"
+  },
+  {
+    "experiment_name": "MKM_Premier",
+    "training_picks": 262012,
+    "validation_picks": 65504,
+    "validation_accuracy": 70.04457743038593,
+    "num_epochs": 150,
+    "training_date": "2025-09-15 13:48:15"
+  },
+  {
+    "experiment_name": "LCI_Premier",
+    "training_picks": 326090,
+    "validation_picks": 81523,
+    "validation_accuracy": 69.41353973725207,
+    "num_epochs": 64,
+    "training_date": "2025-09-15 14:09:37"
+  },
+  {
+    "experiment_name": "TDM_Premier",
+    "training_picks": 81508,
+    "validation_picks": 20377,
+    "validation_accuracy": 67.45350149678559,
+    "num_epochs": 104,
+    "training_date": "2025-09-15 14:16:37"
+  },
+  {
+    "experiment_name": "FIN_Premier",
+    "training_picks": 285449,
+    "validation_picks": 71363,
+    "validation_accuracy": 70.04610232193153,
+    "num_epochs": 86,
+    "training_date": "2025-09-15 14:39:53"
+  },
+  {
+    "experiment_name": "EOE_Premier",
+    "training_picks": 178464,
+    "validation_picks": 44616,
+    "validation_accuracy": 71.26367222521068,
+    "num_epochs": 56,
+    "training_date": "2025-09-15 14:50:36"
   }
 ]
