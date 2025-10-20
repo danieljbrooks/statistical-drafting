@@ -42,8 +42,9 @@ def load_data_tracker() -> Dict:
             "last_cards_update": None,
             "premier_draft_last_updated": None,
             "traditional_draft_last_updated": None,
+            "picktwodraft_last_updated": None,
             "last_check_timestamp": None,
-            "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing."
+            "notes": "This file tracks the most recent MTG set and update dates for Premier, Traditional, and PickTwoDraft data to avoid redundant downloads and processing."
         }
 
 
@@ -107,6 +108,7 @@ def check_and_download_cards(tracker_data: Dict, latest_set_info: Dict) -> bool:
             # Reset draft data tracking for new set (they will be downloaded fresh)
             tracker_data["premier_draft_last_updated"] = None
             tracker_data["traditional_draft_last_updated"] = None
+            tracker_data["picktwodraft_last_updated"] = None
             print("🔄 Reset draft data tracking for new set")
             
             return True
@@ -123,17 +125,19 @@ def get_draft_data_url(set_code: str, draft_mode: str) -> str:
     return f"https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.{set_code}.{draft_mode}Draft.csv.gz"
 
 
-def check_and_download_draft_data(tracker_data: Dict, latest_set_info: Dict) -> Tuple[bool, bool]:
+def check_and_download_draft_data(tracker_data: Dict, latest_set_info: Dict) -> Tuple[bool, bool, bool]:
     """Check if draft data needs updating and download if necessary."""
     print("\n🔍 Checking draft data for updates...")
     
     latest_set = latest_set_info.get("most_recent_set")
+    all_sets = latest_set_info.get("all_available_sets", [])
     if not latest_set:
         print("❌ No latest set information available")
-        return False, False
+        return False, False, False
     
     premier_updated = False
     traditional_updated = False
+    picktwodraft_updated = False
     
     # Check Premier Draft data
     premier_url = get_draft_data_url(latest_set, "Premier")
@@ -183,7 +187,52 @@ def check_and_download_draft_data(tracker_data: Dict, latest_set_info: Dict) -> 
     else:
         print(f"✅ Traditional Draft data up to date ({traditional_last_modified})")
     
-    return premier_updated, traditional_updated
+    # Check PickTwoDraft data - check multiple recent sets since PickTwoDraft might be available for newer sets
+    # that don't have Premier Draft data yet
+    current_picktwodraft_date = tracker_data.get("picktwodraft_last_updated")
+    picktwodraft_last_modified = None
+    picktwodraft_set = None
+    
+    # Check the most recent sets for PickTwoDraft data (limit to first 5 sets to avoid too many requests)
+    sets_to_check = all_sets[:5] if all_sets else [latest_set]
+    
+    for set_code in sets_to_check:
+        picktwodraft_url = get_draft_data_url(set_code, "PickTwo")
+        last_modified = get_file_last_modified(picktwodraft_url)
+        
+        if last_modified:
+            print(f"🔍 Found PickTwoDraft data for {set_code}: {last_modified}")
+            # Use the most recent PickTwoDraft data found
+            if picktwodraft_last_modified is None or last_modified > picktwodraft_last_modified:
+                picktwodraft_last_modified = last_modified
+                picktwodraft_set = set_code
+        else:
+            print(f"🔍 No PickTwoDraft data found for {set_code}")
+    
+    # If we found PickTwoDraft data and it needs updating
+    if picktwodraft_last_modified and picktwodraft_set and (current_picktwodraft_date is None or picktwodraft_last_modified != current_picktwodraft_date):
+        if current_picktwodraft_date is None:
+            print(f"🆕 First run - PickTwoDraft data needs download: {picktwodraft_set} ({picktwodraft_last_modified})")
+        else:
+            print(f"🆕 PickTwoDraft data updated: {current_picktwodraft_date} -> {picktwodraft_last_modified} ({picktwodraft_set})")
+        
+        # Download PickTwoDraft data
+        picktwodraft_url = get_draft_data_url(picktwodraft_set, "PickTwo")
+        gz_path = os.path.join(DRAFT_DATA_PATH, f"draft_data_public.{picktwodraft_set}.PickTwoDraft.csv.gz")
+        if download_file(picktwodraft_url, gz_path):
+            # Update tracker immediately after successful download
+            tracker_data["picktwodraft_last_updated"] = picktwodraft_last_modified
+            tracker_data["picktwodraft_set"] = picktwodraft_set  # Track which set we downloaded
+            picktwodraft_updated = True
+            print(f"✅ PickTwoDraft download tracked: {picktwodraft_set} ({picktwodraft_last_modified})")
+        else:
+            print("❌ Failed to download PickTwoDraft data")
+    elif picktwodraft_last_modified:
+        print(f"✅ PickTwoDraft data up to date ({picktwodraft_set}: {picktwodraft_last_modified})")
+    else:
+        print("✅ No PickTwoDraft data found for recent sets")
+    
+    return premier_updated, traditional_updated, picktwodraft_updated
 
 
 def run_training_pipeline(set_code: str, draft_mode: str) -> Tuple[bool, Dict]:
@@ -246,7 +295,7 @@ def main():
     cards_updated = check_and_download_cards(tracker_data, latest_set_info)
     
     # Check and download draft data if needed
-    premier_updated, traditional_updated = check_and_download_draft_data(tracker_data, latest_set_info)
+    premier_updated, traditional_updated, picktwodraft_updated = check_and_download_draft_data(tracker_data, latest_set_info)
     
     # Run training pipelines if data was updated
     latest_set = latest_set_info.get("most_recent_set")
@@ -266,6 +315,14 @@ def main():
         else:
             print(f"⚠️  Training failed for {latest_set} Traditional Draft")
     
+    # PickTwoDraft training now supported
+    if picktwodraft_updated:
+        success, training_info = run_training_pipeline(latest_set, "PickTwo")
+        if success:
+            training_logs.append(training_info)
+        else:
+            print(f"⚠️  Training failed for {latest_set} PickTwoDraft")
+    
     # Add training logs to tracker data
     if training_logs:
         tracker_data["last_training_logs"] = training_logs
@@ -282,6 +339,7 @@ def main():
     print(f"📦 Cards Downloaded: {'✅' if cards_updated else '❌'}")
     print(f"🏆 Premier Draft Downloaded: {'✅' if premier_updated else '❌'}")
     print(f"🎲 Traditional Draft Downloaded: {'✅' if traditional_updated else '❌'}")
+    print(f"🎯 PickTwoDraft Downloaded: {'✅' if picktwodraft_updated else '❌'}")
     
     # Show training logs if any models were trained
     if training_logs:
@@ -290,7 +348,7 @@ def main():
             print(f"   • {log['experiment_name']}: {log['validation_accuracy']:.2f}% accuracy ({log['training_picks']:,} training picks, {log['num_epochs']} epochs)")
             print(f"     Trained on: {log['training_date']}")
     
-    if not any([cards_updated, premier_updated, traditional_updated]):
+    if not any([cards_updated, premier_updated, traditional_updated, picktwodraft_updated]):
         print("✨ All data is up to date - no action needed!")
     else:
         print("🚀 Automation completed with updates!")

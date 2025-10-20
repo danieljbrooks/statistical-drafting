@@ -117,7 +117,7 @@ def create_dataset(
 
     Args:
         set_abbreviation (str): Three letter abbreviation of set to create training set of.
-        draft_mode (str): Use either "Premier" or "Trad" draft data.
+        draft_mode (str): Use either "Premier", "Trad", "PickTwo", or "PickTwoTrad" draft data.
         overwrite (bool): If False, won't overwrite an existing dataset for the set and draft mode.
         omit_first_days (int): Omit this many days from the beginning of the dataset.
         train_fraction (float): Fraction of dataset to use for training.
@@ -141,6 +141,11 @@ def create_dataset(
     else:
         print(f"Did not find file {csv_path}")
 
+    # Check if this is a PickTwoDraft mode
+    is_picktwo_mode = draft_mode in ["PickTwo", "PickTwoTrad"]
+    if is_picktwo_mode:
+        print(f"Detected PickTwoDraft mode: {draft_mode}")
+
     # Initialization on a single chunk.
     for draft_chunk in pd.read_csv(csv_path, chunksize=10000, compression="gzip"):
 
@@ -159,6 +164,13 @@ def create_dataset(
         class_to_index = {cls: idx for idx, cls in enumerate(cardnames)}
 
         print("Completed initialization.")
+        
+        # Verify that pick_2 column exists for PickTwoDraft modes
+        if is_picktwo_mode:
+            if "pick_2" not in draft_chunk.columns:
+                raise Exception(f"pick_2 column not found in {draft_mode} data. Expected for PickTwoDraft modes.")
+            print("Confirmed pick_2 column exists")
+        
         break
 
     # Process full input csv in chunks.
@@ -199,17 +211,43 @@ def create_dataset(
         pool_chunk = draft_chunk[sorted(pool_cols)].astype(np.uint8)
 
         # Extract picks.
-        pick_chunk = np.zeros((len(draft_chunk), len(cardnames)), dtype=bool)
-        for j, item in enumerate(draft_chunk["pick"]):
-            pick_chunk[j, class_to_index[item]] = True
+        if is_picktwo_mode:
+            # For PickTwoDraft modes, generate two examples per row: one for pick and one for pick_2
+            # We need to duplicate the pack and pool data for each pick
+            pick_chunk = np.zeros((len(draft_chunk) * 2, len(cardnames)), dtype=bool)
+            
+            # Process pick column
+            for j, item in enumerate(draft_chunk["pick"]):
+                pick_chunk[j * 2, class_to_index[item]] = True
+            
+            # Process pick_2 column
+            for j, item in enumerate(draft_chunk["pick_2"]):
+                pick_chunk[j * 2 + 1, class_to_index[item]] = True
+            
+            # Duplicate pack and pool data for the second example
+            pack_chunk_duplicated = pd.concat([pack_chunk, pack_chunk], ignore_index=True)
+            pool_chunk_duplicated = pd.concat([pool_chunk, pool_chunk], ignore_index=True)
+            
+            # Append data
+            pick_chunks.append(pick_chunk)
+            pack_chunks.append(pack_chunk_duplicated)
+            pool_chunks.append(pool_chunk_duplicated)
+        else:
+            # Standard processing for non-PickTwoDraft modes
+            pick_chunk = np.zeros((len(draft_chunk), len(cardnames)), dtype=bool)
+            for j, item in enumerate(draft_chunk["pick"]):
+                pick_chunk[j, class_to_index[item]] = True
 
-        # Append data (consider multiple files for memory efficiency).
-        pick_chunks.append(pick_chunk)
-        pack_chunks.append(pack_chunk)
-        pool_chunks.append(pool_chunk)
+            # Append data (consider multiple files for memory efficiency).
+            pick_chunks.append(pick_chunk)
+            pack_chunks.append(pack_chunk)
+            pool_chunks.append(pool_chunk)
 
         if i % 10 == 0:
-            print(f"Loaded {chunk_size * i} picks, t=", round(time.time() - t0, 1), "s")
+            examples_loaded = chunk_size * i
+            if is_picktwo_mode:
+                examples_loaded *= 2  # Double the examples for PickTwoDraft modes
+            print(f"Loaded {examples_loaded} picks, t=", round(time.time() - t0, 1), "s")
 
     print("Loaded all draft data.")
 
@@ -252,7 +290,11 @@ def create_dataset(
 
     # Write datasets.
     torch.save(pick_train_dataset, train_path)
-    print(f"A total of {len(pick_train_dataset)} picks in the training set.")
+    total_examples = len(pick_train_dataset)
+    if is_picktwo_mode:
+        print(f"A total of {total_examples} picks in the training set (doubled from {total_examples // 2} PickTwoDraft rows).")
+    else:
+        print(f"A total of {total_examples} picks in the training set.")
     print(f"Saved training set to {train_path}")
     torch.save(pick_val_dataset, val_path)
     print(f"Saved validation set to {val_path}")

@@ -4,8 +4,9 @@
 # Ignore training set files
 *.pth
 
-# Ignore dev notebook
+# Ignore dev notebooks
 notebooks/test.ipynb
+notebooks/deckbuild_model.ipynb
 
 # Ignore auto-generated files
 .ipynb_checkpoints/

@@ -1,8 +1,10 @@
 {
-  "most_recent_set": "EOE",
-  "last_cards_update": "2025-08-30",
-  "premier_draft_last_updated": "2025-09-03",
-  "traditional_draft_last_updated": "2025-09-03",
-  "last_check_timestamp": "2025-09-04T18:28:12.415380",
-  "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing."
+  "most_recent_set": "OM1",
+  "last_cards_update": "2025-10-19",
+  "premier_draft_last_updated": null,
+  "traditional_draft_last_updated": null,
+  "last_check_timestamp": "2025-10-19T21:19:44.289765",
+  "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing.",
+  "picktwodraft_last_updated": "2025-10-15",
+  "picktwodraft_set": "OM1"
 }

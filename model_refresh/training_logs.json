@@ -382,5 +382,29 @@
     "validation_accuracy": 71.26367222521068,
     "num_epochs": 56,
     "training_date": "2025-09-15 14:50:36"
+  },
+  {
+    "experiment_name": "OM1_PickTwo",
+    "training_picks": 42260,
+    "validation_picks": 10565,
+    "validation_accuracy": 54.76573592049219,
+    "num_epochs": 26,
+    "training_date": "2025-10-19 21:19:29"
+  },
+  {
+    "experiment_name": "OM1_Picktwo",
+    "training_picks": 42260,
+    "validation_picks": 10565,
+    "validation_accuracy": 54.95504022716517,
+    "num_epochs": 42,
+    "training_date": "2025-10-19 21:34:04"
+  },
+  {
+    "experiment_name": "OM1_PickTwo",
+    "training_picks": 42260,
+    "validation_picks": 10565,
+    "validation_accuracy": 55.36204448651207,
+    "num_epochs": 44,
+    "training_date": "2025-10-19 21:43:38"
   }
 ]

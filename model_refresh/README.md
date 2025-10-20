@@ -6,7 +6,7 @@ This automates the process of detecting and downloading new datasets for model t
 
 ```bash
 cd model_refresh
-python refresh_models.py
+python ./refresh_models.py
 ```
 
 The script automatically:

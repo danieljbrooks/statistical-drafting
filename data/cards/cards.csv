@@ -9946,30 +9946,42 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 79410,TJMP,Phyrexian Myr,token,,0,Artifact Creature - Phyrexian Myr,False
 71579,MH1,Fiery Islet,rare,RU,0,Land,True
 71587,MH1,Silent Clearing,rare,BW,0,Land,True
+71575,MH1,Talisman of Resilience,uncommon,BG,2,Artifact,True
+71574,MH1,Talisman of Hierarchy,uncommon,BW,2,Artifact,True
 71588,MH1,Sunbaked Canyon,rare,RW,0,Land,True
+71571,MH1,Talisman of Conviction,uncommon,RW,2,Artifact,True
+71573,MH1,Talisman of Curiosity,uncommon,GU,2,Artifact,True
+71570,MH1,Sword of Truth and Justice,mythic,,3,Artifact - Equipment,True
 71584,MH1,Nurturing Peatland,rare,BG,0,Land,True
+71572,MH1,Talisman of Creativity,uncommon,RU,2,Artifact,True
 71590,MH1,Waterlogged Grove,rare,GU,0,Land,True
+71558,MH1,Wrenn and Six,mythic,GR,2,Legendary Planeswalker - Wrenn,True
 71354,MH1,Giver of Runes,rare,W,1,Creature - Kor Cleric,True
 76216,MH2,Thornglint Bridge,common,GW,0,Artifact Land,True
 77056,MH2,Marsh Flats,rare,,0,Land,True
 76206,MH2,Mistvault Bridge,common,BU,0,Artifact Land,True
 76214,MH2,Slagwoods Bridge,common,GR,0,Artifact Land,True
 77062,MH2,Scalding Tarn,rare,,0,Land,True
+76954,MH2,Damn,rare,BW,2,Sorcery,True
 76203,MH2,Darkmoss Bridge,common,BG,0,Artifact Land,True
 76204,MH2,Drossforge Bridge,common,BR,0,Artifact Land,True
 77054,MH2,Arid Mesa,rare,,0,Land,True
+77014,MH2,Ignoble Hierarch,rare,BGR,1,Creature - Goblin Shaman,True
 76209,MH2,Razortide Bridge,common,UW,0,Artifact Land,True
 76931,MH2,Timeless Dragon,rare,W,5,Creature - Dragon,True
 76210,MH2,Rustvale Bridge,common,RW,0,Artifact Land,True
 77058,MH2,Misty Rainforest,rare,,0,Land,True
 76213,MH2,Silverbluff Bridge,common,RU,0,Artifact Land,True
 77063,MH2,Verdant Catacombs,rare,,0,Land,True
+76158,MH2,"Grist, the Hunger Tide",mythic,BG,3,Legendary Planeswalker - Grist,True
 76215,MH2,Tanglepool Bridge,common,GU,0,Artifact Land,True
 76212,MH2,Goldmire Bridge,common,BW,0,Artifact Land,True
 89788,CLB,Mystery Key,uncommon,U,2,Artifact - Equipment,True
+87968,2X2,Darksteel Plate,rare,,3,Artifact - Equipment,True
 87848,2X2,Bloodbraid Elf,uncommon,GR,4,Creature - Elf Berserker,True
 87760,2X2,Unearth,common,B,1,Sorcery,True
 87681,2X2,Mentor of the Meek,uncommon,W,3,Creature - Human Soldier,True
+87809,2X2,Eternal Witness,uncommon,G,3,Creature - Human Shaman,True
 81583,HBG,Wyll of the Blade Pact,mythic,R,6,Legendary Creature - Human Warlock,False
 81686,HBG,Rally Maneuver,uncommon,W,3,Instant,True
 81585,HBG,"Jaheira, Harper Emissary",uncommon,G,2,Legendary Creature - Human Elf Druid,True
@@ -10461,6 +10473,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 82476,HBG,Forest,basic,G,0,Basic Land - Forest,True
 82474,HBG,Mountain,basic,R,0,Basic Land - Mountain,True
 82461,HBG,Plains,basic,W,0,Basic Land - Plains,True
+36682,ROE,Oust,uncommon,W,1,Sorcery,True
 58051,KTK,Taigam's Scheming,common,U,2,Sorcery,True
 58139,KTK,Bloodfire Expert,common,R,3,Creature - Efreet Monk,True
 58387,KTK,Sultai Banner,common,BGU,3,Artifact,True
@@ -17391,7 +17404,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 94194,Y25,Cottontail Caretaker,uncommon,W,2,Creature - Rabbit Citizen,True
 94195,Y25,Ace Flockbringer,rare,UW,3,Creature - Bird Scout,True
 94196,Y25,Three Tree Battalion,rare,W,4,Instant,True
-94197,Y25,Shellfish Scholar,uncommon,U,3,Creature - Rat Wizard,True
+94197,Y25,Shellfish Scholar,uncommon,U,2,Creature - Rat Wizard,True
 94198,Y25,Pool Resources,uncommon,U,3,Instant,True
 94199,Y25,Tempest Trapper,rare,U,4,Creature - Otter Wizard,True
 94200,Y25,Archival Whorl,rare,U,5,Sorcery,True
@@ -22162,14 +22175,336 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 97270,EOC,"Inspirit, Flagship Vessel",mythic,RUW,3,Legendary Artifact - Spacecraft,False
 96862,SPG,Magus of the Moon,rare,R,3,Creature - Human Wizard,True
 97273,TSPG,Eldrazi Scion,token,,0,Creature - Eldrazi Scion,False
-100112,Y25,Clifftop Retreat,rare,RW,0,Land,False
-100113,Y25,Dragonskull Summit,rare,BR,0,Land,False
-100114,Y25,Drowned Catacomb,rare,BU,0,Land,False
-100115,Y25,Glacial Fortress,rare,UW,0,Land,False
-100116,Y25,Hinterland Harbor,rare,GU,0,Land,False
-100117,Y25,Isolated Chapel,rare,BW,0,Land,False
-100118,Y25,Rootbound Crag,rare,GR,0,Land,False
-100119,Y25,Sulfur Falls,rare,RU,0,Land,False
-100120,Y25,Sunpetal Grove,rare,GW,0,Land,False
-100121,Y25,Woodland Cemetery,rare,BG,0,Land,False
+100112,Y25,Clifftop Retreat,rare,RW,0,Land,True
+100113,Y25,Dragonskull Summit,rare,BR,0,Land,True
+100114,Y25,Drowned Catacomb,rare,BU,0,Land,True
+100115,Y25,Glacial Fortress,rare,UW,0,Land,True
+100116,Y25,Hinterland Harbor,rare,GU,0,Land,True
+100117,Y25,Isolated Chapel,rare,BW,0,Land,True
+100118,Y25,Rootbound Crag,rare,GR,0,Land,True
+100119,Y25,Sulfur Falls,rare,RU,0,Land,True
+100120,Y25,Sunpetal Grove,rare,GW,0,Land,True
+100121,Y25,Woodland Cemetery,rare,BG,0,Land,True
 96863,SPG,Burgeoning,rare,G,1,Enchantment,True
+98816,Y25,Ambassador of Evendo,rare,GU,2,Creature - Insect Advisor,True
+98817,Y25,"Axavar, Fate Thief",rare,BR,4,Legendary Creature - Drix Pirate,True
+98818,Y25,Prototype X-8,mythic,BU,8,Legendary Artifact Creature - Robot Octopus,True
+98819,Y25,Sliver Weftwinder,mythic,BGRUW,5,Legendary Creature - Sliver,True
+98820,Y25,"Val, Marooned Surveyor",uncommon,GRW,2,Legendary Creature - Human Scout,True
+98821,Y25,Volatile Orbit,rare,GR,2,Enchantment,True
+98822,Y25,"Vv'viza, Orbital Overseer",mythic,GUW,4,Legendary Creature - Jellyfish Advisor,True
+98823,Y25,Drix Interlacer,rare,,1,Artifact,True
+98824,Y25,Spirited Simulacrum,rare,,4,Artifact Creature - Robot,True
+98869,Y25,Wastes,common,,0,Basic Land,False
+98795,Y25,"Candela, Aegis of Adagia",rare,W,1,Legendary Artifact - Spacecraft,True
+98796,Y25,Squadron Carrier,uncommon,W,3,Artifact - Spacecraft,True
+98797,Y25,Stoic Star-Captain,rare,W,2,Creature - Human Pilot,True
+98798,Y25,Thought Partition,uncommon,W,1,Sorcery,True
+98799,Y25,Cloudsculpt Armorer,rare,U,4,Creature - Jellyfish Artificer,True
+98800,Y25,Hydroponics Architect,uncommon,U,1,Creature - Insect,True
+98801,Y25,Machinist's Dismissal,uncommon,U,5,Instant,True
+98802,Y25,Network Marauder,rare,U,3,Artifact Creature - Robot Pirate,True
+98803,Y25,Cantor of the Refrain,uncommon,B,1,Creature - Human Pilot,True
+98804,Y25,Gravitic Herald,rare,B,4,Creature - Human Soldier,True
+98805,Y25,Monoist Gravliner,rare,B,2,Artifact - Spacecraft,True
+98806,Y25,Song of Point Prime,uncommon,B,2,Sorcery,True
+98807,Y25,Voidcalled Devotee,rare,B,3,Creature - Human Soldier,True
+98808,Y25,Cosmic Sovereign,mythic,R,5,Creature - Dragon,True
+98809,Y25,Kavaron Consumed,rare,R,5,Sorcery,True
+98810,Y25,Mine Security,uncommon,R,2,Creature - Kavu Soldier,True
+98811,Y25,"Thendar, the Overminer",rare,R,4,Legendary Creature - Kavu Pirate,True
+98812,Y25,Brood Astronomer,rare,G,2,Creature - Insect Scientist,True
+98813,Y25,Eumidian Lifeseed,uncommon,G,1,Artifact,True
+98814,Y25,Mutable Pupa,uncommon,G,1,Creature - Insect,True
+98815,Y25,Worldweave,mythic,G,3,Enchantment,True
+98827,Y25,Bonescythe Sliver,rare,W,4,Creature - Sliver,False
+98828,Y25,Enduring Sliver,common,W,2,Creature - Sliver,False
+98829,Y25,First Sliver's Chosen,uncommon,W,5,Creature - Sliver,False
+98830,Y25,Lancer Sliver,common,W,3,Creature - Sliver,False
+98831,Y25,Sentinel Sliver,common,W,2,Creature - Sliver,False
+98832,Y25,Starfighter Pilot,common,W,2,Creature - Human Pilot,False
+98833,Y25,Steelform Sliver,uncommon,W,3,Creature - Sliver,False
+98834,Y25,Diffusion Sliver,uncommon,U,2,Creature - Sliver,False
+98835,Y25,Scuttling Sliver,uncommon,U,3,Creature - Sliver Trilobite,False
+98836,Y25,Cantor of the Refrain,uncommon,B,1,Creature - Human Pilot,False
+98837,Y25,Dregscape Sliver,uncommon,B,2,Creature - Sliver,False
+98838,Y25,Leeching Sliver,uncommon,B,2,Creature - Sliver,False
+98839,Y25,Belligerent Sliver,uncommon,R,3,Creature - Sliver,False
+98840,Y25,Bladeback Sliver,common,R,2,Creature - Sliver,False
+98841,Y25,Blur Sliver,common,R,3,Creature - Sliver,False
+98842,Y25,Cleaving Sliver,common,R,4,Creature - Sliver,False
+98843,Y25,Flametongue Kavu,uncommon,R,4,Creature - Kavu,False
+98844,Y25,Hollowhead Sliver,uncommon,R,3,Creature - Sliver,False
+98845,Y25,Spiteful Sliver,rare,R,3,Creature - Sliver,False
+98846,Y25,Striking Sliver,common,R,1,Creature - Sliver,False
+98847,Y25,Manaweft Sliver,uncommon,G,2,Creature - Sliver,False
+98848,Y25,Predatory Sliver,common,G,2,Creature - Sliver,False
+98849,Y25,Tempered Sliver,uncommon,G,3,Creature - Sliver,False
+98850,Y25,Cloudshredder Sliver,rare,RW,2,Creature - Sliver,False
+98851,Y25,The First Sliver,mythic,BGRUW,5,Legendary Creature - Sliver,False
+98852,Y25,Lavabelly Sliver,uncommon,RW,3,Creature - Sliver,False
+98853,Y25,Sliver Hivelord,mythic,BGRUW,5,Legendary Creature - Sliver,False
+98854,Y25,"Adagia, Windswept Bastion",mythic,W,0,Land - Planet,False
+98855,Y25,Blast Zone,rare,,0,Land,False
+98856,Y25,Cascading Cataracts,rare,,0,Land,False
+98857,Y25,Contested War Zone,rare,,0,Land,False
+98858,Y25,Deserted Temple,mythic,,0,Land,False
+98859,Y25,Dust Bowl,mythic,,0,Land,False
+98860,Y25,"Evendo, Waking Haven",mythic,G,0,Land - Planet,False
+98861,Y25,"Kavaron, Memorial World",mythic,R,0,Land - Planet,False
+98862,Y25,Mutavault,mythic,,0,Land,False
+98863,Y25,Nesting Grounds,rare,,0,Land,False
+98864,Y25,Plaza of Heroes,mythic,,0,Land,False
+98865,Y25,Sunken Citadel,rare,,0,Land - Cave,False
+98866,Y25,"Susur Secundi, Void Altar",mythic,B,0,Land - Planet,False
+98867,Y25,Terrain Generator,rare,,0,Land,False
+98868,Y25,"Uthros, Titanic Godcore",mythic,U,0,Land - Planet,False
+98825,TY25,Robot,token,,0,Artifact Creature - Robot,False
+98826,TY25,Lander,token,,0,Artifact - Lander,False
+56493,DDK,Flame Slash,common,R,1,Sorcery,False
+43399,DKA,Thought Scour,common,U,1,Instant,True
+57365,MMA,Pyrite Spellbomb,common,R,1,Artifact,True
+57375,MMA,Sword of Light and Shadow,mythic,,3,Artifact - Equipment,True
+10307,STH,Mana Leak,common,U,2,Instant,True
+97998,OM1,Multiversal Passage,rare,,0,Land,True
+97935,OM1,The Clutter Cluster,uncommon,G,2,Legendary Creature - Spider Hero,True
+97956,OM1,"Carlo, Suave Schemer",uncommon,BU,3,Legendary Creature - Human Rogue Villain,True
+97852,OM1,The Watcher on the Road,rare,U,4,Legendary Creature - Human Villain,True
+97961,OM1,"Kivni, Orb Weaver",uncommon,BR,2,Legendary Creature - Spider Human Hero,True
+97870,OM1,The House Grows Hungry,rare,B,3,Enchantment - Saga,True
+97878,OM1,Prison Break,uncommon,B,5,Sorcery,True
+97921,OM1,Cruel Caracals,common,G,2,Creature - Cat Villain,True
+97931,OM1,Scout the City,common,G,2,Sorcery,True
+97849,OM1,Impostor Syndrome,mythic,U,6,Enchantment,True
+97973,OM1,"Kavaero, Mind-Bitten",rare,BU,4,Legendary Creature - Spider Human Hero,True
+97915,OM1,Wisecrack,uncommon,R,3,Instant,True
+97918,OM1,Grow Extra Arms,common,G,2,Instant,True
+97943,OM1,"Desecrex, Gift of Servitude",rare,BR,4,Legendary Creature - Symbiote Villain,True
+97895,OM1,"Nia, Skysail Storyteller",mythic,RUW,2,Legendary Creature - Human Performer Hero,True
+97871,OM1,"Viggo, Enforcer of Ig's Crossing",mythic,BGR,3,Legendary Creature - Human Hero Villain,True
+97816,OM1,"Yera and Oski, Weaver and Guide",rare,W,3,Legendary Creature - Spider Human Hero,True
+97917,OM1,"Orris, Last of the Web Lords",uncommon,G,5,Legendary Creature - Spider Human Advisor,True
+97927,OM1,Ancestral Carvings,uncommon,G,3,Artifact,True
+97970,OM1,"Makdee and Itla, Skysnarers",rare,UW,2,Legendary Creature - Spider Human Hero,True
+97939,OM1,Rouse the Swarm,uncommon,G,4,Enchantment,True
+97934,OM1,"Chizak, Apex Arachnosaur",common,G,6,Legendary Creature - Spider Dinosaur Hero,True
+97965,OM1,"Kumonosu, the Watchful",uncommon,UW,5,Legendary Artifact Creature - Spider Hero,True
+97937,OM1,Supportive Parents,uncommon,G,3,Creature - Human Citizen,True
+97835,OM1,Lively Leap,common,W,1,Instant,True
+97867,OM1,Hex of Undeath,mythic,B,7,Sorcery,True
+97984,OM1,"Fizik, Etherium Mechanic",rare,,3,Legendary Artifact Creature - Spider Hero,True
+97933,OM1,"Zan, Tunnelweb Explorer",common,G,5,Legendary Creature - Spider Human Hero,True
+97842,OM1,"Vazin, Two-Faced Trickster",uncommon,U,4,Legendary Creature - Human Shapeshifter Villain,True
+97834,OM1,Sudden Strike,uncommon,W,2,Instant,True
+97892,OM1,Galvanized Workforce,common,R,2,Creature - Human Citizen,True
+97873,OM1,Egrix the Bile Bulwark,mythic,B,5,Legendary Creature - Symbiote Spider Hero,True
+97814,OM1,Shock,common,R,1,Instant,True
+97986,OM1,Data Scrubber,common,,3,Artifact Creature - Human Robot Villain,True
+97859,OM1,Secret Identity,uncommon,U,1,Instant,True
+97820,OM1,Principled Referee,common,W,4,Creature - Human Citizen,True
+98003,OM1,Suburban Sanctuary,common,GW,0,Land,True
+97865,OM1,Rhilex the Accursed,rare,B,3,Legendary Creature - Symbiote Soldier Hero,True
+98005,OM1,Urban Retreat,rare,GUW,0,Land,True
+97831,OM1,"Darval, Whose Web Protects",common,W,3,Legendary Creature - Spider Human Hero,True
+97923,OM1,King of the Coldblood Curse,rare,G,4,Legendary Creature - Lizard Villain,True
+97930,OM1,The Scouring Stormsoul,rare,G,3,Legendary Creature - Sand Elemental Villain,True
+97945,OM1,Scions of the Ur-Spider,mythic,BGRUW,5,Legendary Creature - Spider Human Hero,True
+98006,OM1,Vibrant Cityscape,common,,0,Land,True
+97946,OM1,"Neach, Pinnacle Pariah",mythic,BU,7,Legendary Creature - Human Scientist Villain,True
+97890,OM1,Damning Caress,common,B,5,Sorcery,True
+97891,OM1,Villainous Wrath,rare,B,5,Sorcery,True
+97994,OM1,Cactarantula Saddle,uncommon,,1,Artifact - Equipment,True
+97983,OM1,Reality Fulcrum,rare,,4,Artifact,True
+97827,OM1,Crime-Scene Instructor,common,W,2,Creature - Human Detective,True
+97886,OM1,"Wekhdu, Midnight Hunter",common,B,3,Legendary Creature - Insect Villain,True
+97877,OM1,Duskmourn's Claim,rare,B,3,Enchantment,True
+97987,OM1,Opulent Valet,common,,3,Artifact Creature - Construct,True
+97967,OM1,"Janai and Hoppy, Roofskippers",uncommon,GW,2,Legendary Creature - Spider Human Hero,True
+97843,OM1,Lost in Littjara,rare,U,4,Enchantment - Saga,True
+97863,OM1,Unstable Experiment,common,U,2,Instant,True
+97869,OM1,Common Crook,common,B,2,Creature - Human Rogue Villain,True
+97828,OM1,Generous Betty Wray,uncommon,W,3,Legendary Creature - Human Mercenary Hero,True
+97952,OM1,"Demera, Soul of a Spider",rare,GW,2,Legendary Creature - Human Performer,True
+97936,OM1,Strength of Will,rare,G,2,Instant,True
+97907,OM1,Wardens of Silverweb Summit,common,R,3,Legendary Creature - Spider Human Hero,True
+98001,OM1,Savage Mansion,common,GR,0,Land,True
+97885,OM1,Remorseless Coup,uncommon,B,3,Instant,True
+97980,OM1,Giantcraft Helm,rare,,1,Artifact - Equipment,True
+97947,OM1,Gallant Citizen,common,GW,2,Creature - Human Citizen,True
+97823,OM1,A Most Helpful Weaver,rare,W,2,Enchantment - Saga,True
+97992,OM1,Scuttling Spidercoach,uncommon,,3,Artifact - Vehicle,True
+97826,OM1,Confessor's Bindings,rare,W,1,Enchantment,True
+97919,OM1,Eccentric Arachnologist,common,G,3,Creature - Human Advisor,True
+97851,OM1,"Olx, Mouth to Many Eyes",uncommon,U,6,Legendary Creature - Mutant Advisor,True
+97925,OM1,"Cren, Undercity Dreamer",mythic,GRW,2,Legendary Creature - Human Citizen Hero,True
+97882,OM1,Scorpion's Sting,common,B,2,Instant,True
+97910,OM1,Arachnomania,mythic,R,5,Enchantment,True
+97905,OM1,Quint's Insight,rare,R,2,Enchantment,True
+97906,OM1,"Kazuo, Ruthless Rival",uncommon,R,6,Legendary Creature - Human Rogue Villain,True
+97982,OM1,Treat Trolley,common,,3,Artifact,True
+97981,OM1,Eerie Gravestone,common,B,2,Artifact,True
+97830,OM1,Spectacular Tactics,common,W,2,Instant,True
+97942,OM1,Angler's Shield,rare,UW,4,Artifact - Equipment,True
+97868,OM1,"Wrench, Speedway Saboteur",rare,B,5,Legendary Creature - Human Rogue Villain,True
+97902,OM1,The Infernus,uncommon,R,3,Legendary Creature - Elemental Villain,True
+97908,OM1,Sadistic String-Puller,common,R,4,Creature - Spider Horror Citizen,True
+97962,OM1,"Crash, Reckless Endrider",uncommon,BR,3,Legendary Creature - Mutant Villain,True
+97957,OM1,Knife Trick,common,BR,1,Sorcery,True
+97821,OM1,"Basil, Cabaretti Loudmouth",uncommon,W,2,Legendary Creature - Human Citizen,True
+97815,OM1,Verilax the Havenskin,mythic,W,5,Legendary Creature - Symbiote Hero,True
+97985,OM1,"Error-9, Viral Node",uncommon,,4,Legendary Artifact Creature - Robot Villain,True
+97990,OM1,Stitcher's Wings,rare,,3,Artifact - Equipment,True
+97883,OM1,The Terminus of Return,mythic,B,2,Legendary Artifact - Terminus Stone,True
+97840,OM1,Drix Interception,common,U,3,Instant,True
+97844,OM1,"Ozor, Chronicler of Collapse",common,U,5,Legendary Creature - Human Scientist Villain,True
+97960,OM1,"Borys, the Spider Rider",rare,GR,3,Legendary Creature - Spider Human Hero,True
+97876,OM1,"Luis, Pompous Pillager",rare,B,2,Legendary Creature - Vampire Villain,True
+97964,OM1,Wonderweave Aerialist,common,UW,2,Creature - Spider Human Hero,True
+97991,OM1,Steelweb Surveyor,common,,2,Artifact Creature - Spider Robot Scout,True
+97974,OM1,Skv'x the Augmenter,rare,BU,3,Legendary Creature - Symbiote Spider Hero,True
+97993,OM1,"Goro Rel, Scourge to Spiders",uncommon,,2,Legendary Artifact Creature - Human Villain,True
+97837,OM1,Archangler's Skyrod,uncommon,W,2,Artifact - Equipment,True
+97999,OM1,Ominous Asylum,common,BR,0,Land,True
+97997,OM1,Fearsome Ridgeline,uncommon,,0,Land,True
+97875,OM1,Merciless Enforcers,common,B,2,Creature - Human Mercenary Villain,True
+97880,OM1,Miasmic Mist,uncommon,B,3,Sorcery,True
+97972,OM1,Cirina Bargainspinner,uncommon,UW,4,Legendary Creature - Spider Human Hero,True
+97948,OM1,"Nu and Sumi, Career Criminals",uncommon,BR,5,Legendary Creature - Goblin Human Villain,True
+97922,OM1,A Trail of Teacups,rare,G,4,Enchantment - Saga,True
+97858,OM1,Outsmart the Amateur,uncommon,U,5,Instant,True
+97903,OM1,Lavaborn Goblins,uncommon,R,5,Creature - Goblin Berserker Villain,True
+97833,OM1,Eztli of the Thousand Moons,common,W,5,Legendary Creature - Human Hero,True
+97818,OM1,City Pigeon,common,W,1,Creature - Bird,True
+97864,OM1,Snatch Back,common,U,2,Instant,True
+97955,OM1,"Tearle, Entropic Hunger",uncommon,BU,4,Legendary Creature - Vampire Scientist Villain,True
+97850,OM1,"Merata, Neuron Hacker",rare,U,1,Legendary Creature - Human Scientist Villain,True
+97913,OM1,Restless Razorkin,uncommon,R,3,Creature - Human Rogue Villain,True
+98002,OM1,Sinister Hideout,common,BU,0,Land,True
+97940,OM1,Through the Omenpath,mythic,G,8,Enchantment,True
+97971,OM1,"Qoneus, Horizon Splicer",rare,BW,5,Legendary Creature - Human Scientist Villain,True
+97924,OM1,Lurking Lizards,common,G,2,Creature - Lizard Villain,True
+97846,OM1,Vexed Bots,uncommon,U,2,Artifact Creature - Robot Villain,True
+97817,OM1,"Zora, Spider Fancier",uncommon,W,1,Legendary Creature - Human Citizen,True
+97879,OM1,Clandestine Work,common,B,3,Sorcery,True
+97894,OM1,Deathflame Burst,common,R,3,Sorcery,True
+97901,OM1,Lavabrink Repels the Magmaloth,rare,R,5,Enchantment - Saga,True
+97909,OM1,"Kraza, the Swarm as One",rare,R,2,Legendary Creature - Spider Human Hero,True
+97888,OM1,"Tethex, Gift of Malice",common,B,5,Legendary Creature - Symbiote Villain,True
+97976,OM1,"Rishei, Getaway Accomplice",uncommon,BU,6,Legendary Creature - Human Artificer Villain,True
+97996,OM1,Vinewoven Chariot,common,G,2,Artifact - Vehicle,True
+97929,OM1,Fateweaver,rare,G,1,Creature - Spider,True
+97866,OM1,Aggressive Symbiosis,uncommon,B,2,Enchantment - Aura,True
+97899,OM1,"Lazlo, Enthusiastic Accuser",rare,R,3,Legendary Creature - Human Citizen,True
+97836,OM1,Mothwing Shroud,common,W,3,Enchantment,True
+97841,OM1,"Arala, Hedron Scaler",common,U,4,Legendary Creature - Human Rogue Villain,True
+97839,OM1,Chosen by Valgavoth,rare,W,4,Enchantment - Aura,True
+97874,OM1,Caldaia Brawlers,common,B,4,Creature - Human Rogue Villain,True
+97887,OM1,"Nill, Vessel of Valgavoth",uncommon,B,3,Legendary Creature - Human Villain,True
+97856,OM1,Pinnacle Research Team,common,U,4,Creature - Human Scientist,True
+97853,OM1,Phantasmal Vision,common,U,2,Creature - Illusion Villain,True
+97860,OM1,"Argyr, Tidal Spinner",uncommon,U,3,Legendary Creature - Spider Avatar Hero,True
+97958,OM1,"Xecau, Predation's Shadow",uncommon,GR,7,Legendary Creature - Human Villain,True
+97847,OM1,Spectral Restitching,rare,U,1,Instant,True
+97861,OM1,Hide in Mundanity,common,U,2,Enchantment - Aura,True
+97862,OM1,Detect Intrusion,rare,U,2,Instant,True
+97897,OM1,Fire-Brained Scheme,uncommon,R,1,Sorcery,True
+97911,OM1,"Rizna, the Spider-Crowned",rare,R,1,Legendary Creature - Spider Human Hero,True
+97977,OM1,Diligent Webkeepers,uncommon,GW,5,Creature - Spider Hero,True
+97838,OM1,Freestrider Aces,common,W,3,Creature - Human Mercenary,True
+97950,OM1,"Dreadfang, Loathed by Fans",uncommon,GR,3,Legendary Creature - Human Warrior Villain,True
+97928,OM1,Favored Fighter,common,G,4,Creature - Human Warrior Performer,True
+97995,OM1,Temple Trap,common,R,5,Artifact,True
+97854,OM1,"Goben, Gene-Splice Savant",mythic,BRU,2,Legendary Creature - Human Scientist Villain,True
+97893,OM1,"Bayo, Irritable Instructor",rare,R,3,Legendary Creature - Human Villain,True
+97975,OM1,"Ruzic, Booed but Victorious",rare,BR,3,Legendary Creature - Goblin Villain,True
+97848,OM1,"Belion, the Parched",rare,U,2,Legendary Creature - Elemental Villain,True
+97963,OM1,"Alenni, Brood Recruiter",rare,GW,4,Legendary Creature - Spider Human Hero,True
+97822,OM1,Remarkable Readings,rare,W,4,Enchantment - Aura,True
+97944,OM1,Cheering Crowd,rare,GR,2,Creature - Human Citizen,True
+97904,OM1,Romantic Rendezvous,common,R,2,Sorcery,True
+97845,OM1,Obscura Alleylurkers,common,U,3,Creature - Human Villain,True
+98004,OM1,University Campus,common,UW,0,Land,True
+97969,OM1,"Alessos and Pras, Acrobats",uncommon,GW,5,Legendary Creature - Spider Human Hero,True
+97824,OM1,"Surris, Spidersilk Innovator",mythic,GUW,2,Legendary Creature - Human Scientist Hero,True
+97968,OM1,"Uharis, the Stormspinner",rare,RU,2,Legendary Creature - Spider Human Hero,True
+98000,OM1,Exclusive Nightclub,rare,BRU,0,Land,True
+97966,OM1,Leyline Weaver,common,GR,2,Creature - Spider Avatar,True
+97912,OM1,"Kephon, Rage Incubator",common,R,5,Legendary Creature - Dinosaur Villain,True
+97954,OM1,Mob Lookout,common,BU,2,Creature - Human Rogue Villain,True
+97832,OM1,Sarn of the Silken Throne,uncommon,W,4,Legendary Creature - Spider Human Hero,True
+97916,OM1,Selesnya Archivist,uncommon,G,4,Creature - Human Citizen,True
+97881,OM1,"Scorvus Ames, Crimelord",uncommon,B,4,Legendary Creature - Scorpion Human Villain,True
+97884,OM1,"Kroble, Envoy of the Bog",uncommon,B,5,Legendary Creature - Spider Human Hero,True
+97920,OM1,Perilous Lunge,common,G,3,Sorcery,True
+97898,OM1,"Cam and Farrik, Havoc Duo",uncommon,R,2,Legendary Creature - Goblin Human Villain,True
+97953,OM1,"Withar, Cocoon Keeper",mythic,BW,7,Legendary Creature - Human Villain,True
+97900,OM1,Skittering Kitten,common,R,1,Creature - Spider Cat Hero,True
+97829,OM1,Ademi of the Silkchutes,rare,W,2,Legendary Creature - Spider Human Hero,True
+97949,OM1,"Druneth, Reviver of the Hive",rare,GU,2,Legendary Creature - Human Scientist Villain,True
+97989,OM1,Phenomena Recorder,rare,,1,Artifact,True
+97889,OM1,Bane-Marked Leonin,common,B,3,Creature - Symbiote Cat Villain,True
+97938,OM1,Terrific Team-Up,uncommon,G,4,Instant,True
+97857,OM1,Robotics Mastery,uncommon,U,5,Enchantment - Aura,True
+97959,OM1,Rhino's Rampage,uncommon,GR,1,Sorcery,True
+97819,OM1,Costume Closet,uncommon,W,2,Artifact,True
+97988,OM1,Carriage of Dreams,common,U,3,Artifact - Vehicle,True
+97951,OM1,"Brako, Heartless Hunter",rare,BG,3,Legendary Creature - Human Warrior Villain,True
+97914,OM1,Full-Throttle Fanatic,common,R,2,Creature - Human Pilot,True
+97979,OM1,Perfected Pastry,common,W,1,Artifact - Food,True
+97932,OM1,"Tarantusk, Unwisely Awoken",rare,G,2,Legendary Creature - Spider Boar Hero,True
+97941,OM1,"Gloria, the Great Armorer",rare,RW,3,Legendary Creature - Spider Human Hero,True
+97978,OM1,"Margot, On the Case",uncommon,UW,3,Legendary Creature - Human Detective Hero,True
+98042,OMB,Winds of Change,uncommon,R,1,Sorcery,True
+98041,OMB,Unexpected Windfall,common,R,4,Instant,True
+98050,OMB,Tangle,uncommon,G,2,Instant,True
+98039,OMB,Shock,common,R,1,Instant,True
+98014,OMB,Leyline Binding,rare,W,6,Enchantment,True
+98029,OMB,Hex,rare,B,6,Sorcery,True
+98020,OMB,Clever Impersonator,mythic,U,4,Creature - Shapeshifter,True
+98047,OMB,Hunter's Insight,uncommon,G,3,Instant,True
+98045,OMB,Beast Within,uncommon,G,3,Instant,True
+98049,OMB,Silkguard,rare,G,1,Instant,True
+98033,OMB,Saw in Half,rare,B,3,Instant,True
+98044,OMB,Arasta of the Endless Web,rare,G,4,Legendary Enchantment Creature - Spider,True
+98022,OMB,"Lorthos, the Tidemaker",mythic,U,8,Legendary Creature - Octopus,True
+98024,OMB,Mystic Confluence,rare,U,5,Instant,True
+98017,OMB,Reprieve,uncommon,W,2,Instant,True
+98046,OMB,Heroic Intervention,rare,G,2,Instant,True
+98035,OMB,Goblin Bombardment,rare,R,2,Enchantment,True
+98030,OMB,Infernal Grasp,uncommon,B,2,Instant,True
+98026,OMB,Rite of Replication,rare,U,4,Sorcery,True
+98013,OMB,Comeuppance,rare,W,4,Instant,True
+98036,OMB,"Najeela, the Blade-Blossom",mythic,BGRUW,3,Legendary Creature - Human Warrior,True
+98018,OMB,Rest in Peace,rare,W,2,Enchantment,True
+98048,OMB,Parallel Lives,mythic,G,4,Enchantment,True
+98025,OMB,Ponder,common,U,1,Sorcery,True
+98032,OMB,Reanimate,rare,B,1,Sorcery,True
+98019,OMB,Wedding Ring,mythic,W,4,Artifact,True
+98031,OMB,Opposition Agent,mythic,B,3,Creature - Human Rogue,True
+98027,OMB,Traumatize,rare,U,5,Sorcery,True
+98037,OMB,Relentless Assault,rare,R,4,Sorcery,True
+98016,OMB,Path to Exile,rare,W,1,Instant,True
+98028,OMB,Feed the Swarm,common,B,2,Sorcery,True
+98052,OMB,Terminate,uncommon,BR,2,Instant,True
+98051,OMB,"Alibou, Ancient Witness",mythic,RW,5,Legendary Artifact Creature - Golem,True
+98043,OMB,Arachnogenesis,rare,G,3,Instant,True
+98023,OMB,Mindbreak Trap,mythic,U,4,Instant - Trap,True
+98038,OMB,Savage Beating,mythic,R,5,Instant,True
+98040,OMB,Thrill of Possibility,common,R,2,Instant,True
+98015,OMB,Nine Lives,rare,W,3,Enchantment,True
+98034,OMB,"Skithiryx, the Blight Dragon",mythic,B,5,Legendary Creature - Phyrexian Dragon Skeleton,True
+98021,OMB,Counterspell,rare,U,2,Instant,True
+97825,OM1,"Surris, Silk-Tech Vanguard",mythic,GUW,4,Legendary Creature - Spider Human Hero,False
+97855,OM1,"Fleem, Goben's Creation",mythic,BRU,4,Legendary Creature - Goblin Human Villain,False
+97872,OM1,"Viggo, End of Ig's Crossing",mythic,BGR,6,Legendary Creature - Symbiote Hero Villain,False
+97896,OM1,"Nia, Fabled Skyclimber",mythic,RUW,5,Legendary Creature - Spider Human Hero,False
+97926,OM1,Cren of the Spider Brood,mythic,GRW,6,Legendary Creature - Spider Human Hero,False
+98007,TOM1,Illusion Villain,token,,0,Creature - Illusion Villain,False
+98008,TOM1,Spider,token,,0,Creature - Spider,False
+98009,TOM1,Human Citizen,token,,0,Creature - Human Citizen,False
+98010,TOM1,Food,token,,0,Artifact - Food,False
+98011,TOM1,Robot,token,,0,Artifact Creature - Robot,False
+98012,TOM1,Treasure,token,,0,Artifact - Treasure,False
+98053,TOMB,Warrior,token,,0,Creature - Warrior,False
+98054,TOMB,Beast,token,,0,Creature - Beast,False
+98055,TOMB,Spider,token,,0,Creature - Spider,False

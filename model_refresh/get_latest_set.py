@@ -30,32 +30,59 @@ def get_s3_links():
 def extract_set_info_from_links(s3_links: List[str]) -> Dict:
     """Extract set information from S3 links."""
     premier_draft_links = []
+    picktwo_draft_links = []
     
     # Pattern to match: .SET_CODE.PremierDraft.csv.gz
-    pattern = r'\.([A-Z]{3})\.PremierDraft\.csv\.gz'
+    premier_pattern = r'\.([A-Z0-9]{3,4})\.PremierDraft\.csv\.gz'
+    # Pattern to match: .SET_CODE.PickTwoDraft.csv.gz
+    picktwo_pattern = r'\.([A-Z0-9]{3,4})\.PickTwoDraft\.csv\.gz'
     
     for link in s3_links:
-        match = re.search(pattern, link)
-        if match:
-            set_code = match.group(1)
+        # Check for Premier Draft links
+        premier_match = re.search(premier_pattern, link)
+        if premier_match:
+            set_code = premier_match.group(1)
             premier_draft_links.append((set_code, link))
+        
+        # Check for PickTwoDraft links
+        picktwo_match = re.search(picktwo_pattern, link)
+        if picktwo_match:
+            set_code = picktwo_match.group(1)
+            picktwo_draft_links.append((set_code, link))
     
-    if not premier_draft_links:
-        return {"error": "No Premier Draft links found"}
+    if not premier_draft_links and not picktwo_draft_links:
+        return {"error": "No Premier Draft or PickTwoDraft links found"}
+    
+    # Combine all sets from both Premier and PickTwoDraft, preserving original order
+    all_sets_with_links = []
+    
+    # Process links in original order to preserve chronological order
+    for link in s3_links:
+        # Check for Premier Draft links
+        premier_match = re.search(premier_pattern, link)
+        if premier_match:
+            set_code = premier_match.group(1)
+            all_sets_with_links.append((set_code, link))
+        
+        # Check for PickTwoDraft links
+        picktwo_match = re.search(picktwo_pattern, link)
+        if picktwo_match:
+            set_code = picktwo_match.group(1)
+            all_sets_with_links.append((set_code, link))
     
     # Get unique sets in the order they appear (preserving order is important!)
     seen = set()
     unique_sets_ordered = []
-    for set_code, _ in premier_draft_links:
+    for set_code, _ in all_sets_with_links:
         if set_code not in seen:
             unique_sets_ordered.append(set_code)
             seen.add(set_code)
     
     # The first set in the original list is typically the most recent
     if unique_sets_ordered:
-        most_recent_set = unique_sets_ordered[0]  # Should be EOE
+        most_recent_set = unique_sets_ordered[0]
         
-        # Find the first Premier Draft link for this set
+        # Find the first Premier Draft link for this set (prefer Premier for "most recent")
         premier_draft_link = next((link for set_code, link in premier_draft_links if set_code == most_recent_set), None)
         
         return {
@@ -63,7 +90,8 @@ def extract_set_info_from_links(s3_links: List[str]) -> Dict:
             "most_recent_set": most_recent_set,
             "premier_draft_link": premier_draft_link,
             "all_sets": unique_sets_ordered,
-            "total_premier_draft_links": len(premier_draft_links)
+            "total_premier_draft_links": len(premier_draft_links),
+            "total_picktwo_draft_links": len(picktwo_draft_links)
         }
     
     return {"error": "No sets found"}
@@ -103,9 +131,11 @@ def get_latest_set_info() -> Dict:
     if not set_info.get("success"):
         return set_info
     
-    # Get the last modified date for the Premier Draft file
+    # Get the last modified date for the Premier Draft file (if it exists)
     premier_draft_link = set_info["premier_draft_link"]
-    last_updated = get_file_last_modified(premier_draft_link)
+    last_updated = None
+    if premier_draft_link:
+        last_updated = get_file_last_modified(premier_draft_link)
     
     result = {
         "success": True,

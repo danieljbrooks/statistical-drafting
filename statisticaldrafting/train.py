@@ -178,7 +178,7 @@ def default_training_pipeline(
 
     Args:
             set_abbreviation (str): Three letter abbreviation of set to create training set of.
-            draft_mode (str): Use either "Premier" or "Trad" draft data.
+            draft_mode (str): Use either "Premier", "Trad", "PickTwo", or "PickTwoTrad" draft data.
             overwrite_dataset (bool): If False, won't overwrite an existing dataset for the set and draft mode.
     """
     # Create dataset.
