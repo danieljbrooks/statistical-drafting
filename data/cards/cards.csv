@@ -9944,12 +9944,16 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 81229,JMP,A-Blood Artist,uncommon,B,2,Creature - Vampire,True
 76840,AKR,Collected Company,rare,G,4,Instant,False
 79410,TJMP,Phyrexian Myr,token,,0,Artifact Creature - Phyrexian Myr,False
+78196,2XM,Manamorphose,uncommon,GR,2,Instant,True
+78258,2XM,Mana Crypt,mythic,,0,Artifact,True
 71579,MH1,Fiery Islet,rare,RU,0,Land,True
+71416,MH1,"Urza, Lord High Artificer",mythic,U,4,Legendary Creature - Human Artificer,True
 71587,MH1,Silent Clearing,rare,BW,0,Land,True
 71575,MH1,Talisman of Resilience,uncommon,BG,2,Artifact,True
 71574,MH1,Talisman of Hierarchy,uncommon,BW,2,Artifact,True
 71588,MH1,Sunbaked Canyon,rare,RW,0,Land,True
 71571,MH1,Talisman of Conviction,uncommon,RW,2,Artifact,True
+71393,MH1,Force of Negation,rare,U,3,Instant,True
 71573,MH1,Talisman of Curiosity,uncommon,GU,2,Artifact,True
 71570,MH1,Sword of Truth and Justice,mythic,,3,Artifact - Equipment,True
 71584,MH1,Nurturing Peatland,rare,BG,0,Land,True
@@ -9957,8 +9961,12 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 71590,MH1,Waterlogged Grove,rare,GU,0,Land,True
 71558,MH1,Wrenn and Six,mythic,GR,2,Legendary Planeswalker - Wrenn,True
 71354,MH1,Giver of Runes,rare,W,1,Creature - Kor Cleric,True
+75992,MH2,Dress Down,rare,U,2,Enchantment,True
 76216,MH2,Thornglint Bridge,common,GW,0,Artifact Land,True
+76177,MH2,Academy Manufactor,rare,,3,Artifact Creature - Assembly-Worker,True
 77056,MH2,Marsh Flats,rare,,0,Land,True
+76976,MH2,"Tourach, Dread Cantor",mythic,B,2,Legendary Creature - Human Cleric,True
+77067,MH2,"Titania, Protector of Argoth",mythic,G,5,Legendary Creature - Elemental,True
 76206,MH2,Mistvault Bridge,common,BU,0,Artifact Land,True
 76214,MH2,Slagwoods Bridge,common,GR,0,Artifact Land,True
 77062,MH2,Scalding Tarn,rare,,0,Land,True
@@ -9966,21 +9974,32 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 76203,MH2,Darkmoss Bridge,common,BG,0,Artifact Land,True
 76204,MH2,Drossforge Bridge,common,BR,0,Artifact Land,True
 77054,MH2,Arid Mesa,rare,,0,Land,True
+76060,MH2,Unmarked Grave,rare,B,2,Sorcery,True
+77064,MH2,"Yavimaya, Cradle of Growth",rare,,0,Legendary Land,True
+76254,MH2,Vindicate,rare,BW,3,Sorcery,True
+76228,MH2,Upheaval,rare,U,6,Sorcery,True
 77014,MH2,Ignoble Hierarch,rare,BGR,1,Creature - Goblin Shaman,True
 76209,MH2,Razortide Bridge,common,UW,0,Artifact Land,True
 76931,MH2,Timeless Dragon,rare,W,5,Creature - Dragon,True
+76217,MH2,Urza's Saga,rare,,0,Enchantment Land - Urza's Saga,True
 76210,MH2,Rustvale Bridge,common,RW,0,Artifact Land,True
+76029,MH2,Archon of Cruelty,mythic,B,8,Creature - Archon,True
+77004,MH2,Mine Collapse,common,R,4,Instant,True
 77058,MH2,Misty Rainforest,rare,,0,Land,True
+76955,MH2,Dauthi Voidwalker,rare,B,2,Creature - Dauthi Rogue,True
 76213,MH2,Silverbluff Bridge,common,RU,0,Artifact Land,True
 77063,MH2,Verdant Catacombs,rare,,0,Land,True
 76158,MH2,"Grist, the Hunger Tide",mythic,BG,3,Legendary Planeswalker - Grist,True
 76215,MH2,Tanglepool Bridge,common,GU,0,Artifact Land,True
+76260,MH2,Zuran Orb,uncommon,,0,Artifact,True
 76212,MH2,Goldmire Bridge,common,BW,0,Artifact Land,True
+76186,MH2,Kaldra Compleat,mythic,,7,Legendary Artifact - Equipment,True
 89788,CLB,Mystery Key,uncommon,U,2,Artifact - Equipment,True
 87968,2X2,Darksteel Plate,rare,,3,Artifact - Equipment,True
 87848,2X2,Bloodbraid Elf,uncommon,GR,4,Creature - Elf Berserker,True
 87760,2X2,Unearth,common,B,1,Sorcery,True
 87681,2X2,Mentor of the Meek,uncommon,W,3,Creature - Human Soldier,True
+87972,2X2,Mana Vault,mythic,,1,Artifact,True
 87809,2X2,Eternal Witness,uncommon,G,3,Creature - Human Shaman,True
 81583,HBG,Wyll of the Blade Pact,mythic,R,6,Legendary Creature - Human Warlock,False
 81686,HBG,Rally Maneuver,uncommon,W,3,Instant,True
@@ -10038,7 +10057,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 81834,HBG,"Kagha, Shadow Archdruid",uncommon,BG,4,Legendary Creature - Elf Druid,True
 81262,HBG,Dragonborn Immolator,uncommon,R,4,Creature - Dragon Shaman,True
 81241,HBG,Sworn to the Legion,mythic,W,6,Enchantment,True
-81841,HBG,"Minsc & Boo, Timeless Heroes",mythic,GR,4,Legendary Planeswalker - Minsc,False
+81841,HBG,"Minsc & Boo, Timeless Heroes",mythic,GR,4,Legendary Planeswalker - Minsc,True
 81256,HBG,Mind Spike,uncommon,B,1,Sorcery,True
 81246,HBG,Hypnotic Pattern,common,U,1,Instant,True
 81575,HBG,"Karlach, Tiefling Spellrager",rare,RU,3,Legendary Creature - Tiefling Barbarian,False
@@ -10474,6 +10493,8 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 82474,HBG,Mountain,basic,R,0,Basic Land - Mountain,True
 82461,HBG,Plains,basic,W,0,Basic Land - Plains,True
 36682,ROE,Oust,uncommon,W,1,Sorcery,True
+51281,ROE,"Emrakul, the Aeons Torn",mythic,,15,Legendary Creature - Eldrazi,True
+51285,ROE,"Ulamog, the Infinite Gyre",mythic,,11,Legendary Creature - Eldrazi,True
 58051,KTK,Taigam's Scheming,common,U,2,Sorcery,True
 58139,KTK,Bloodfire Expert,common,R,3,Creature - Efreet Monk,True
 58387,KTK,Sultai Banner,common,BGU,3,Artifact,True
@@ -10798,8 +10819,8 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 82938,ARENASUP,Reign of Dragons Emblem,mythic,,0,Artifact,False
 46669,AVR,"Avacyn, Angel of Hope",mythic,W,8,Legendary Creature - Angel,True
 55043,BNG,Searing Blood,uncommon,R,2,Instant,True
-83000,C18,Retrofitter Foundry,rare,,1,Artifact,False
-83081,C21,"Laelia, the Blade Reforged",rare,R,3,Legendary Creature - Spirit Warrior,False
+83000,C18,Retrofitter Foundry,rare,,1,Artifact,True
+83081,C21,"Laelia, the Blade Reforged",rare,R,3,Legendary Creature - Spirit Warrior,True
 83143,CC2,Ophiomancer,rare,B,3,Creature - Human Shaman,False
 21287,CHK,Night of Souls' Betrayal,rare,B,4,Legendary Enchantment,True
 83473,ELD,A-Cauldron Familiar,uncommon,B,1,Creature - Cat,False
@@ -11334,6 +11355,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 83677,UNF,Plains,basic,W,0,Basic Land - Plains,True
 83680,UNF,Mountain,basic,R,0,Basic Land - Mountain,True
 83681,UNF,Forest,basic,G,0,Basic Land - Forest,True
+100871,UNF,"Comet, Stellar Pup",mythic,RW,4,Legendary Planeswalker - Comet,True
 81181,UNF,Swamp,basic,B,0,Basic Land - Swamp,True
 81179,UNF,Plains,basic,W,0,Basic Land - Plains,True
 81183,UNF,Forest,basic,G,0,Basic Land - Forest,True
@@ -11997,6 +12019,11 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 54387,THS,Soldier of the Pantheon,rare,W,1,Creature - Human Soldier,True
 62569,SOI,Eerie Interlude,rare,W,3,Instant,True
 60833,DTK,Rending Volley,uncommon,R,1,Instant,True
+99493,DMR,Empty the Warrens,common,R,4,Sorcery,True
+99488,DMR,Chain Lightning,common,R,1,Sorcery,True
+99534,DMR,Exploration,rare,G,1,Enchantment,True
+99425,DMR,Force of Will,mythic,U,5,Instant,True
+99609,DMR,Life // Death,uncommon,BG,3,Sorcery,True
 85620,Y22,A-Shipwreck Sifters,common,U,2,Creature - Spirit,False
 85621,Y22,A-Patrician Geist,rare,U,3,Creature - Spirit Knight,False
 85656,Y22,A-Akki Ronin,common,R,1,Creature - Goblin Samurai,False
@@ -15103,7 +15130,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 90297,Y24,Caldera Breaker,mythic,R,6,Artifact Creature - Golem,True
 90298,Y24,"Kamachal, Ship's Mascot",rare,R,3,Legendary Creature - Dinosaur Pirate,True
 90299,Y24,Pirate's Landing,uncommon,R,1,Sorcery,True
-90300,Y24,Ribald Shanty,uncommon,R,2,Instant - Chorus,True
+90300,Y24,Ribald Shanty,uncommon,R,1,Instant - Chorus,True
 90301,Y24,Colossal Chorus,mythic,G,8,Sorcery - Chorus,True
 90302,Y24,Mythweaver Poq,mythic,G,4,Legendary Creature - Cat Shaman,True
 90303,Y24,Propagator Primordium,rare,G,2,Creature - Fungus,True
@@ -17352,12 +17379,12 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 92705,BLC,"Flubs, the Fool",mythic,GRU,3,Legendary Creature - Frog Scout,False
 91889,BLC,"Chatterfang, Squirrel General",mythic,BG,3,Legendary Creature - Squirrel Warrior,False
 91891,BLC,"Nissa, Who Shakes the World",rare,G,5,Legendary Planeswalker - Nissa,False
-91893,BLC,Baleful Strix,rare,BU,2,Artifact Creature - Bird,False
+91893,BLC,Baleful Strix,rare,BU,2,Artifact Creature - Bird,True
 92706,BLC,"Elspeth, Sun's Champion",mythic,W,6,Legendary Planeswalker - Elspeth,False
 91885,BLC,Liliana of the Dark Realms,mythic,B,4,Legendary Planeswalker - Liliana,False
 91895,BLC,The Gitrog Monster,mythic,BG,5,Legendary Creature - Frog Horror,False
 91886,BLC,Marrow-Gnawer,rare,B,5,Legendary Creature - Rat Rogue,False
-91882,BLC,"Jace, the Mind Sculptor",mythic,U,4,Legendary Planeswalker - Jace,False
+91882,BLC,"Jace, the Mind Sculptor",mythic,U,4,Legendary Planeswalker - Jace,True
 91890,BLC,Gilded Goose,rare,G,1,Creature - Bird,False
 91881,BLC,Luminous Broodmoth,mythic,W,4,Creature - Insect,False
 92708,BLC,"Garruk, Cursed Huntsman",mythic,BG,6,Legendary Planeswalker - Garruk,False
@@ -17368,7 +17395,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 91898,BLC,"Kykar, Wind's Fury",mythic,RUW,4,Legendary Creature - Bird Wizard,False
 91880,BLC,"Karn, the Great Creator",mythic,,4,Legendary Planeswalker - Karn,False
 91887,BLC,Ant Queen,rare,G,5,Creature - Insect,False
-91888,BLC,Birds of Paradise,rare,G,1,Creature - Bird,False
+91888,BLC,Birds of Paradise,rare,G,1,Creature - Bird,True
 91883,BLC,"Narset, Parter of Veils",rare,U,3,Legendary Planeswalker - Narset,False
 91901,BLC,"A-Teferi, Time Raveler",rare,UW,4,Legendary Planeswalker - Teferi,False
 92710,BLC,"Jace, the Mind Sculptor",mythic,U,4,Legendary Planeswalker - Jace,False
@@ -17399,7 +17426,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 94220,Y25,"Euru, Acorn Scrounger",mythic,BG,4,Legendary Creature - Squirrel Soldier,True
 94221,Y25,Recruit Instructor,mythic,RW,2,Creature - Mouse Warrior,True
 94222,Y25,Leaf-Leap Guide,mythic,GU,2,Creature - Frog Scout,True
-95165,TY25,Fountainport Charmer,token,G,3,Creature - Frog Bard,True
+95165,TY25,Fountainport Charmer,token,G,2,Creature - Frog Bard,True
 94193,Y25,Sandcloud Harbinger,uncommon,W,3,Creature - Elemental Horse,True
 94194,Y25,Cottontail Caretaker,uncommon,W,2,Creature - Rabbit Citizen,True
 94195,Y25,Ace Flockbringer,rare,UW,3,Creature - Bird Scout,True
@@ -18673,7 +18700,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 93300,J25,Bituminous Blast,uncommon,BR,5,Instant,False
 92975,J25,Disfigure,common,B,1,Instant,False
 93457,J25,Argivian Phalanx,common,W,6,Creature - Human Kor Soldier,False
-92904,J25,Dark Confidant,mythic,B,2,Creature - Human Wizard,False
+92904,J25,Dark Confidant,mythic,B,2,Creature - Human Wizard,True
 93144,J25,Soul Read,common,U,4,Instant,False
 93547,J25,Stalwart Valkyrie,common,W,4,Creature - Angel Warrior,False
 92862,J25,Delightful Discovery,uncommon,U,5,Instant,False
@@ -19095,7 +19122,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 93562,J25,Triplicate Spirits,common,W,6,Sorcery,False
 93138,J25,Shorecomber Crab,common,U,1,Creature - Crab,False
 93414,J25,Rapacious Dragon,uncommon,R,5,Creature - Dragon,False
-92880,J25,Scythecat Cub,rare,G,2,Creature - Cat,False
+92880,J25,Scythecat Cub,rare,G,2,Creature - Cat,True
 92930,J25,Krenko's Command,common,R,2,Sorcery,False
 93394,J25,Jaya's Firenado,common,R,5,Sorcery,False
 93063,J25,Wakedancer,common,B,3,Creature - Human Shaman,False
@@ -19237,7 +19264,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 93221,J25,Giant Opportunity,uncommon,G,3,Sorcery,False
 93397,J25,Kindled Fury,common,R,1,Instant,False
 93555,J25,Sunhome Stalwart,uncommon,W,2,Creature - Human Soldier,False
-93614,J25,"Ivora, Insatiable Heir",uncommon,R,2,Legendary Creature - Vampire Warrior,False
+93614,J25,"Ivora, Insatiable Heir",uncommon,R,2,Legendary Creature - Vampire Warrior,True
 93278,J25,Stony Strength,common,G,1,Instant,False
 92993,J25,Foul Play,uncommon,B,2,Sorcery,False
 93044,J25,Thieves' Guild Enforcer,rare,B,1,Creature - Human Rogue,False
@@ -19249,7 +19276,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 92928,J25,Guttersnipe,uncommon,R,3,Creature - Goblin Shaman,False
 93595,J25,"Psemilla, Meletian Poet",uncommon,W,3,Legendary Creature - Human Bard,False
 92943,J25,Ornithopter of Paradise,common,,2,Artifact Creature - Thopter,False
-93132,J25,Remand,uncommon,U,2,Instant,False
+93132,J25,Remand,uncommon,U,2,Instant,True
 93314,J25,Myr Enforcer,common,,7,Artifact Creature - Myr,False
 93253,J25,Orochi Merge-Keeper,uncommon,G,2,Creature - Snake Druid,False
 93081,J25,Choking Tethers,common,U,4,Instant,False
@@ -19372,12 +19399,12 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 93127,J25,Phantasmal Form,common,U,3,Instant,False
 93606,J25,"Fumulus, the Infestation",rare,B,4,Legendary Creature - Vampire Insect,False
 93153,J25,Teferi's Ageless Insight,rare,U,4,Legendary Enchantment,False
-93022,J25,Night's Whisper,common,B,2,Sorcery,False
+93022,J25,Night's Whisper,common,B,2,Sorcery,True
 93392,J25,Insolent Neonate,common,R,1,Creature - Vampire,False
 93603,J25,"Taeko, the Patient Avalanche",mythic,BU,4,Legendary Creature - Turtle Ninja,False
 92962,J25,Boneclad Necromancer,common,B,5,Creature - Human Wizard,False
 93009,J25,"Liliana, Death's Majesty",mythic,B,5,Legendary Planeswalker - Liliana,False
-93384,J25,Goblin Rabblemaster,rare,R,3,Creature - Goblin Warrior,False
+93384,J25,Goblin Rabblemaster,rare,R,3,Creature - Goblin Warrior,True
 93220,J25,Giant Growth,common,G,1,Instant,False
 93331,J25,Seat of the Synod,common,U,0,Artifact Land,False
 93076,J25,Cackling Counterpart,rare,U,3,Instant,False
@@ -22261,7 +22288,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 98868,Y25,"Uthros, Titanic Godcore",mythic,U,0,Land - Planet,False
 98825,TY25,Robot,token,,0,Artifact Creature - Robot,False
 98826,TY25,Lander,token,,0,Artifact - Lander,False
-56493,DDK,Flame Slash,common,R,1,Sorcery,False
+56493,DDK,Flame Slash,common,R,1,Sorcery,True
 43399,DKA,Thought Scour,common,U,1,Instant,True
 57365,MMA,Pyrite Spellbomb,common,R,1,Artifact,True
 57375,MMA,Sword of Light and Shadow,mythic,,3,Artifact - Equipment,True
@@ -22508,3 +22535,838 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 98053,TOMB,Warrior,token,,0,Creature - Warrior,False
 98054,TOMB,Beast,token,,0,Creature - Beast,False
 98055,TOMB,Spider,token,,0,Creature - Spider,False
+99373,TDRC,Golem,token,,0,Artifact Creature - Golem,False
+99374,TDRC,Golem,token,,0,Artifact Creature - Golem,False
+99375,TDRC,Golem,token,,0,Artifact Creature - Golem,False
+99663,TDMR,Goblin,token,,0,Creature - Goblin,False
+100133,M20,"A-Sorin, Imperious Bloodlord",mythic,B,3,Legendary Planeswalker - Sorin,False
+100125,INR,Island,basic,U,0,Basic Land - Island,False
+100128,INR,Swamp,basic,B,0,Basic Land - Swamp,False
+100132,INR,Forest,basic,G,0,Basic Land - Forest,False
+100127,INR,Swamp,basic,B,0,Basic Land - Swamp,False
+100123,INR,Plains,basic,W,0,Basic Land - Plains,False
+100124,INR,Plains,basic,W,0,Basic Land - Plains,False
+100131,INR,Forest,basic,G,0,Basic Land - Forest,False
+100129,INR,Mountain,basic,R,0,Basic Land - Mountain,False
+100126,INR,Island,basic,U,0,Basic Land - Island,False
+100130,INR,Mountain,basic,R,0,Basic Land - Mountain,False
+100134,TDM,A-Cori-Steel Cutter,rare,R,2,Artifact - Equipment,False
+100135,TDM,A-Cori-Steel Cutter,rare,R,2,Artifact - Equipment,False
+100767,TONC,Spirit,token,,0,Creature - Spirit,False
+29970,EVE,Flickerwisp,uncommon,W,3,Creature - Elemental,True
+29944,EVE,Regal Force,rare,G,7,Creature - Elemental,True
+39730,NPH,Sword of War and Peace,mythic,,3,Artifact - Equipment,True
+39974,NPH,Batterskull,mythic,,5,Artifact - Equipment,True
+39549,MBS,Sword of Feast and Famine,mythic,,3,Artifact - Equipment,True
+100747,TCLB,Skeleton,token,,0,Creature - Skeleton,False
+19681,MRD,Talisman of Indulgence,uncommon,BR,2,Artifact,True
+19683,MRD,Talisman of Impulse,uncommon,GR,2,Artifact,True
+20021,MRD,Great Furnace,common,R,0,Artifact Land,True
+19685,MRD,Talisman of Unity,uncommon,GW,2,Artifact,True
+20249,MRD,Tree of Tales,common,G,0,Artifact Land,True
+19679,MRD,Talisman of Dominance,uncommon,BU,2,Artifact,True
+19677,MRD,Talisman of Progress,uncommon,UW,2,Artifact,True
+20015,MRD,Ancient Den,common,W,0,Artifact Land,True
+37997,SOM,Assault Strobe,common,R,1,Sorcery,True
+38059,SOM,Oxidda Scrapmelter,uncommon,R,4,Creature - Beast,True
+38197,SOM,Mox Opal,mythic,,0,Legendary Artifact,True
+42322,ISD,Ambush Viper,common,G,2,Creature - Snake,True
+32801,M10,Stormfront Pegasus,common,W,2,Creature - Pegasus,True
+49049,M13,Kraken Hatchling,common,U,1,Creature - Kraken,True
+98947,CMA,Control Magic,uncommon,U,4,Enchantment - Aura,False
+62503,OGW,Crumbling Vestige,common,,0,Land,True
+100122,PRM,Wastes,common,,0,Basic Land,False
+12553,ULG,Mother of Runes,uncommon,W,1,Creature - Human Cleric,True
+12697,ULG,Memory Jar,rare,,5,Artifact,True
+12607,ULG,Miscalculation,common,U,2,Instant,True
+12547,ULG,Crop Rotation,common,G,1,Instant,True
+16927,ODY,Peek,common,U,1,Instant,True
+97166,ARENASUP,A Star Is Born,mythic,,0,Artifact,False
+97167,ARENASUP,Chromatic Star,uncommon,,1,Artifact,False
+20718,5DN,Trinket Mage,common,U,3,Creature - Human Wizard,True
+88380,CM2,Fiery Confluence,rare,R,4,Sorcery,True
+15530,7ED,Force Spike,common,U,1,Instant,True
+99610,DMR,Life,uncommon,BG,1,Sorcery,False
+99611,DMR,Death,uncommon,BG,2,Sorcery,False
+21603,BOK,Umezawa's Jitte,rare,,2,Legendary Artifact - Equipment,True
+40633,CMD,Champion's Helm,rare,,3,Artifact - Equipment,False
+100070,RVR,Boros Signet,uncommon,RW,2,Artifact,True
+100088,RVR,Simic Signet,uncommon,GU,2,Artifact,True
+100078,RVR,Gruul Signet,uncommon,GR,2,Artifact,True
+100084,RVR,Rakdos Signet,uncommon,BR,2,Artifact,True
+100077,RVR,Golgari Signet,uncommon,BG,2,Artifact,True
+100069,RVR,Azorius Signet,uncommon,UW,2,Artifact,True
+100086,RVR,Selesnya Signet,uncommon,GW,2,Artifact,True
+100075,RVR,Dimir Signet,uncommon,BU,2,Artifact,True
+100080,RVR,Izzet Signet,uncommon,RU,2,Artifact,True
+100082,RVR,Orzhov Signet,uncommon,BW,2,Artifact,True
+47035,CON,Noble Hierarch,rare,GUW,1,Creature - Human Druid,True
+28707,LRW,Shelldock Isle,rare,U,0,Land,True
+99689,M3C,Barrowgoyf,rare,B,3,Creature - Lhurgoyf,True
+99698,M3C,Pyrogoyf,rare,R,4,Creature - Lhurgoyf,True
+59613,UDS,"Rofellos, Llanowar Emissary",rare,G,2,Legendary Creature - Elf Druid,True
+7649,VIS,Necromancy,uncommon,B,3,Enchantment,True
+100335,OTC,Fallen Shinobi,rare,BU,5,Creature - Zombie Ninja,True
+99319,DRC,Triplicate Titan,rare,,9,Artifact Creature - Golem,True
+100457,CLB,"Gut, True Soul Zealot",uncommon,R,3,Legendary Creature - Goblin Shaman,True
+100171,LCC,Broadside Bombardiers,rare,R,3,Creature - Goblin Pirate,True
+99795,NCC,Currency Converter,rare,,1,Artifact,True
+100142,ONC,Staff of the Storyteller,rare,W,2,Artifact,True
+101113,ANA,Plateau,rare,RW,0,Land - Mountain Plains,True
+7163,MIR,Mystical Tutor,uncommon,U,1,Instant,True
+6947,MIR,Enlightened Tutor,uncommon,W,1,Instant,True
+12349,USG,Yawgmoth's Will,rare,B,3,Sorcery,True
+12385,USG,Time Spiral,rare,U,6,Sorcery,True
+11867,USG,Gaea's Cradle,rare,G,0,Legendary Land,True
+34690,ZEN,Vampire Hexmage,uncommon,B,2,Creature - Vampire Shaman,True
+60275,VMA,Library of Alexandria,mythic,,0,Land,True
+60053,VMA,Wheel of Fortune,mythic,R,3,Sorcery,True
+60303,VMA,Taiga,rare,GR,0,Land - Mountain Forest,True
+59675,VMA,Timetwister,mythic,U,3,Sorcery,True
+60163,VMA,Dack Fayden,mythic,RU,3,Legendary Planeswalker - Dack,True
+60301,VMA,Strip Mine,rare,,0,Land,True
+60279,VMA,Mishra's Workshop,mythic,,0,Land,True
+60251,VMA,Badlands,rare,BR,0,Land - Swamp Mountain,True
+59987,VMA,Fireblast,uncommon,R,6,Instant,True
+59673,VMA,Time Walk,mythic,U,2,Sorcery,True
+60255,VMA,Bayou,rare,BG,0,Land - Swamp Forest,True
+59913,VMA,Hymn to Tourach,uncommon,B,2,Sorcery,True
+60313,VMA,Tundra,rare,UW,0,Land - Plains Island,True
+60295,VMA,Scrubland,rare,BW,0,Land - Plains Swamp,True
+60311,VMA,Tropical Island,rare,GU,0,Land - Forest Island,True
+60307,VMA,Tolarian Academy,mythic,U,0,Legendary Land,True
+60211,VMA,Lion's Eye Diamond,mythic,,0,Artifact,True
+59697,VMA,Balance,mythic,W,2,Sorcery,True
+60087,VMA,Fastbond,mythic,G,1,Enchantment,True
+59877,VMA,Animate Dead,uncommon,B,2,Enchantment - Aura,True
+60291,VMA,Savannah,rare,GW,0,Land - Forest Plains,True
+20551,DST,Skullclamp,uncommon,,1,Artifact - Equipment,True
+37388,M11,Preordain,common,U,1,Sorcery,True
+39976,NPH,Gitaxian Probe,common,U,1,Sorcery,True
+39581,MBS,Green Sun's Zenith,rare,G,1,Sorcery,True
+19831,MRD,Chrome Mox,rare,,0,Artifact,True
+19737,MRD,Lightning Greaves,uncommon,,2,Artifact - Equipment,True
+19991,MRD,Seething Song,common,R,3,Instant,True
+12615,ULG,Frantic Search,common,U,3,Instant,True
+12623,ULG,Tinker,uncommon,U,3,Sorcery,True
+12551,ULG,Grim Monolith,rare,,2,Artifact,True
+38085,SOM,Contagion Clasp,uncommon,,2,Artifact,True
+38307,SOM,Myr Battlesphere,rare,,7,Artifact Creature - Myr Construct,True
+83446,UMA,Karakas,mythic,W,0,Legendary Land,True
+83402,UMA,"Leovold, Emissary of Trest",mythic,BGU,3,Legendary Creature - Elf Advisor,True
+83443,UMA,Dark Depths,mythic,,0,Legendary Snow Land,True
+83438,UMA,Ancient Tomb,rare,,0,Land,True
+35675,WWK,Raging Ravine,rare,GR,0,Land,True
+35657,WWK,Creeping Tar Pit,rare,BU,0,Land,True
+35665,WWK,Lavaclaw Reaches,rare,BR,0,Land,True
+35679,WWK,Stirring Wildwood,rare,GW,0,Land,True
+35639,WWK,Celestial Colonnade,rare,UW,0,Land,True
+17047,ODY,Entomb,rare,B,1,Instant,True
+13747,NEM,Parallax Wave,rare,W,4,Enchantment,True
+14009,NEM,Daze,common,U,2,Instant,True
+34952,DDD,Snuff Out,common,B,4,Instant,True
+48165,FUT,Coalition Relic,rare,,3,Artifact,True
+100950,CLU,Carnage Interpreter,rare,BR,3,Creature - Devil Detective,True
+10583,EXO,Recurring Nightmare,rare,B,3,Enchantment,True
+10709,EXO,Survival of the Fittest,rare,G,2,Enchantment,True
+88660,IMA,Cryptic Command,rare,U,4,Instant,True
+72862,ICE,Fire Covenant,uncommon,BR,3,Instant,True
+56597,DDL,Pyrokinesis,uncommon,R,6,Instant,True
+77679,CMR,Hullbreacher,rare,U,3,Creature - Merfolk Pirate,True
+77761,CMR,Vampiric Tutor,mythic,B,1,Instant,True
+9475,TMP,Lotus Petal,common,,0,Artifact,True
+10035,TMP,Wasteland,uncommon,,0,Land,True
+29589,SHM,Woodfall Primus,rare,G,8,Creature - Treefolk Shaman,True
+55531,C13,Unexpectedly Absent,rare,W,2,Instant,True
+82997,C18,Coveted Jewel,rare,,6,Artifact,True
+100929,MOC,Death-Greeter's Champion,rare,R,3,Creature - Human Warrior,True
+100138,ONC,Glimmer Lens,rare,W,2,Artifact - Equipment,True
+100737,DMC,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental,False
+100908,DMC,"Torsten, Founder of Benalia",mythic,GW,7,Legendary Creature - Human Soldier,True
+101550,ANA,Echo of Eons,rare,U,6,Sorcery,True
+91326,UND,Booster Tutor,uncommon,B,1,Instant,True
+30238,EVE,Figure of Destiny,rare,RW,1,Creature - Kithkin,True
+18932,SCG,Brain Freeze,uncommon,U,2,Instant,True
+10325,STH,Mox Diamond,rare,,0,Artifact,True
+20874,5DN,Pentad Prism,common,,2,Artifact,True
+101022,LEA,Mox Ruby,rare,R,0,Artifact,True
+88075,A25,Flash,rare,U,2,Instant,True
+101023,LEA,Mox Sapphire,rare,U,0,Artifact,True
+101024,LEA,Mox Jet,rare,B,0,Artifact,True
+101020,LEA,Mox Emerald,rare,G,0,Artifact,True
+101021,LEA,Mox Pearl,rare,W,0,Artifact,True
+101033,ANA,Dismember,uncommon,B,3,Instant,True
+101032,ANA,Winds of Abandon,rare,W,2,Sorcery,True
+101025,ANA,Animate Dead,rare,B,2,Enchantment - Aura,True
+101026,ANA,Candelabra of Tawnos,rare,,1,Artifact,True
+101027,ANA,Gitaxian Probe,rare,U,1,Sorcery,True
+101028,ANA,Hymn to Tourach,rare,B,2,Sorcery,True
+101029,ANA,Mind Twist,rare,B,1,Sorcery,True
+101030,ANA,Urza's Bauble,uncommon,,0,Artifact,True
+101031,ANA,Volcanic Island,rare,RU,0,Land - Island Mountain,True
+97465,TLA,Origin of Metalbending,common,G,2,Instant - Lesson,True
+97536,TLA,Bender's Waterskin,common,,3,Artifact,True
+97537,TLA,Fire Nation Warship,uncommon,,3,Artifact - Vehicle,True
+97344,TLA,Secret of Bloodbending,mythic,U,4,Sorcery - Lesson,True
+97276,TLA,Zuko's Exile,common,,5,Instant - Lesson,True
+97299,TLA,Kyoshi Warriors,common,W,4,Creature - Human Warrior Ally,True
+97353,TLA,"Wan Shi Tong, Librarian",mythic,U,2,Legendary Creature - Bird Spirit,True
+97289,TLA,Earth Kingdom Jailer,uncommon,W,3,Creature - Human Soldier Ally,True
+97501,TLA,Fire Lord Azula,rare,BRU,4,Legendary Creature - Human Noble,True
+97349,TLA,"Teo, Spirited Glider",uncommon,U,4,Legendary Creature - Human Pilot Ally,True
+97284,TLA,Avatar Enthusiasts,common,W,3,Creature - Human Peasant Ally,True
+97395,TLA,Sold Out,common,B,4,Instant,True
+97433,TLA,Treetop Freedom Fighters,common,R,3,Creature - Human Rebel Ally,True
+97379,TLA,Hog-Monkey,common,B,3,Creature - Boar Monkey,True
+97474,TLA,Shared Roots,uncommon,G,2,Sorcery - Lesson,True
+97426,TLA,Price of Freedom,uncommon,R,2,Sorcery - Lesson,True
+97492,TLA,"Bumi, Unleashed",mythic,GR,5,Legendary Creature - Human Noble Ally,True
+97432,TLA,Tiger-Dillo,uncommon,R,2,Creature - Cat Armadillo,True
+97518,TLA,Pretending Poxbearers,common,BW,2,Creature - Human Citizen Ally,True
+97318,TLA,Accumulate Wisdom,uncommon,U,2,Instant - Lesson,True
+97423,TLA,Lightning Strike,common,R,2,Instant,True
+97312,TLA,Team Avatar,uncommon,W,3,Enchantment,True
+97326,TLA,Geyser Leaper,common,U,5,Creature - Human Warrior Ally,True
+97380,TLA,"Joo Dee, One of Many",uncommon,B,2,Creature - Human Advisor,True
+97542,TLA,The Walls of Ba Sing Se,mythic,,8,Legendary Artifact Creature - Wall,True
+97340,TLA,North Pole Patrol,uncommon,U,3,Creature - Human Soldier Ally,True
+97286,TLA,Compassionate Healer,common,W,2,Creature - Human Cleric Ally,True
+97403,TLA,Combustion Man,uncommon,R,5,Legendary Creature - Human Assassin,True
+97355,TLA,Waterbending Lesson,common,U,4,Sorcery - Lesson,True
+97524,TLA,"Suki, Kyoshi Warrior",uncommon,GW,4,Legendary Creature - Human Warrior Ally,True
+97445,TLA,"The Boulder, Ready to Rumble",uncommon,G,4,Legendary Creature - Human Warrior Performer,True
+97438,TLA,Yuyan Archers,common,R,2,Creature - Human Archer,True
+97503,TLA,Foggy Swamp Spirit Keeper,uncommon,BU,3,Creature - Human Druid Ally,True
+97402,TLA,The Cave of Two Lovers,uncommon,R,4,Enchantment - Saga,True
+97369,TLA,Day of Black Sun,rare,B,2,Sorcery,True
+97309,TLA,South Pole Voyager,rare,W,2,Creature - Human Scout Ally,True
+97478,TLA,Turtle-Duck,common,G,1,Creature - Turtle Bird,True
+97297,TLA,Invasion Reinforcements,uncommon,W,2,Creature - Human Warrior Ally,True
+97440,TLA,"Zuko, Exiled Prince",uncommon,R,4,Legendary Creature - Human Noble,True
+97364,TLA,Callous Inspector,common,B,1,Creature - Human Soldier,True
+97436,TLA,War Balloon,uncommon,R,3,Artifact - Vehicle,True
+97556,TLA,Omashu City,common,GR,0,Land,True
+97314,TLA,Vengeful Villagers,uncommon,W,4,Creature - Human Citizen,True
+97371,TLA,Epic Downfall,uncommon,B,2,Sorcery,True
+97396,TLA,Swampsnare Trap,common,B,3,Enchantment - Aura,True
+97363,TLA,Buzzard-Wasp Colony,uncommon,B,4,Creature - Bird Insect,True
+97522,TLA,"Sokka, Lateral Strategist",uncommon,UW,3,Legendary Creature - Human Warrior Ally,True
+97477,TLA,True Ancestry,uncommon,G,2,Sorcery - Lesson,True
+97320,TLA,Boomerang Basics,uncommon,U,1,Sorcery - Lesson,True
+97491,TLA,Bitter Work,uncommon,GR,3,Enchantment,True
+97512,TLA,"Katara, Water Tribe's Hope",rare,UW,5,Legendary Creature - Human Warrior Ally,True
+97528,TLA,"Toph, the First Metalbender",rare,GRW,4,Legendary Creature - Human Warrior Ally,True
+97562,TLA,White Lotus Hideout,uncommon,,0,Land,True
+97494,TLA,Cruel Administrator,uncommon,BR,5,Creature - Human Soldier,True
+97305,TLA,Path to Redemption,common,W,2,Enchantment - Aura,True
+97282,TLA,"Appa, Loyal Sky Bison",uncommon,W,6,Legendary Creature - Bison Ally,True
+97291,TLA,Enter the Avatar State,uncommon,W,1,Instant - Lesson,True
+97345,TLA,Serpent of the Pass,uncommon,U,7,Creature - Serpent,True
+97333,TLA,"Katara, Bending Prodigy",uncommon,U,3,Legendary Creature - Human Warrior Ally,True
+97554,TLA,Misty Palms Oasis,common,BW,0,Land,True
+97504,TLA,Guru Pathik,uncommon,GU,4,Legendary Creature - Human Monk Ally,True
+97384,TLA,"Mai, Scornful Striker",rare,B,2,Legendary Creature - Human Noble Ally,True
+97455,TLA,Elemental Teachings,rare,G,5,Instant - Lesson,True
+97462,TLA,Leaves from the Vine,uncommon,G,2,Enchantment - Saga,True
+97419,TLA,Jet's Brainwashing,uncommon,R,1,Sorcery,True
+97506,TLA,"Hei Bai, Spirit of Balance",uncommon,BW,4,Legendary Creature - Bear Spirit,True
+97479,TLA,Unlucky Cabbage Merchant,uncommon,G,2,Creature - Human Citizen,True
+97483,TLA,"Aang, Swift Savior",rare,UW,3,Legendary Creature - Human Avatar Ally,True
+97366,TLA,Cat-Gator,uncommon,B,7,Creature - Fish Crocodile,True
+97431,TLA,Sozin's Comet,mythic,R,5,Sorcery,True
+97547,TLA,Ba Sing Se,rare,G,0,Land,True
+97565,TLA,Swamp,basic,B,0,Basic Land - Swamp,True
+97277,TLA,"Aang, the Last Airbender",uncommon,W,4,Legendary Creature - Human Avatar Ally,True
+97413,TLA,Firebender Ascension,rare,R,2,Enchantment,True
+97544,TLA,Abandoned Air Temple,rare,W,0,Land,True
+97493,TLA,Cat-Owl,common,UW,4,Creature - Cat Bird,True
+97485,TLA,Abandon Attachments,common,RU,2,Instant - Lesson,True
+97370,TLA,Deadly Precision,common,B,1,Sorcery,True
+97500,TLA,Earth Village Ruffians,common,BG,3,Creature - Human Soldier Rogue,True
+97566,TLA,Mountain,basic,R,0,Basic Land - Mountain,True
+97507,TLA,Hermitic Herbalist,uncommon,GU,2,Creature - Human Druid Ally,True
+97452,TLA,Earthbender Ascension,rare,G,3,Enchantment,True
+97457,TLA,Foggy Swamp Vinebender,common,G,4,Creature - Human Plant Ally,True
+97295,TLA,Glider Staff,uncommon,W,3,Artifact - Equipment,True
+97323,TLA,First-Time Flyer,common,U,2,Creature - Human Pilot Ally,True
+97443,TLA,Badgermole,common,G,5,Creature - Badger Mole,True
+97548,TLA,Boiling Rock Prison,common,BR,0,Land,True
+97391,TLA,Raven Eagle,rare,B,3,Creature - Bird Assassin,True
+97489,TLA,"Azula, Cunning Usurper",rare,BU,5,Legendary Creature - Human Noble Rogue,True
+97446,TLA,"Bumi, King of Three Trials",uncommon,G,6,Legendary Creature - Human Noble Ally,True
+97525,TLA,Sun Warriors,uncommon,RW,4,Creature - Human Warrior Ally,True
+97274,TLA,Aang's Journey,common,,2,Sorcery - Lesson,True
+97382,TLA,"Koh, the Face Stealer",mythic,B,6,Legendary Creature - Shapeshifter Spirit,True
+97514,TLA,"Long Feng, Grand Secretariat",uncommon,BG,3,Legendary Creature - Human Advisor,True
+97405,TLA,Crescent Island Temple,uncommon,R,4,Legendary Enchantment - Shrine,True
+97495,TLA,Dai Li Agents,uncommon,BG,5,Creature - Human Soldier,True
+97404,TLA,Combustion Technique,uncommon,R,2,Instant - Lesson,True
+97490,TLA,Beifong's Bounty Hunters,rare,BG,4,Creature - Human Mercenary,True
+97505,TLA,"Hama, the Bloodbender",uncommon,BU,5,Legendary Creature - Human Warlock,True
+97454,TLA,Earthen Ally,rare,BGRUW,1,Creature - Human Soldier Ally,True
+97549,TLA,Fire Nation Palace,rare,R,0,Land,True
+97418,TLA,"Jeong Jeong, the Deserter",uncommon,R,3,Legendary Creature - Human Rebel Ally,True
+97343,TLA,Rowdy Snowballers,common,U,3,Creature - Human Peasant Ally,True
+97337,TLA,Lost Days,common,U,5,Instant - Lesson,True
+97424,TLA,"Mai, Jaded Edge",uncommon,R,2,Legendary Creature - Human Noble,True
+97411,TLA,Fire Nation Raider,common,R,4,Creature - Human Soldier,True
+97559,TLA,Secret Tunnel,rare,,0,Land - Cave,True
+97498,TLA,Earth King's Lieutenant,rare,GW,2,Creature - Human Soldier Ally,True
+97459,TLA,"Haru, Hidden Talent",uncommon,G,2,Legendary Creature - Human Peasant Ally,True
+97332,TLA,It'll Quench Ya!,common,U,2,Instant - Lesson,True
+97461,TLA,Kyoshi Island Plaza,uncommon,G,4,Legendary Enchantment - Shrine,True
+97469,TLA,Rebellious Captives,common,G,2,Creature - Human Peasant Ally,True
+97481,TLA,"Aang, at the Crossroads",rare,GUW,5,Legendary Creature - Human Avatar Ally,True
+97502,TLA,Fire Lord Zuko,rare,BRW,3,Legendary Creature - Human Noble Ally,True
+97496,TLA,Dragonfly Swarm,uncommon,RU,3,Creature - Dragon Insect,True
+97294,TLA,Glider Kids,common,W,3,Creature - Human Pilot Ally,True
+97470,TLA,Rockalanche,uncommon,G,3,Sorcery - Lesson,True
+97410,TLA,Fire Nation Cadets,common,R,1,Creature - Human Soldier,True
+97564,TLA,Island,basic,U,0,Basic Land - Island,True
+97551,TLA,Jasmine Dragon Tea Shop,rare,,0,Land,True
+97535,TLA,Barrels of Blasting Jelly,common,,1,Artifact,True
+97327,TLA,Giant Koi,common,U,6,Creature - Fish,True
+97401,TLA,Bumi Bash,common,R,4,Sorcery,True
+97331,TLA,Invasion Submersible,uncommon,U,3,Artifact - Vehicle,True
+97341,TLA,Octopus Form,common,U,1,Instant - Lesson,True
+97475,TLA,Sparring Dummy,uncommon,G,2,Artifact Creature - Scarecrow,True
+97521,TLA,"Sokka, Bold Boomeranger",rare,RU,2,Legendary Creature - Human Warrior Ally,True
+97373,TLA,The Fire Nation Drill,rare,B,4,Legendary Artifact - Vehicle,True
+97526,TLA,Tolls of War,uncommon,BW,2,Enchantment,True
+97381,TLA,"June, Bounty Hunter",uncommon,B,2,Legendary Creature - Human Mercenary,True
+97546,TLA,Airship Engine Room,common,RU,0,Land,True
+97285,TLA,Avatar's Wrath,rare,W,4,Sorcery,True
+97561,TLA,Sun-Blessed Peak,common,RW,0,Land,True
+97300,TLA,The Legend of Yangchen,mythic,W,5,Enchantment - Saga,True
+97499,TLA,Earth Rumble Wrestlers,common,GR,4,Creature - Human Warrior Performer,True
+97471,TLA,Rocky Rebuke,common,G,2,Instant,True
+97508,TLA,"Iroh, Grand Lotus",rare,GRU,6,Legendary Creature - Human Noble Ally,True
+97513,TLA,The Lion-Turtle,rare,GU,3,Legendary Creature - Elder Cat Turtle,True
+97372,TLA,Fatal Fissure,uncommon,B,2,Instant,True
+97435,TLA,"Ty Lee, Artful Acrobat",uncommon,R,3,Legendary Creature - Human Performer,True
+97354,TLA,Waterbender Ascension,rare,U,2,Enchantment,True
+97472,TLA,Saber-Tooth Moose-Lion,common,G,6,Creature - Elk Cat,True
+97460,TLA,Invasion Tactics,uncommon,G,5,Enchantment,True
+97421,TLA,The Legend of Roku,mythic,R,4,Enchantment - Saga,True
+97534,TLA,"Zuko, Conflicted",rare,BR,2,Legendary Creature - Human Rogue,True
+97308,TLA,Sandbenders' Storm,common,W,4,Instant,True
+97360,TLA,"Azula, On the Hunt",uncommon,B,4,Legendary Creature - Human Noble,True
+97361,TLA,Beetle-Headed Merchants,common,B,5,Creature - Human Citizen,True
+97338,TLA,Master Pakku,uncommon,U,2,Legendary Creature - Human Advisor Ally,True
+97293,TLA,Gather the White Lotus,uncommon,W,5,Sorcery,True
+97519,TLA,"Professor Zei, Anthropologist",uncommon,RU,2,Legendary Creature - Human Advisor Ally,True
+97352,TLA,The Unagi of Kyoshi Island,rare,U,5,Legendary Creature - Serpent,True
+97552,TLA,Kyoshi Village,common,GW,0,Land,True
+97467,TLA,Pillar Launch,common,G,1,Instant,True
+97407,TLA,Deserter's Disciple,common,R,2,Creature - Human Rebel Ally,True
+97555,TLA,North Pole Gates,common,UW,0,Land,True
+97348,TLA,Spirit Water Revival,rare,U,3,Sorcery,True
+97476,TLA,"Toph, the Blind Bandit",uncommon,G,3,Legendary Creature - Human Warrior Ally,True
+97367,TLA,Corrupt Court Official,common,B,2,Creature - Human Advisor,True
+97275,TLA,Energybending,uncommon,,2,Instant - Lesson,True
+97412,TLA,Fire Sages,uncommon,R,2,Creature - Human Cleric,True
+97415,TLA,Firebending Student,rare,R,2,Creature - Human Monk,True
+97449,TLA,The Earth King,rare,G,4,Legendary Creature - Human Noble Ally,True
+97533,TLA,"Zhao, Ruthless Admiral",uncommon,BR,4,Legendary Creature - Human Soldier,True
+97473,TLA,Seismic Sense,uncommon,G,1,Sorcery - Lesson,True
+97322,TLA,Ember Island Production,uncommon,U,5,Sorcery,True
+97346,TLA,Sokka's Haiku,uncommon,U,5,Instant - Lesson,True
+97420,TLA,The Last Agni Kai,rare,R,2,Instant,True
+97434,TLA,Twin Blades,uncommon,R,3,Artifact - Equipment,True
+97365,TLA,Canyon Crawler,common,B,6,Creature - Spider Beast,True
+97376,TLA,Foggy Swamp Hunters,common,B,4,Creature - Human Ranger Ally,True
+97480,TLA,Walltop Sentries,common,G,3,Creature - Human Soldier Ally,True
+97310,TLA,Southern Air Temple,uncommon,W,4,Legendary Enchantment - Shrine,True
+97563,TLA,Plains,basic,W,0,Basic Land - Plains,True
+97325,TLA,Forecasting Fortune Teller,common,U,2,Creature - Human Advisor Ally,True
+97408,TLA,Fated Firepower,mythic,R,3,Enchantment,True
+97394,TLA,Ruinous Waterbending,uncommon,B,3,Sorcery - Lesson,True
+97487,TLA,Avatar Aang,mythic,BGRUW,4,Legendary Creature - Human Avatar Ally,True
+97466,TLA,Ostrich-Horse,common,G,3,Creature - Bird Horse,True
+97362,TLA,Boiling Rock Rioter,rare,B,3,Creature - Human Rogue Ally,True
+97315,TLA,Water Tribe Captain,common,W,3,Creature - Human Soldier Ally,True
+97292,TLA,Fancy Footwork,uncommon,W,3,Instant - Lesson,True
+97334,TLA,Knowledge Seeker,uncommon,U,2,Creature - Fox Spirit,True
+97388,TLA,Ozai's Cruelty,uncommon,B,3,Sorcery - Lesson,True
+97311,TLA,"Suki, Courageous Rescuer",rare,W,3,Legendary Creature - Human Warrior Ally,True
+97351,TLA,"Ty Lee, Chi Blocker",rare,U,3,Legendary Creature - Human Performer Ally,True
+97307,TLA,Razor Rings,common,W,2,Instant,True
+97358,TLA,"Yue, the Moon Spirit",rare,U,4,Legendary Creature - Spirit Ally,True
+97378,TLA,Heartless Act,uncommon,B,2,Instant,True
+97458,TLA,Great Divide Guide,rare,G,2,Creature - Human Scout Ally,True
+97444,TLA,Badgermole Cub,mythic,G,2,Creature - Badger Mole,True
+97368,TLA,Dai Li Indoctrination,common,B,2,Sorcery - Lesson,True
+97453,TLA,Earthbending Lesson,common,G,4,Sorcery - Lesson,True
+97313,TLA,United Front,mythic,W,2,Sorcery,True
+97302,TLA,Master Piandao,uncommon,W,5,Legendary Creature - Human Warrior Ally,True
+97553,TLA,Meditation Pools,common,GU,0,Land,True
+97357,TLA,Watery Grasp,common,U,1,Enchantment - Aura,True
+97330,TLA,Iguana Parrot,common,U,3,Creature - Lizard Bird Pirate,True
+97540,TLA,Planetarium of Wan Shi Tong,mythic,,6,Legendary Artifact,True
+97510,TLA,"Jet, Freedom Fighter",uncommon,RW,5,Legendary Creature - Human Rebel Ally,True
+97317,TLA,Yip Yip!,common,W,1,Instant - Lesson,True
+97389,TLA,Phoenix Fleet Airship,mythic,B,4,Artifact - Vehicle,True
+97316,TLA,Water Tribe Rallier,uncommon,W,2,Creature - Human Soldier Ally,True
+97288,TLA,Destined Confrontation,uncommon,W,4,Sorcery,True
+97509,TLA,"Iroh, Tea Master",rare,RW,3,Legendary Creature - Human Citizen Ally,True
+97347,TLA,The Spirit Oasis,uncommon,U,3,Legendary Enchantment - Shrine,True
+97468,TLA,Raucous Audience,common,G,2,Creature - Human Citizen,True
+97406,TLA,Cunning Maneuver,common,R,2,Instant,True
+97278,TLA,Aang's Iceberg,rare,W,3,Enchantment,True
+97463,TLA,The Legend of Kyoshi,mythic,G,6,Enchantment - Saga,True
+97560,TLA,Serpent's Pass,common,BU,0,Land,True
+97290,TLA,Earth Kingdom Protectors,uncommon,W,1,Creature - Human Soldier Ally,True
+97539,TLA,Meteor Sword,uncommon,,7,Artifact - Equipment,True
+97328,TLA,Gran-Gran,uncommon,U,1,Legendary Creature - Human Peasant Ally,True
+97386,TLA,Northern Air Temple,uncommon,B,1,Legendary Enchantment - Shrine,True
+97335,TLA,The Legend of Kuruk,mythic,U,4,Enchantment - Saga,True
+97281,TLA,Airbending Lesson,common,W,3,Instant - Lesson,True
+97385,TLA,Merchant of Many Hats,common,B,2,Creature - Human Peasant Ally,True
+97398,TLA,Wolfbat,uncommon,B,3,Creature - Wolf Bat,True
+97517,TLA,Platypus-Bear,common,GU,2,Creature - Platypus Bear,True
+97350,TLA,Tiger-Seal,rare,U,1,Creature - Cat Seal,True
+97430,TLA,Solstice Revelations,uncommon,R,3,Instant - Lesson,True
+97387,TLA,Obsessive Pursuit,rare,B,2,Enchantment,True
+97375,TLA,Fire Navy Trebuchet,uncommon,B,3,Artifact Creature - Wall,True
+97486,TLA,Air Nomad Legacy,uncommon,UW,2,Enchantment,True
+97383,TLA,"Lo and Li, Twin Tutors",uncommon,B,5,Legendary Creature - Human Advisor,True
+97527,TLA,"Toph, Hardheaded Teacher",rare,GR,4,Legendary Creature - Human Warrior Ally,True
+97429,TLA,Rough Rhino Cavalry,common,R,5,Creature - Human Mercenary,True
+97397,TLA,Tundra Tank,uncommon,B,3,Artifact - Vehicle,True
+97416,TLA,How to Start a Riot,common,R,3,Instant - Lesson,True
+97456,TLA,"Flopsie, Bumi's Buddy",uncommon,G,6,Legendary Creature - Ape Goat,True
+97447,TLA,Cycle of Renewal,common,G,3,Instant - Lesson,True
+97279,TLA,Airbender Ascension,rare,W,2,Enchantment,True
+97342,TLA,Otter-Penguin,common,U,2,Creature - Otter Bird,True
+97529,TLA,Uncle Iroh,uncommon,GR,3,Legendary Creature - Human Noble Ally,True
+97321,TLA,Crashing Wave,uncommon,U,2,Sorcery,True
+97511,TLA,"Katara, the Fearless",rare,GUW,3,Legendary Creature - Human Warrior Ally,True
+97515,TLA,Messenger Hawk,common,BU,3,Creature - Bird Scout,True
+97359,TLA,Azula Always Lies,common,B,2,Instant - Lesson,True
+97450,TLA,Earth Kingdom General,uncommon,G,4,Creature - Human Soldier Ally,True
+97550,TLA,Foggy Bottom Swamp,common,BG,0,Land,True
+97428,TLA,Redirect Lightning,rare,R,1,Instant - Lesson,True
+97567,TLA,Forest,basic,G,0,Basic Land - Forest,True
+97451,TLA,Earth Rumble,uncommon,G,4,Sorcery,True
+97516,TLA,"Ozai, the Phoenix King",mythic,BR,6,Legendary Creature - Human Noble,True
+97497,TLA,Earth Kingdom Soldier,common,GW,5,Creature - Human Soldier,True
+97523,TLA,"Sokka, Tenacious Tactician",rare,RUW,4,Legendary Creature - Human Warrior Ally,True
+97545,TLA,Agna Qel'a,rare,U,0,Land,True
+97280,TLA,Airbender's Reversal,uncommon,W,2,Instant - Lesson,True
+97439,TLA,"Zhao, the Moon Slayer",rare,R,2,Legendary Creature - Human Soldier,True
+97409,TLA,Fire Nation Attacks,uncommon,R,5,Instant,True
+97532,TLA,White Lotus Reinforcements,uncommon,GW,3,Creature - Human Soldier Ally,True
+97543,TLA,White Lotus Tile,mythic,,4,Artifact,True
+97448,TLA,Diligent Zookeeper,rare,G,4,Creature - Human Citizen Ally,True
+97538,TLA,Kyoshi Battle Fan,common,,2,Artifact - Equipment,True
+97530,TLA,Vindictive Warden,common,BR,3,Creature - Human Soldier,True
+97339,TLA,"The Mechanist, Aerial Artisan",rare,U,3,Legendary Creature - Human Artificer Ally,True
+97417,TLA,Iroh's Demonstration,uncommon,R,2,Sorcery - Lesson,True
+97558,TLA,Rumble Arena,common,,0,Land,True
+97441,TLA,Allies at Last,uncommon,G,3,Instant,True
+97319,TLA,Benevolent River Spirit,uncommon,U,2,Creature - Spirit,True
+97287,TLA,Curious Farm Animals,common,W,1,Creature - Boar Elk Bird Ox,True
+97324,TLA,Flexible Waterbender,common,U,4,Creature - Human Warrior Ally,True
+97427,TLA,Ran and Shaw,rare,R,5,Legendary Creature - Dragon,True
+97303,TLA,"Momo, Friendly Flier",rare,W,1,Legendary Creature - Lemur Bat Ally,True
+97377,TLA,Foggy Swamp Visions,rare,B,3,Sorcery,True
+97541,TLA,Trusty Boomerang,uncommon,,1,Artifact - Equipment,True
+97298,TLA,Jeong Jeong's Deserters,common,W,2,Creature - Human Rebel Ally,True
+97442,TLA,Avatar Destiny,rare,G,4,Enchantment - Aura,True
+97374,TLA,Fire Nation Engineer,uncommon,B,3,Creature - Human Artificer,True
+97400,TLA,Boar-q-pine,common,R,3,Creature - Boar Porcupine,True
+97304,TLA,"Momo, Playful Pet",uncommon,W,1,Legendary Creature - Lemur Bat Ally,True
+97392,TLA,The Rise of Sozin,mythic,B,6,Enchantment - Saga,True
+97425,TLA,Mongoose Lizard,common,R,6,Creature - Mongoose Lizard,True
+97283,TLA,"Appa, Steadfast Guardian",mythic,W,4,Legendary Creature - Bison Ally,True
+97306,TLA,Rabaroo Troop,common,W,5,Creature - Rabbit Kangaroo,True
+97329,TLA,Honest Work,uncommon,U,1,Enchantment - Aura,True
+97390,TLA,Pirate Peddlers,common,B,3,Creature - Human Pirate,True
+97520,TLA,Sandbender Scavengers,rare,BW,2,Creature - Human Rogue,True
+97437,TLA,Wartime Protestors,rare,R,4,Creature - Human Rebel Ally,True
+97531,TLA,Wandering Musicians,common,RW,4,Creature - Human Bard Ally,True
+97356,TLA,Waterbending Scroll,uncommon,U,2,Artifact,True
+97296,TLA,"Hakoda, Selfless Commander",rare,W,4,Legendary Creature - Human Warrior Ally,True
+97557,TLA,Realm of Koh,rare,B,0,Land,True
+97414,TLA,Firebending Lesson,common,R,1,Instant - Lesson,True
+97399,TLA,Zuko's Conviction,uncommon,B,1,Instant,True
+98657,TLE,Heartbeat of Spring,mythic,G,3,Enchantment,True
+98662,TLE,Captain Sisay,mythic,GW,4,Legendary Creature - Human Soldier,True
+98651,TLE,Shattering Spree,mythic,R,1,Sorcery,True
+98661,TLE,Taunting Challenge,mythic,G,3,Sorcery,True
+98635,TLE,Training Grounds,mythic,U,1,Enchantment,True
+98668,TLE,Cityscape Leveler,mythic,,8,Artifact Creature - Construct,True
+98636,TLE,Visions of Beyond,mythic,U,1,Instant,True
+98672,TLE,Fabled Passage,mythic,,0,Land,True
+98660,TLE,Rites of Flourishing,mythic,G,3,Enchantment,True
+98641,TLE,Blasphemous Act,mythic,R,9,Sorcery,True
+98656,TLE,The Great Henge,mythic,G,9,Legendary Artifact,True
+98637,TLE,Black Sun's Zenith,mythic,B,2,Sorcery,True
+98642,TLE,"Diaochan, Artful Beauty",mythic,R,4,Legendary Creature - Human Advisor,True
+98648,TLE,Mirrorwing Dragon,mythic,R,5,Creature - Dragon,True
+98644,TLE,Fervor,mythic,R,3,Enchantment,True
+98650,TLE,Searing Blood,mythic,R,2,Instant,True
+98664,TLE,Fevered Visions,mythic,RU,3,Enchantment,True
+98676,TLE,"Valakut, the Molten Pinnacle",mythic,R,0,Land,True
+98675,TLE,Treetop Village,mythic,G,0,Land,True
+98654,TLE,Beastmaster Ascension,mythic,G,3,Enchantment,True
+98669,TLE,Meteorite,mythic,,5,Artifact,True
+98674,TLE,Tarnished Citadel,mythic,,0,Land,True
+98653,TLE,Warstorm Surge,mythic,R,6,Enchantment,True
+98671,TLE,Dark Depths,mythic,,0,Legendary Snow Land,True
+98643,TLE,Dockside Extortionist,mythic,R,2,Creature - Goblin Pirate,True
+98663,TLE,Eladamri's Call,mythic,GW,2,Instant,True
+98665,TLE,Join the Dance,mythic,GW,2,Sorcery,True
+98655,TLE,Elemental Bond,mythic,G,3,Enchantment,True
+98639,TLE,Cruel Tutor,mythic,B,3,Sorcery,True
+98658,TLE,Heroic Intervention,mythic,G,2,Instant,True
+98670,TLE,Sundial of the Infinite,mythic,,2,Artifact,True
+98666,TLE,"Koma, Cosmos Serpent",mythic,GU,7,Legendary Creature - Serpent,True
+98646,TLE,Insurrection,mythic,R,8,Sorcery,True
+98652,TLE,Volcanic Torrent,mythic,R,5,Sorcery,True
+98647,TLE,Lightning Bolt,mythic,R,1,Instant,True
+98659,TLE,Return of the Wildspeaker,mythic,G,5,Instant,True
+98640,TLE,Noxious Gearhulk,mythic,B,6,Artifact Creature - Construct,True
+98649,TLE,Rending Volley,mythic,R,1,Instant,True
+98667,TLE,Rhys the Redeemed,mythic,GW,1,Legendary Creature - Elf Warrior,True
+98634,TLE,Standstill,mythic,U,2,Enchantment,True
+98645,TLE,Humble Defector,mythic,R,2,Creature - Human Rogue,True
+98673,TLE,Sunbaked Canyon,mythic,RW,0,Land,True
+98638,TLE,Bloodchief Ascension,mythic,B,1,Enchantment,True
+98239,TLE,Nightmares and Daydreams,rare,U,3,Enchantment - Saga,True
+98294,TLE,Stand United,common,GW,2,Instant,True
+98301,TLE,Coastal Piracy,uncommon,U,4,Enchantment,True
+98292,TLE,Hook Swords,uncommon,RW,3,Artifact - Equipment,True
+98218,TLE,Mechanical Glider,common,,1,Artifact - Equipment,True
+98681,TLE,Deadly Rollick,rare,B,4,Instant,True
+98677,TLE,Enlightened Tutor,rare,W,1,Instant,True
+98252,TLE,Giant Fly,common,B,3,Creature - Insect,True
+98678,TLE,Flawless Maneuver,rare,W,3,Instant,True
+98300,TLE,Brainstorm,common,U,1,Instant,True
+98315,TLE,Suspicious Bookcase,uncommon,,2,Artifact Creature - Wall,True
+98196,TLE,Capital Guard,common,R,2,Creature - Human Soldier,True
+98258,TLE,"Chong and Lily, Nomads",rare,R,4,Legendary Creature - Human Bard Ally,True
+98180,TLE,Sledding Otter-Penguin,common,W,3,Creature - Otter Bird,True
+98611,TLE,Thriving Bluff,common,R,0,Land,True
+98243,TLE,"Wan Shi Tong, All-Knowing",mythic,U,5,Legendary Creature - Bird Spirit,True
+98240,TLE,Princess Yue,uncommon,U,3,Legendary Creature - Human Noble Ally,True
+98694,TLE,Sokka's Charge,rare,W,4,Enchantment,True
+98296,TLE,Acrobatic Leap,common,W,1,Instant,True
+98274,TLE,The Art of Tea,common,G,2,Instant - Lesson,True
+98208,TLE,"Zuko, Avatar Hunter",rare,R,5,Legendary Creature - Human Noble,True
+98261,TLE,Founding of Omashu,uncommon,R,3,Enchantment - Saga,True
+98700,TLE,Momo's Heist,rare,R,3,Sorcery,True
+98307,TLE,Diresight,common,B,3,Sorcery,True
+98260,TLE,"Fang, Roku's Companion",rare,R,5,Legendary Creature - Dragon,True
+98614,TLE,Thriving Isle,common,U,0,Land,True
+98697,TLE,Aang and Katara,rare,GUW,6,Legendary Creature - Human Avatar Ally,True
+98609,TLE,Run Amok,common,R,2,Instant,True
+98246,TLE,"Azula, Ruthless Firebender",mythic,B,3,Legendary Creature - Human Noble,True
+98278,TLE,Bumi's Feast Lecture,uncommon,G,2,Sorcery - Lesson,True
+98178,TLE,Kyoshi Warrior Guard,common,W,2,Creature - Human Warrior Ally,True
+98219,TLE,"Aang, Airbending Master",mythic,W,5,Legendary Creature - Human Avatar Ally,True
+98269,TLE,Reckless Blaze,rare,R,5,Sorcery - Lesson,True
+98268,TLE,Overwhelming Victory,rare,R,5,Instant - Lesson,True
+98685,TLE,Obscuring Haze,rare,G,3,Instant,True
+98211,TLE,Earthbending Student,uncommon,G,3,Creature - Human Warrior Ally,True
+98245,TLE,Whirlwind Technique,uncommon,U,6,Instant - Lesson,True
+98228,TLE,"Sokka, Swordmaster",mythic,W,3,Legendary Creature - Human Warrior Ally,True
+98281,TLE,Creeping Crystal Coating,uncommon,G,3,Enchantment - Aura,True
+98199,TLE,Fire Nation Archers,rare,R,4,Creature - Human Archer,True
+98198,TLE,Explosive Shot,common,R,2,Sorcery,True
+98195,TLE,Purple Pentapus,common,B,1,Creature - Octopus Starfish,True
+98308,TLE,Bolt Bend,uncommon,R,4,Instant,True
+98302,TLE,Consider,common,U,1,Instant,True
+98185,TLE,Flying Dolphin-Fish,common,U,2,Creature - Whale Fish,True
+98177,TLE,"Katara, Heroic Healer",uncommon,W,5,Legendary Creature - Human Warrior Ally,True
+98241,TLE,"Tui and La, Moon and Ocean",rare,U,4,Legendary Creature - Fish Spirit,True
+98179,TLE,"Momo, Rambunctious Rascal",uncommon,W,3,Legendary Creature - Lemur Bat Ally,True
+98699,TLE,Sokka and Suki,rare,RUW,3,Legendary Creature - Human Warrior Ally,True
+98312,TLE,Descendants' Path,rare,G,3,Enchantment,True
+98230,TLE,"Suki, Kyoshi Captain",rare,W,3,Legendary Creature - Human Warrior Ally,True
+98284,TLE,"Hei Bai, Forest Guardian",mythic,BGRUW,4,Legendary Creature - Bear Spirit,True
+98689,TLE,Swiftfoot Boots,rare,,2,Artifact - Equipment,True
+98212,TLE,Eel-Hounds,uncommon,G,4,Creature - Fish Dog,True
+98188,TLE,Turtle-Seals,common,U,4,Creature - Turtle Seal,True
+98698,TLE,"Toph, Greatest Earthbender",rare,GR,4,Legendary Creature - Human Warrior Ally,True
+98174,TLE,Aardvark Sloth,common,W,4,Creature - Sloth Beast,True
+98226,TLE,Monk Gyatso,rare,W,4,Legendary Creature - Human Monk,True
+98686,TLE,Worldly Tutor,rare,G,1,Instant,True
+98206,TLE,Warship Scout,common,R,1,Creature - Human Scout,True
+98186,TLE,Lost in the Spirit World,uncommon,U,3,Sorcery,True
+98612,TLE,Thriving Grove,common,G,0,Land,True
+98305,TLE,Bastion of Remembrance,uncommon,B,3,Enchantment,True
+98200,TLE,Fire Nation Soldier,common,R,3,Creature - Human Soldier,True
+98690,TLE,"Appa, the Vigilant",rare,W,7,Legendary Creature - Bison Ally,True
+98298,TLE,Duelist's Heritage,rare,W,3,Enchantment,True
+98271,TLE,Storm of Memories,rare,R,5,Sorcery,True
+98194,TLE,Lion Vulture,rare,B,4,Creature - Cat Bird,True
+98176,TLE,"Appa, Aang's Companion",uncommon,W,4,Legendary Creature - Bison Ally,True
+98288,TLE,Tale of Katara and Toph,rare,G,3,Enchantment,True
+98231,TLE,Tale of Momo,rare,W,3,Sorcery,True
+98277,TLE,"Bosco, Just a Bear",uncommon,G,5,Legendary Creature - Bear,True
+98272,TLE,"Zuko, Firebending Master",mythic,R,2,Legendary Creature - Human Noble Ally,True
+98283,TLE,Elephant-Mandrill,uncommon,G,3,Creature - Elephant Monkey,True
+98191,TLE,Fire Nation Ambushers,common,B,3,Creature - Human Soldier,True
+98275,TLE,"Avatar Kyoshi, Earthbender",mythic,G,8,Legendary Creature - Human Avatar,True
+98680,TLE,Mystical Tutor,rare,U,1,Instant,True
+98282,TLE,Crystalline Armor,rare,G,4,Enchantment - Aura,True
+98610,TLE,Explore,common,G,2,Sorcery,True
+98238,TLE,"Katara, Waterbending Master",mythic,U,2,Legendary Creature - Human Warrior Ally,True
+98314,TLE,Many Partings,common,G,1,Sorcery,True
+98225,TLE,Koala-Sheep,common,W,3,Creature - Bear Sheep,True
+98266,TLE,Lost in Memories,rare,R,2,Enchantment - Aura,True
+98696,TLE,Mai and Zuko,rare,BRU,4,Legendary Creature - Human Noble Ally,True
+98270,TLE,"Smellerbee, Rebel Fighter",rare,R,4,Legendary Creature - Human Rebel Ally,True
+98182,TLE,Tundra Wall,common,W,2,Creature - Wall,True
+98299,TLE,Valorous Stance,uncommon,W,2,Instant,True
+98615,TLE,Thriving Moor,common,B,0,Land,True
+98197,TLE,Dragon Moose,common,R,4,Creature - Dragon Elk,True
+98263,TLE,Freedom Fighter Recruit,common,R,2,Creature - Human Rebel Ally,True
+98242,TLE,Unagi's Spray,common,U,1,Instant,True
+98688,TLE,Sol Ring,rare,,1,Artifact,True
+98608,TLE,Feed the Swarm,common,B,2,Sorcery,True
+98679,TLE,Fierce Guardianship,rare,U,3,Instant,True
+98613,TLE,Thriving Heath,common,W,0,Land,True
+98207,TLE,"Zhao, the Seething Flame",uncommon,R,5,Legendary Creature - Human Soldier,True
+98204,TLE,Loyal Fire Sage,uncommon,R,3,Creature - Human Cleric Ally,True
+98220,TLE,Air Nomad Student,uncommon,W,4,Creature - Human Monk,True
+98216,TLE,Seismic Tutelage,rare,G,4,Enchantment - Aura,True
+98202,TLE,"Iroh, Firebending Instructor",uncommon,R,3,Legendary Creature - Human Noble Ally,True
+98310,TLE,Fiery Confluence,rare,R,4,Sorcery,True
+98223,TLE,"Jet, Rebel Leader",rare,W,4,Legendary Creature - Human Rebel Ally,True
+98232,TLE,That's Rough Buddy,uncommon,W,2,Instant - Lesson,True
+98224,TLE,Kindly Customer,common,W,2,Creature - Human Citizen,True
+98217,TLE,Hog-Monkey Rampage,uncommon,GR,2,Instant,True
+98264,TLE,"Iroh, Dragon of the West",rare,R,4,Legendary Creature - Human Noble Ally,True
+98214,TLE,Hippo-Cows,common,G,5,Creature - Hippo Ox,True
+98306,TLE,Dark Deal,uncommon,B,3,Sorcery,True
+98215,TLE,Match the Odds,uncommon,G,3,Sorcery - Lesson,True
+98251,TLE,Fire Nation Salvagers,rare,B,5,Creature - Human Soldier,True
+98303,TLE,Dramatic Reversal,common,U,2,Instant,True
+98235,TLE,The Blue Spirit,rare,U,4,Legendary Creature - Human Rogue Ally,True
+98221,TLE,"The Duke, Rebel Sentry",uncommon,W,1,Legendary Creature - Human Rebel Ally,True
+98190,TLE,Elephant-Rat,common,B,2,Creature - Elephant Rat,True
+98286,TLE,Master's Guidance,rare,G,3,Enchantment,True
+98189,TLE,Water Whip,rare,U,2,Sorcery - Lesson,True
+98172,TLE,"Aang, Air Nomad",rare,W,5,Legendary Creature - Human Avatar Ally,True
+98684,TLE,Gamble,rare,R,1,Sorcery,True
+98295,TLE,"Zuko, Seeking Honor",uncommon,BR,3,Legendary Creature - Human Noble,True
+98257,TLE,"Avatar Roku, Firebender",mythic,R,6,Legendary Creature - Human Avatar,True
+98234,TLE,Baboon Spirit,rare,U,3,Creature - Monkey Spirit,True
+98244,TLE,Waterbender's Restoration,rare,U,2,Instant - Lesson,True
+98254,TLE,"Nyla, Shirshu Sleuth",rare,B,5,Legendary Creature - Mole Beast,True
+98248,TLE,Desperate Plea,rare,B,2,Sorcery - Lesson,True
+98313,TLE,Inspiring Call,uncommon,G,3,Instant,True
+98255,TLE,Ruthless Waterbender,uncommon,B,2,Creature - Human Soldier Ally,True
+98304,TLE,Frantic Search,common,U,3,Instant,True
+98280,TLE,Cracked Earth Technique,uncommon,G,5,Sorcery - Lesson,True
+98293,TLE,"Katara, Seeking Revenge",uncommon,BU,4,Legendary Creature - Human Warrior Ally,True
+98682,TLE,Entomb,rare,B,1,Instant,True
+98203,TLE,Komodo Rhino,common,R,4,Creature - Lizard Rhino,True
+98701,TLE,Uncle's Musings,rare,G,4,Sorcery,True
+98259,TLE,Deer-Dog,common,R,2,Creature - Elk Dog,True
+98181,TLE,"Sokka, Wolf Cove's Protector",uncommon,W,3,Legendary Creature - Human Warrior Ally,True
+98289,TLE,Tectonic Split,rare,G,6,Enchantment,True
+98291,TLE,"Aang, A Lot to Learn",uncommon,GW,3,Legendary Creature - Human Avatar Ally,True
+98311,TLE,Fists of Flame,common,R,2,Instant,True
+98184,TLE,Deny Entry,common,U,3,Instant,True
+98250,TLE,Fire Nation Occupation,rare,B,3,Enchantment,True
+98273,TLE,Animal Attendant,uncommon,G,2,Creature - Human Citizen,True
+98290,TLE,"Toph, Earthbending Master",mythic,G,4,Legendary Creature - Human Warrior Ally,True
+98253,TLE,"Lo and Li, Royal Advisors",rare,BU,4,Legendary Creature - Human Advisor,True
+98691,TLE,Katara's Reversal,rare,U,4,Instant,True
+98237,TLE,Dutiful Knowledge Seeker,uncommon,U,3,Creature - Fox Spirit,True
+98267,TLE,"Moku, Meandering Drummer",uncommon,R,2,Legendary Creature - Human Bard Ally,True
+98262,TLE,Frantic Confrontation,uncommon,R,1,Instant,True
+98233,TLE,Toucan-Puffin,common,W,3,Creature - Bird,True
+98222,TLE,Inspired Insurgent,common,W,2,Creature - Human Peasant Ally,True
+98205,TLE,Roku's Mastery,uncommon,R,2,Instant,True
+98209,TLE,Zuko's Offense,common,R,1,Sorcery,True
+98173,TLE,Aang's Defense,common,W,1,Instant,True
+98201,TLE,Fire Nation's Conquest,uncommon,R,3,Enchantment,True
+98183,TLE,Wolf Cove Villager,common,W,1,Creature - Human Peasant,True
+98249,TLE,Fire Lord Ozai,mythic,BR,4,Legendary Creature - Human Noble,True
+98276,TLE,Bison Whistle,rare,G,2,Artifact,True
+98683,TLE,Deflecting Swat,rare,R,3,Instant,True
+98227,TLE,"Pipsqueak, Rebel Strongarm",uncommon,W,3,Legendary Creature - Human Rebel Ally,True
+98279,TLE,The Cabbage Merchant,rare,G,3,Legendary Creature - Human Citizen,True
+98687,TLE,Arcane Signet,rare,,2,Artifact,True
+98297,TLE,Cloudshift,common,W,1,Instant,True
+98693,TLE,Swampbenders,rare,G,6,Creature - Human Druid Ally,True
+98695,TLE,Earthshape,rare,W,3,Instant,True
+98213,TLE,Frog-Squirrels,common,G,2,Creature - Frog Squirrel,True
+98187,TLE,The Terror of Serpent's Pass,rare,U,7,Legendary Creature - Serpent,True
+98247,TLE,Dai Li Censor,common,B,2,Creature - Human Soldier Advisor,True
+98287,TLE,Solid Ground,uncommon,G,4,Enchantment,True
+98229,TLE,Sokka's Sword Training,common,W,2,Instant - Lesson,True
+98256,TLE,Scarring Memories,uncommon,B,4,Sorcery - Lesson,True
+98192,TLE,Fire Nation Sentinels,rare,B,5,Creature - Human Soldier,True
+98193,TLE,Gilacorn,common,B,1,Creature - Lizard,True
+98285,TLE,Kyoshi Warrior Exemplars,uncommon,G,4,Creature - Human Warrior Ally,True
+98265,TLE,"Longshot, Rebel Bowman",uncommon,R,4,Legendary Creature - Human Rebel Ally,True
+98175,TLE,Allied Teamwork,rare,W,3,Enchantment,True
+98309,TLE,Cathartic Reunion,common,R,2,Sorcery,True
+98692,TLE,Fire Nation Turret,rare,R,3,Artifact,True
+98210,TLE,"Bumi, Eclectic Earthbender",rare,G,5,Legendary Creature - Human Noble Ally,True
+98236,TLE,Chakra Meditation,rare,U,3,Enchantment,True
+98788,TTLE,Zeppelin,token,,0,Artifact - Vehicle,False
+98789,TTLE,Spirit,token,,0,Creature - Spirit,False
+98790,TTLE,Human,token,,0,Creature - Human,False
+98791,TTLE,Human Soldier,token,,0,Creature - Human Soldier,False
+98792,TTLE,Koma's Coil,token,,0,Creature - Serpent,False
+98793,TTLE,Elf Warrior,token,,0,Creature - Elf Warrior,False
+98794,TTLE,Powerstone,token,,0,Artifact - Powerstone,False
+98702,TTLE,Marit Lage,token,,0,Legendary Creature - Avatar,False
+98703,TTLE,Soldier,token,,0,Creature - Soldier,False
+97589,TTLE,Treasure,token,,0,Artifact - Treasure,False
+98622,TLE,Teferi's Protection,mythic,W,3,Instant,True
+98619,TLE,"Lita, Mechanical Engineer",mythic,W,3,Legendary Artifact Creature - Artificer,True
+98632,TLE,Prosperity,mythic,U,1,Sorcery,True
+98633,TLE,Sakashima of a Thousand Faces,mythic,U,4,Legendary Creature - Human Rogue,True
+98625,TLE,Bribery,mythic,U,5,Sorcery,True
+98618,TLE,Empty City Ruse,mythic,W,1,Sorcery,True
+98616,TLE,Brought Back,mythic,W,2,Instant,True
+98628,TLE,Force of Negation,mythic,U,3,Instant,True
+98629,TLE,Imprisoned in the Moon,mythic,U,3,Enchantment - Aura,True
+98617,TLE,Drannith Magistrate,mythic,W,2,Creature - Human Wizard,True
+98631,TLE,Mystic Remora,mythic,U,1,Enchantment,True
+98620,TLE,Release to Memory,mythic,W,4,Instant,True
+98626,TLE,Clone,mythic,U,4,Creature - Shapeshifter,True
+98627,TLE,Clone Legion,mythic,U,9,Sorcery,True
+98623,TLE,Three Dreams,mythic,W,5,Sorcery,True
+98621,TLE,Scout's Warning,mythic,W,1,Instant,True
+98630,TLE,Intruder Alarm,mythic,U,3,Enchantment,True
+98624,TLE,Agent of Treachery,mythic,U,7,Creature - Human Rogue,True
+97568,TTLA,Copy,token,,0,,False
+97569,TTLA,Copy,token,,0,,False
+97570,TTLA,Spirit,token,,0,Creature - Spirit,False
+97571,TTLA,Ally,token,,0,Creature - Ally,False
+97572,TTLA,Ally,token,,0,Creature - Ally,False
+97573,TTLA,Ally,token,,0,Creature - Ally,False
+97574,TTLA,Ally,token,,0,Creature - Ally,False
+97575,TTLA,Ally,token,,0,Creature - Ally,False
+97576,TTLA,Dragon,token,,0,Creature - Dragon,False
+97577,TTLA,Monk,token,,0,Creature - Monk,False
+97578,TTLA,Soldier,token,,0,Creature - Soldier,False
+97579,TTLA,Bear,token,,0,Creature - Bear,False
+97580,TTLA,Ballistic Boulder,token,,0,Artifact Creature - Construct,False
+97581,TTLA,Clue,token,,0,Artifact - Clue,False
+97582,TTLA,Clue,token,,0,Artifact - Clue,False
+97583,TTLA,Clue,token,,0,Artifact - Clue,False
+97584,TTLA,Clue,token,,0,Artifact - Clue,False
+97585,TTLA,Clue,token,,0,Artifact - Clue,False
+97586,TTLA,Food,token,,0,Artifact - Food,False
+97587,TTLA,Food,token,,0,Artifact - Food,False
+97588,TTLA,Food,token,,0,Artifact - Food,False
+98164,TLA,Swamp,basic,B,0,Basic Land - Swamp,False
+98167,TLA,Plains,basic,W,0,Basic Land - Plains,False
+98166,TLA,Forest,basic,G,0,Basic Land - Forest,False
+98168,TLA,Island,basic,U,0,Basic Land - Island,False
+98165,TLA,Mountain,basic,R,0,Basic Land - Mountain,False
+98171,TLA,Forest,basic,G,0,Basic Land - Forest,False
+98170,TLA,Mountain,basic,R,0,Basic Land - Mountain,False
+98162,TLA,Plains,basic,W,0,Basic Land - Plains,False
+98163,TLA,Island,basic,U,0,Basic Land - Island,False
+98169,TLA,Swamp,basic,B,0,Basic Land - Swamp,False
+97301,TLA,Avatar Yangchen,mythic,W,0,Legendary Creature - Avatar,False
+97336,TLA,Avatar Kuruk,mythic,U,0,Legendary Creature - Avatar,False
+97393,TLA,Fire Lord Sozin,mythic,B,0,Legendary Creature - Human Noble,False
+97422,TLA,Avatar Roku,mythic,R,0,Legendary Creature - Avatar,False
+97464,TLA,Avatar Kyoshi,mythic,G,0,Legendary Creature - Avatar,False
+97482,TLA,"Aang, Destined Savior",rare,GUW,0,Legendary Creature - Avatar Ally,False
+97484,TLA,"Aang and La, Ocean's Fury",rare,UW,0,Legendary Creature - Avatar Spirit Ally,False
+97488,TLA,"Aang, Master of Elements",mythic,BGRUW,0,Legendary Creature - Avatar Ally,False
+98706,TLA,Fated Firepower,mythic,R,3,Enchantment,False
+98707,TLA,"Aang, Swift Savior",rare,UW,3,Legendary Creature - Human Avatar Ally,False
+98708,TLA,"Aang and La, Ocean's Fury",rare,UW,0,Legendary Creature - Avatar Spirit Ally,False
+98709,TLA,Fire Nation Attacks,uncommon,R,5,Instant,False
+98710,TLA,Crashing Wave,uncommon,U,2,Sorcery,False
+98711,TLA,Combustion Technique,uncommon,R,2,Instant - Lesson,False
+98712,TLA,"Zuko, Conflicted",rare,BR,2,Legendary Creature - Human Rogue,False
+98713,TLA,"Azula, Cunning Usurper",rare,BU,5,Legendary Creature - Human Noble Rogue,False
+98714,TLA,"Aang, at the Crossroads",rare,GUW,5,Legendary Creature - Human Avatar Ally,False
+98715,TLA,"Aang, Destined Savior",rare,GUW,0,Legendary Creature - Avatar Ally,False
+98716,TLA,"Katara, the Fearless",rare,GUW,3,Legendary Creature - Human Warrior Ally,False
+98717,TLA,Dai Li Agents,uncommon,BG,5,Creature - Human Soldier,False
+98718,TLA,Earthbender Ascension,rare,G,3,Enchantment,False
+98719,TLA,Avatar Aang,mythic,BGRUW,4,Legendary Creature - Human Avatar Ally,False
+98720,TLA,"Aang, Master of Elements",mythic,BGRUW,0,Legendary Creature - Avatar Ally,False
+98721,TLA,Sozin's Comet,mythic,R,5,Sorcery,False
+98722,TLA,Waterbender Ascension,rare,U,2,Enchantment,False
+98723,TLA,"Ozai, the Phoenix King",mythic,BR,6,Legendary Creature - Human Noble,False
+98724,TLA,Firebender Ascension,rare,R,2,Enchantment,False
+98725,TLA,Fire Lord Azula,rare,BRU,4,Legendary Creature - Human Noble,False
+98726,TLA,The Last Agni Kai,rare,R,2,Instant,False
+98727,TLA,Fire Lord Zuko,rare,BRW,3,Legendary Creature - Human Noble Ally,False
+98728,TLA,"Appa, Steadfast Guardian",mythic,W,4,Legendary Creature - Bison Ally,False
+98729,TLA,"Momo, Friendly Flier",rare,W,1,Legendary Creature - Lemur Bat Ally,False
+98730,TLA,Tiger-Seal,rare,U,1,Creature - Cat Seal,False
+98731,TLA,The Unagi of Kyoshi Island,rare,U,5,Legendary Creature - Serpent,False
+98732,TLA,"Wan Shi Tong, Librarian",mythic,U,2,Legendary Creature - Bird Spirit,False
+98733,TLA,The Fire Nation Drill,rare,B,4,Legendary Artifact - Vehicle,False
+98734,TLA,"Koh, the Face Stealer",mythic,B,6,Legendary Creature - Shapeshifter Spirit,False
+98735,TLA,Phoenix Fleet Airship,mythic,B,4,Artifact - Vehicle,False
+98736,TLA,Raven Eagle,rare,B,3,Creature - Bird Assassin,False
+98737,TLA,Ran and Shaw,rare,R,5,Legendary Creature - Dragon,False
+98738,TLA,Badgermole Cub,mythic,G,2,Creature - Badger Mole,False
+98739,TLA,Diligent Zookeeper,rare,G,4,Creature - Human Citizen Ally,False
+98740,TLA,The Lion-Turtle,rare,GU,3,Legendary Creature - Elder Cat Turtle,False
+98741,TLA,The Walls of Ba Sing Se,mythic,,8,Legendary Artifact Creature - Wall,False
+98742,TLA,White Lotus Tile,mythic,,4,Artifact,False
+98743,TLA,Aang's Iceberg,rare,W,3,Enchantment,False
+98744,TLA,Secret of Bloodbending,mythic,U,4,Sorcery - Lesson,False
+98745,TLA,"Yue, the Moon Spirit",rare,U,4,Legendary Creature - Spirit Ally,False
+98746,TLA,Foggy Swamp Visions,rare,B,3,Sorcery,False
+98747,TLA,Obsessive Pursuit,rare,B,2,Enchantment,False
+98748,TLA,Fated Firepower,mythic,R,3,Enchantment,False
+98749,TLA,Firebending Student,rare,R,2,Creature - Human Monk,False
+98750,TLA,Redirect Lightning,rare,R,1,Instant - Lesson,False
+98751,TLA,The Earth King,rare,G,4,Legendary Creature - Human Noble Ally,False
+98752,TLA,Great Divide Guide,rare,G,2,Creature - Human Scout Ally,False
+98753,TLA,"Aang, at the Crossroads",rare,GUW,5,Legendary Creature - Human Avatar Ally,False
+98754,TLA,"Aang, Destined Savior",rare,GUW,0,Legendary Creature - Avatar Ally,False
+98755,TLA,"Aang, Swift Savior",rare,UW,3,Legendary Creature - Human Avatar Ally,False
+98756,TLA,"Aang and La, Ocean's Fury",rare,UW,0,Legendary Creature - Avatar Spirit Ally,False
+98757,TLA,"Bumi, Unleashed",mythic,GR,5,Legendary Creature - Human Noble Ally,False
+98758,TLA,"Iroh, Grand Lotus",rare,GRU,6,Legendary Creature - Human Noble Ally,False
+98759,TLA,"Katara, the Fearless",rare,GUW,3,Legendary Creature - Human Warrior Ally,False
+98760,TLA,"Katara, Water Tribe's Hope",rare,UW,5,Legendary Creature - Human Warrior Ally,False
+98761,TLA,"Sokka, Tenacious Tactician",rare,RUW,4,Legendary Creature - Human Warrior Ally,False
+98762,TLA,"Toph, the First Metalbender",rare,GRW,4,Legendary Creature - Human Warrior Ally,False
+98763,TLA,The Legend of Yangchen,mythic,W,5,Enchantment - Saga,False
+98764,TLA,Avatar Yangchen,mythic,W,0,Legendary Creature - Avatar,False
+98765,TLA,The Legend of Kuruk,mythic,U,4,Enchantment - Saga,False
+98766,TLA,Avatar Kuruk,mythic,U,0,Legendary Creature - Avatar,False
+98767,TLA,The Rise of Sozin,mythic,B,6,Enchantment - Saga,False
+98768,TLA,Fire Lord Sozin,mythic,B,0,Legendary Creature - Human Noble,False
+98769,TLA,The Legend of Roku,mythic,R,4,Enchantment - Saga,False
+98770,TLA,Avatar Roku,mythic,R,0,Legendary Creature - Avatar,False
+98771,TLA,The Legend of Kyoshi,mythic,G,6,Enchantment - Saga,False
+98772,TLA,Avatar Kyoshi,mythic,G,0,Legendary Creature - Avatar,False
+98773,TLA,Firebending Student,rare,R,2,Creature - Human Monk,False
+98774,TLA,United Front,mythic,W,2,Sorcery,False
+98775,TLA,Sozin's Comet,mythic,R,5,Sorcery,False
+98776,TLA,Avatar Destiny,rare,G,4,Enchantment - Aura,False
+98777,TLA,Fire Lord Azula,rare,BRU,4,Legendary Creature - Human Noble,False
+98778,TLA,"Ozai, the Phoenix King",mythic,BR,6,Legendary Creature - Human Noble,False
+98779,TLA,"Aang, Swift Savior",rare,UW,3,Legendary Creature - Human Avatar Ally,False
+98780,TLA,"Aang and La, Ocean's Fury",rare,UW,0,Legendary Creature - Avatar Spirit Ally,False
+98781,TLA,Fire Lord Zuko,rare,BRW,3,Legendary Creature - Human Noble Ally,False
+98782,TLA,"Katara, the Fearless",rare,GUW,3,Legendary Creature - Human Warrior Ally,False
+98783,TLA,"Toph, the First Metalbender",rare,GRW,4,Legendary Creature - Human Warrior Ally,False
+385,ANA,[Land],token,,0,,False
+100785,TSOM,Myr,token,,0,Artifact Creature - Myr,False
+100780,SLD,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental,False
+100781,SLD,Polyraptor,mythic,G,8,Creature - Dinosaur,False
+100782,SLD,Academy Manufactor,rare,,3,Artifact Creature - Assembly-Worker,False
+100783,SLD,Wurmcoil Engine,mythic,,6,Artifact Creature - Phyrexian Wurm,False
+102111,FIN,A-Vivi Ornitier,mythic,RU,3,Legendary Creature - Wizard,False
+102112,FIN,A-Vivi Ornitier,mythic,RU,3,Legendary Creature - Wizard,False
+100739,TDMC,Badger,token,,0,Creature - Badger,False
+100786,FEM,Goblin Grenade,common,R,1,Sorcery,False
+17129,TOR,Obsessive Search,common,U,1,Instant,True
+101014,TUNF,Squirrel,token,,0,Creature - Squirrel,False
+77978,TCMR,Treasure,token,,0,Artifact - Treasure,False
+83462,TUMA,Marit Lage,token,,0,Legendary Creature - Avatar,False
+100983,OTC,Smirking Spelljacker,rare,U,5,Creature - Djinn Wizard Rogue,False

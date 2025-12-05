@@ -1,10 +1,29 @@
 {
-  "most_recent_set": "OM1",
-  "last_cards_update": "2025-10-19",
-  "premier_draft_last_updated": null,
-  "traditional_draft_last_updated": null,
-  "last_check_timestamp": "2025-10-19T21:19:44.289765",
+  "most_recent_set": "TLA",
+  "last_cards_update": "2025-12-05",
+  "premier_draft_last_updated": "2025-12-04",
+  "traditional_draft_last_updated": "2025-12-04",
+  "last_check_timestamp": "2025-12-05T14:05:07.175843",
   "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing.",
-  "picktwodraft_last_updated": "2025-10-15",
-  "picktwodraft_set": "OM1"
+  "picktwodraft_last_updated": "2025-10-30",
+  "picktwodraft_set": "OM1",
+  "last_training_logs": [
+    {
+      "experiment_name": "TLA_Premier",
+      "training_picks": 89879,
+      "validation_picks": 22470,
+      "validation_accuracy": 67.87716955941255,
+      "num_epochs": 26,
+      "training_date": "2025-12-05 14:02:36"
+    },
+    {
+      "experiment_name": "TLA_Trad",
+      "training_picks": 31035,
+      "validation_picks": 7759,
+      "validation_accuracy": 67.34115221033639,
+      "num_epochs": 82,
+      "training_date": "2025-12-05 14:05:07"
+    }
+  ],
+  "last_training_timestamp": "2025-12-05T14:05:07.175833"
 }
