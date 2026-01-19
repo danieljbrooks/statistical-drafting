@@ -181,6 +181,10 @@ def default_training_pipeline(
             draft_mode (str): Use either "Premier", "Trad", "PickTwo", or "PickTwoTrad" draft data.
             overwrite_dataset (bool): If False, won't overwrite an existing dataset for the set and draft mode.
     """
+    import sys
+    print("🔧 Step 1: Creating dataset...")
+    sys.stdout.flush()
+
     # Create dataset.
     train_path, val_path = sd.create_dataset(
         set_abbreviation=set_abbreviation,
@@ -188,16 +192,34 @@ def default_training_pipeline(
         overwrite=overwrite_dataset,
     )
 
+    print(f"🔧 Step 2: Loading datasets from {train_path} and {val_path}...")
+    sys.stdout.flush()
+
     dataset_folder = "../data/training_sets/"
 
     train_dataset = torch.load(train_path, weights_only=False)
-    train_dataloader = DataLoader(train_dataset, batch_size=10000, shuffle=True)
+    print(f"🔧 Step 3: Creating train dataloader (batch_size=10000)...")
+    sys.stdout.flush()
+
+    train_dataloader = DataLoader(train_dataset, batch_size=10000, shuffle=True, num_workers=0)
+
+    print(f"🔧 Step 4: Loading validation dataset...")
+    sys.stdout.flush()
 
     val_dataset = torch.load(val_path, weights_only=False)
-    val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=False)
+    print(f"🔧 Step 5: Creating validation dataloader...")
+    sys.stdout.flush()
+
+    val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=False, num_workers=0)
+
+    print(f"🔧 Step 6: Creating DraftNet model...")
+    sys.stdout.flush()
 
     # Train network.
     network = sd.DraftNet(cardnames=train_dataset.cardnames)
+
+    print(f"🔧 Step 7: Starting model training...")
+    sys.stdout.flush()
 
     network, training_info = sd.train_model(
         train_dataloader,

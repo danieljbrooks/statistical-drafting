@@ -78,6 +78,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          # Install CPU-only PyTorch first to avoid CUDA version
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          # Install other dependencies
           pip install -r requirements.txt
           pip install -r model_refresh/requirements.txt
           pip install -e .
