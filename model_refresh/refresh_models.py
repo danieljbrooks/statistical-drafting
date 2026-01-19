@@ -239,14 +239,18 @@ def run_training_pipeline(set_code: str, draft_mode: str) -> Tuple[bool, Dict]:
     """Run the training pipeline for a given set and draft mode."""
     try:
         print(f"\n🚀 Starting training pipeline for {set_code} {draft_mode} Draft...")
-        
+
         # Change to notebooks directory to run training (expected context for relative paths)
         original_cwd = os.getcwd()
         notebooks_dir = os.path.join(os.path.dirname(os.getcwd()), "notebooks")
         os.chdir(notebooks_dir)
         print(f"📁 Changed working directory to: {os.getcwd()}")
-        
+
         try:
+            print(f"📦 About to call sd.default_training_pipeline...")
+            print(f"   Parameters: set={set_code}, mode={draft_mode}, overwrite=True")
+            sys.stdout.flush()  # Force flush before potential crash
+
             training_info = sd.default_training_pipeline(
                 set_abbreviation=set_code,
                 draft_mode=draft_mode,

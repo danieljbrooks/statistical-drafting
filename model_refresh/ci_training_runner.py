@@ -32,8 +32,19 @@ def set_output(name, value):
 
 
 def main():
+    # Set PyTorch environment variables to avoid threading issues in CI
+    os.environ['OMP_NUM_THREADS'] = '1'
+    os.environ['MKL_NUM_THREADS'] = '1'
+    os.environ['OPENBLAS_NUM_THREADS'] = '1'
+
     print("Starting training pipeline...")
     print(f"Working directory: {os.getcwd()}")
+    print(f"Python version: {sys.version}")
+
+    # Import PyTorch and check version
+    import torch
+    print(f"PyTorch version: {torch.__version__}")
+    print(f"PyTorch CUDA available: {torch.cuda.is_available()}")
 
     # Load current state
     tracker_data = load_data_tracker()
@@ -62,37 +73,52 @@ def main():
         print(f"\n{'='*50}")
         print(f"Training Premier Draft model for {latest_set}")
         print(f"{'='*50}")
-        success, training_info = run_training_pipeline(latest_set, "Premier")
-        if success:
-            training_results.append(training_info)
-            models_trained = True
-            print(f"Premier Draft training completed successfully")
-        else:
-            print(f"WARNING: Premier Draft training failed")
+        try:
+            success, training_info = run_training_pipeline(latest_set, "Premier")
+            if success:
+                training_results.append(training_info)
+                models_trained = True
+                print(f"Premier Draft training completed successfully")
+            else:
+                print(f"WARNING: Premier Draft training failed")
+        except Exception as e:
+            print(f"ERROR: Premier Draft training crashed: {e}")
+            import traceback
+            traceback.print_exc()
 
     if traditional_updated:
         print(f"\n{'='*50}")
         print(f"Training Traditional Draft model for {latest_set}")
         print(f"{'='*50}")
-        success, training_info = run_training_pipeline(latest_set, "Trad")
-        if success:
-            training_results.append(training_info)
-            models_trained = True
-            print(f"Traditional Draft training completed successfully")
-        else:
-            print(f"WARNING: Traditional Draft training failed")
+        try:
+            success, training_info = run_training_pipeline(latest_set, "Trad")
+            if success:
+                training_results.append(training_info)
+                models_trained = True
+                print(f"Traditional Draft training completed successfully")
+            else:
+                print(f"WARNING: Traditional Draft training failed")
+        except Exception as e:
+            print(f"ERROR: Traditional Draft training crashed: {e}")
+            import traceback
+            traceback.print_exc()
 
     if picktwodraft_updated:
         print(f"\n{'='*50}")
         print(f"Training PickTwoDraft model for {latest_set}")
         print(f"{'='*50}")
-        success, training_info = run_training_pipeline(latest_set, "PickTwo")
-        if success:
-            training_results.append(training_info)
-            models_trained = True
-            print(f"PickTwoDraft training completed successfully")
-        else:
-            print(f"WARNING: PickTwoDraft training failed")
+        try:
+            success, training_info = run_training_pipeline(latest_set, "PickTwo")
+            if success:
+                training_results.append(training_info)
+                models_trained = True
+                print(f"PickTwoDraft training completed successfully")
+            else:
+                print(f"WARNING: PickTwoDraft training failed")
+        except Exception as e:
+            print(f"ERROR: PickTwoDraft training crashed: {e}")
+            import traceback
+            traceback.print_exc()
 
     # Save tracker with training results
     if training_results:

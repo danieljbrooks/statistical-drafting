@@ -110,6 +110,10 @@ jobs:
           PREMIER_UPDATED: ${{ needs.check-for-updates.outputs.premier_updated }}
           TRADITIONAL_UPDATED: ${{ needs.check-for-updates.outputs.traditional_updated }}
           PICKTWODRAFT_UPDATED: ${{ needs.check-for-updates.outputs.picktwodraft_updated }}
+          # PyTorch threading environment variables
+          OMP_NUM_THREADS: 1
+          MKL_NUM_THREADS: 1
+          OPENBLAS_NUM_THREADS: 1
 
       - name: Generate release notes
         working-directory: model_refresh
