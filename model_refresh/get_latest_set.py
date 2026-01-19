@@ -2,19 +2,42 @@
 """
 Get Latest Set Information from 17lands
 
-This script uses Playwright to handle the dynamic React content on the 
+This script uses Playwright to handle the dynamic React content on the
 17lands public datasets page to extract S3 dataset links and determine
 the most recent set and Premier Draft update information.
 """
 
 import re
 import requests
+import time
 from datetime import datetime
+from functools import wraps
 from playwright.sync_api import sync_playwright
 from typing import List, Dict, Optional, Tuple
 
 URL = "https://www.17lands.com/public_datasets"
 
+
+def retry_with_backoff(max_retries=3, initial_delay=2):
+    """Decorator for retry with exponential backoff."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            delay = initial_delay
+            for attempt in range(max_retries):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    if attempt == max_retries - 1:
+                        print(f"All {max_retries} attempts failed. Last error: {e}")
+                        raise
+                    print(f"Attempt {attempt + 1} failed: {e}. Retrying in {delay}s...")
+                    time.sleep(delay)
+                    delay *= 2
+        return wrapper
+    return decorator
+
+@retry_with_backoff(max_retries=3, initial_delay=2)
 def get_s3_links():
     """Get S3 dataset links from the 17lands public datasets page."""
     with sync_playwright() as p:
@@ -96,21 +119,18 @@ def extract_set_info_from_links(s3_links: List[str]) -> Dict:
     
     return {"error": "No sets found"}
 
+@retry_with_backoff(max_retries=3, initial_delay=1)
 def get_file_last_modified(url: str) -> Optional[str]:
     """Get the last modified date of an S3 file."""
-    try:
-        # Send HEAD request to get metadata without downloading the file
-        response = requests.head(url, timeout=10)
-        if response.status_code == 200:
-            # S3 returns Last-Modified header
-            last_modified = response.headers.get('Last-Modified')
-            if last_modified:
-                # Parse the date and convert to YYYY-MM-DD format
-                dt = datetime.strptime(last_modified, '%a, %d %b %Y %H:%M:%S %Z')
-                return dt.strftime('%Y-%m-%d')
-    except Exception as e:
-        print(f"Could not get last modified date: {e}")
-    
+    # Send HEAD request to get metadata without downloading the file
+    response = requests.head(url, timeout=10)
+    if response.status_code == 200:
+        # S3 returns Last-Modified header
+        last_modified = response.headers.get('Last-Modified')
+        if last_modified:
+            # Parse the date and convert to YYYY-MM-DD format
+            dt = datetime.strptime(last_modified, '%a, %d %b %Y %H:%M:%S %Z')
+            return dt.strftime('%Y-%m-%d')
     return None
 
 def get_latest_set_info() -> Dict:

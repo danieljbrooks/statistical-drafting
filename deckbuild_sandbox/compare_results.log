@@ -1,0 +1,161 @@
+================================================================================
+COMPARING ENCODER/DECODER VS MLP BASELINE
+================================================================================
+
+Loading validation dataset...
+  ✓ Total validation examples: 7,483
+  ✓ Evaluating on: 500 examples
+
+================================================================================
+TESTING MLP BASELINE (2-LAYER)
+================================================================================
+
+Evaluating on 500 examples...
+Target deck size: 23 cards
+
+  [  50/500] Accuracy: 84.01% | Speed: 382.22 ex/s | ETA: 1.2s
+  [ 100/500] Accuracy: 83.86% | Speed: 385.29 ex/s | ETA: 1.0s
+  [ 150/500] Accuracy: 84.07% | Speed: 400.47 ex/s | ETA: 0.9s
+  [ 200/500] Accuracy: 83.78% | Speed: 402.38 ex/s | ETA: 0.7s
+  [ 250/500] Accuracy: 83.91% | Speed: 414.13 ex/s | ETA: 0.6s
+  [ 300/500] Accuracy: 83.82% | Speed: 416.92 ex/s | ETA: 0.5s
+  [ 350/500] Accuracy: 84.06% | Speed: 422.22 ex/s | ETA: 0.4s
+  [ 400/500] Accuracy: 84.12% | Speed: 425.60 ex/s | ETA: 0.2s
+  [ 450/500] Accuracy: 84.16% | Speed: 425.52 ex/s | ETA: 0.1s
+  [ 500/500] Accuracy: 84.26% | Speed: 424.64 ex/s | ETA: 0.0s
+
+Evaluation completed in 1.2s
+
+Results saved to evaluation_results/eval_FDN_Premier_mlp_500.json
+
+MLP BASELINE RESULTS:
+--------------------------------------------------------------------------------
+============================================================
+EVALUATION SUMMARY
+============================================================
+
+Card Accuracy:
+  Total matches:  10,415 / 12,361
+  Accuracy:       84.26%
+
+Difference Statistics:
+  Mean cards different:   6.06
+  Median cards different: 6.0
+  Std cards different:    3.08
+  Range:                  [1, 19]
+
+Evaluation Metadata:
+  Examples evaluated:     500
+  Total time:             1.2s
+  Avg time per example:   0.002s
+
+Difference Distribution:
+   1 cards different:    7 examples ( 1.40%)
+   2 cards different:   38 examples ( 7.60%)
+   3 cards different:   48 examples ( 9.60%)
+   4 cards different:   88 examples (17.60%)
+   5 cards different:   64 examples (12.80%)
+   6 cards different:   69 examples (13.80%)
+   7 cards different:   60 examples (12.00%)
+   8 cards different:   30 examples ( 6.00%)
+   9 cards different:   29 examples ( 5.80%)
+  10 cards different:   23 examples ( 4.60%)
+  11 cards different:   17 examples ( 3.40%)
+  12 cards different:    8 examples ( 1.60%)
+  13 cards different:    4 examples ( 0.80%)
+  14 cards different:    6 examples ( 1.20%)
+  15 cards different:    3 examples ( 0.60%)
+  16 cards different:    2 examples ( 0.40%)
+  17 cards different:    2 examples ( 0.40%)
+  18 cards different:    1 examples ( 0.20%)
+  19 cards different:    1 examples ( 0.20%)
+============================================================
+
+================================================================================
+TESTING ENCODER/DECODER MODEL
+================================================================================
+
+Loading model from: data/models/FDN_Premier_deckbuild_encdec.pt
+  ✓ Encoder/decoder parameters: 38,977
+  ✓ MLP baseline parameters: 387,481
+  ✓ Parameter reduction: 89.9%
+
+Evaluating on 500 examples...
+Target deck size: 23 cards
+
+  [  50/500] Accuracy: 76.21% | Speed: 81.28 ex/s | ETA: 5.5s
+  [ 100/500] Accuracy: 75.39% | Speed: 102.50 ex/s | ETA: 3.9s
+  [ 150/500] Accuracy: 74.84% | Speed: 108.14 ex/s | ETA: 3.2s
+  [ 200/500] Accuracy: 74.70% | Speed: 112.26 ex/s | ETA: 2.7s
+  [ 250/500] Accuracy: 74.87% | Speed: 114.27 ex/s | ETA: 2.2s
+  [ 300/500] Accuracy: 74.73% | Speed: 116.17 ex/s | ETA: 1.7s
+  [ 350/500] Accuracy: 74.90% | Speed: 119.02 ex/s | ETA: 1.3s
+  [ 400/500] Accuracy: 74.90% | Speed: 118.15 ex/s | ETA: 0.8s
+  [ 450/500] Accuracy: 74.85% | Speed: 117.60 ex/s | ETA: 0.4s
+  [ 500/500] Accuracy: 74.96% | Speed: 117.51 ex/s | ETA: 0.0s
+
+Evaluation completed in 4.3s
+
+Results saved to evaluation_results/eval_FDN_Premier_encdec_500.json
+
+ENCODER/DECODER RESULTS:
+--------------------------------------------------------------------------------
+============================================================
+EVALUATION SUMMARY
+============================================================
+
+Card Accuracy:
+  Total matches:  9,266 / 12,361
+  Accuracy:       74.96%
+
+Difference Statistics:
+  Mean cards different:   10.66
+  Median cards different: 10.0
+  Std cards different:    3.55
+  Range:                  [4, 23]
+
+Evaluation Metadata:
+  Examples evaluated:     500
+  Total time:             4.3s
+  Avg time per example:   0.009s
+
+Difference Distribution:
+   4 cards different:    6 examples ( 1.20%)
+   5 cards different:   14 examples ( 2.80%)
+   6 cards different:   38 examples ( 7.60%)
+   7 cards different:   42 examples ( 8.40%)
+   8 cards different:   57 examples (11.40%)
+   9 cards different:   52 examples (10.40%)
+  10 cards different:   51 examples (10.20%)
+  11 cards different:   51 examples (10.20%)
+  12 cards different:   45 examples ( 9.00%)
+  13 cards different:   36 examples ( 7.20%)
+  14 cards different:   39 examples ( 7.80%)
+  15 cards different:   17 examples ( 3.40%)
+  16 cards different:   20 examples ( 4.00%)
+  17 cards different:   15 examples ( 3.00%)
+  18 cards different:    6 examples ( 1.20%)
+  19 cards different:    4 examples ( 0.80%)
+  20 cards different:    3 examples ( 0.60%)
+  21 cards different:    1 examples ( 0.20%)
+  23 cards different:    3 examples ( 0.60%)
+============================================================
+
+================================================================================
+DETAILED COMPARISON: MLP vs ENCODER/DECODER
+================================================================================
+
+Metric                                  MLP       EncDec   Difference
+--------------------------------------------------------------------------------
+Parameters                          387,481       38,977       -89.9%
+Card Accuracy                        84.26%       74.96%       -9.30%
+Mean Cards Different                   6.06        10.66        -4.60
+Median Cards Different                  6.0         10.0
+Std Cards Different                    3.08         3.55
+Traceback (most recent call last):
+  File "/Users/danielbrooks/Desktop/Code/statistical-drafting/compare_encdec_vs_mlp.py", line 174, in <module>
+    main()
+  File "/Users/danielbrooks/Desktop/Code/statistical-drafting/compare_encdec_vs_mlp.py", line 134, in main
+    speed_mlp = results_mlp['performance']['examples_per_second']
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'performance'

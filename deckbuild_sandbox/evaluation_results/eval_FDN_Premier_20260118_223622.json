@@ -1,0 +1,118 @@
+{
+  "card_accuracy": {
+    "total_matches": 209,
+    "total_cards": 249,
+    "accuracy_percentage": 83.93574297188755
+  },
+  "difference_distribution": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 3,
+    "4": 1,
+    "5": 0,
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 1,
+    "10": 1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 0,
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 0,
+    "21": 0,
+    "22": 0,
+    "23": 0
+  },
+  "summary_stats": {
+    "mean_cards_different": 6.1,
+    "median_cards_different": 6.5,
+    "std_cards_different": 2.5475478405713994,
+    "min_cards_different": 3,
+    "max_cards_different": 10
+  },
+  "per_example_results": [
+    {
+      "index": 0,
+      "num_matches": 22,
+      "num_different": 7,
+      "pool_size": 42,
+      "time_seconds": 0.0067691802978515625
+    },
+    {
+      "index": 1,
+      "num_matches": 22,
+      "num_different": 3,
+      "pool_size": 39,
+      "time_seconds": 0.0022301673889160156
+    },
+    {
+      "index": 2,
+      "num_matches": 20,
+      "num_different": 9,
+      "pool_size": 42,
+      "time_seconds": 0.001993894577026367
+    },
+    {
+      "index": 3,
+      "num_matches": 21,
+      "num_different": 6,
+      "pool_size": 41,
+      "time_seconds": 0.002577066421508789
+    },
+    {
+      "index": 4,
+      "num_matches": 19,
+      "num_different": 10,
+      "pool_size": 39,
+      "time_seconds": 0.00415492057800293
+    },
+    {
+      "index": 5,
+      "num_matches": 23,
+      "num_different": 3,
+      "pool_size": 40,
+      "time_seconds": 0.0027589797973632812
+    },
+    {
+      "index": 6,
+      "num_matches": 20,
+      "num_different": 8,
+      "pool_size": 41,
+      "time_seconds": 0.0017232894897460938
+    },
+    {
+      "index": 7,
+      "num_matches": 21,
+      "num_different": 4,
+      "pool_size": 41,
+      "time_seconds": 0.0025119781494140625
+    },
+    {
+      "index": 8,
+      "num_matches": 19,
+      "num_different": 8,
+      "pool_size": 41,
+      "time_seconds": 0.003072977066040039
+    },
+    {
+      "index": 9,
+      "num_matches": 22,
+      "num_different": 3,
+      "pool_size": 42,
+      "time_seconds": 0.0014421939849853516
+    }
+  ],
+  "metadata": {
+    "num_examples_evaluated": 10,
+    "target_deck_size": 23,
+    "total_time_seconds": 0.029260873794555664,
+    "avg_time_per_example": 0.0029260873794555663
+  }
+}

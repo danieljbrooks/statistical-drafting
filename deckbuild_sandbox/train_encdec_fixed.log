@@ -1,0 +1,427 @@
+================================================================================
+TRAINING ENCODER/DECODER DECKBUILDING MODEL
+================================================================================
+
+Loading datasets...
+  ✓ Training examples: 29,928
+  ✓ Validation examples: 7,483
+  ✓ Number of cards: 281
+
+Creating attention-based encoder/decoder network...
+  Architecture:
+    - Embedding dim: 64
+    - Attention heads: 4
+    - Dropout rate: 0.1
+    - Encoder: Multi-head attention pooling
+    - Decoder: Direct dot product scoring
+
+  Total parameters: 38,977
+  (MLP baseline: ~387,000 parameters)
+  Parameter reduction: 89.9%
+
+Starting training...
+--------------------------------------------------------------------------------
+Using device: cpu
+Starting training. learning_rate=0.01
+Validation accuracy = 6.7% (501/7483)
+
+Epoch 0  lr=0.01
+Training loss: nan
+
+Epoch 1  lr=0.0094
+Training loss: nan
+
+Epoch 2  lr=0.00884
+Training loss: nan
+Validation accuracy = 15.25% (1141/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 3  lr=0.00831
+Training loss: nan
+
+Epoch 4  lr=0.00781
+Training loss: nan
+Validation accuracy = 16.7% (1250/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 5  lr=0.00734
+Training loss: nan
+
+Epoch 6  lr=0.0069
+Training loss: nan
+Validation accuracy = 19.19% (1436/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 7  lr=0.00648
+Training loss: nan
+
+Epoch 8  lr=0.0061
+Training loss: nan
+Validation accuracy = 21.19% (1586/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 9  lr=0.00573
+Training loss: nan
+
+Epoch 10  lr=0.00539
+Training loss: nan
+Validation accuracy = 24.11% (1804/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 11  lr=0.00506
+Training loss: nan
+
+Epoch 12  lr=0.00476
+Training loss: nan
+Validation accuracy = 26.65% (1994/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 13  lr=0.00447
+Training loss: nan
+
+Epoch 14  lr=0.00421
+Training loss: nan
+Validation accuracy = 28.76% (2152/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 15  lr=0.00395
+Training loss: nan
+
+Epoch 16  lr=0.00372
+Training loss: nan
+Validation accuracy = 30.28% (2266/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 17  lr=0.00349
+Training loss: nan
+
+Epoch 18  lr=0.00328
+Training loss: nan
+Validation accuracy = 31.59% (2364/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 19  lr=0.00309
+Training loss: nan
+
+Epoch 20  lr=0.0029
+Training loss: nan
+Validation accuracy = 32.1% (2402/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 21  lr=0.00273
+Training loss: nan
+
+Epoch 22  lr=0.00256
+Training loss: nan
+Validation accuracy = 33.16% (2481/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 23  lr=0.00241
+Training loss: nan
+
+Epoch 24  lr=0.00227
+Training loss: nan
+Validation accuracy = 34.21% (2560/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 25  lr=0.00213
+Training loss: nan
+
+Epoch 26  lr=0.002
+Training loss: nan
+Validation accuracy = 33.97% (2542/7483)
+
+Epoch 27  lr=0.00188
+Training loss: nan
+
+Epoch 28  lr=0.00177
+Training loss: nan
+Validation accuracy = 34.8% (2604/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 29  lr=0.00166
+Training loss: nan
+
+Epoch 30  lr=0.00156
+Training loss: nan
+Validation accuracy = 34.38% (2573/7483)
+
+Epoch 31  lr=0.00147
+Training loss: nan
+
+Epoch 32  lr=0.00138
+Training loss: nan
+Validation accuracy = 35.81% (2680/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 33  lr=0.0013
+Training loss: nan
+
+Epoch 34  lr=0.00122
+Training loss: nan
+Validation accuracy = 35.35% (2645/7483)
+
+Epoch 35  lr=0.00115
+Training loss: nan
+
+Epoch 36  lr=0.00108
+Training loss: nan
+Validation accuracy = 34.81% (2605/7483)
+
+Epoch 37  lr=0.00101
+Training loss: nan
+
+Epoch 38  lr=0.00095
+Training loss: nan
+Validation accuracy = 35.91% (2687/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 39  lr=0.0009
+Training loss: nan
+
+Epoch 40  lr=0.00084
+Training loss: nan
+Validation accuracy = 35.73% (2674/7483)
+
+Epoch 41  lr=0.00079
+Training loss: nan
+
+Epoch 42  lr=0.00074
+Training loss: nan
+Validation accuracy = 36.64% (2742/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 43  lr=0.0007
+Training loss: nan
+
+Epoch 44  lr=0.00066
+Training loss: nan
+Validation accuracy = 36.22% (2710/7483)
+
+Epoch 45  lr=0.00062
+Training loss: nan
+
+Epoch 46  lr=0.00058
+Training loss: nan
+Validation accuracy = 36.1% (2701/7483)
+
+Epoch 47  lr=0.00055
+Training loss: nan
+
+Epoch 48  lr=0.00051
+Training loss: nan
+Validation accuracy = 35.17% (2632/7483)
+
+Epoch 49  lr=0.00048
+Training loss: nan
+
+Epoch 50  lr=0.00045
+Training loss: nan
+Validation accuracy = 35.87% (2684/7483)
+
+Epoch 51  lr=0.00043
+Training loss: nan
+
+Epoch 52  lr=0.0004
+Training loss: nan
+Validation accuracy = 36.71% (2747/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 53  lr=0.00038
+Training loss: nan
+
+Epoch 54  lr=0.00035
+Training loss: nan
+Validation accuracy = 36.99% (2768/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 55  lr=0.00033
+Training loss: nan
+
+Epoch 56  lr=0.00031
+Training loss: nan
+Validation accuracy = 36.24% (2712/7483)
+
+Epoch 57  lr=0.00029
+Training loss: nan
+
+Epoch 58  lr=0.00028
+Training loss: nan
+Validation accuracy = 36.67% (2744/7483)
+
+Epoch 59  lr=0.00026
+Training loss: nan
+
+Epoch 60  lr=0.00024
+Training loss: nan
+Validation accuracy = 36.34% (2719/7483)
+
+Epoch 61  lr=0.00023
+Training loss: nan
+
+Epoch 62  lr=0.00022
+Training loss: nan
+Validation accuracy = 36.66% (2743/7483)
+
+Epoch 63  lr=0.0002
+Training loss: nan
+
+Epoch 64  lr=0.00019
+Training loss: nan
+Validation accuracy = 37.57% (2811/7483)
+Saving model weights to data/models/FDN_Premier_deckbuild_encdec.pt
+
+Epoch 65  lr=0.00018
+Training loss: nan
+
+Epoch 66  lr=0.00017
+Training loss: nan
+Validation accuracy = 36.54% (2734/7483)
+
+Epoch 67  lr=0.00016
+Training loss: nan
+
+Epoch 68  lr=0.00015
+Training loss: nan
+Validation accuracy = 36.72% (2748/7483)
+
+Epoch 69  lr=0.00014
+Training loss: nan
+
+Epoch 70  lr=0.00013
+Training loss: nan
+Validation accuracy = 36.46% (2728/7483)
+
+Epoch 71  lr=0.00012
+Training loss: nan
+
+Epoch 72  lr=0.00012
+Training loss: nan
+Validation accuracy = 37.23% (2786/7483)
+
+Epoch 73  lr=0.00011
+Training loss: nan
+
+Epoch 74  lr=0.0001
+Training loss: nan
+Validation accuracy = 37.1% (2776/7483)
+
+Epoch 75  lr=0.0001
+Training loss: nan
+
+Epoch 76  lr=9e-05
+Training loss: nan
+Validation accuracy = 36.55% (2735/7483)
+
+Epoch 77  lr=9e-05
+Training loss: nan
+
+Epoch 78  lr=8e-05
+Training loss: nan
+Validation accuracy = 36.9% (2761/7483)
+
+Epoch 79  lr=8e-05
+Training loss: nan
+
+Epoch 80  lr=7e-05
+Training loss: nan
+Validation accuracy = 36.4% (2724/7483)
+
+Epoch 81  lr=7e-05
+Training loss: nan
+
+Epoch 82  lr=6e-05
+Training loss: nan
+Validation accuracy = 37.2% (2784/7483)
+
+Epoch 83  lr=6e-05
+Training loss: nan
+
+Epoch 84  lr=6e-05
+Training loss: nan
+Validation accuracy = 36.79% (2753/7483)
+
+Epoch 85  lr=5e-05
+Training loss: nan
+
+Epoch 86  lr=5e-05
+Training loss: nan
+Validation accuracy = 36.56% (2736/7483)
+
+Epoch 87  lr=5e-05
+Training loss: nan
+
+Epoch 88  lr=4e-05
+Training loss: nan
+Validation accuracy = 37.03% (2771/7483)
+
+Epoch 89  lr=4e-05
+Training loss: nan
+
+Epoch 90  lr=4e-05
+Training loss: nan
+Validation accuracy = 36.24% (2712/7483)
+
+Epoch 91  lr=4e-05
+Training loss: nan
+
+Epoch 92  lr=3e-05
+Training loss: nan
+Validation accuracy = 36.88% (2760/7483)
+
+Epoch 93  lr=3e-05
+Training loss: nan
+
+Epoch 94  lr=3e-05
+Training loss: nan
+Validation accuracy = 36.52% (2733/7483)
+
+Epoch 95  lr=3e-05
+Training loss: nan
+
+Epoch 96  lr=3e-05
+Training loss: nan
+Validation accuracy = 36.38% (2722/7483)
+
+Epoch 97  lr=2e-05
+Training loss: nan
+
+Epoch 98  lr=2e-05
+Training loss: nan
+Validation accuracy = 36.48% (2730/7483)
+
+Epoch 99  lr=2e-05
+Training loss: nan
+
+Epoch 100  lr=2e-05
+Training loss: nan
+Validation accuracy = 36.52% (2733/7483)
+
+Epoch 101  lr=2e-05
+Training loss: nan
+
+Epoch 102  lr=2e-05
+Training loss: nan
+Validation accuracy = 36.67% (2744/7483)
+
+Epoch 103  lr=2e-05
+Training loss: nan
+
+Epoch 104  lr=2e-05
+Training loss: nan
+Validation accuracy = 36.27% (2714/7483)
+
+Training complete. Best accuracy=37.57% at epoch 64
+Total time: 819s
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Best validation accuracy: 37.57%
+Number of epochs: 64
+Model saved to: data/models/FDN_Premier_deckbuild_encdec.pt
+
+Baseline MLP validation accuracy: 71.42%
+Encoder/decoder validation accuracy: 37.57%
+Difference: -33.85%
+

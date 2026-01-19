@@ -19,8 +19,8 @@ def main():
     BATCH_SIZE = 10000
 
     # Load datasets
-    train_path = f"data/training_sets/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_train.pth"
-    val_path = f"data/training_sets/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_val.pth"
+    train_path = f"../data/training_sets/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_train.pth"
+    val_path = f"../data/training_sets/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_val.pth"
 
     print("Loading datasets...")
     train_dataset = torch.load(train_path, weights_only=False)
@@ -73,7 +73,7 @@ def main():
         experiment_name=f"{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_encdec",
         learning_rate=0.01,  # Lower LR for smaller model
         patience=40,
-        model_folder="data/models/",
+        model_folder="../data/models/",
     )
 
     print()
@@ -82,7 +82,7 @@ def main():
     print("=" * 80)
     print(f"Best validation accuracy: {training_info['validation_accuracy']:.2f}%")
     print(f"Number of epochs: {training_info['num_epochs']}")
-    print(f"Model saved to: data/models/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_encdec.pt")
+    print(f"Model saved to: ../data/models/{SET_ABBREVIATION}_{DRAFT_MODE}_deckbuild_encdec.pt")
     print()
 
     # Compare with MLP baseline

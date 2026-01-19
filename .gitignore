@@ -15,3 +15,11 @@ notebooks/deckbuild_model.ipynb
 __pycache__
 build/*
 training_sets/*
+
+# Ignore trained models (stored in GitHub Releases instead)
+data/models/*.pt
+data/onnx/*.onnx
+
+# Ignore CI training reports
+model_refresh/training_report.json
+model_refresh/release_notes.md

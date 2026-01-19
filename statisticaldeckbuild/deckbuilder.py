@@ -11,15 +11,15 @@ from .model import DeckbuildNet
 
 class IterativeDeckBuilder:
     """
-    Builds optimal decks from card pools using iterative refinement with DeckbuildNet.
+    Builds optimal decks from card pools using two-phase refinement with DeckbuildNet.
 
-    The algorithm works by:
-    1. Starting with fractional card counts proportional to the pool
-    2. Using the model to score all cards given the current partial deck
-    3. Updating counts via softmax-weighted blending
-    4. Constraining to target size and pool limits
-    5. Repeating until convergence
-    6. Rounding to integer counts using the largest-remainder method
+    Phase 1 - Mean-field:
+        Iteratively refine fractional card counts using softmax-weighted updates.
+        Converges to ~100% inclusion for good cards, ~0% for bad cards.
+
+    Phase 2 - Card-by-card:
+        Starting from rounded mean-field result, greedily swap the weakest deck
+        card with the strongest sideboard card until stable.
     """
 
     def __init__(
@@ -95,25 +95,6 @@ class IterativeDeckBuilder:
         available_mask = (pool_counts > 0).astype(np.float32)
         return pool_counts, available_mask
 
-    def initialize_deck(self, pool_counts: np.ndarray, target_deck_size: int) -> np.ndarray:
-        """
-        Initialize fractional deck counts proportional to pool.
-
-        Args:
-            pool_counts: Array of card counts in the pool.
-            target_deck_size: Target number of cards in deck (e.g., 23).
-
-        Returns:
-            Initial fractional deck counts summing to target_deck_size.
-        """
-        total_pool = pool_counts.sum()
-        if total_pool == 0:
-            return np.zeros_like(pool_counts)
-
-        # Start with counts proportional to pool representation
-        deck_counts = pool_counts * (target_deck_size / total_pool)
-        return deck_counts
-
     def get_card_scores(self, deck_counts: np.ndarray, available_mask: np.ndarray) -> np.ndarray:
         """
         Get model scores for all cards given the current partial deck.
@@ -123,15 +104,27 @@ class IterativeDeckBuilder:
             available_mask: Binary mask of available cards in pool.
 
         Returns:
-            Array of scores for each card position.
+            Array of scores (0-100) for each card position.
         """
         with torch.no_grad():
             partial_deck = torch.from_numpy(deck_counts).float().unsqueeze(0).to(self.device)
             available = torch.from_numpy(available_mask).float().unsqueeze(0).to(self.device)
-            scores = self.network(partial_deck, available)
-            return scores.cpu().numpy().squeeze()
+            raw_scores = self.network(partial_deck, available)
+            raw_scores = raw_scores.cpu().numpy().squeeze()
 
-    def softmax_update(
+        # Convert raw scores to 0-100 ratings (sigmoid transformation)
+        # Average card in pool is ~50.0
+        mean = raw_scores[available_mask > 0].mean() if available_mask.sum() > 0 else 0
+        std = raw_scores[available_mask > 0].std() if available_mask.sum() > 0 else 1
+        ratings = 100 / (1 + np.exp(-1.2 * (raw_scores - mean) / std))
+
+        return ratings
+
+    # =========================================================================
+    # Phase 1: Mean-field approach
+    # =========================================================================
+
+    def mean_field_update(
         self,
         deck_counts: np.ndarray,
         scores: np.ndarray,
@@ -142,7 +135,7 @@ class IterativeDeckBuilder:
         learning_rate: float,
     ) -> np.ndarray:
         """
-        Update deck counts using softmax-weighted blending.
+        Single mean-field update step using softmax-weighted blending.
 
         Args:
             deck_counts: Current fractional deck counts.
@@ -191,37 +184,91 @@ class IterativeDeckBuilder:
 
         return new_deck
 
-    def round_to_integer_deck(
+    def run_mean_field(
+        self,
+        pool_counts: np.ndarray,
+        available_mask: np.ndarray,
+        target_deck_size: int,
+        max_iterations: int = 100,
+        convergence_tolerance: float = 0.01,
+        temperature: float = 1.0,
+        learning_rate: float = 0.3,
+        verbose: bool = False,
+    ) -> Tuple[np.ndarray, bool, int]:
+        """
+        Run mean-field iteration to get fractional deck counts.
+
+        Args:
+            pool_counts: Count of each card in the pool.
+            available_mask: Binary mask of available cards.
+            target_deck_size: Target number of cards in deck.
+            max_iterations: Maximum iterations before stopping.
+            convergence_tolerance: Stop when max change is below this.
+            temperature: Softmax temperature.
+            learning_rate: Blending rate for updates.
+            verbose: Print progress information.
+
+        Returns:
+            Tuple of (fractional_deck, converged, iterations)
+        """
+        # Initialize: proportional to pool
+        total_pool = pool_counts.sum()
+        deck_counts = pool_counts * (target_deck_size / total_pool) if total_pool > 0 else np.zeros_like(pool_counts)
+
+        converged = False
+        iteration = 0
+
+        for iteration in range(max_iterations):
+            scores = self.get_card_scores(deck_counts, available_mask)
+            new_deck = self.mean_field_update(
+                deck_counts, scores, pool_counts, available_mask,
+                target_deck_size, temperature, learning_rate
+            )
+
+            max_change = np.max(np.abs(new_deck - deck_counts))
+            deck_counts = new_deck
+
+            if verbose and iteration % 10 == 0:
+                print(f"  Mean-field iter {iteration}: max_change={max_change:.4f}")
+
+            if max_change < convergence_tolerance:
+                converged = True
+                if verbose:
+                    print(f"  Mean-field converged at iteration {iteration}")
+                break
+
+        return deck_counts, converged, iteration + 1
+
+    # =========================================================================
+    # Phase 2: Card-by-card refinement
+    # =========================================================================
+
+    def round_mean_field(
         self,
         fractional_deck: np.ndarray,
         pool_counts: np.ndarray,
         target_size: int,
     ) -> np.ndarray:
         """
-        Round fractional deck counts to integers using the largest-remainder method.
+        Round fractional deck to integers using largest-remainder method.
 
         Args:
             fractional_deck: Fractional deck counts.
             pool_counts: Maximum count of each card (pool limits).
-            target_size: Exact number of cards needed in final deck.
+            target_size: Exact number of cards needed.
 
         Returns:
-            Integer deck counts summing to exactly target_size.
+            Integer deck counts summing to target_size.
         """
-        # Start with floor values
         integer_deck = np.floor(fractional_deck).astype(np.int32)
         remainders = fractional_deck - integer_deck
 
-        # Calculate deficit
         deficit = target_size - integer_deck.sum()
 
         if deficit > 0:
-            # Get indices sorted by remainder (descending)
-            # Only consider cards that haven't hit their pool limit
+            # Sort by remainder descending, add to highest remainders
             can_add = integer_deck < pool_counts
             sorted_indices = np.argsort(-remainders)
-
-            # Add 1 to cards with largest remainders until deficit = 0
             for idx in sorted_indices:
                 if deficit <= 0:
                     break
@@ -229,18 +276,79 @@ class IterativeDeckBuilder:
                     integer_deck[idx] += 1
                     deficit -= 1
 
-        elif deficit < 0:
-            # Rare case: need to remove cards
-            # Remove from cards with smallest remainders
-            sorted_indices = np.argsort(remainders)
-            for idx in sorted_indices:
-                if deficit >= 0:
-                    break
-                if integer_deck[idx] > 0:
-                    integer_deck[idx] -= 1
-                    deficit += 1
-
         return integer_deck
+
+    def run_card_by_card(
+        self,
+        deck_counts: np.ndarray,
+        pool_counts: np.ndarray,
+        available_mask: np.ndarray,
+        max_swaps: int = 50,
+        verbose: bool = False,
+    ) -> Tuple[np.ndarray, List[Tuple[str, str, float, float]], int]:
+        """
+        Refine deck by greedily swapping weakest deck card with strongest sideboard card.
+
+        Args:
+            deck_counts: Current integer deck counts.
+            pool_counts: Count of each card in the pool.
+            available_mask: Binary mask of available cards.
+            max_swaps: Maximum number of swaps before stopping.
+            verbose: Print each swap.
+
+        Returns:
+            Tuple of (final_deck_counts, swap_history, num_swaps)
+            swap_history is list of (card_out, card_in, score_out, score_in)
+        """
+        deck = deck_counts.astype(np.int32).copy()
+        sideboard = (pool_counts - deck).astype(np.int32)
+        swap_history = []
+
+        for swap_num in range(max_swaps):
+            # Get current scores
+            scores = self.get_card_scores(deck.astype(np.float32), available_mask)
+
+            # Find weakest card in deck (lowest score among cards with count > 0)
+            deck_mask = deck > 0
+            if not deck_mask.any():
+                break
+            deck_scores = np.where(deck_mask, scores, np.inf)
+            worst_deck_idx = np.argmin(deck_scores)
+            worst_deck_score = scores[worst_deck_idx]
+
+            # Find strongest card in sideboard (highest score among cards with count > 0)
+            sb_mask = sideboard > 0
+            if not sb_mask.any():
+                break
+            sb_scores = np.where(sb_mask, scores, -np.inf)
+            best_sb_idx = np.argmax(sb_scores)
+            best_sb_score = scores[best_sb_idx]
+
+            # If sideboard's best is better than deck's worst, swap
+            if best_sb_score > worst_deck_score:
+                # Perform swap
+                deck[worst_deck_idx] -= 1
+                sideboard[worst_deck_idx] += 1
+                deck[best_sb_idx] += 1
+                sideboard[best_sb_idx] -= 1
+
+                card_out = self.cardnames[worst_deck_idx]
+                card_in = self.cardnames[best_sb_idx]
+                swap_history.append((card_out, card_in, worst_deck_score, best_sb_score))
+
+                if verbose:
+                    print(f"  Swap {swap_num + 1}: OUT {card_out} ({worst_deck_score:.2f}) <- IN {card_in} ({best_sb_score:.2f})")
+            else:
+                # No beneficial swap possible, we're done
+                if verbose:
+                    print(f"  Card-by-card converged after {swap_num} swaps")
+                break
+
+        return deck, swap_history, len(swap_history)
+
+    # =========================================================================
+    # Main build method
+    # =========================================================================
 
     def build_deck(
         self,
@@ -248,33 +356,26 @@ class IterativeDeckBuilder:
         target_deck_size: int = 23,
         max_iterations: int = 100,
         convergence_tolerance: float = 0.01,
-        initial_temperature: float = 2.0,
-        final_temperature: float = 0.5,
+        temperature: float = 1.0,
         learning_rate: float = 0.3,
+        max_swaps: int = 50,
         verbose: bool = False,
     ) -> Dict:
         """
-        Build an optimal deck from a card pool using iterative refinement.
+        Build an optimal deck from a card pool using mean-field + card-by-card refinement.
 
         Args:
             pool: List of card names (can contain duplicates for multiple copies).
             target_deck_size: Number of non-land cards in deck (default 23).
-            max_iterations: Maximum number of refinement iterations.
-            convergence_tolerance: Stop when max change is below this value.
-            initial_temperature: Starting softmax temperature (more exploration).
-            final_temperature: Ending softmax temperature (more greedy).
-            learning_rate: Blending rate for updates.
-            verbose: If True, print progress information.
+            max_iterations: Maximum mean-field iterations.
+            convergence_tolerance: Mean-field convergence threshold.
+            temperature: Softmax temperature for mean-field.
+            learning_rate: Blending rate for mean-field updates.
+            max_swaps: Maximum card-by-card swaps.
+            verbose: Print progress information.
 
         Returns:
-            Dictionary containing:
-                - 'deck': List of card names in deck
-                - 'deck_counts': Dict mapping card name to count
-                - 'sideboard': List of card names in sideboard
-                - 'sideboard_counts': Dict mapping card name to count
-                - 'scores': Dict mapping card name to final model score
-                - 'converged': Whether algorithm converged
-                - 'iterations': Number of iterations run
+            Dictionary containing deck, sideboard, scores, and metadata.
         """
         # Convert pool to vectors
         pool_counts, available_mask = self.pool_to_vectors(pool)
@@ -284,58 +385,43 @@ class IterativeDeckBuilder:
 
         if pool_counts.sum() < target_deck_size:
             if verbose:
-                print(f"Warning: Pool ({int(pool_counts.sum())} cards) smaller than target deck size ({target_deck_size}).")
+                print(f"Warning: Pool ({int(pool_counts.sum())} cards) smaller than target ({target_deck_size}).")
             target_deck_size = int(pool_counts.sum())
 
-        # Initialize deck
-        deck_counts = self.initialize_deck(pool_counts, target_deck_size)
-
-        # Iterative refinement
-        converged = False
-        iteration = 0
-
-        for iteration in range(max_iterations):
-            # Anneal temperature
-            progress = iteration / max(max_iterations - 1, 1)
-            temperature = initial_temperature + (final_temperature - initial_temperature) * progress
-
-            # Get scores and update deck
-            scores = self.get_card_scores(deck_counts, available_mask)
-            new_deck = self.softmax_update(
-                deck_counts, scores, pool_counts, available_mask,
-                target_deck_size, temperature, learning_rate
-            )
-
-            # Check convergence
-            max_change = np.max(np.abs(new_deck - deck_counts))
-            deck_counts = new_deck
-
-            if verbose and iteration % 10 == 0:
-                print(f"Iteration {iteration}: temp={temperature:.2f}, max_change={max_change:.4f}")
-
-            if max_change < convergence_tolerance:
-                converged = True
-                if verbose:
-                    print(f"Converged at iteration {iteration}")
-                break
-
-        # Get final scores for all cards in pool
-        final_scores = self.get_card_scores(deck_counts, available_mask)
+        # Phase 1: Mean-field
+        if verbose:
+            print("Phase 1: Mean-field iteration")
+        fractional_deck, mf_converged, mf_iterations = self.run_mean_field(
+            pool_counts, available_mask, target_deck_size,
+            max_iterations, convergence_tolerance, temperature, learning_rate, verbose
+        )
 
         # Round to integer deck
-        integer_deck = self.round_to_integer_deck(deck_counts, pool_counts, target_deck_size)
+        integer_deck = self.round_mean_field(fractional_deck, pool_counts, target_deck_size)
 
-        # Build result
+        # Phase 2: Card-by-card refinement
+        if verbose:
+            print("\nPhase 2: Card-by-card refinement")
+        final_deck, swap_history, num_swaps = self.run_card_by_card(
+            integer_deck, pool_counts, available_mask, max_swaps, verbose
+        )
+
+        # Get final scores
+        final_scores = self.get_card_scores(final_deck.astype(np.float32), available_mask)
+
+        # Build result dictionaries
         deck_list = []
         deck_counts_dict = {}
         sideboard_list = []
         sideboard_counts_dict = {}
         scores_dict = {}
+        fractional_dict = {}
 
         for i, card_name in enumerate(self.cardnames):
             if pool_counts[i] > 0:
                 scores_dict[card_name] = float(final_scores[i])
-                deck_count = int(integer_deck[i])
+                fractional_dict[card_name] = float(fractional_deck[i])
+                deck_count = int(final_deck[i])
                 sideboard_count = int(pool_counts[i]) - deck_count
 
                 if deck_count > 0:
@@ -352,13 +438,49 @@ class IterativeDeckBuilder:
             "sideboard": sideboard_list,
             "sideboard_counts": sideboard_counts_dict,
             "scores": scores_dict,
-            "converged": converged,
-            "iterations": iteration + 1,
+            "fractional_counts": fractional_dict,
+            "mean_field_converged": mf_converged,
+            "mean_field_iterations": mf_iterations,
+            "card_by_card_swaps": num_swaps,
+            "swap_history": swap_history,
         }
+
+    # =========================================================================
+    # Visualization
+    # =========================================================================
+
+    def print_mean_field_deck(self, result: Dict) -> None:
+        """
+        Print the mean-field fractional deck showing inclusion percentages.
+
+        Args:
+            result: Result dictionary from build_deck().
+        """
+        fractional = result["fractional_counts"]
+        scores = result["scores"]
+
+        # Sort by fractional count descending
+        sorted_cards = sorted(fractional.items(), key=lambda x: -x[1])
+
+        print(f"\n{'='*55}")
+        print("MEAN-FIELD DECK (fractional inclusion)")
+        print(f"{'='*55}")
+        print(f"{'Score':>7}  {'Count':>6}  {'%':>5}  Card Name")
+        print(f"{'-'*55}")
+
+        for card_name, frac_count in sorted_cards:
+            score = scores[card_name]
+            pct = (frac_count / max(frac_count, 0.01)) * 100 if frac_count > 0.01 else frac_count * 100
+            # Show as percentage of 1 copy
+            pct_display = frac_count * 100 / max(1, frac_count) if frac_count >= 1 else frac_count * 100
+            print(f"{score:7.2f}  {frac_count:6.2f}  {frac_count*100/23:5.1f}%  {card_name}")
+
+        print(f"\nTotal: {sum(fractional.values()):.1f} cards")
+        print(f"Converged: {result['mean_field_converged']} ({result['mean_field_iterations']} iterations)")
 
     def print_deck_and_sideboard(self, result: Dict, pool: List[str] = None) -> None:
         """
-        Print a formatted view of the deck and sideboard.
+        Print a formatted view of the final deck and sideboard.
 
         Args:
             result: Result dictionary from build_deck().
@@ -374,7 +496,7 @@ class IterativeDeckBuilder:
         # Print deck
         deck_size = sum(deck_counts.values())
         print(f"\n{'='*40}")
-        print(f"DECK ({deck_size} cards)")
+        print(f"FINAL DECK ({deck_size} cards)")
         print(f"{'='*40}")
         print(f"{'Score':>7}  {'Qty':>3}  Card Name")
         print(f"{'-'*40}")
@@ -399,12 +521,12 @@ class IterativeDeckBuilder:
 
         # Print summary
         print(f"\n{'='*40}")
-        print(f"Converged: {result['converged']} ({result['iterations']} iterations)")
+        print(f"Mean-field: {result['mean_field_iterations']} iterations")
+        print(f"Card-by-card: {result['card_by_card_swaps']} swaps")
 
         # Verification
         if pool is not None:
             pool_counter = Counter(pool)
-            # Only count cards that are in the set
             valid_pool_size = sum(
                 count for card, count in pool_counter.items()
                 if card in self.card_to_idx
