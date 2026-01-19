@@ -173,14 +173,18 @@ def create_dataset(
         
         break
 
-    # Process full input csv in chunks.
-    pack_chunks, pool_chunks, pick_chunks = [], [], []
+    # Process full input csv in chunks with immediate train/val split to minimize memory usage.
+    # This approach never holds more than one chunk in memory at a time.
+    all_data_train = {'pools': [], 'packs': [], 'picks': []}
+    all_data_val = {'pools': [], 'packs': [], 'picks': []}
+
     chunk_size = 100000
     t0 = time.time()
+    total_examples = 0
+
     for i, draft_chunk in enumerate(
         pd.read_csv(csv_path, chunksize=chunk_size, compression="gzip")
     ):
-
         # Remove basics.
         draft_chunk = remove_basics(draft_chunk)
 
@@ -215,41 +219,50 @@ def create_dataset(
             # For PickTwoDraft modes, generate two examples per row: one for pick and one for pick_2
             # We need to duplicate the pack and pool data for each pick
             pick_chunk = np.zeros((len(draft_chunk) * 2, len(cardnames)), dtype=bool)
-            
+
             # Process pick column
             for j, item in enumerate(draft_chunk["pick"]):
                 pick_chunk[j * 2, class_to_index[item]] = True
-            
+
             # Process pick_2 column
             for j, item in enumerate(draft_chunk["pick_2"]):
                 pick_chunk[j * 2 + 1, class_to_index[item]] = True
-            
+
             # Duplicate pack and pool data for the second example
-            pack_chunk_duplicated = pd.concat([pack_chunk, pack_chunk], ignore_index=True)
-            pool_chunk_duplicated = pd.concat([pool_chunk, pool_chunk], ignore_index=True)
-            
-            # Append data
-            pick_chunks.append(pick_chunk)
-            pack_chunks.append(pack_chunk_duplicated)
-            pool_chunks.append(pool_chunk_duplicated)
+            pack_chunk = pd.concat([pack_chunk, pack_chunk], ignore_index=True)
+            pool_chunk = pd.concat([pool_chunk, pool_chunk], ignore_index=True)
         else:
             # Standard processing for non-PickTwoDraft modes
             pick_chunk = np.zeros((len(draft_chunk), len(cardnames)), dtype=bool)
             for j, item in enumerate(draft_chunk["pick"]):
                 pick_chunk[j, class_to_index[item]] = True
 
-            # Append data (consider multiple files for memory efficiency).
-            pick_chunks.append(pick_chunk)
-            pack_chunks.append(pack_chunk)
-            pool_chunks.append(pool_chunk)
+        # Immediately split this chunk into train/val to avoid accumulating all chunks
+        if len(pick_chunk) > 1:
+            chunk_pools = pool_chunk.values
+            chunk_packs = pack_chunk.values
+
+            pools_train, pools_test, packs_train, packs_test, picks_train, picks_test = train_test_split(
+                chunk_pools, chunk_packs, pick_chunk, test_size=0.2, random_state=42
+            )
+
+            all_data_train['pools'].append(pools_train)
+            all_data_train['packs'].append(packs_train)
+            all_data_train['picks'].append(picks_train)
+            all_data_val['pools'].append(pools_test)
+            all_data_val['packs'].append(packs_test)
+            all_data_val['picks'].append(picks_test)
+
+            total_examples += len(pick_chunk)
+
+        # Free chunk memory immediately
+        del draft_chunk, pack_chunk, pool_chunk, pick_chunk
 
         if i % 10 == 0:
-            examples_loaded = chunk_size * i
-            if is_picktwo_mode:
-                examples_loaded *= 2  # Double the examples for PickTwoDraft modes
-            print(f"Loaded {examples_loaded} picks, t=", round(time.time() - t0, 1), "s")
+            examples_loaded = total_examples
+            print(f"Processed {examples_loaded} picks, t=", round(time.time() - t0, 1), "s")
 
-    print("Loaded all draft data.")
+    print(f"Loaded and split all draft data ({total_examples} total examples).")
 
     # Make sure we have a card csv.
     create_card_csv(
@@ -259,37 +272,8 @@ def create_dataset(
     # Get rarities for set.
     rarities = pd.read_csv("../data/cards/" + set_abbreviation + ".csv")["rarity"].tolist() #TODO check if sorted.
 
-    # Memory-efficient approach: concatenate and immediately split to avoid holding 3 copies
-    print("Creating train/validation split...")
-
-    # Process in batches to reduce peak memory
-    all_data_train = {'pools': [], 'packs': [], 'picks': []}
-    all_data_val = {'pools': [], 'packs': [], 'picks': []}
-
-    for i in range(len(pick_chunks)):
-        # Concatenate this chunk's data
-        chunk_picks = pick_chunks[i]
-        chunk_packs = pack_chunks[i].values
-        chunk_pools = pool_chunks[i].values
-
-        # Split this chunk
-        if len(chunk_picks) > 1:
-            pools_train, pools_test, packs_train, packs_test, picks_train, picks_test = train_test_split(
-                chunk_pools, chunk_packs, chunk_picks, test_size=0.2, random_state=42
-            )
-            all_data_train['pools'].append(pools_train)
-            all_data_train['packs'].append(packs_train)
-            all_data_train['picks'].append(picks_train)
-            all_data_val['pools'].append(pools_test)
-            all_data_val['packs'].append(packs_test)
-            all_data_val['picks'].append(picks_test)
-
-        # Free memory as we go
-        pick_chunks[i] = None
-        pack_chunks[i] = None
-        pool_chunks[i] = None
-
-    # Final concatenation
+    # Final concatenation of train/val splits
+    print("Concatenating train/validation splits...")
     pools_train = np.vstack(all_data_train['pools'])
     packs_train = np.vstack(all_data_train['packs'])
     picks_train = np.vstack(all_data_train['picks'])
