@@ -198,10 +198,17 @@ def default_training_pipeline(
     dataset_folder = "../data/training_sets/"
 
     train_dataset = torch.load(train_path, weights_only=False)
-    print(f"🔧 Step 3: Creating train dataloader (batch_size=10000)...")
+
+    # Use smaller batch size for CI environments with limited memory
+    # Batch size reduced from 10000 to 1000 (×0.1)
+    batch_size = 1000
+    # Learning rate reduced proportionally from 0.03 to 0.003 (×0.1)
+    learning_rate = 0.003
+
+    print(f"🔧 Step 3: Creating train dataloader (batch_size={batch_size})...")
     sys.stdout.flush()
 
-    train_dataloader = DataLoader(train_dataset, batch_size=10000, shuffle=True, num_workers=0)
+    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=0)
 
     print(f"🔧 Step 4: Loading validation dataset...")
     sys.stdout.flush()
@@ -218,13 +225,14 @@ def default_training_pipeline(
     # Train network.
     network = sd.DraftNet(cardnames=train_dataset.cardnames)
 
-    print(f"🔧 Step 7: Starting model training...")
+    print(f"🔧 Step 7: Starting model training (lr={learning_rate})...")
     sys.stdout.flush()
 
     network, training_info = sd.train_model(
         train_dataloader,
         val_dataloader,
         network,
+        learning_rate=learning_rate,
         experiment_name=f"{set_abbreviation}_{draft_mode}",
     )
 

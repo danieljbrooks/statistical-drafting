@@ -251,28 +251,57 @@ def create_dataset(
 
     print("Loaded all draft data.")
 
-    # Make sure we have a card csv. 
+    # Make sure we have a card csv.
     create_card_csv(
         set_abbreviation=set_abbreviation, cardnames=cardnames
     )
 
-    # Get rarities for set. 
-    rarities = pd.read_csv("../data/cards/" + set_abbreviation + ".csv")["rarity"].tolist() #TODO check if sorted. 
+    # Get rarities for set.
+    rarities = pd.read_csv("../data/cards/" + set_abbreviation + ".csv")["rarity"].tolist() #TODO check if sorted.
 
-    # Concatenate all chunks into a single Dataframe
-    picks = np.vstack(pick_chunks)
-    packs = pd.concat(pack_chunks, ignore_index=True)
-    pools = pd.concat(pool_chunks, ignore_index=True)
+    # Memory-efficient approach: concatenate and immediately split to avoid holding 3 copies
+    print("Creating train/validation split...")
 
-    # Create train and validation datasets.
-    pools_train, pools_test, packs_train, packs_test, picks_train, picks_test = train_test_split(
-        pools, packs, picks, test_size=0.2, random_state=42
-    )
+    # Process in batches to reduce peak memory
+    all_data_train = {'pools': [], 'packs': [], 'picks': []}
+    all_data_val = {'pools': [], 'packs': [], 'picks': []}
+
+    for i in range(len(pick_chunks)):
+        # Concatenate this chunk's data
+        chunk_picks = pick_chunks[i]
+        chunk_packs = pack_chunks[i].values
+        chunk_pools = pool_chunks[i].values
+
+        # Split this chunk
+        if len(chunk_picks) > 1:
+            pools_train, pools_test, packs_train, packs_test, picks_train, picks_test = train_test_split(
+                chunk_pools, chunk_packs, chunk_picks, test_size=0.2, random_state=42
+            )
+            all_data_train['pools'].append(pools_train)
+            all_data_train['packs'].append(packs_train)
+            all_data_train['picks'].append(picks_train)
+            all_data_val['pools'].append(pools_test)
+            all_data_val['packs'].append(packs_test)
+            all_data_val['picks'].append(picks_test)
+
+        # Free memory as we go
+        pick_chunks[i] = None
+        pack_chunks[i] = None
+        pool_chunks[i] = None
+
+    # Final concatenation
+    pools_train = np.vstack(all_data_train['pools'])
+    packs_train = np.vstack(all_data_train['packs'])
+    picks_train = np.vstack(all_data_train['picks'])
+    pools_test = np.vstack(all_data_val['pools'])
+    packs_test = np.vstack(all_data_val['packs'])
+    picks_test = np.vstack(all_data_val['picks'])
+
     pick_train_dataset = PickDataset(
-        pools_train.values, packs_train.values, picks_train, cardnames, rarities
+        pools_train, packs_train, picks_train, cardnames, rarities
     )
     pick_val_dataset = PickDataset(
-        pools_test.values, packs_test.values, picks_test, cardnames, rarities
+        pools_test, packs_test, picks_test, cardnames, rarities
     )
 
     # Previous train/test split - segmented by time. 
