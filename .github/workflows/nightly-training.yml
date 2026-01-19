@@ -97,14 +97,6 @@ jobs:
           restore-keys: |
             17lands-data-${{ needs.check-for-updates.outputs.latest_set }}-
 
-      - name: Cache processed training sets
-        uses: actions/cache@v4
-        with:
-          path: data/training_sets/
-          key: training-sets-${{ needs.check-for-updates.outputs.latest_set }}-premier-${{ needs.check-for-updates.outputs.premier_updated }}-trad-${{ needs.check-for-updates.outputs.traditional_updated }}-picktwo-${{ needs.check-for-updates.outputs.picktwodraft_updated }}
-          restore-keys: |
-            training-sets-${{ needs.check-for-updates.outputs.latest_set }}-
-
       - name: Download tracker state
         uses: actions/download-artifact@v4
         with:
