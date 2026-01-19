@@ -103,6 +103,14 @@ jobs:
           name: tracker-state
           path: model_refresh/
 
+      - name: Maximize build space and add swap
+        uses: easimon/maximize-build-space@v10
+        with:
+          swap-size-mb: 4096
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+
       - name: Run training pipeline
         id: training
         working-directory: model_refresh

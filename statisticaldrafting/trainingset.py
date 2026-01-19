@@ -1,3 +1,4 @@
+import gc
 import math
 import os
 import time
@@ -255,8 +256,9 @@ def create_dataset(
 
             total_examples += len(pick_chunk)
 
-        # Free chunk memory immediately
+        # Free chunk memory immediately and force garbage collection
         del draft_chunk, pack_chunk, pool_chunk, pick_chunk
+        gc.collect()
 
         if i % 10 == 0:
             examples_loaded = total_examples
@@ -287,6 +289,12 @@ def create_dataset(
     pick_val_dataset = PickDataset(
         pools_test, packs_test, picks_test, cardnames, rarities
     )
+
+    # Free memory from intermediate arrays
+    del all_data_train, all_data_val
+    del pools_train, packs_train, picks_train
+    del pools_test, packs_test, picks_test
+    gc.collect()
 
     # Previous train/test split - segmented by time. 
     # tsize = round(len(pools) * train_fraction)
