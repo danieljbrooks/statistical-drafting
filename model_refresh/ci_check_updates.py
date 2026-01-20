@@ -40,8 +40,51 @@ def set_output(name, value):
     print(f"Output: {name}={value}")
 
 
+def generate_issue_body(latest_set, premier_updated, picktwodraft_updated):
+    """Generate the GitHub Issue body content."""
+    # Determine update status
+    premier_status = "Updated" if premier_updated else "No change"
+    picktwodraft_status = "Updated" if picktwodraft_updated else "No change"
+
+    # Get workflow URL from environment
+    github_server = os.environ.get('GITHUB_SERVER_URL', 'https://github.com')
+    github_repo = os.environ.get('GITHUB_REPOSITORY', '')
+    github_run_id = os.environ.get('GITHUB_RUN_ID', '')
+    workflow_url = f"{github_server}/{github_repo}/actions/runs/{github_run_id}" if github_run_id else "N/A"
+
+    body = f"""New draft data has been detected on 17lands.com.
+
+## Data Updates
+- **Set:** {latest_set}
+- **Premier Draft:** {premier_status}
+- **PickTwoDraft:** {picktwodraft_status}
+
+## Commands to Run
+
+### 1. Train models locally
+```bash
+cd /path/to/statistical-drafting/model_refresh
+python refresh_models.py
+```
+
+### 2. Deploy to website
+```bash
+cd ../data/onnx
+cp *.onnx /path/to/statistical-drafting-website/data/onnx/
+cd /path/to/statistical-drafting-website
+git add data/onnx/*.onnx
+git commit -m "Update ONNX models for {latest_set}"
+git push
+```
+
+---
+Workflow run: {workflow_url}
+"""
+    return body
+
+
 def main():
-    force_training = os.environ.get('FORCE_TRAINING', 'false').lower() == 'true'
+    force_notification = os.environ.get('FORCE_NOTIFICATION', 'false').lower() == 'true'
 
     print("Checking for data updates...")
     tracker_data = load_data_tracker()
@@ -79,12 +122,38 @@ def main():
                 picktwodraft_updated = True
                 break
 
-    has_updates = new_set_detected or premier_updated or picktwodraft_updated or force_training
+    has_updates = new_set_detected or premier_updated or picktwodraft_updated or force_notification
 
     # Set outputs
     set_output("has_updates", str(has_updates).lower())
     set_output("premier_updated", str(premier_updated).lower())
     set_output("picktwodraft_updated", str(picktwodraft_updated).lower())
+
+    # Generate and set issue body if there are updates
+    if has_updates:
+        issue_body = generate_issue_body(latest_set, premier_updated, picktwodraft_updated)
+        # Escape newlines and special characters for GitHub Actions output
+        escaped_body = issue_body.replace('%', '%25').replace('\n', '%0A').replace('\r', '%0D')
+        set_output("issue_body", escaped_body)
+
+        # Update tracker data
+        if new_set_detected:
+            tracker_data["most_recent_set"] = latest_set
+        if premier_updated and premier_last_modified:
+            tracker_data["premier_draft_last_updated"] = premier_last_modified
+        if picktwodraft_updated:
+            # Update with the latest picktwodraft timestamp found
+            for set_code in all_sets:
+                picktwodraft_url = f"https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.{set_code}.PickTwoDraft.csv.gz"
+                picktwodraft_last_modified = get_file_last_modified(picktwodraft_url)
+                if picktwodraft_last_modified:
+                    tracker_data["picktwodraft_last_updated"] = picktwodraft_last_modified
+                    break
+
+        # Save updated tracker
+        with open(DATA_TRACKER_PATH, 'w') as f:
+            json.dump(tracker_data, f, indent=2)
+        print(f"Updated tracker saved to {DATA_TRACKER_PATH}")
 
     # Summary
     print(f"\n{'='*50}")
@@ -94,9 +163,8 @@ def main():
     print(f"New Set Detected: {new_set_detected}")
     print(f"Premier Draft Updated: {premier_updated}")
     print(f"PickTwoDraft Updated: {picktwodraft_updated}")
-    print(f"Force Training: {force_training}")
-    print(f"Has Updates (will train): {has_updates}")
-    print(f"Note: Will train ONE model per set (PickTwo preferred over Premier)")
+    print(f"Force Notification: {force_notification}")
+    print(f"Has Updates (will notify): {has_updates}")
     print(f"{'='*50}\n")
 
 

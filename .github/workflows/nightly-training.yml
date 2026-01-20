@@ -1,4 +1,4 @@
-name: Nightly Model Training
+name: Nightly Data Update Check
 
 on:
   schedule:
@@ -6,8 +6,8 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
-      force_training:
-        description: 'Force training even if no new data'
+      force_notification:
+        description: 'Force notification even if no new data'
         required: false
         default: false
         type: boolean
@@ -16,15 +16,9 @@ env:
   PYTHON_VERSION: '3.11'
 
 jobs:
-  check-for-updates:
+  check-and-notify:
     name: Check for Data Updates
     runs-on: ubuntu-latest
-    outputs:
-      has_updates: ${{ steps.check.outputs.has_updates }}
-      latest_set: ${{ steps.check.outputs.latest_set }}
-      premier_updated: ${{ steps.check.outputs.premier_updated }}
-      traditional_updated: ${{ steps.check.outputs.traditional_updated }}
-      picktwodraft_updated: ${{ steps.check.outputs.picktwodraft_updated }}
 
     steps:
       - name: Checkout repository
@@ -48,148 +42,38 @@ jobs:
         run: |
           python ci_check_updates.py
         env:
-          FORCE_TRAINING: ${{ github.event.inputs.force_training }}
+          FORCE_NOTIFICATION: ${{ github.event.inputs.force_notification }}
 
-      - name: Upload tracker state
+      - name: Create GitHub Issue for new data
         if: steps.check.outputs.has_updates == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: tracker-state
-          path: model_refresh/data_tracker.json
-
-  train-models:
-    name: Train Models
-    needs: check-for-updates
-    if: needs.check-for-updates.outputs.has_updates == 'true' || github.event.inputs.force_training == true
-    runs-on: ubuntu-latest-16-core  # 16-core, 64GB RAM runner
-    timeout-minutes: 120
-    outputs:
-      models_trained: ${{ steps.training.outputs.models_trained }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          # Install CPU-only PyTorch first to avoid CUDA version
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          # Install other dependencies
-          pip install -r requirements.txt
-          pip install -r model_refresh/requirements.txt
-          pip install -e .
-          playwright install chromium
-          playwright install-deps chromium
-
-      - name: Cache downloaded data
-        uses: actions/cache@v4
-        with:
-          path: |
-            data/17lands/*.csv.gz
-            data/cards/cards.csv
-          key: 17lands-data-${{ needs.check-for-updates.outputs.latest_set }}-${{ github.run_number }}
-          restore-keys: |
-            17lands-data-${{ needs.check-for-updates.outputs.latest_set }}-
-
-      - name: Download tracker state
-        uses: actions/download-artifact@v4
-        with:
-          name: tracker-state
-          path: model_refresh/
-
-      - name: Run training pipeline
-        id: training
-        working-directory: model_refresh
-        run: |
-          python ci_training_runner.py
+        uses: actions/github-script@v7
         env:
-          LATEST_SET: ${{ needs.check-for-updates.outputs.latest_set }}
-          PREMIER_UPDATED: ${{ needs.check-for-updates.outputs.premier_updated }}
-          TRADITIONAL_UPDATED: ${{ needs.check-for-updates.outputs.traditional_updated }}
-          PICKTWODRAFT_UPDATED: ${{ needs.check-for-updates.outputs.picktwodraft_updated }}
-          # PyTorch threading environment variables
-          OMP_NUM_THREADS: 1
-          MKL_NUM_THREADS: 1
-          OPENBLAS_NUM_THREADS: 1
-
-      - name: Generate release notes
-        working-directory: model_refresh
-        run: python generate_release_notes.py
-
-      - name: Upload trained models as artifacts
-        uses: actions/upload-artifact@v4
+          LATEST_SET: ${{ steps.check.outputs.latest_set }}
+          PREMIER_UPDATED: ${{ steps.check.outputs.premier_updated }}
+          TRADITIONAL_UPDATED: ${{ steps.check.outputs.traditional_updated }}
+          PICKTWODRAFT_UPDATED: ${{ steps.check.outputs.picktwodraft_updated }}
+          ISSUE_BODY: ${{ steps.check.outputs.issue_body }}
         with:
-          name: trained-models-${{ github.run_number }}
-          path: |
-            data/models/*.pt
-            data/onnx/*.onnx
-          retention-days: 30
+          script: |
+            const latestSet = process.env.LATEST_SET;
+            const issueBody = process.env.ISSUE_BODY;
 
-      - name: Upload training logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: training-logs-${{ github.run_number }}
-          path: |
-            model_refresh/training_report.json
+            // Create the issue
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `New data available for ${latestSet}`,
+              body: issueBody,
+              labels: ['data-update']
+            });
+
+            core.info(`Created issue #${issue.data.number}: ${issue.data.html_url}`);
 
       - name: Commit updated tracker
+        if: steps.check.outputs.has_updates == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: Update data tracker after training run"
+          commit_message: "chore: Update data tracker after detecting new data"
           file_pattern: 'model_refresh/data_tracker.json'
           commit_user_name: github-actions[bot]
           commit_user_email: github-actions[bot]@users.noreply.github.com
-
-      - name: Create GitHub Release for new models
-        if: steps.training.outputs.models_trained == 'true'
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: models-${{ needs.check-for-updates.outputs.latest_set }}-${{ github.run_number }}
-          name: Models for ${{ needs.check-for-updates.outputs.latest_set }}
-          body_path: model_refresh/release_notes.md
-          files: |
-            data/models/*.pt
-            data/onnx/*.onnx
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy-to-website:
-    name: Deploy ONNX Models to Website
-    needs: [check-for-updates, train-models]
-    if: needs.train-models.outputs.models_trained == 'true'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download trained models
-        uses: actions/download-artifact@v4
-        with:
-          name: trained-models-${{ github.run_number }}
-          path: models/
-
-      - name: Checkout website repository
-        uses: actions/checkout@v4
-        with:
-          repository: danieljbrooks/statistical-drafting-website
-          token: ${{ secrets.WEBSITE_DEPLOY_TOKEN }}
-          path: website-repo
-
-      - name: Copy ONNX models to website
-        run: |
-          mkdir -p website-repo/data/onnx
-          cp -v models/data/onnx/*.onnx website-repo/data/onnx/
-          echo "Copied $(ls -1 models/data/onnx/*.onnx | wc -l) ONNX files"
-
-      - name: Commit and push to website repo
-        working-directory: website-repo
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/onnx/*.onnx
-          git commit -m "chore: Update ONNX models for ${{ needs.check-for-updates.outputs.latest_set }}"
-          git push
