@@ -61,7 +61,7 @@ jobs:
     name: Train Models
     needs: check-for-updates
     if: needs.check-for-updates.outputs.has_updates == 'true' || github.event.inputs.force_training == true
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-16-core  # 16-core, 64GB RAM runner
     timeout-minutes: 120
     outputs:
       models_trained: ${{ steps.training.outputs.models_trained }}
@@ -102,14 +102,6 @@ jobs:
         with:
           name: tracker-state
           path: model_refresh/
-
-      - name: Add swap space
-        run: |
-          sudo fallocate -l 4G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
-          sudo swapon --show
 
       - name: Run training pipeline
         id: training
