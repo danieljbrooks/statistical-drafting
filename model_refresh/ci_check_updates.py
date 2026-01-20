@@ -67,14 +67,6 @@ def main():
         current_premier_date is None or premier_last_modified != current_premier_date
     )
 
-    # Check Traditional Draft updates
-    trad_url = f"https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.{latest_set}.TradDraft.csv.gz"
-    trad_last_modified = get_file_last_modified(trad_url)
-    current_trad_date = tracker_data.get("traditional_draft_last_updated")
-    trad_updated = trad_last_modified and (
-        current_trad_date is None or trad_last_modified != current_trad_date
-    )
-
     # Check PickTwoDraft updates (check multiple recent sets)
     picktwodraft_updated = False
     all_sets = latest_set_info.get("all_available_sets", [])[:5]
@@ -87,12 +79,11 @@ def main():
                 picktwodraft_updated = True
                 break
 
-    has_updates = new_set_detected or premier_updated or trad_updated or picktwodraft_updated or force_training
+    has_updates = new_set_detected or premier_updated or picktwodraft_updated or force_training
 
     # Set outputs
     set_output("has_updates", str(has_updates).lower())
     set_output("premier_updated", str(premier_updated).lower())
-    set_output("traditional_updated", str(trad_updated).lower())
     set_output("picktwodraft_updated", str(picktwodraft_updated).lower())
 
     # Summary
@@ -102,10 +93,10 @@ def main():
     print(f"Latest Set: {latest_set}")
     print(f"New Set Detected: {new_set_detected}")
     print(f"Premier Draft Updated: {premier_updated}")
-    print(f"Traditional Draft Updated: {trad_updated}")
     print(f"PickTwoDraft Updated: {picktwodraft_updated}")
     print(f"Force Training: {force_training}")
     print(f"Has Updates (will train): {has_updates}")
+    print(f"Note: Will train ONE model per set (PickTwo preferred over Premier)")
     print(f"{'='*50}\n")
 
 

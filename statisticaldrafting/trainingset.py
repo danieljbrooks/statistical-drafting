@@ -179,7 +179,7 @@ def create_dataset(
     all_data_train = {'pools': [], 'packs': [], 'picks': []}
     all_data_val = {'pools': [], 'packs': [], 'picks': []}
 
-    chunk_size = 100000
+    chunk_size = 10000  # Reduced from 100000 for CI memory constraints
     t0 = time.time()
     total_examples = 0
 

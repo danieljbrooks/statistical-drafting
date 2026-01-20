@@ -68,41 +68,8 @@ def main():
     training_results = []
     models_trained = False
 
-    # Train models based on what was updated
-    if premier_updated:
-        print(f"\n{'='*50}")
-        print(f"Training Premier Draft model for {latest_set}")
-        print(f"{'='*50}")
-        try:
-            success, training_info = run_training_pipeline(latest_set, "Premier")
-            if success:
-                training_results.append(training_info)
-                models_trained = True
-                print(f"Premier Draft training completed successfully")
-            else:
-                print(f"WARNING: Premier Draft training failed")
-        except Exception as e:
-            print(f"ERROR: Premier Draft training crashed: {e}")
-            import traceback
-            traceback.print_exc()
-
-    if traditional_updated:
-        print(f"\n{'='*50}")
-        print(f"Training Traditional Draft model for {latest_set}")
-        print(f"{'='*50}")
-        try:
-            success, training_info = run_training_pipeline(latest_set, "Trad")
-            if success:
-                training_results.append(training_info)
-                models_trained = True
-                print(f"Traditional Draft training completed successfully")
-            else:
-                print(f"WARNING: Traditional Draft training failed")
-        except Exception as e:
-            print(f"ERROR: Traditional Draft training crashed: {e}")
-            import traceback
-            traceback.print_exc()
-
+    # Train ONE model per set to reduce memory usage
+    # Priority: PickTwo > Premier (PickTwo is more important for the website)
     if picktwodraft_updated:
         print(f"\n{'='*50}")
         print(f"Training PickTwoDraft model for {latest_set}")
@@ -119,6 +86,24 @@ def main():
             print(f"ERROR: PickTwoDraft training crashed: {e}")
             import traceback
             traceback.print_exc()
+    elif premier_updated:
+        print(f"\n{'='*50}")
+        print(f"Training Premier Draft model for {latest_set}")
+        print(f"{'='*50}")
+        try:
+            success, training_info = run_training_pipeline(latest_set, "Premier")
+            if success:
+                training_results.append(training_info)
+                models_trained = True
+                print(f"Premier Draft training completed successfully")
+            else:
+                print(f"WARNING: Premier Draft training failed")
+        except Exception as e:
+            print(f"ERROR: Premier Draft training crashed: {e}")
+            import traceback
+            traceback.print_exc()
+    else:
+        print(f"No updates detected, skipping training")
 
     # Save tracker with training results
     if training_results:
@@ -133,7 +118,6 @@ def main():
         "latest_set": latest_set,
         "cards_updated": cards_updated,
         "premier_updated": premier_updated,
-        "traditional_updated": traditional_updated,
         "picktwodraft_updated": picktwodraft_updated,
         "training_results": training_results,
         "models_trained": models_trained
