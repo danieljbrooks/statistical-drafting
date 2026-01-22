@@ -17,3 +17,9 @@ Older frontend [![Open in Colab](https://colab.research.google.com/assets/colab-
 - Recommendations for pack-1 pick-1 pick order is similar to GIH winrate from 17lands 
 - Synergy adjustment accounts for color, archetype, speculation, and splash potential
 - Models are portable, with a training time of <20 minutes/dataset and inference time of <1ms/pick
+
+## Model Training & Updates
+
+For training new models when new sets are released, see the [model_refresh](./model_refresh) directory.
+
+GitHub Actions automatically checks for new data nightly. When updates are detected, train new models with `python model_refresh/refresh_models.py`, then manually deploy ONNX models to the website repository.

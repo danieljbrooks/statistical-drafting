@@ -128,12 +128,12 @@ def check_and_download_draft_data(tracker_data: Dict, latest_set_info: Dict) -> 
     Check if draft data needs updating and download if necessary.
     
     Strategy: Only download and train Premier draft models. If Premier is not available,
-    fall back to PickTwo draft. Traditional draft is no longer trained.
+    fall back to PickTwo draft. Traditional draft is no longer downloaded or trained.
     
     Returns:
         Tuple of (data_updated, draft_mode, is_picktwodraft_fallback)
         - data_updated: bool indicating if new data was downloaded
-        - draft_mode: str indicating which mode to train ("Premier" or "PickTwo")
+        - draft_mode: str indicating which mode to train ("Premier" or "PickTwo"), or None
         - is_picktwodraft_fallback: bool indicating if we're using PickTwo as fallback
     """
     print("\n🔍 Checking draft data for updates...")
