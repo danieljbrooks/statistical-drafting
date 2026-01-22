@@ -59,23 +59,14 @@ def generate_issue_body(latest_set, premier_updated, picktwodraft_updated):
 - **Premier Draft:** {premier_status}
 - **PickTwoDraft:** {picktwodraft_status}
 
-## Commands to Run
+## To Update Models
 
-### 1. Train models locally
+Run from the statistical-drafting directory:
 ```bash
-cd /path/to/statistical-drafting/model_refresh
-python refresh_models.py
+./deploy.sh
 ```
 
-### 2. Deploy to website
-```bash
-cd ../data/onnx
-cp *.onnx /path/to/statistical-drafting-website/data/onnx/
-cd /path/to/statistical-drafting-website
-git add data/onnx/*.onnx
-git commit -m "Update ONNX models for {latest_set}"
-git push
-```
+This will train new models and deploy them to the website.
 
 ---
 Workflow run: {workflow_url}
