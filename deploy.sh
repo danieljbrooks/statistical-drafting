@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+# Aggressively push changes to the website repo.
+
 # Configuration
 WEBSITE_REPO="../statistical-drafting-website"
 
