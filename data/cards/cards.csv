@@ -2246,7 +2246,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 69896,M20,Rotting Regisaur,rare,B,3,Creature - Zombie Dinosaur,True
 69897,M20,Sanitarium Skeleton,common,B,1,Creature - Skeleton,True
 69898,M20,Scheming Symmetry,rare,B,1,Sorcery,True
-69899,M20,Sorcerer of the Fang,common,B,2,Creature - Human Wizard,True
+69899,M20,Sorcerer of the Fang,common,B,2,Creature - Human Wizard Sorcerer,True
 69900,M20,"Sorin, Imperious Bloodlord",mythic,B,3,Legendary Planeswalker - Sorin,True
 69901,M20,Soul Salvage,common,B,3,Sorcery,True
 69902,M20,Thought Distortion,uncommon,B,6,Sorcery,True
@@ -4535,7 +4535,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 73353,ZNR,Nahiri's Lithoforming,rare,R,2,Sorcery,True
 73354,ZNR,Pyroclastic Hellion,common,R,5,Creature - Hellion,True
 73355,ZNR,Relic Robber,rare,R,3,Creature - Goblin Rogue,True
-73356,ZNR,Rockslide Sorcerer,uncommon,R,4,Creature - Human Wizard,True
+73356,ZNR,Rockslide Sorcerer,uncommon,R,4,Creature - Human Wizard Sorcerer,True
 73357,ZNR,Roil Eruption,common,R,2,Sorcery,True
 73358,ZNR,Roiling Vortex,rare,R,2,Enchantment,True
 73359,ZNR,Scavenged Blade,common,R,2,Artifact - Equipment,True
@@ -6843,7 +6843,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 77146,AFR,White Dragon,uncommon,W,6,Creature - Dragon,True
 77147,AFR,You Hear Something on Watch,common,W,2,Instant,True
 77148,AFR,You're Ambushed on the Road,common,W,1,Instant,True
-77149,AFR,Aberrant Mind Sorcerer,uncommon,U,5,Creature - Human Elf Shaman,True
+77149,AFR,Aberrant Mind Sorcerer,uncommon,U,5,Creature - Human Elf Shaman Sorcerer,True
 77150,AFR,Air-Cult Elemental,common,U,6,Creature - Elemental,True
 77151,AFR,Arcane Investigator,common,U,2,Creature - Elf Wizard,True
 77152,AFR,Bar the Gate,common,U,3,Instant,True
@@ -10785,7 +10785,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 83480,ZNR,A-Gnarlid Colony,common,G,2,Creature - Beast,False
 83482,ZNR,A-Oran-Rief Ooze,rare,G,3,Creature - Ooze,False
 83476,ZNR,A-Master of Winds,rare,U,4,Creature - Sphinx Wizard,False
-83479,ZNR,A-Rockslide Sorcerer,uncommon,R,3,Creature - Human Wizard,False
+83479,ZNR,A-Rockslide Sorcerer,uncommon,R,3,Creature - Human Wizard Sorcerer,False
 83483,ZNR,A-Moss-Pit Skeleton,uncommon,BG,2,Creature - Plant Skeleton,False
 83481,ZNR,A-Iridescent Hornbeetle,uncommon,G,4,Creature - Insect,False
 83486,KHM,A-Bretagard Stronghold,uncommon,GW,0,Land,False
@@ -14189,7 +14189,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 87005,WOE,Ogre Chitterlord,rare,R,6,Creature - Ogre Warrior,False
 86685,WOE,Armory Mice,common,W,2,Creature - Mouse,True
 87024,WOE,Forest,basic,G,0,Basic Land - Forest,True
-86917,WOE,"Johann, Apprentice Sorcerer",uncommon,RU,4,Legendary Creature - Human Wizard,True
+86917,WOE,"Johann, Apprentice Sorcerer",uncommon,RU,4,Legendary Creature - Human Wizard Sorcerer,True
 86739,WOE,Galvanic Giant,uncommon,U,4,Creature - Giant Wizard,True
 86749,WOE,Merfolk Coralsmith,common,U,3,Creature - Merfolk,True
 86709,WOE,Regal Bunnicorn,rare,W,2,Creature - Rabbit Unicorn,True
@@ -19677,7 +19677,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 94518,PIO,Eidolon of Rhetoric,uncommon,W,3,Enchantment Creature - Spirit,True
 94557,PIO,"Xenagos, God of Revels",mythic,GR,5,Legendary Enchantment Creature - God,True
 94598,PIO,Hallowed Moonlight,rare,W,2,Instant,True
-94524,PIO,Silumgar Sorcerer,uncommon,U,3,Creature - Human Wizard,True
+94524,PIO,Silumgar Sorcerer,uncommon,U,3,Creature - Human Wizard Sorcerer,True
 94362,PIO,"Chandra, Flamecaller",mythic,R,6,Legendary Planeswalker - Chandra,True
 94490,PIO,Urban Evolution,uncommon,GU,5,Sorcery,True
 94239,PIO,Heliod's Pilgrim,common,W,3,Creature - Human Cleric,True
@@ -22681,7 +22681,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 82997,C18,Coveted Jewel,rare,,6,Artifact,True
 100929,MOC,Death-Greeter's Champion,rare,R,3,Creature - Human Warrior,True
 100138,ONC,Glimmer Lens,rare,W,2,Artifact - Equipment,True
-100737,DMC,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental,False
+100737,DMC,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental Sorcerer,False
 100908,DMC,"Torsten, Founder of Benalia",mythic,GW,7,Legendary Creature - Human Soldier,True
 101550,ANA,Echo of Eons,rare,U,6,Sorcery,True
 91326,UND,Booster Tutor,uncommon,B,1,Instant,True
@@ -23357,7 +23357,7 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 98783,TLA,"Toph, the First Metalbender",rare,GRW,4,Legendary Creature - Human Warrior Ally,False
 385,ANA,[Land],token,,0,,False
 100785,TSOM,Myr,token,,0,Artifact Creature - Myr,False
-100780,SLD,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental,False
+100780,SLD,"Greensleeves, Maro-Sorcerer",mythic,G,5,Legendary Creature - Elemental Sorcerer,False
 100781,SLD,Polyraptor,mythic,G,8,Creature - Dinosaur,False
 100782,SLD,Academy Manufactor,rare,,3,Artifact Creature - Assembly-Worker,False
 100783,SLD,Wurmcoil Engine,mythic,,6,Artifact Creature - Phyrexian Wurm,False
@@ -23370,3 +23370,702 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 77978,TCMR,Treasure,token,,0,Artifact - Treasure,False
 83462,TUMA,Marit Lage,token,,0,Legendary Creature - Avatar,False
 100983,OTC,Smirking Spelljacker,rare,U,5,Creature - Djinn Wizard Rogue,False
+101117,FIC,Mountain,basic,R,0,Basic Land - Mountain,False
+101114,FIC,Plains,basic,W,0,Basic Land - Plains,False
+101116,FIC,Swamp,basic,B,0,Basic Land - Swamp,False
+101115,FIC,Island,basic,U,0,Basic Land - Island,False
+101118,FIC,Forest,basic,G,0,Basic Land - Forest,False
+98475,ECL,Sear,uncommon,R,2,Instant,True
+98385,ECL,Run Away Together,common,U,2,Instant,True
+98378,ECL,"Oko, Lorwyn Liege",mythic,GU,3,Legendary Planeswalker - Oko,True
+98416,ECL,Darkness Descends,uncommon,B,4,Sorcery,True
+98502,ECL,Lys Alana Informant,common,G,2,Creature - Elf Scout,True
+98394,ECL,"Sygg, Wanderwine Wisdom",rare,UW,2,Legendary Creature - Merfolk Wizard,True
+98519,ECL,Thoughtweft Charge,uncommon,G,2,Instant,True
+98559,ECL,Noggle Robber,uncommon,GR,3,Creature - Noggle Rogue,True
+98460,ECL,Flamebraider,uncommon,R,2,Creature - Elemental Bard,True
+98439,ECL,Scarblade's Malice,common,B,1,Instant,True
+98461,ECL,Flamekin Gildweaver,common,R,4,Creature - Elemental Sorcerer,True
+98584,ECL,Blood Crypt,rare,BR,0,Land - Swamp Mountain,True
+98582,ECL,Springleaf Drum,uncommon,,1,Artifact,True
+98561,ECL,Raiding Schemes,rare,GR,5,Enchantment,True
+98384,ECL,Rimekin Recluse,uncommon,U,3,Creature - Elemental Wizard,True
+98556,ECL,Merrow Skyswimmer,common,UW,5,Creature - Merfolk Soldier,True
+98368,ECL,Glen Elendra Guardian,rare,U,3,Creature - Faerie Wizard,True
+98474,ECL,Scuzzback Scrounger,rare,R,2,Creature - Goblin Warrior,True
+98407,ECL,Bitterbloom Bearer,mythic,B,2,Creature - Faerie Rogue,True
+98465,ECL,Gristle Glutton,common,R,2,Creature - Goblin Scout,True
+98322,ECL,"Brigid, Clachan's Heart",rare,GW,3,Legendary Creature - Kithkin Warrior,True
+98499,ECL,Great Forest Druid,common,G,2,Creature - Treefolk Druid,True
+98363,ECL,Champions of the Shoal,rare,U,4,Creature - Merfolk Soldier,True
+98497,ECL,Formidable Speaker,rare,G,3,Creature - Elf Druid,True
+98423,ECL,Graveshifter,uncommon,B,4,Creature - Shapeshifter,True
+98557,ECL,Mischievous Sneakling,common,BU,2,Creature - Shapeshifter,True
+98337,ECL,Kinbinding,rare,W,5,Enchantment,True
+98360,ECL,Winnowing,rare,W,6,Sorcery,True
+98511,ECL,Pummeler for Hire,uncommon,G,5,Creature - Giant Mercenary,True
+98398,ECL,Thirst for Identity,uncommon,U,3,Instant,True
+98541,ECL,Eclipsed Flamekin,uncommon,RU,3,Creature - Elemental Scout,True
+98500,ECL,Luminollusk,uncommon,G,4,Creature - Elemental,True
+98588,ECL,Overgrown Tomb,rare,BG,0,Land - Swamp Forest,True
+98357,ECL,Tributary Vaulter,common,W,3,Creature - Merfolk Warrior,True
+98331,ECL,Encumbered Reejerey,uncommon,W,2,Creature - Merfolk Soldier,True
+98572,ECL,Voracious Tome-Skimmer,uncommon,BU,3,Creature - Faerie Rogue,True
+98539,ECL,Eclipsed Boggart,uncommon,BR,3,Creature - Goblin Scout,True
+98495,ECL,Dawn's Light Archer,common,G,3,Creature - Elf Archer,True
+98551,ECL,High Perfect Morcant,rare,BG,4,Legendary Creature - Elf Noble,True
+98437,ECL,Retched Wretch,uncommon,B,3,Creature - Goblin,True
+98419,ECL,Dose of Dawnglow,uncommon,B,5,Instant,True
+98517,ECL,Surly Farrier,common,G,2,Creature - Kithkin Citizen,True
+98412,ECL,Boggart Prankster,common,B,2,Creature - Goblin Warrior,True
+98432,ECL,Mudbutton Cursetosser,uncommon,B,1,Creature - Goblin Warlock,True
+98433,ECL,Nameless Inversion,uncommon,B,2,Kindred Instant - Shapeshifter,True
+98498,ECL,Gilt-Leaf's Embrace,common,G,3,Enchantment - Aura,True
+98560,ECL,Prideful Feastling,common,BW,3,Creature - Shapeshifter,True
+98503,ECL,Midnight Tilling,common,G,2,Instant,True
+98430,ECL,Moonshadow,mythic,B,1,Creature - Elemental,True
+98351,ECL,Shore Lurker,common,W,4,Creature - Merfolk Scout,True
+98318,ECL,Adept Watershaper,rare,W,3,Creature - Merfolk Cleric,True
+98488,ECL,Blossoming Defense,uncommon,G,1,Instant,True
+98574,ECL,Wistfulness,mythic,GU,5,Creature - Elemental Incarnation,True
+98450,ECL,Burning Curiosity,common,R,3,Sorcery,True
+98356,ECL,Timid Shieldbearer,common,W,2,Creature - Kithkin Soldier,True
+98507,ECL,Mutable Explorer,rare,G,3,Creature - Shapeshifter,True
+98369,ECL,Glen Elendra's Answer,mythic,U,4,Instant,True
+98482,ECL,Sting-Slinger,uncommon,R,3,Creature - Goblin Warrior,True
+98514,ECL,Selfless Safewright,rare,G,5,Creature - Elf Warrior,True
+98483,ECL,Tweeze,common,R,3,Instant,True
+98492,ECL,Champions of the Perfect,rare,G,4,Creature - Elf Warrior,True
+98462,ECL,Giantfall,uncommon,R,2,Instant,True
+98546,ECL,Figure of Fable,rare,GW,1,Creature - Kithkin,True
+98587,ECL,Hallowed Fountain,rare,UW,0,Land - Plains Island,True
+98409,ECL,Blighted Blackthorn,common,B,5,Creature - Treefolk Warlock,True
+98565,ECL,Stoic Grove-Guide,common,BG,5,Creature - Elf Druid,True
+98408,ECL,Blight Rot,common,B,3,Instant,True
+98324,ECL,Burdened Stoneback,uncommon,W,2,Creature - Giant Warrior,True
+98326,ECL,Clachan Festival,uncommon,W,3,Kindred Enchantment - Kithkin,True
+98377,ECL,Noggle the Mind,uncommon,U,2,Enchantment - Aura,True
+98320,ECL,Appeal to Eirdu,common,W,4,Instant,True
+98520,ECL,"Trystan, Callous Cultivator",rare,BG,3,Legendary Creature - Elf Druid,True
+98527,ECL,Ashling's Command,rare,RU,5,Kindred Instant - Elemental,True
+98371,ECL,Harmonized Crescendo,rare,U,6,Instant,True
+98533,ECL,Chitinous Graspling,common,GU,4,Creature - Shapeshifter,True
+98540,ECL,Eclipsed Elf,uncommon,BG,3,Creature - Elf Scout,True
+98489,ECL,Bristlebane Battler,rare,G,2,Creature - Kithkin Soldier,True
+98399,ECL,Unexpected Assistance,common,U,5,Instant,True
+98522,ECL,Unforgiving Aim,common,G,3,Instant,True
+98470,ECL,Lasting Tarfire,uncommon,R,2,Enchantment,True
+98534,ECL,Deceit,mythic,BU,6,Creature - Elemental Incarnation,True
+98393,ECL,Swat Away,uncommon,U,4,Instant,True
+98424,ECL,"Grub, Storied Matriarch",rare,BR,3,Legendary Creature - Goblin Warlock,True
+98447,ECL,Boneclub Berserker,common,R,4,Creature - Goblin Berserker,True
+98370,ECL,Gravelgill Scoundrel,common,U,2,Creature - Merfolk Rogue,True
+98577,ECL,Firdoch Core,common,,3,Kindred Artifact - Shapeshifter,True
+98440,ECL,Shimmercreep,uncommon,B,5,Creature - Elemental,True
+98349,ECL,"Rhys, the Evermore",rare,W,2,Legendary Creature - Elf Warrior,True
+98355,ECL,Thoughtweft Imbuer,uncommon,W,4,Creature - Kithkin Advisor,True
+98467,ECL,Impolite Entrance,uncommon,R,1,Sorcery,True
+98373,ECL,Kulrath Mystic,common,U,3,Creature - Elemental Wizard,True
+98553,ECL,"Kirol, Attentive First-Year",rare,RW,3,Legendary Creature - Vampire Cleric,True
+98342,ECL,Meanders Guide,uncommon,W,3,Creature - Merfolk Scout,True
+98335,ECL,Goldmeadow Nomad,common,W,1,Creature - Kithkin Scout,True
+98449,ECL,Brambleback Brute,common,R,3,Creature - Giant Warrior,True
+98473,ECL,Reckless Ransacking,common,R,2,Instant,True
+98443,ECL,Unbury,uncommon,B,2,Instant,True
+98340,ECL,Kithkeeper,uncommon,W,7,Creature - Elemental,True
+98328,ECL,Curious Colossus,mythic,W,7,Creature - Giant Warrior,True
+98333,ECL,Flock Impostor,uncommon,W,3,Creature - Shapeshifter,True
+98555,ECL,"Maralen, Fae Ascendant",rare,BGU,5,Legendary Creature - Elf Faerie Noble,True
+98406,ECL,Bile-Vial Boggart,common,B,1,Creature - Goblin Assassin,True
+98366,ECL,Glamer Gifter,uncommon,U,2,Creature - Faerie Wizard,True
+98448,ECL,Boulder Dash,uncommon,R,2,Sorcery,True
+98359,ECL,Wanderbrine Trapper,uncommon,W,1,Creature - Merfolk Scout,True
+98516,ECL,Spry and Mighty,rare,G,5,Sorcery,True
+98358,ECL,Wanderbrine Preacher,common,W,2,Creature - Merfolk Cleric,True
+98472,ECL,Meek Attack,mythic,R,3,Enchantment,True
+98538,ECL,Dream Harvest,rare,BU,7,Sorcery,True
+98388,ECL,Silvergill Peddler,common,U,3,Creature - Merfolk Citizen,True
+98481,ECL,Squawkroaster,uncommon,R,4,Creature - Elemental,True
+98429,ECL,Moonglove Extractor,common,B,3,Creature - Elf Warlock,True
+98413,ECL,Bogslither's Embrace,common,B,2,Sorcery,True
+98585,ECL,Eclipsed Realms,uncommon,,0,Land,True
+98452,ECL,Cinder Strike,common,R,1,Sorcery,True
+98454,ECL,Elder Auntie,common,R,3,Creature - Goblin Warlock,True
+98531,ECL,Catharsis,mythic,RW,6,Creature - Elemental Incarnation,True
+98471,ECL,Lavaleaper,rare,R,4,Creature - Elemental,True
+98376,ECL,Mirrorform,mythic,U,6,Instant,True
+98410,ECL,Bloodline Bidding,rare,B,8,Sorcery,True
+98466,ECL,Hexing Squelcher,rare,R,2,Creature - Goblin Sorcerer,True
+98478,ECL,Soulbright Seeker,uncommon,R,1,Creature - Elemental Sorcerer,True
+98339,ECL,Kinscaer Sentry,rare,W,2,Creature - Kithkin Soldier,True
+98508,ECL,Pitiless Fists,uncommon,G,4,Enchantment - Aura,True
+98321,ECL,Bark of Doran,uncommon,W,2,Artifact - Equipment,True
+98510,ECL,Prismatic Undercurrents,uncommon,G,4,Enchantment,True
+98341,ECL,Liminal Hold,common,W,4,Enchantment,True
+98580,ECL,Mirrormind Crown,rare,,4,Artifact - Equipment,True
+98456,ECL,Enraged Flamecaster,common,R,3,Creature - Elemental Sorcerer,True
+98405,ECL,Barbed Bloodletter,common,B,2,Artifact - Equipment,True
+98501,ECL,Lys Alana Dignitary,uncommon,G,2,Creature - Elf Advisor,True
+98594,ECL,Mountain,basic,R,0,Basic Land - Mountain,True
+98578,ECL,Foraging Wickermaw,common,,2,Artifact Creature - Scarecrow,True
+98529,ECL,Bre of Clan Stoutarm,rare,RW,4,Legendary Creature - Giant Warrior,True
+98505,ECL,Moon-Vigil Adherents,uncommon,G,4,Creature - Elf Druid,True
+98566,ECL,Sygg's Command,rare,UW,3,Kindred Sorcery - Merfolk,True
+98329,ECL,"Eirdu, Carrier of Dawn",mythic,BW,5,Legendary Creature - Elemental God,True
+98515,ECL,Shimmerwilds Growth,uncommon,G,2,Enchantment - Aura,True
+98336,ECL,Keep Out,common,W,2,Instant,True
+98381,ECL,Pestered Wellguard,uncommon,U,4,Creature - Merfolk Soldier,True
+98434,ECL,Nightmare Sower,uncommon,B,4,Creature - Faerie Assassin,True
+98576,ECL,Dawn-Blessed Pennant,uncommon,,1,Artifact,True
+98400,ECL,Unwelcome Sprite,uncommon,U,2,Creature - Faerie Rogue,True
+98550,ECL,Grub's Command,rare,BR,5,Kindred Sorcery - Goblin,True
+98428,ECL,Iron-Shield Elf,uncommon,B,2,Creature - Elf Warrior,True
+98554,ECL,"Lluwen, Imperfect Naturalist",rare,BG,2,Legendary Creature - Elf Druid,True
+98374,ECL,Loch Mare,mythic,U,2,Creature - Horse Serpent,True
+98343,ECL,Moonlit Lamenter,uncommon,W,3,Creature - Treefolk Cleric,True
+98535,ECL,Deepchannel Duelist,uncommon,UW,2,Creature - Merfolk Soldier,True
+98365,ECL,Flitterwing Nuisance,rare,U,1,Creature - Faerie Rogue,True
+98383,ECL,Rimefire Torque,rare,U,2,Artifact,True
+98317,ECL,Rooftop Percher,common,,5,Creature - Shapeshifter,True
+98593,ECL,Swamp,basic,B,0,Basic Land - Swamp,True
+98592,ECL,Island,basic,U,0,Basic Land - Island,True
+98325,ECL,Champion of the Clachan,rare,W,4,Creature - Kithkin Knight,True
+98542,ECL,Eclipsed Kithkin,uncommon,GW,2,Creature - Kithkin Scout,True
+98438,ECL,Scarblade Scout,common,B,2,Creature - Elf Scout,True
+98391,ECL,Summit Sentinel,common,U,2,Creature - Elemental Soldier,True
+98442,ECL,Twilight Diviner,rare,B,3,Creature - Elf Cleric,True
+98581,ECL,Puca's Eye,uncommon,,2,Artifact,True
+98549,ECL,Glister Bairn,uncommon,GU,5,Creature - Ouphe,True
+98543,ECL,Eclipsed Merrow,uncommon,UW,3,Creature - Merfolk Scout,True
+98364,ECL,Disruptor of Currents,rare,U,5,Creature - Merfolk Wizard,True
+98494,ECL,Crossroads Watcher,common,G,3,Creature - Kithkin Ranger,True
+98390,ECL,Stratosoarer,common,U,5,Creature - Elemental,True
+98524,ECL,Virulent Emissary,uncommon,G,1,Creature - Elf Assassin,True
+98571,ECL,Vibrance,mythic,GR,5,Creature - Elemental Incarnation,True
+98583,ECL,Stalactite Dagger,common,,2,Artifact - Equipment,True
+98493,ECL,Chomping Changeling,uncommon,G,3,Creature - Shapeshifter,True
+98512,ECL,Safewright Cavalry,common,G,4,Creature - Elf Warrior,True
+98345,ECL,Personify,uncommon,W,2,Instant,True
+98591,ECL,Plains,basic,W,0,Basic Land - Plains,True
+98372,ECL,Illusion Spinners,uncommon,U,5,Creature - Faerie Wizard,True
+98444,ECL,"Ashling, Rekindled",rare,RU,2,Legendary Creature - Elemental Sorcerer,True
+98420,ECL,Dream Seizer,common,B,4,Creature - Faerie Rogue,True
+98347,ECL,Pyrrhic Strike,uncommon,W,3,Instant,True
+98397,ECL,Temporal Cleansing,common,U,4,Sorcery,True
+98362,ECL,Blossombind,common,U,2,Enchantment - Aura,True
+98418,ECL,Dawnhand Eulogist,common,B,4,Creature - Elf Warlock,True
+98441,ECL,Taster of Wares,rare,B,3,Creature - Goblin Warlock,True
+98458,ECL,Feed the Flames,common,R,4,Instant,True
+98451,ECL,Champion of the Path,rare,R,4,Creature - Elemental Sorcerer,True
+98496,ECL,Dundoolin Weaver,uncommon,G,2,Creature - Kithkin Druid,True
+98338,ECL,Kinsbaile Aspirant,uncommon,W,1,Creature - Kithkin Citizen,True
+98558,ECL,Morcant's Loyalist,uncommon,BG,3,Creature - Elf Warrior,True
+98415,ECL,Creakwood Safewright,uncommon,B,2,Creature - Elf Warrior,True
+98464,ECL,Goliath Daydreamer,rare,R,4,Creature - Giant Wizard,True
+98348,ECL,Reluctant Dounguard,common,W,3,Creature - Kithkin Soldier,True
+98346,ECL,Protective Response,uncommon,W,3,Instant,True
+98485,ECL,Assert Perfection,common,G,2,Sorcery,True
+98352,ECL,Slumbering Walker,rare,W,5,Creature - Giant Warrior,True
+98567,ECL,"Tam, Mindful First-Year",rare,GU,2,Legendary Creature - Gorgon Wizard,True
+98367,ECL,Glamermite,common,U,3,Creature - Faerie Rogue,True
+98537,ECL,"Doran, Besieged by Time",rare,BGW,4,Legendary Creature - Treefolk Druid,True
+98569,ECL,Trystan's Command,rare,BG,6,Kindred Sorcery - Elf,True
+98361,ECL,Aquitect's Defenses,common,U,2,Enchantment - Aura,True
+98528,ECL,Boggart Cursecrafter,uncommon,BR,2,Creature - Goblin Warlock,True
+98319,ECL,"Ajani, Outland Chaperone",mythic,W,3,Legendary Planeswalker - Ajani,True
+98563,ECL,"Sanar, Innovative First-Year",rare,RU,4,Legendary Creature - Goblin Sorcerer,True
+98486,ECL,Aurora Awakener,mythic,G,7,Creature - Giant Druid,True
+98422,ECL,Gnarlbark Elm,uncommon,B,3,Creature - Treefolk Warlock,True
+98595,ECL,Forest,basic,G,0,Basic Land - Forest,True
+98354,ECL,Sun-Dappled Celebrant,common,W,6,Creature - Treefolk Cleric,True
+98504,ECL,Mistmeadow Council,common,G,5,Creature - Kithkin Advisor,True
+98421,ECL,Gloom Ripper,rare,B,5,Creature - Elf Assassin,True
+98453,ECL,Collective Inferno,rare,R,5,Enchantment,True
+98431,ECL,Mornsong Aria,rare,B,3,Legendary Enchantment,True
+98523,ECL,Vinebred Brawler,uncommon,G,3,Creature - Elf Berserker,True
+98436,ECL,Requiting Hex,uncommon,B,1,Instant,True
+98484,ECL,Warren Torchmaster,uncommon,R,2,Creature - Goblin Warrior,True
+98404,ECL,Auntie's Sentence,common,B,2,Sorcery,True
+98480,ECL,Spinerock Tyrant,mythic,R,5,Creature - Dragon,True
+98479,ECL,Sourbread Auntie,uncommon,R,4,Creature - Goblin Warrior,True
+98513,ECL,Sapling Nursery,rare,G,8,Enchantment,True
+98548,ECL,Gangly Stompling,common,GR,3,Creature - Shapeshifter,True
+98401,ECL,Wanderwine Distracter,common,U,4,Creature - Merfolk Wizard,True
+98457,ECL,Explosive Prodigy,uncommon,R,2,Creature - Elemental Sorcerer,True
+98477,ECL,Soul Immolation,mythic,R,5,Sorcery,True
+98487,ECL,Bloom Tender,mythic,G,2,Creature - Elf Druid,True
+98389,ECL,Spell Snare,uncommon,U,1,Instant,True
+98332,ECL,Evershrike's Gift,uncommon,W,1,Enchantment - Aura,True
+98344,ECL,Morningtide's Light,mythic,W,4,Sorcery,True
+98468,ECL,Kindle the Inner Flame,uncommon,R,4,Kindred Sorcery - Elemental,True
+98334,ECL,Gallant Fowlknight,common,W,4,Creature - Kithkin Knight,True
+98382,ECL,Rime Chill,uncommon,U,7,Instant,True
+98353,ECL,Spiral into Solitude,common,W,2,Enchantment - Aura,True
+98327,ECL,Crib Swap,uncommon,W,3,Kindred Instant - Shapeshifter,True
+98589,ECL,Steam Vents,rare,RU,0,Land - Island Mountain,True
+98562,ECL,Reaping Willow,uncommon,BW,4,Creature - Treefolk Cleric,True
+98570,ECL,Twinflame Travelers,uncommon,RU,4,Creature - Elemental Sorcerer,True
+98525,ECL,Wildvine Pummeler,common,G,7,Creature - Giant Berserker,True
+98544,ECL,Emptiness,mythic,BW,6,Creature - Elemental Incarnation,True
+98403,ECL,Wild Unraveling,common,U,2,Instant,True
+98547,ECL,Flaring Cinder,common,RU,3,Creature - Elemental Sorcerer,True
+98446,ECL,Boldwyr Aggressor,uncommon,R,5,Creature - Giant Warrior,True
+98490,ECL,Bristlebane Outrider,uncommon,G,4,Creature - Kithkin Knight,True
+98545,ECL,Feisty Spikeling,common,RW,2,Creature - Shapeshifter,True
+98463,ECL,Goatnap,uncommon,R,3,Sorcery,True
+98392,ECL,Sunderflock,rare,U,9,Creature - Elemental,True
+98586,ECL,Evolving Wilds,common,,0,Land,True
+98426,ECL,Gutsplitter Gang,uncommon,B,4,Creature - Goblin Berserker,True
+98411,ECL,Boggart Mischief,uncommon,B,3,Kindred Enchantment - Goblin,True
+98435,ECL,Perfect Intimidation,uncommon,B,4,Sorcery,True
+98530,ECL,Brigid's Command,rare,GW,3,Kindred Sorcery - Kithkin,True
+98414,ECL,Champion of the Weird,rare,B,4,Creature - Goblin Berserker,True
+98564,ECL,Shadow Urchin,rare,BR,3,Creature - Ouphe,True
+98532,ECL,Chaos Spewer,common,BR,3,Creature - Goblin Warlock,True
+98573,ECL,Wary Farmer,common,GW,3,Creature - Kithkin Citizen,True
+98469,ECL,Kulrath Zealot,common,R,6,Creature - Elemental Warrior,True
+98375,ECL,Lofty Dreams,uncommon,U,5,Enchantment - Aura,True
+98590,ECL,Temple Garden,rare,GW,0,Land - Forest Plains,True
+98350,ECL,Riverguard's Reflexes,common,W,2,Instant,True
+98575,ECL,Chronicle of Victory,mythic,,6,Legendary Artifact,True
+98396,ECL,Tanufel Rimespeaker,uncommon,U,4,Creature - Elemental Wizard,True
+98380,ECL,Omni-Changeling,uncommon,U,5,Creature - Shapeshifter,True
+98417,ECL,Dawnhand Dissident,rare,B,1,Creature - Elf Warlock,True
+98491,ECL,Celestial Reunion,mythic,G,1,Sorcery,True
+98476,ECL,Sizzling Changeling,uncommon,R,3,Creature - Shapeshifter,True
+98455,ECL,End-Blaze Epiphany,rare,R,1,Instant,True
+98568,ECL,Thoughtweft Lieutenant,uncommon,GW,2,Creature - Kithkin Soldier,True
+98536,ECL,Deepway Navigator,rare,UW,2,Creature - Merfolk Wizard,True
+98386,ECL,Shinestriker,uncommon,U,6,Creature - Elemental,True
+98579,ECL,Gathering Stone,uncommon,,4,Artifact,True
+98552,ECL,Hovel Hurler,uncommon,RW,5,Creature - Giant Warrior,True
+98506,ECL,Morcant's Eyes,uncommon,G,2,Kindred Enchantment - Elf,True
+98526,ECL,"Abigale, Eloquent First-Year",rare,BW,2,Legendary Creature - Bird Bard,True
+98459,ECL,Flame-Chain Mauler,common,R,2,Creature - Elemental Warrior,True
+98427,ECL,Heirloom Auntie,common,B,3,Creature - Goblin Warlock,True
+98509,ECL,Prismabasher,uncommon,G,6,Creature - Elemental,True
+98518,ECL,Tend the Sprigs,common,G,3,Sorcery,True
+98402,ECL,Wanderwine Farewell,uncommon,U,7,Kindred Sorcery - Merfolk,True
+98387,ECL,Silvergill Mentor,uncommon,U,2,Creature - Merfolk Wizard,True
+98316,ECL,Changeling Wayfinder,common,,3,Creature - Shapeshifter,True
+98870,SPG,Idyllic Tutor,rare,W,3,Sorcery,True
+98883,SPG,Manamorphose,uncommon,GR,2,Instant,True
+98878,SPG,Heat Shimmer,rare,R,3,Sorcery,True
+98871,SPG,Kinsbaile Cavalier,rare,W,4,Creature - Kithkin Knight,True
+98875,SPG,Faerie Macabre,common,B,3,Creature - Faerie Rogue,True
+98880,SPG,Helix Pinnacle,rare,G,1,Enchantment,True
+98874,SPG,Bitterblossom,mythic,B,2,Kindred Enchantment - Faerie,True
+98872,SPG,Mistbind Clique,rare,U,4,Creature - Faerie Wizard,True
+98884,SPG,Risen Reef,uncommon,GU,3,Creature - Elemental,True
+98881,SPG,Leaf-Crowned Visionary,rare,G,2,Creature - Elf Druid,True
+98882,SPG,Regal Force,rare,G,7,Creature - Elemental,True
+98888,SPG,Painter's Servant,mythic,,2,Artifact Creature - Scarecrow,True
+98873,SPG,Wanderwine Prophets,rare,U,6,Creature - Merfolk Wizard,True
+98879,SPG,Devoted Druid,uncommon,G,2,Creature - Elf Druid,True
+98876,SPG,Goblin Chieftain,rare,R,3,Creature - Goblin,True
+98886,SPG,Dolmen Gate,rare,,2,Artifact,True
+98885,SPG,Slippery Bogle,uncommon,GU,1,Creature - Beast,True
+98887,SPG,Door of Destinies,rare,,4,Artifact,True
+98877,SPG,Goblin Sharpshooter,rare,R,3,Creature - Goblin,True
+98889,SPG,Thousand-Year Elixir,rare,,3,Artifact,True
+101452,ECL,Mountain,basic,R,0,Basic Land - Mountain,True
+101455,ECL,Island,basic,U,0,Basic Land - Island,True
+101458,ECL,Forest,basic,G,0,Basic Land - Forest,True
+101453,ECL,Forest,basic,G,0,Basic Land - Forest,True
+101450,ECL,Island,basic,U,0,Basic Land - Island,True
+101456,ECL,Swamp,basic,B,0,Basic Land - Swamp,True
+101454,ECL,Plains,basic,W,0,Basic Land - Plains,True
+101457,ECL,Mountain,basic,R,0,Basic Land - Mountain,True
+101449,ECL,Plains,basic,W,0,Basic Land - Plains,True
+101451,ECL,Swamp,basic,B,0,Basic Land - Swamp,True
+98323,ECL,"Brigid, Doun's Mind",rare,GW,0,Legendary Creature - Kithkin Soldier,False
+98330,ECL,"Isilu, Carrier of Twilight",mythic,BW,0,Legendary Creature - Elemental God,False
+98379,ECL,"Oko, Shadowmoor Scion",mythic,GU,0,Legendary Planeswalker - Oko,False
+98395,ECL,"Sygg, Wanderbrine Shield",rare,UW,0,Legendary Creature - Merfolk Rogue,False
+98425,ECL,"Grub, Notorious Auntie",rare,BR,0,Legendary Creature - Goblin Warrior,False
+98445,ECL,"Ashling, Rimebound",rare,RU,0,Legendary Creature - Elemental Wizard,False
+98521,ECL,"Trystan, Penitent Culler",rare,BG,0,Legendary Creature - Elf Warlock,False
+98606,ECL,Mutavault,rare,,0,Land,False
+101459,ECL,"Ajani, Outland Chaperone",mythic,W,3,Legendary Planeswalker - Ajani,False
+101460,ECL,"Brigid, Clachan's Heart",rare,GW,3,Legendary Creature - Kithkin Warrior,False
+101461,ECL,"Brigid, Doun's Mind",rare,GW,0,Legendary Creature - Kithkin Soldier,False
+101462,ECL,"Eirdu, Carrier of Dawn",mythic,BW,5,Legendary Creature - Elemental God,False
+101463,ECL,"Isilu, Carrier of Twilight",mythic,BW,0,Legendary Creature - Elemental God,False
+101464,ECL,"Oko, Lorwyn Liege",mythic,GU,3,Legendary Planeswalker - Oko,False
+101465,ECL,"Oko, Shadowmoor Scion",mythic,GU,0,Legendary Planeswalker - Oko,False
+101466,ECL,"Sygg, Wanderwine Wisdom",rare,UW,2,Legendary Creature - Merfolk Wizard,False
+101467,ECL,"Sygg, Wanderbrine Shield",rare,UW,0,Legendary Creature - Merfolk Rogue,False
+101468,ECL,"Grub, Storied Matriarch",rare,BR,3,Legendary Creature - Goblin Warlock,False
+101469,ECL,"Grub, Notorious Auntie",rare,BR,0,Legendary Creature - Goblin Warrior,False
+101470,ECL,"Ashling, Rekindled",rare,RU,2,Legendary Creature - Elemental Sorcerer,False
+101471,ECL,"Ashling, Rimebound",rare,RU,0,Legendary Creature - Elemental Wizard,False
+101472,ECL,"Trystan, Callous Cultivator",rare,BG,3,Legendary Creature - Elf Druid,False
+101473,ECL,"Trystan, Penitent Culler",rare,BG,0,Legendary Creature - Elf Warlock,False
+101474,ECL,Catharsis,mythic,RW,6,Creature - Elemental Incarnation,False
+101475,ECL,Deceit,mythic,BU,6,Creature - Elemental Incarnation,False
+101476,ECL,Emptiness,mythic,BW,6,Creature - Elemental Incarnation,False
+101477,ECL,Vibrance,mythic,GR,5,Creature - Elemental Incarnation,False
+101478,ECL,Wistfulness,mythic,GU,5,Creature - Elemental Incarnation,False
+101479,ECL,Hallowed Fountain,rare,UW,0,Land - Plains Island,False
+101480,ECL,Hallowed Fountain,rare,UW,0,Land - Plains Island,False
+101481,ECL,Steam Vents,rare,RU,0,Land - Island Mountain,False
+101482,ECL,Steam Vents,rare,RU,0,Land - Island Mountain,False
+101483,ECL,Blood Crypt,rare,BR,0,Land - Swamp Mountain,False
+101484,ECL,Blood Crypt,rare,BR,0,Land - Swamp Mountain,False
+101485,ECL,Overgrown Tomb,rare,BG,0,Land - Swamp Forest,False
+101486,ECL,Overgrown Tomb,rare,BG,0,Land - Swamp Forest,False
+101487,ECL,Temple Garden,rare,GW,0,Land - Forest Plains,False
+101488,ECL,Temple Garden,rare,GW,0,Land - Forest Plains,False
+101489,ECL,Harmonized Crescendo,rare,U,6,Instant,False
+101490,ECL,Adept Watershaper,rare,W,3,Creature - Merfolk Cleric,False
+101491,ECL,Curious Colossus,mythic,W,7,Creature - Giant Warrior,False
+101492,ECL,Kinbinding,rare,W,5,Enchantment,False
+101493,ECL,Kinscaer Sentry,rare,W,2,Creature - Kithkin Soldier,False
+101494,ECL,Morningtide's Light,mythic,W,4,Sorcery,False
+101495,ECL,Slumbering Walker,rare,W,5,Creature - Giant Warrior,False
+101496,ECL,Disruptor of Currents,rare,U,5,Creature - Merfolk Wizard,False
+101497,ECL,Flitterwing Nuisance,rare,U,1,Creature - Faerie Rogue,False
+101498,ECL,Glen Elendra Guardian,rare,U,3,Creature - Faerie Wizard,False
+101499,ECL,Glen Elendra's Answer,mythic,U,4,Instant,False
+101500,ECL,Loch Mare,mythic,U,2,Creature - Horse Serpent,False
+101501,ECL,Mirrorform,mythic,U,6,Instant,False
+101502,ECL,Sunderflock,rare,U,9,Creature - Elemental,False
+101503,ECL,Bitterbloom Bearer,mythic,B,2,Creature - Faerie Rogue,False
+101504,ECL,Dawnhand Dissident,rare,B,1,Creature - Elf Warlock,False
+101505,ECL,Gloom Ripper,rare,B,5,Creature - Elf Assassin,False
+101506,ECL,Moonshadow,mythic,B,1,Creature - Elemental,False
+101507,ECL,Taster of Wares,rare,B,3,Creature - Goblin Warlock,False
+101508,ECL,Twilight Diviner,rare,B,3,Creature - Elf Cleric,False
+101509,ECL,Goliath Daydreamer,rare,R,4,Creature - Giant Wizard,False
+101510,ECL,Hexing Squelcher,rare,R,2,Creature - Goblin Sorcerer,False
+101511,ECL,Lavaleaper,rare,R,4,Creature - Elemental,False
+101512,ECL,Meek Attack,mythic,R,3,Enchantment,False
+101513,ECL,Scuzzback Scrounger,rare,R,2,Creature - Goblin Warrior,False
+101514,ECL,Soul Immolation,mythic,R,5,Sorcery,False
+101515,ECL,Spinerock Tyrant,mythic,R,5,Creature - Dragon,False
+101516,ECL,Aurora Awakener,mythic,G,7,Creature - Giant Druid,False
+101517,ECL,Bloom Tender,mythic,G,2,Creature - Elf Druid,False
+101518,ECL,Bristlebane Battler,rare,G,2,Creature - Kithkin Soldier,False
+101519,ECL,Celestial Reunion,mythic,G,1,Sorcery,False
+101520,ECL,Mutable Explorer,rare,G,3,Creature - Shapeshifter,False
+101521,ECL,Sapling Nursery,rare,G,8,Enchantment,False
+101522,ECL,Spry and Mighty,rare,G,5,Sorcery,False
+101523,ECL,Ashling's Command,rare,RU,5,Kindred Instant - Elemental,False
+101524,ECL,Boggart Cursecrafter,uncommon,BR,2,Creature - Goblin Warlock,False
+101525,ECL,Brigid's Command,rare,GW,3,Kindred Sorcery - Kithkin,False
+101526,ECL,Deepchannel Duelist,uncommon,UW,2,Creature - Merfolk Soldier,False
+101527,ECL,"Doran, Besieged by Time",rare,BGW,4,Legendary Creature - Treefolk Druid,False
+101528,ECL,Eclipsed Boggart,uncommon,BR,3,Creature - Goblin Scout,False
+101529,ECL,Eclipsed Elf,uncommon,BG,3,Creature - Elf Scout,False
+101530,ECL,Eclipsed Flamekin,uncommon,RU,3,Creature - Elemental Scout,False
+101531,ECL,Eclipsed Kithkin,uncommon,GW,2,Creature - Kithkin Scout,False
+101532,ECL,Eclipsed Merrow,uncommon,UW,3,Creature - Merfolk Scout,False
+101533,ECL,Grub's Command,rare,BR,5,Kindred Sorcery - Goblin,False
+101534,ECL,Morcant's Loyalist,uncommon,BG,3,Creature - Elf Warrior,False
+101535,ECL,Sygg's Command,rare,UW,3,Kindred Sorcery - Merfolk,False
+101536,ECL,Thoughtweft Lieutenant,uncommon,GW,2,Creature - Kithkin Soldier,False
+101537,ECL,Trystan's Command,rare,BG,6,Kindred Sorcery - Elf,False
+101538,ECL,Twinflame Travelers,uncommon,RU,4,Creature - Elemental Sorcerer,False
+101539,ECL,Chronicle of Victory,mythic,,6,Legendary Artifact,False
+101540,ECL,Winnowing,mythic,W,6,Sorcery,False
+101541,ECL,Glen Elendra Guardian,mythic,U,3,Creature - Faerie Wizard,False
+101542,ECL,Harmonized Crescendo,mythic,U,6,Instant,False
+101543,ECL,Bloodline Bidding,mythic,B,8,Sorcery,False
+101544,ECL,Moonshadow,mythic,B,1,Creature - Elemental,False
+101545,ECL,Collective Inferno,mythic,R,5,Enchantment,False
+101546,ECL,Meek Attack,mythic,R,3,Enchantment,False
+101547,ECL,Spinerock Tyrant,mythic,R,5,Creature - Dragon,False
+101548,ECL,Bloom Tender,mythic,G,2,Creature - Elf Druid,False
+101549,ECL,Selfless Safewright,mythic,G,5,Creature - Elf Warrior,False
+98905,ECC,"Ferrafor, Young Yew",rare,G,7,Legendary Creature - Treefolk Druid,False
+98891,ECC,"Auntie Ool, Cursewretch",mythic,BGR,4,Legendary Creature - Goblin Warlock,False
+98890,ECC,"Ashling, the Limitless",mythic,BGRUW,3,Legendary Creature - Elemental Sorcerer,False
+98893,ECC,"The Reaper, King No More",mythic,BGR,3,Legendary Artifact Creature - Scarecrow,False
+101304,2X2,Wrenn and Six,mythic,GR,2,Legendary Planeswalker - Wrenn,False
+101157,2X2,Dragonlord Dromoka,mythic,GW,6,Legendary Creature - Elder Dragon,False
+101158,2X2,"Elenda, the Dusk Rose",mythic,BW,4,Legendary Creature - Vampire Knight,False
+101303,2X2,"Liliana, the Last Hope",mythic,B,3,Legendary Planeswalker - Liliana,False
+97810,TFIC,Rebel,token,,0,Creature - Rebel,False
+98596,TECL,Shapeshifter,token,,0,Creature - Shapeshifter,False
+98597,TECL,Elk,token,,0,Creature - Elk,False
+98598,TECL,Treefolk,token,,0,Creature - Treefolk,False
+98599,TECL,Elf,token,,0,Creature - Elf,False
+98600,TECL,Faerie,token,,0,Creature - Faerie,False
+98601,TECL,Goblin,token,,0,Creature - Goblin,False
+98602,TECL,Kithkin,token,,0,Creature - Kithkin,False
+98603,TECL,Merfolk,token,,0,Creature - Merfolk,False
+98604,TECL,Worm,token,,0,Creature - Worm,False
+98605,TECL,Treasure,token,,0,Artifact - Treasure,False
+103902,TECL,Faerie Rogue,token,,0,Creature - Faerie Rogue,False
+98138,FIC,"Mog, Moogle Warrior",rare,RW,3,Legendary Creature - Moogle Warrior,False
+98146,FIC,"Wakka, Devoted Guardian",rare,GW,4,Legendary Creature - Human Warrior,False
+98086,FIC,"Lulu, Stern Guardian",rare,U,3,Legendary Creature - Human Wizard,False
+98127,FIC,"Barret, Avalanche Leader",rare,GR,4,Legendary Creature - Human Rebel,False
+98124,FIC,"Aerith, Last Ancient",rare,GW,4,Legendary Creature - Human Cleric Druid,False
+98130,FIC,Estinien Varlineau,rare,BW,4,Legendary Creature - Elf Warrior,False
+98089,FIC,"Rikku, Resourceful Guardian",rare,U,3,Legendary Creature - Human Artificer,False
+98078,FIC,Tataru Taru,rare,W,2,Legendary Creature - Dwarf Advisor,False
+98113,FIC,"Yuffie, Materia Hunter",rare,R,3,Legendary Creature - Human Ninja,False
+98136,FIC,"Locke, Treasure Hunter",rare,BR,3,Legendary Creature - Human Rogue,False
+98129,FIC,Emet-Selch of the Third Seat,rare,BU,4,Legendary Creature - Elder Wizard,False
+98150,FIC,Tataru Taru,rare,W,2,Legendary Creature - Dwarf Advisor,False
+98151,FIC,"Lulu, Stern Guardian",rare,U,3,Legendary Creature - Human Wizard,False
+98152,FIC,"Rikku, Resourceful Guardian",rare,U,3,Legendary Creature - Human Artificer,False
+98153,FIC,Snapcaster Mage,mythic,U,2,Creature - Human Wizard,False
+98154,FIC,"Yuffie, Materia Hunter",rare,R,3,Legendary Creature - Human Ninja,False
+98155,FIC,"Aerith, Last Ancient",rare,GW,4,Legendary Creature - Human Cleric Druid,False
+98156,FIC,"Barret, Avalanche Leader",rare,GR,4,Legendary Creature - Human Rebel,False
+98157,FIC,Emet-Selch of the Third Seat,rare,BU,4,Legendary Creature - Elder Wizard,False
+98158,FIC,Estinien Varlineau,rare,BW,4,Legendary Creature - Elf Warrior,False
+98159,FIC,"Locke, Treasure Hunter",rare,BR,3,Legendary Creature - Human Rogue,False
+98160,FIC,"Mog, Moogle Warrior",rare,RW,3,Legendary Creature - Moogle Warrior,False
+98161,FIC,"Wakka, Devoted Guardian",rare,GW,4,Legendary Creature - Human Warrior,False
+101280,INR,"Thalia, Heretic Cathar",rare,W,3,Legendary Creature - Human Soldier,False
+103206,TECC,Saproling,token,,0,Creature - Saproling,False
+101244,DMR,"Urza, Lord High Artificer",mythic,U,4,Legendary Creature - Human Artificer,False
+101234,DMR,Lyra Dawnbringer,mythic,W,5,Legendary Creature - Angel,False
+101252,DMR,"Yawgmoth, Thran Physician",mythic,B,4,Legendary Creature - Human Cleric,False
+101195,2XM,"Avacyn, Angel of Hope",mythic,W,8,Legendary Creature - Angel,False
+75936,MH2,Svyelun of Sea and Sky,mythic,U,3,Legendary Creature - Merfolk God,False
+75941,MH2,"Ragavan, Nimble Pilferer",mythic,R,1,Legendary Creature - Monkey Pirate,False
+75942,MH2,"Chatterfang, Squirrel General",mythic,BG,3,Legendary Creature - Squirrel Warrior,False
+100096,RVR,Godless Shrine,rare,BW,0,Land - Plains Swamp,False
+100099,RVR,Hallowed Fountain,rare,UW,0,Land - Plains Island,False
+100102,RVR,Overgrown Tomb,rare,BG,0,Land - Swamp Forest,False
+100104,RVR,Sacred Foundry,rare,RW,0,Land - Mountain Plains,False
+100107,RVR,Steam Vents,rare,RU,0,Land - Island Mountain,False
+100108,RVR,Stomping Ground,rare,GR,0,Land - Mountain Forest,False
+100109,RVR,Temple Garden,rare,GW,0,Land - Forest Plains,False
+100110,RVR,Watery Grave,rare,BU,0,Land - Island Swamp,False
+100092,RVR,Blood Crypt,rare,BR,0,Land - Swamp Mountain,False
+100094,RVR,Breeding Pool,rare,GU,0,Land - Forest Island,False
+101344,TY26,Elf,token,,0,Creature - Elf,False
+101345,TY26,Faerie,token,,0,Creature - Faerie,False
+101346,TY26,Kithkin,token,,0,Creature - Kithkin,False
+101347,TY26,Merfolk,token,,0,Creature - Merfolk,False
+101348,TY26,Treasure,token,,0,Artifact - Treasure,False
+101335,TY26,Shapeshifter,token,,0,Creature - Shapeshifter,False
+101336,TY26,Dog,token,,0,Creature - Dog,False
+101337,TY26,Knight,token,,0,Creature - Knight,False
+101338,TY26,Faerie,token,,0,Creature - Faerie,False
+101339,TY26,Fish,token,,0,Creature - Fish,False
+101340,TY26,Merfolk Wizard,token,,0,Creature - Merfolk Wizard,False
+101341,TY26,Faerie Rogue,token,,0,Creature - Faerie Rogue,False
+101342,TY26,Treefolk,token,,0,Creature - Treefolk,False
+101343,TY26,Citizen,token,,0,Creature - Citizen,False
+101325,Y26,Kithkin Brinefarer,rare,GW,3,Creature - Kithkin Warrior Bard,True
+101313,Y26,Infestation,mythic,B,5,Creature - Elemental Incarnation,True
+101326,Y26,"Oura, the Imitator",rare,BU,3,Legendary Creature - Faerie Noble,True
+101310,Y26,Reflective Rimekin,uncommon,U,3,Creature - Elemental Wizard,True
+101324,Y26,The Grand Goatnapper,rare,BR,4,Legendary Creature - Goblin Rogue,True
+101308,Y26,Aquatic Subtlety,mythic,U,3,Sorcery,True
+101330,Y26,"Salacinder and Soot, Rascals",mythic,RU,4,Legendary Creature - Elemental,True
+101316,Y26,Limitless Rekindling,mythic,R,5,Kindred Sorcery - Elemental,True
+101318,Y26,Gilt-Leaf Alchemist,rare,G,1,Creature - Elf Druid,True
+101307,Y26,Thoughtweft's Call,uncommon,W,1,Sorcery,True
+101315,Y26,Craterous Stomp,uncommon,R,2,Kindred Instant - Giant,True
+101320,Y26,Topsoil Turner,uncommon,G,3,Creature - Treefolk Druid,True
+101329,Y26,Providence of Night,mythic,BGRUW,5,Legendary Creature - Spirit Avatar,True
+101306,Y26,Current Curriculum,rare,W,2,Enchantment,True
+101331,Y26,Thorna and Twigtooth,rare,BRW,4,Legendary Creature - Giant Treefolk,True
+101309,Y26,Preponderant Pearl,uncommon,U,1,Kindred Artifact - Merfolk,True
+101311,Y26,Thoughtsteal Sprites,rare,U,2,Creature - Faerie Rogue,True
+101314,Y26,Putrid Hexhag,uncommon,B,2,Creature - Goblin Warlock,True
+101328,Y26,Perennial Gravewarden,rare,BG,2,Creature - Elf Warlock,True
+101312,Y26,Blighted Nightmare,rare,B,3,Enchantment,True
+101305,Y26,Adaptive Armorer,rare,W,4,Creature - Giant Warrior,True
+101319,Y26,Opulent Clomper,uncommon,G,2,Creature - Ouphe,True
+101327,Y26,"Pep, Raucous Raider",rare,GR,4,Legendary Creature - Noggle Rogue,True
+101321,Y26,Wildgrove Summoner,rare,G,5,Creature - Treefolk Druid,True
+101333,Y26,Adherent's Heirloom,uncommon,,3,Artifact,True
+101334,Y26,Echoing Cavern,rare,,0,Land - Cave,True
+101323,Y26,Elvish Elegy,uncommon,BG,1,Kindred Sorcery - Elf,True
+101447,Y26,Forest,basic,G,0,Basic Land - Forest,False
+101332,Y26,Volatile Rift,uncommon,GR,2,Enchantment,True
+101317,Y26,Tend to the Kiln,rare,R,2,Enchantment,True
+101322,Y26,Circadian Struggle,rare,GU,6,Instant,True
+101376,Y26,Mirrorform,mythic,U,6,Instant,False
+101377,Y26,Pestermite,common,U,3,Creature - Faerie Rogue,False
+101378,Y26,Picklock Prankster,uncommon,U,2,Creature - Faerie Rogue,False
+101379,Y26,Free the Fae,uncommon,U,2,Instant - Adventure,False
+101380,Y26,Ponder,common,U,1,Sorcery,False
+101381,Y26,Rime Chill,uncommon,U,7,Instant,False
+101382,Y26,Run Away Together,common,U,2,Instant,False
+101383,Y26,Spell Snare,uncommon,U,1,Instant,False
+101384,Y26,Spell Stutter,common,U,2,Instant,False
+101385,Y26,Swat Away,uncommon,U,4,Instant,False
+101386,Y26,Take Inventory,common,U,2,Sorcery,False
+101387,Y26,Temporal Cleansing,common,U,4,Sorcery,False
+101388,Y26,Thirst for Identity,uncommon,U,3,Instant,False
+101389,Y26,Unexpected Assistance,common,U,5,Instant,False
+101390,Y26,Vendilion Clique,rare,U,3,Legendary Creature - Faerie Wizard,False
+101391,Y26,Wanderwine Farewell,uncommon,U,7,Kindred Sorcery - Merfolk,False
+101392,Y26,Wild Unraveling,common,U,2,Instant,False
+101393,Y26,Auntie's Sentence,common,B,2,Sorcery,False
+101394,Y26,Bitterblossom,mythic,B,2,Kindred Enchantment - Faerie,False
+101395,Y26,Blight Rot,common,B,3,Instant,False
+101396,Y26,Bloodline Bidding,rare,B,8,Sorcery,False
+101397,Y26,Blowfly Infestation,uncommon,B,3,Enchantment,False
+101398,Y26,Bogslither's Embrace,common,B,2,Sorcery,False
+101399,Y26,Darkness Descends,uncommon,B,4,Sorcery,False
+101400,Y26,Dose of Dawnglow,uncommon,B,5,Instant,False
+101401,Y26,Faerie Fencing,uncommon,B,1,Instant,False
+101402,Y26,Nameless Inversion,uncommon,B,2,Kindred Instant - Shapeshifter,False
+101403,Y26,Perfect Intimidation,uncommon,B,4,Sorcery,False
+101404,Y26,Requiting Hex,uncommon,B,1,Instant,False
+101405,Y26,Scarblade's Malice,common,B,1,Instant,False
+101406,Y26,Unbury,uncommon,B,2,Instant,False
+101407,Y26,Boulder Dash,uncommon,R,2,Sorcery,False
+101408,Y26,Burning Curiosity,common,R,3,Sorcery,False
+101409,Y26,Cinder Strike,common,R,1,Sorcery,False
+101410,Y26,End-Blaze Epiphany,rare,R,1,Instant,False
+101411,Y26,Feed the Flames,common,R,4,Instant,False
+101412,Y26,Flamebraider,uncommon,R,2,Creature - Elemental Bard,False
+101413,Y26,Giantfall,uncommon,R,2,Instant,False
+101414,Y26,Goatnap,uncommon,R,3,Sorcery,False
+101415,Y26,Impolite Entrance,uncommon,R,1,Sorcery,False
+101416,Y26,Kindle the Inner Flame,uncommon,R,4,Kindred Sorcery - Elemental,False
+101417,Y26,Reckless Ransacking,common,R,2,Instant,False
+101418,Y26,Rite of Flame,common,R,1,Sorcery,False
+101419,Y26,Sear,uncommon,R,2,Instant,False
+101420,Y26,Soul Immolation,mythic,R,5,Sorcery,False
+101421,Y26,Tweeze,common,R,3,Instant,False
+101422,Y26,Assert Perfection,common,G,2,Sorcery,False
+101423,Y26,Blossoming Defense,uncommon,G,1,Instant,False
+101424,Y26,Celestial Reunion,mythic,G,1,Sorcery,False
+101425,Y26,Midnight Tilling,common,G,2,Instant,False
+101426,Y26,Spry and Mighty,rare,G,5,Sorcery,False
+101427,Y26,Tend the Sprigs,common,G,3,Sorcery,False
+101428,Y26,Thoughtweft Charge,uncommon,G,2,Instant,False
+101429,Y26,Unforgiving Aim,common,G,3,Instant,False
+101430,Y26,Ashling's Command,rare,RU,5,Kindred Instant - Elemental,False
+101431,Y26,Brigid's Command,rare,GW,3,Kindred Sorcery - Kithkin,False
+101432,Y26,Dream Harvest,rare,BU,7,Sorcery,False
+101433,Y26,Grub's Command,rare,BR,5,Kindred Sorcery - Goblin,False
+101434,Y26,High Fae Prankster,rare,BU,4,Creature - Faerie Rogue,False
+101435,Y26,Likeness Looter,rare,BU,2,Creature - Faerie Shapeshifter,False
+101436,Y26,Sygg's Command,rare,UW,3,Kindred Sorcery - Merfolk,False
+101437,Y26,Trystan's Command,rare,BG,6,Kindred Sorcery - Elf,False
+101438,Y26,Voracious Tome-Skimmer,uncommon,BU,3,Creature - Faerie Rogue,False
+101439,Y26,Amorphous Axe,common,,2,Artifact - Equipment,False
+101440,Y26,Conqueror's Flail,rare,,2,Artifact - Equipment,False
+101441,Y26,Fireshrieker,uncommon,,3,Artifact - Equipment,False
+101442,Y26,Fishing Pole,uncommon,,1,Artifact - Equipment,False
+101443,Y26,Shield of the Realm,uncommon,,2,Artifact - Equipment,False
+101444,Y26,Sigiled Sword of Valeron,rare,,3,Artifact - Equipment,False
+101445,Y26,Thran Power Suit,uncommon,,2,Artifact - Equipment,False
+101446,Y26,Flooded Strand,rare,,0,Land,False
+101448,Y26,Leech Gauntlet,uncommon,B,2,Artifact Creature - Equipment Leech,False
+101349,Y26,Appeal to Eirdu,common,W,4,Instant,False
+101350,Y26,Citizen's Crowbar,uncommon,W,2,Artifact - Equipment,False
+101351,Y26,Cloudsteel Kirin,rare,W,3,Artifact Creature - Equipment Kirin,False
+101352,Y26,Crib Swap,uncommon,W,3,Kindred Instant - Shapeshifter,False
+101353,Y26,Keep Out,common,W,2,Instant,False
+101354,Y26,Krovod Haunch,uncommon,W,1,Artifact - Food Equipment,False
+101355,Y26,Lion Sash,rare,W,2,Artifact Creature - Equipment Cat,False
+101356,Y26,Mace of the Valiant,uncommon,W,3,Artifact - Equipment,False
+101357,Y26,Maul of the Skyclaves,rare,W,3,Artifact - Equipment,False
+101358,Y26,Morningtide's Light,mythic,W,4,Sorcery,False
+101359,Y26,Personify,uncommon,W,2,Instant,False
+101360,Y26,Protective Response,uncommon,W,3,Instant,False
+101361,Y26,Pyrrhic Strike,uncommon,W,3,Instant,False
+101362,Y26,Riverguard's Reflexes,common,W,2,Instant,False
+101363,Y26,Stonybrook Schoolmaster,common,W,3,Creature - Merfolk Wizard,False
+101364,Y26,Thunder Lasso,uncommon,W,3,Artifact - Equipment,False
+101365,Y26,Winnowing,rare,W,6,Sorcery,False
+101366,Y26,Brazen Borrower,mythic,U,3,Creature - Faerie Rogue,False
+101367,Y26,Petty Theft,mythic,U,2,Instant - Adventure,False
+101368,Y26,Faebloom Trick,uncommon,U,3,Instant,False
+101369,Y26,Faerie Mastermind,rare,U,2,Creature - Faerie Rogue,False
+101370,Y26,Flitterwing Nuisance,rare,U,1,Creature - Faerie Rogue,False
+101371,Y26,Glen Elendra Guardian,rare,U,3,Creature - Faerie Wizard,False
+101372,Y26,Glen Elendra's Answer,mythic,U,4,Instant,False
+101373,Y26,Harmonized Crescendo,rare,U,6,Instant,False
+101374,Y26,Hypnotic Sprite,uncommon,U,2,Creature - Faerie,False
+101375,Y26,Mesmeric Glare,uncommon,U,3,Instant - Adventure,False
+28593,LRW,Mountain,basic,R,0,Basic Land - Mountain,True
+28193,LRW,Island,basic,U,0,Basic Land - Island,True
+28441,LRW,Wanderwine Prophets,rare,U,6,Creature - Merfolk Wizard,True
+28581,LRW,Plains,basic,W,0,Basic Land - Plains,True
+28583,LRW,Plains,basic,W,0,Basic Land - Plains,True
+28199,LRW,Plains,basic,W,0,Basic Land - Plains,True
+28289,LRW,Heat Shimmer,rare,R,3,Sorcery,True
+28503,LRW,Mistbind Clique,rare,U,4,Creature - Faerie Wizard,True
+28327,LRW,Thousand-Year Elixir,rare,,3,Artifact,True
+28455,LRW,Dolmen Gate,rare,,2,Artifact,True
+28591,LRW,Mountain,basic,R,0,Basic Land - Mountain,True
+28607,LRW,Swamp,basic,B,0,Basic Land - Swamp,True
+28195,LRW,Silvergill Adept,uncommon,U,2,Creature - Merfolk Wizard,True
+28269,LRW,Thoughtseize,rare,B,1,Sorcery,True
+28501,LRW,Primal Command,rare,G,5,Sorcery,True
+28595,LRW,Island,basic,U,0,Basic Land - Island,True
+28197,LRW,Mountain,basic,R,0,Basic Land - Mountain,True
+28587,LRW,Island,basic,U,0,Basic Land - Island,True
+28597,LRW,Swamp,basic,B,0,Basic Land - Swamp,True
+28499,LRW,Cryptic Command,rare,U,4,Instant,True
+28299,LRW,Tarfire,common,R,1,Kindred Instant - Goblin,True
+28189,LRW,Mad Auntie,rare,B,3,Creature - Goblin Shaman,True
+28691,LRW,Forced Fruition,rare,U,6,Enchantment,True
+28589,LRW,Forest,basic,G,0,Basic Land - Forest,True
+28569,LRW,Nameless Inversion,common,B,2,Kindred Instant - Shapeshifter,True
+28577,LRW,Forest,basic,G,0,Basic Land - Forest,True
+28601,LRW,Island,basic,U,0,Basic Land - Island,True
+28781,LRW,Auntie's Hovel,rare,BR,0,Land,True
+28339,LRW,Ponder,common,U,1,Sorcery,True
+28579,LRW,Forest,basic,G,0,Basic Land - Forest,True
+28255,LRW,Boggart Harbinger,uncommon,B,3,Creature - Goblin Shaman,True
+28757,LRW,Incremental Growth,uncommon,G,5,Sorcery,True
+28333,LRW,Springleaf Drum,common,,1,Artifact,True
+28585,LRW,Plains,basic,W,0,Basic Land - Plains,True
+28605,LRW,Swamp,basic,B,0,Basic Land - Swamp,True
+28609,LRW,Swamp,basic,B,0,Basic Land - Swamp,True
+28603,LRW,Forest,basic,G,0,Basic Land - Forest,True
+28599,LRW,Mountain,basic,R,0,Basic Land - Mountain,True
+28561,LRW,Crib Swap,uncommon,W,3,Kindred Instant - Shapeshifter,True
+29747,SHM,Mountain,basic,R,0,Basic Land - Mountain,True
+29737,SHM,Island,basic,U,0,Basic Land - Island,True
+29717,SHM,Plains,basic,W,0,Basic Land - Plains,True
+29305,SHM,Devoted Druid,common,G,2,Creature - Elf Druid,True
+29361,SHM,Mistveil Plains,uncommon,W,0,Land - Plains,True
+29561,SHM,Greater Auramancy,rare,W,2,Enchantment,True
+29767,SHM,Forest,basic,G,0,Basic Land - Forest,True
+29721,SHM,Island,basic,U,0,Basic Land - Island,True
+29753,SHM,Plains,basic,W,0,Basic Land - Plains,True
+29429,SHM,Painter's Servant,rare,,2,Artifact Creature - Scarecrow,True
+29755,SHM,Plains,basic,W,0,Basic Land - Plains,True
+29725,SHM,Forest,basic,G,0,Basic Land - Forest,True
+29735,SHM,Mountain,basic,R,0,Basic Land - Mountain,True
+29743,SHM,Swamp,basic,B,0,Basic Land - Swamp,True
+29613,SHM,Reflecting Pool,rare,,0,Land,True
+29741,SHM,Mountain,basic,R,0,Basic Land - Mountain,True
+29757,SHM,Island,basic,U,0,Basic Land - Island,True
+29763,SHM,Mountain,basic,R,0,Basic Land - Mountain,True
+29719,SHM,Island,basic,U,0,Basic Land - Island,True
+29761,SHM,Swamp,basic,B,0,Basic Land - Swamp,True
+29713,SHM,Swamp,basic,B,0,Basic Land - Swamp,True
+29745,SHM,Plains,basic,W,0,Basic Land - Plains,True
+29623,SHM,Murderous Redcap,uncommon,BR,4,Creature - Goblin Assassin,True
+29749,SHM,Swamp,basic,B,0,Basic Land - Swamp,True
+29591,SHM,Prismatic Omen,rare,G,2,Enchantment,True
+29513,SHM,Polluted Bonds,rare,B,5,Enchantment,True
+29419,SHM,Corrupt,uncommon,B,6,Sorcery,True
+29765,SHM,Forest,basic,G,0,Basic Land - Forest,True
+29647,SHM,Faerie Macabre,common,B,3,Creature - Faerie Rogue,True
+29711,SHM,Forest,basic,G,0,Basic Land - Forest,True
+104052,TLRW,Shapeshifter,token,,0,Creature - Shapeshifter,False
+30260,EVE,Bloom Tender,rare,G,2,Creature - Elf Druid,True
+29954,EVE,Slippery Bogle,common,GU,1,Creature - Beast,True
+29950,EVE,Helix Pinnacle,rare,G,1,Enchantment,True
+30066,EVE,Dream Fracture,uncommon,U,3,Instant,True
+29010,MOR,Negate,common,U,2,Instant,True
+29132,MOR,Idyllic Tutor,rare,W,3,Sorcery,True
+29008,MOR,Kindled Fury,common,R,1,Instant,True
+29038,MOR,Bitterblossom,rare,B,2,Kindred Enchantment - Faerie,True
+29076,MOR,Disperse,common,U,2,Instant,True
+28954,MOR,Scapeshift,rare,G,4,Sorcery,True
+29222,MOR,Door of Destinies,rare,,4,Artifact,True
+28946,MOR,Vendilion Clique,rare,U,3,Legendary Creature - Faerie Wizard,True
+29242,MOR,Shared Animosity,rare,R,3,Enchantment,True
+61371,ORI,Goblin Piledriver,rare,R,2,Creature - Goblin Warrior,True
+104643,ARENASUP,Maralen of the Mornsong Emblem,mythic,,0,Artifact,False
+104054,TMOR,Faerie Rogue,token,,0,Creature - Faerie Rogue,False

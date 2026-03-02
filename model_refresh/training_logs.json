@@ -430,5 +430,21 @@
     "validation_accuracy": 63.947797716150085,
     "num_epochs": 54,
     "training_date": "2025-12-05 14:36:25"
+  },
+  {
+    "experiment_name": "ECL_Premier",
+    "training_picks": 78888,
+    "validation_picks": 19722,
+    "validation_accuracy": 70.22107291349762,
+    "num_epochs": 74,
+    "training_date": "2026-03-02 07:36:54"
+  },
+  {
+    "experiment_name": "ECL_Premier",
+    "training_picks": 78888,
+    "validation_picks": 19722,
+    "validation_accuracy": 70.4391035391948,
+    "num_epochs": 46,
+    "training_date": "2026-03-02 07:51:01"
   }
 ]
