@@ -7,3 +7,4 @@ beautifulsoup4
 playwright
 scikit-learn>=1.0
 onnx>=1.14.0
+onnxscript>=0.1.0

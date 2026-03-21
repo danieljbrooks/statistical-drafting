@@ -171,7 +171,8 @@ def _log_training_info(training_info: dict) -> None:
 def default_training_pipeline(
     set_abbreviation: str,
     draft_mode: str,
-    overwrite_dataset: str = True
+    overwrite_dataset: bool = True,
+    export_onnx: bool = True,
 ) -> Dict:
     """
     End to end training pipeline using default values.
@@ -180,6 +181,7 @@ def default_training_pipeline(
             set_abbreviation (str): Three letter abbreviation of set to create training set of.
             draft_mode (str): Use either "Premier", "Trad", "PickTwo", or "PickTwoTrad" draft data.
             overwrite_dataset (bool): If False, won't overwrite an existing dataset for the set and draft mode.
+            export_onnx (bool): If True (default), export a browser-ready ONNX model alongside the .pt weights.
     """
     import sys
     print("🔧 Step 1: Creating dataset...")
@@ -236,19 +238,17 @@ def default_training_pipeline(
         experiment_name=f"{set_abbreviation}_{draft_mode}",
     )
 
-    # Export final model to ONNX.
     model_path = f"../data/models/{set_abbreviation}_{draft_mode}.pt"
     onnx_path = f"../data/onnx/{set_abbreviation}_{draft_mode}.onnx"
-    
-    try:
+
+    if export_onnx:
+        os.makedirs(os.path.dirname(onnx_path), exist_ok=True)
         print(f"Exporting model to ONNX format: {onnx_path}")
         sd.create_onnx_model(
             model_path=model_path,
             cardnames=train_dataset.cardnames,
-            onnx_path=onnx_path
+            onnx_path=onnx_path,
         )
-    except Exception as e:
-        print(f"Failed to export ONNX model: {e}")
     
     # Log training information to training_logs.json
     _log_training_info(training_info)

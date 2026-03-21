@@ -242,7 +242,8 @@ def run_training_pipeline(set_code: str, draft_mode: str) -> Tuple[bool, Dict]:
             training_info = sd.default_training_pipeline(
                 set_abbreviation=set_code,
                 draft_mode=draft_mode,
-                overwrite_dataset=True
+                overwrite_dataset=True,
+                export_onnx=True,
             )
             
             # Log training information

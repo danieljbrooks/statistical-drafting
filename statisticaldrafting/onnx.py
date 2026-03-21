@@ -1,4 +1,6 @@
 import os
+
+import onnx
 import pandas as pd
 import statisticaldrafting as sd
 import torch
@@ -22,7 +24,7 @@ def create_onnx_model(model_path, cardnames, onnx_path):
     # Save as onnx. 
     torch.onnx.export(
         network,
-        (dummy_collection, dummy_pack),                      # tuple for multiple inputs
+        (dummy_collection, dummy_pack),  # tuple for multiple inputs
         onnx_path,
         input_names=["collection", "pack"],
         output_names=["output"],
@@ -31,8 +33,10 @@ def create_onnx_model(model_path, cardnames, onnx_path):
             "pack": {0: "batch_size"},
             "output": {0: "batch_size"},
         },
-        opset_version=17  # >=13 for native GELU op
+        opset_version=17,  # >=13 for native GELU op
     )
+    # PyTorch 2.x can leave a stub on disk; reload + save produces a single complete .onnx.
+    onnx.save(onnx.load(onnx_path), onnx_path)
     print(f"Created {onnx_path}")
 
 def create_all_onnx_models(model_dir="../data/models/", onnx_dir="../data/onnx/"):
