@@ -19,6 +19,8 @@ training_sets/*
 # Ignore trained models (stored in GitHub Releases instead)
 data/models/*.pt
 data/onnx/*.onnx
+# PyTorch/ONNX external weight shards (use single-file .onnx in repo instead)
+*.onnx.data
 
 # Ignore CI training reports
 model_refresh/training_report.json
