@@ -24069,3 +24069,305 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 61371,ORI,Goblin Piledriver,rare,R,2,Creature - Goblin Warrior,True
 104643,ARENASUP,Maralen of the Mornsong Emblem,mythic,,0,Artifact,False
 104054,TMOR,Faerie Rogue,token,,0,Creature - Faerie Rogue,False
+100620,TMT,"Pizza Face, Gastromancer",uncommon,BG,5,Legendary Artifact Creature - Food Mutant,True
+100539,TMT,Stomped by the Foot,common,B,2,Instant,True
+100583,TMT,New Generation's Technique,uncommon,G,4,Sorcery,True
+100610,TMT,Krang & Shredder,rare,BU,6,Legendary Creature - Utrom Human Ninja,True
+100510,TMT,Sewer-veillance Cam,common,U,1,Artifact,True
+100557,TMT,Purple Dragon Punks,common,R,2,Creature - Human Rogue,True
+100607,TMT,Ice Cream Kitty,common,BG,2,Artifact Creature - Food Cat Mutant,True
+100644,TMT,Mutant Town,common,GU,0,Land,True
+100626,TMT,"Splinter, Radical Rat",rare,BUW,3,Legendary Creature - Mutant Ninja Rat,True
+100627,TMT,Tainted Treats,uncommon,BG,3,Instant,True
+100460,TMT,"April O'Neil, Kunoichi Trainee",common,W,2,Legendary Creature - Human Ninja,True
+100613,TMT,Mechanized Ninja Cavalry,common,RW,2,Artifact Creature - Robot Ninja,True
+100519,TMT,Dream Beavers,uncommon,B,1,Creature - Beaver Nightmare,True
+100599,TMT,Dark Leo & Shredder,mythic,BW,2,Legendary Creature - Mutant Ninja Turtle Human,True
+100624,TMT,"Raph & Mikey, Troublemakers",rare,GR,7,Legendary Creature - Mutant Ninja Turtle,True
+100592,TMT,Turtle Power!,rare,G,3,Enchantment,True
+100623,TMT,"Raph & Leo, Sibling Rivals",rare,RW,3,Legendary Creature - Mutant Ninja Turtle,True
+100634,TMT,The Ooze,rare,,2,Legendary Artifact,True
+100637,TMT,Turtle Blimp,uncommon,,5,Artifact - Vehicle,True
+100598,TMT,Brilliance Unleashed,uncommon,RU,6,Sorcery,True
+100475,TMT,Leonardo's Technique,rare,W,4,Sorcery,True
+100604,TMT,Foot Ninjas,common,BW,6,Creature - Human Ninja,True
+100588,TMT,"Rocksteady, Crash Courser",common,G,6,Legendary Creature - Rhino Mutant,True
+101034,TMT,Plains,basic,W,0,Basic Land - Plains,True
+100482,TMT,Triceraton Commander,mythic,W,2,Creature - Dinosaur Soldier,True
+100628,TMT,"Tokka & Rahzar, Terrible Twos",rare,BR,2,Legendary Creature - Turtle Wolf Mutant,True
+100520,TMT,Foot Mystic,common,B,4,Creature - Human Ninja Warlock,True
+100602,TMT,EPF Point Squad,common,RW,3,Creature - Human Soldier,True
+100461,TMT,Dimensional Exile,uncommon,W,2,Enchantment - Aura,True
+101037,TMT,Mountain,basic,R,0,Basic Land - Mountain,True
+100600,TMT,"Don & Leo, Problem Solvers",rare,UW,5,Legendary Creature - Mutant Ninja Turtle,True
+100515,TMT,"Armaggon, Future Shark",rare,B,8,Legendary Creature - Shark Horror Mutant,True
+100514,TMT,Anchovy & Banana Pizza,common,B,4,Artifact - Food,True
+100576,TMT,"Michelangelo, Improviser",mythic,G,4,Legendary Creature - Mutant Ninja Turtle,True
+100546,TMT,Cool but Rude,rare,R,2,Enchantment - Class,True
+100535,TMT,South Wind Avatar,rare,B,4,Creature - Snake Spirit Avatar,True
+100616,TMT,Mouser Mark III,common,RU,2,Artifact Creature - Robot,True
+100518,TMT,Death in the Family,uncommon,B,2,Instant,True
+100580,TMT,"Mona Lisa, Science Geek",uncommon,G,3,Legendary Creature - Lizard Mutant,True
+100575,TMT,"Michelangelo, Game Master",common,G,3,Legendary Creature - Mutant Ninja Turtle,True
+100573,TMT,Guac & Marshmallow Pizza,common,G,1,Artifact - Food,True
+100500,TMT,"Krang, Master Mind",rare,U,8,Legendary Artifact Creature - Utrom Warrior,True
+100458,TMT,Action News Crew,common,W,2,Creature - Human Citizen,True
+100609,TMT,Karai's Technique,uncommon,BW,3,Sorcery,True
+100570,TMT,Cowabunga!,common,G,1,Sorcery,True
+100556,TMT,"Old Hob, Alleycat Blues",uncommon,RW,5,Legendary Creature - Cat Mutant Rebel,True
+100615,TMT,"Mikey & Leo, Chaos & Order",rare,GW,2,Legendary Creature - Mutant Ninja Turtle,True
+100480,TMT,Quintessential Katana,uncommon,W,1,Artifact - Equipment,True
+100467,TMT,"Jennika, Bad Apple Big Sister",common,W,5,Legendary Creature - Mutant Ninja Turtle,True
+100578,TMT,"Michelangelo, Weirdness to 11",rare,G,2,Legendary Creature - Mutant Ninja Turtle,True
+100542,TMT,Bot Bashing Time,common,R,4,Sorcery,True
+100511,TMT,"Stockman, Mad Fly-entist",common,U,5,Legendary Creature - Insect Mutant Scientist,True
+100612,TMT,Lessons from Life,uncommon,GU,4,Sorcery,True
+100504,TMT,Negate,common,U,2,Instant,True
+100617,TMT,The Neutrinos,uncommon,RW,4,Legendary Creature - Elf Rebel,True
+100622,TMT,Putrid Pals,common,BG,4,Creature - Human Ooze Mutant,True
+100606,TMT,Go Ninja Go,uncommon,RW,2,Sorcery,True
+100555,TMT,Null Group Biological Assets,common,R,3,Creature - Mutant Mercenary,True
+100513,TMT,Utrom Scientists,common,U,3,Artifact Creature - Utrom Robot Scientist,True
+100533,TMT,Shredder's Revenge,common,B,3,Sorcery,True
+100532,TMT,Shredder's Armor,uncommon,B,2,Artifact - Equipment,True
+100471,TMT,"Leonardo, Big Brother",common,W,3,Legendary Creature - Mutant Ninja Turtle,True
+100551,TMT,Manhole Missile,common,R,2,Instant,True
+100525,TMT,"Oroku Saki, Shredder Rising",common,B,3,Legendary Creature - Human Ninja,True
+100569,TMT,Courier of Comestibles,uncommon,G,2,Creature - Human Citizen,True
+100484,TMT,Turtles Forever,rare,W,4,Instant,True
+100554,TMT,Mutant Town Musicians,common,R,3,Creature - Mutant Bard Performer,True
+100523,TMT,"Madame Null, Power Broker",rare,B,3,Legendary Creature - Demon Advisor,True
+100508,TMT,Retro-Mutation,common,U,3,Enchantment - Aura,True
+100564,TMT,Rock Soldiers,common,R,4,Artifact Creature - Elemental Soldier,True
+100537,TMT,Splinter's Technique,rare,B,4,Sorcery,True
+100614,TMT,"Mikey & Don, Party Planners",rare,GU,4,Legendary Creature - Mutant Ninja Turtle,True
+100605,TMT,Genghis Frog,uncommon,GU,2,Legendary Creature - Frog Mutant Rogue,True
+100507,TMT,"Renet, Temporal Apprentice",rare,U,5,Legendary Creature - Human Wizard,True
+100565,TMT,"Slash, Reptile Rampager",rare,R,5,Legendary Creature - Mutant Berserker Turtle,True
+100465,TMT,Hamato Guardian Stance,common,W,1,Instant,True
+100497,TMT,Fugitive Droid,uncommon,U,1,Artifact Creature - Robot Scientist,True
+100469,TMT,The Last Ronin's Technique,uncommon,W,4,Instant,True
+100486,TMT,"April O'Neil, Hacktivist",rare,U,4,Legendary Creature - Human Scientist,True
+100595,TMT,Zoo Escapees,common,G,2,Creature - Boar Rhino,True
+100635,TMT,Skateboard,uncommon,,1,Artifact - Equipment,True
+100502,TMT,Mind Transfer Protocol,common,U,3,Instant,True
+100582,TMT,Mutant Chain Reaction,common,G,3,Sorcery,True
+100495,TMT,"Donatello, Way with Machines",uncommon,U,3,Legendary Creature - Mutant Ninja Turtle,True
+100566,TMT,Spicy Oatmeal Pizza,uncommon,R,3,Artifact - Food,True
+100633,TMT,Omni-Cheese Pizza,common,,2,Artifact - Food,True
+100585,TMT,Party Dude,rare,G,1,Enchantment - Class,True
+100568,TMT,"Zog, Triceraton Castaway",common,R,5,Legendary Creature - Dinosaur Soldier,True
+100524,TMT,Ninja Teen,rare,B,3,Enchantment - Class,True
+100587,TMT,Ragamuffin Raptor,common,G,5,Creature - Dinosaur,True
+100472,TMT,"Leonardo, Cutting Edge",rare,W,2,Legendary Creature - Mutant Ninja Turtle,True
+100522,TMT,"Lord Dregg, Insect Invader",uncommon,BG,4,Legendary Creature - Insect Warrior,True
+100597,TMT,Bebop & Rocksteady,rare,BG,3,Legendary Creature - Boar Rhino Mutant,True
+100505,TMT,Ooze Spill,uncommon,U,3,Instant,True
+100560,TMT,"Raphael, the Nightwatcher",rare,R,4,Legendary Creature - Mutant Ninja Turtle,True
+100567,TMT,"Wingnut, Bat on the Belfry",uncommon,R,2,Legendary Creature - Bat Mutant,True
+100493,TMT,"Donatello, Mutant Mechanic",mythic,U,4,Legendary Creature - Mutant Ninja Turtle,True
+100646,TMT,TCRI Building,common,RU,0,Land,True
+100596,TMT,Baxter Stockman,uncommon,RU,5,Legendary Creature - Human Scientist,True
+100541,TMT,Tunnel Rats,common,B,2,Creature - Rat,True
+100581,TMT,"Mutagen Man, Living Ooze",rare,G,2,Legendary Creature - Ooze Mutant,True
+100538,TMT,Squirrelanoids,common,B,1,Creature - Squirrel Mutant,True
+100589,TMT,Saved by the Shell,uncommon,G,2,Instant,True
+100574,TMT,"Leatherhead, Swamp Stalker",rare,G,4,Legendary Creature - Crocodile Mutant Rogue,True
+100536,TMT,"Splinter, Hamato Yoshi",uncommon,B,2,Legendary Creature - Mutant Ninja Rat,True
+100545,TMT,"Casey Jones, Vigilante",rare,R,3,Legendary Creature - Human Berserker,True
+100645,TMT,Northampton Farm,rare,,0,Land,True
+101036,TMT,Swamp,basic,B,0,Basic Land - Swamp,True
+100544,TMT,"Casey Jones, Jury-Rig Justiciar",uncommon,R,2,Legendary Creature - Human Berserker,True
+100601,TMT,"Don & Raph, Hard Science",rare,RU,3,Legendary Creature - Mutant Ninja Turtle,True
+100491,TMT,Does Machines,rare,U,2,Enchantment - Class,True
+100464,TMT,Grounded for Life,common,W,5,Instant,True
+100552,TMT,Mouser Attack!,common,R,2,Instant,True
+100561,TMT,"Raphael, Tough Turtle",common,R,2,Legendary Creature - Mutant Ninja Turtle,True
+100528,TMT,"Rat King, Verminister",rare,B,2,Legendary Creature - Rat Avatar,True
+100636,TMT,Technodrome,mythic,,2,Artifact Creature - Construct,True
+100553,TMT,Mouser Foundry,common,R,2,Artifact,True
+100643,TMT,Illegitimate Business,common,BG,0,Land,True
+100481,TMT,"Sally Pride, Lioness Leader",rare,W,5,Legendary Creature - Cat Mutant Rebel,True
+100526,TMT,Pain 101,common,B,2,Instant,True
+100498,TMT,"Kitsune, Dragon's Daughter",rare,U,6,Legendary Creature - Fox Warlock Avatar,True
+100543,TMT,Broadcast Takeover,mythic,R,5,Sorcery,True
+100641,TMT,Escape Tunnel,common,,0,Land,True
+100631,TMT,Henchbots,uncommon,,4,Artifact Creature - Robot,True
+100478,TMT,Mighty Mutanimals,uncommon,W,4,Creature - Mutant Rebel,True
+100619,TMT,North Wind Avatar,mythic,RU,5,Creature - Dragon Spirit Avatar,True
+100621,TMT,Punk Frogs,common,GU,5,Creature - Frog Mutant Rebel,True
+100489,TMT,Buzz Bots,common,U,2,Artifact Creature - Robot Insect,True
+100586,TMT,Primordial Pachyderm,common,G,4,Creature - Elephant Avatar,True
+101035,TMT,Island,basic,U,0,Basic Land - Island,True
+100618,TMT,Nobody,common,RU,3,Artifact Creature - Human Hero,True
+100563,TMT,Ravenous Robots,rare,R,2,Artifact Creature - Robot,True
+100642,TMT,Foot Headquarters,common,BW,0,Land,True
+100487,TMT,"April, Reporter of the Weird",uncommon,U,3,Legendary Creature - Human Detective,True
+100462,TMT,East Wind Avatar,common,W,4,Creature - Bird Spirit Avatar,True
+100571,TMT,Frog Butler,common,G,2,Creature - Frog Spirit,True
+100527,TMT,Paramecia Coloniex,uncommon,B,2,Creature - Zombie Worm,True
+100474,TMT,"Leonardo, Sewer Samurai",mythic,W,4,Legendary Creature - Mutant Ninja Turtle Samurai,True
+100547,TMT,"General Traag, Heart of Stone",uncommon,R,5,Legendary Artifact Creature - Elemental Soldier,True
+100611,TMT,The Last Ronin,mythic,BG,6,Enchantment - Saga,True
+100521,TMT,Insectoid Exterminator,common,B,3,Creature - Insect Mutant,True
+100550,TMT,Jennika's Technique,uncommon,R,3,Instant,True
+100488,TMT,Bespoke B?,uncommon,U,3,Artifact - Equipment,True
+100477,TMT,Make Your Move,common,W,3,Instant,True
+100531,TMT,"Shredder, Unrelenting",uncommon,B,5,Legendary Creature - Human Ninja,True
+100479,TMT,Prehistoric Pet,rare,W,1,Creature - Dinosaur Ninja,True
+100512,TMT,Turtles in Time,mythic,U,7,Sorcery,True
+100470,TMT,Leader's Talent,rare,W,2,Enchantment - Class,True
+100506,TMT,"Ray Fillet, Man Ray",uncommon,U,4,Legendary Creature - Fish Mutant,True
+100625,TMT,Slithering Cryptid,common,GU,3,Creature - Fish Mutant,True
+100591,TMT,Transdimensional Bovine,rare,G,3,Creature - Ox Avatar,True
+100559,TMT,"Raphael, Ninja Destroyer",mythic,R,4,Legendary Creature - Mutant Ninja Turtle,True
+100473,TMT,"Leonardo, Leader in Blue",uncommon,W,1,Legendary Creature - Mutant Ninja Turtle,True
+100629,TMT,Chrome Dome,rare,,2,Artifact Creature - Robot Ninja,True
+100548,TMT,Hard-Won Jitte,uncommon,R,2,Artifact - Equipment,True
+100468,TMT,"Koya, Death from Above",uncommon,BW,3,Legendary Creature - Mutant Ninja Bird,True
+100594,TMT,West Wind Avatar,uncommon,G,7,Creature - Cat Spirit Avatar,True
+100558,TMT,"Raphael, Most Attitude",uncommon,R,4,Legendary Creature - Mutant Ninja Turtle,True
+100632,TMT,"Krang, Utrom Warlord",mythic,,9,Legendary Artifact Creature - Utrom Robot,True
+100630,TMT,Everything Pizza,uncommon,BGRUW,2,Artifact - Food,True
+100501,TMT,Metalhead,uncommon,RU,5,Legendary Artifact Creature - Robot Turtle,True
+100593,TMT,"Venus, Torn Between Worlds",uncommon,GU,5,Legendary Creature - Mutant Frog Turtle,True
+100529,TMT,"Savanti Romero, Time's Exile",rare,B,5,Legendary Creature - Demon Wizard,True
+100496,TMT,Donatello's Technique,uncommon,U,3,Sorcery,True
+100603,TMT,Foot Elite,common,BW,3,Creature - Human Ninja,True
+100584,TMT,Novel Nunchaku,uncommon,G,3,Artifact - Equipment,True
+100639,TMT,Weather Maker,rare,,3,Artifact,True
+100483,TMT,Turncoat Kunoichi,rare,BW,3,Creature - Mutant Ninja Fox,True
+100459,TMT,"Agent Bishop, Man in Black",rare,W,3,Legendary Creature - Human Soldier,True
+100647,TMT,Turtle Lair,uncommon,,0,Land,True
+100579,TMT,Michelangelo's Technique,rare,G,5,Sorcery,True
+100562,TMT,Raphael's Technique,rare,R,6,Instant,True
+100492,TMT,"Donatello, Gadget Master",rare,U,3,Legendary Creature - Mutant Ninja Turtle,True
+101038,TMT,Forest,basic,G,0,Basic Land - Forest,True
+100517,TMT,The Cloning of Shredder,mythic,B,6,Enchantment - Saga,True
+100590,TMT,Tenderize,common,G,2,Instant,True
+100476,TMT,"Lita, Little Orphan Amphibian",uncommon,W,2,Legendary Creature - Mutant Ninja Turtle,True
+100503,TMT,Mondo Gecko,mythic,U,3,Legendary Creature - Lizard Mutant,True
+100499,TMT,Kitsune's Technique,rare,U,6,Instant,True
+100572,TMT,Groundchuck & Dirtbag,rare,G,6,Legendary Creature - Ox Mole Mutant,True
+100534,TMT,Shredder's Technique,uncommon,B,3,Sorcery,True
+100549,TMT,Improvised Arsenal,rare,R,2,Artifact - Equipment,True
+100485,TMT,Uneasy Alliance,common,W,2,Enchantment - Aura,True
+100494,TMT,"Donatello, Turtle Techie",common,U,4,Legendary Creature - Mutant Ninja Turtle,True
+100608,TMT,"Karai, Future of the Foot",uncommon,BW,3,Legendary Creature - Human Ninja,True
+100509,TMT,Return to the Sewers,common,U,4,Instant,True
+100463,TMT,Featherbrained Filcher,uncommon,W,1,Creature - Bird Mutant,True
+100466,TMT,High-Flying Ace,common,W,3,Creature - Bird Mutant,True
+100530,TMT,"Shark Shredder, Killer Clone",rare,B,4,Legendary Creature - Shark Octopus Ninja,True
+100516,TMT,"Bebop, Warthog Warrior",common,B,5,Legendary Creature - Boar Mutant Warrior,True
+100540,TMT,Super Shredder,mythic,B,2,Legendary Creature - Mutant Ninja Human,True
+100490,TMT,Crustacean Commando,common,U,2,Creature - Crab Mutant Soldier,True
+100638,TMT,Turtle Van,rare,,3,Artifact - Vehicle,True
+100577,TMT,"Michelangelo, Mutant BFF",uncommon,G,4,Legendary Creature - Mutant Ninja Turtle,True
+100640,TMT,Dimension X,common,RW,0,Land,True
+100680,PZA,Sword of Sinew and Steel,mythic,,3,Artifact - Equipment,True
+100677,PZA,Conqueror's Flail,rare,,2,Artifact - Equipment,True
+100682,PZA,Undercity Sewers,rare,BU,0,Land - Island Swamp,True
+100663,PZA,Path to Exile,uncommon,W,1,Instant,True
+100664,PZA,Teleportation Circle,rare,W,4,Enchantment,True
+100675,PZA,Waves of Aggression,rare,RW,5,Sorcery,True
+100672,PZA,Underworld Breach,rare,R,2,Enchantment,True
+100665,PZA,Trouble in Pairs,rare,W,4,Enchantment,True
+100681,PZA,Umezawa's Jitte,mythic,,2,Legendary Artifact - Equipment,True
+100678,PZA,Metallic Mimic,rare,,2,Artifact Creature - Shapeshifter,True
+100670,PZA,All Will Be One,mythic,R,5,Enchantment,True
+100666,PZA,Brainstorm,common,U,1,Instant,True
+100674,PZA,Rhythm of the Wild,uncommon,GR,3,Enchantment,True
+100673,PZA,Doubling Season,mythic,G,5,Enchantment,True
+100668,PZA,Ashcoat of the Shadow Swarm,mythic,B,4,Legendary Creature - Rat Warlock,True
+100671,PZA,Silverclad Ferocidons,rare,R,7,Creature - Dinosaur,True
+100676,PZA,Arcbound Ravager,rare,,2,Artifact Creature - Beast,True
+100667,PZA,Cytoplast Manipulator,rare,U,4,Creature - Human Wizard Mutant,True
+100679,PZA,Shadowspear,rare,,1,Legendary Artifact - Equipment,True
+100669,PZA,Plague of Vermin,rare,B,7,Sorcery,True
+101043,TMT,Forest,basic,G,0,Basic Land - Forest,False
+100651,TMT,Mountain,basic,R,0,Basic Land - Mountain,True
+101039,TMT,Plains,basic,W,0,Basic Land - Plains,False
+101042,TMT,Mountain,basic,R,0,Basic Land - Mountain,False
+100649,TMT,Island,basic,U,0,Basic Land - Island,True
+100648,TMT,Plains,basic,W,0,Basic Land - Plains,True
+100650,TMT,Swamp,basic,B,0,Basic Land - Swamp,True
+101040,TMT,Island,basic,U,0,Basic Land - Island,False
+100652,TMT,Forest,basic,G,0,Basic Land - Forest,True
+101041,TMT,Swamp,basic,B,0,Basic Land - Swamp,False
+104023,TMT,"Leonardo, Leader in Blue",uncommon,W,1,Legendary Creature - Mutant Ninja Turtle,False
+104024,TMT,"Donatello, Way with Machines",uncommon,U,3,Legendary Creature - Mutant Ninja Turtle,False
+104025,TMT,"Michelangelo, Mutant BFF",uncommon,G,4,Legendary Creature - Mutant Ninja Turtle,False
+104026,TMT,"Raphael, Most Attitude",uncommon,R,4,Legendary Creature - Mutant Ninja Turtle,False
+104027,TMT,"Mikey & Leo, Chaos & Order",rare,GW,2,Legendary Creature - Mutant Ninja Turtle,False
+104028,TMT,Krang & Shredder,rare,BU,6,Legendary Creature - Utrom Human Ninja,False
+104029,TMT,"Renet, Temporal Apprentice",rare,U,5,Legendary Creature - Human Wizard,False
+104030,TMT,"Jennika, Bad Apple Big Sister",common,W,5,Legendary Creature - Mutant Ninja Turtle,False
+104031,TMT,Bebop & Rocksteady,rare,BG,3,Legendary Creature - Boar Rhino Mutant,False
+104032,TMT,"Don & Raph, Hard Science",rare,RU,3,Legendary Creature - Mutant Ninja Turtle,False
+104033,TMT,"April, Reporter of the Weird",uncommon,U,3,Legendary Creature - Human Detective,False
+104034,TMT,"Casey Jones, Jury-Rig Justiciar",uncommon,R,2,Legendary Creature - Human Berserker,False
+104035,TMT,"Slash, Reptile Rampager",rare,R,5,Legendary Creature - Mutant Berserker Turtle,False
+104036,TMT,Foot Ninjas,common,BW,6,Creature - Human Ninja,False
+104037,TMT,"Shredder, Unrelenting",uncommon,B,5,Legendary Creature - Human Ninja,False
+104038,TMT,"Leonardo, Cutting Edge",rare,W,2,Legendary Creature - Mutant Ninja Turtle,False
+104039,TMT,"Donatello, Gadget Master",rare,U,3,Legendary Creature - Mutant Ninja Turtle,False
+104040,TMT,"Raphael, the Nightwatcher",rare,R,4,Legendary Creature - Mutant Ninja Turtle,False
+104041,TMT,"Michelangelo, Weirdness to 11",rare,G,2,Legendary Creature - Mutant Ninja Turtle,False
+101044,TMT,The Last Ronin's Technique,uncommon,W,4,Instant,False
+101045,TMT,Leonardo's Technique,rare,W,4,Sorcery,False
+101046,TMT,"Sally Pride, Lioness Leader",rare,W,5,Legendary Creature - Cat Mutant Rebel,False
+101047,TMT,Triceraton Commander,mythic,W,2,Creature - Dinosaur Soldier,False
+101048,TMT,"April O'Neil, Hacktivist",rare,U,4,Legendary Creature - Human Scientist,False
+101049,TMT,Donatello's Technique,uncommon,U,3,Sorcery,False
+101050,TMT,Kitsune's Technique,rare,U,6,Instant,False
+101051,TMT,"Krang, Master Mind",rare,U,8,Legendary Artifact Creature - Utrom Warrior,False
+101052,TMT,Mondo Gecko,mythic,U,3,Legendary Creature - Lizard Mutant,False
+101053,TMT,Shredder's Technique,uncommon,B,3,Sorcery,False
+101054,TMT,Splinter's Technique,rare,B,4,Sorcery,False
+101055,TMT,Broadcast Takeover,mythic,R,5,Sorcery,False
+101056,TMT,"Casey Jones, Vigilante",rare,R,3,Legendary Creature - Human Berserker,False
+101057,TMT,Jennika's Technique,uncommon,R,3,Instant,False
+101058,TMT,Raphael's Technique,rare,R,6,Instant,False
+101059,TMT,Groundchuck & Dirtbag,rare,G,6,Legendary Creature - Ox Mole Mutant,False
+101060,TMT,Michelangelo's Technique,rare,G,5,Sorcery,False
+101061,TMT,New Generation's Technique,uncommon,G,4,Sorcery,False
+101062,TMT,Bebop & Rocksteady,rare,BG,3,Legendary Creature - Boar Rhino Mutant,False
+101063,TMT,"Don & Leo, Problem Solvers",rare,UW,5,Legendary Creature - Mutant Ninja Turtle,False
+101064,TMT,"Don & Raph, Hard Science",rare,RU,3,Legendary Creature - Mutant Ninja Turtle,False
+101065,TMT,Karai's Technique,uncommon,BW,3,Sorcery,False
+101066,TMT,Krang & Shredder,rare,BU,6,Legendary Creature - Utrom Human Ninja,False
+101067,TMT,"Mikey & Don, Party Planners",rare,GU,4,Legendary Creature - Mutant Ninja Turtle,False
+101068,TMT,"Mikey & Leo, Chaos & Order",rare,GW,2,Legendary Creature - Mutant Ninja Turtle,False
+101069,TMT,North Wind Avatar,mythic,RU,5,Creature - Dragon Spirit Avatar,False
+101070,TMT,"Raph & Leo, Sibling Rivals",rare,RW,3,Legendary Creature - Mutant Ninja Turtle,False
+101071,TMT,"Raph & Mikey, Troublemakers",rare,GR,7,Legendary Creature - Mutant Ninja Turtle,False
+101072,TMT,"Splinter, Radical Rat",rare,BUW,3,Legendary Creature - Mutant Ninja Rat,False
+101073,TMT,"Tokka & Rahzar, Terrible Twos",rare,BR,2,Legendary Creature - Turtle Wolf Mutant,False
+101074,TMT,"Leonardo, Cutting Edge",mythic,W,2,Legendary Creature - Mutant Ninja Turtle,False
+101075,TMT,"April O'Neil, Hacktivist",mythic,U,4,Legendary Creature - Human Scientist,False
+101076,TMT,"Donatello, Gadget Master",mythic,U,3,Legendary Creature - Mutant Ninja Turtle,False
+101077,TMT,Turtles in Time,mythic,U,7,Sorcery,False
+101078,TMT,Super Shredder,mythic,B,2,Legendary Creature - Mutant Ninja Human,False
+101079,TMT,"Casey Jones, Vigilante",mythic,R,3,Legendary Creature - Human Berserker,False
+101080,TMT,"Raphael, the Nightwatcher",mythic,R,4,Legendary Creature - Mutant Ninja Turtle,False
+101081,TMT,"Michelangelo, Weirdness to 11",mythic,G,2,Legendary Creature - Mutant Ninja Turtle,False
+101082,TMT,Dark Leo & Shredder,mythic,BW,2,Legendary Creature - Mutant Ninja Turtle Human,False
+101083,TMT,"Krang, Utrom Warlord",mythic,,9,Legendary Artifact Creature - Utrom Robot,False
+101084,TMT,"Leonardo, Sewer Samurai",mythic,W,4,Legendary Creature - Mutant Ninja Turtle Samurai,False
+101085,TMT,"Donatello, Mutant Mechanic",mythic,U,4,Legendary Creature - Mutant Ninja Turtle,False
+101086,TMT,Super Shredder,mythic,B,2,Legendary Creature - Mutant Ninja Human,False
+101087,TMT,"Raphael, Ninja Destroyer",mythic,R,4,Legendary Creature - Mutant Ninja Turtle,False
+101088,TMT,"Michelangelo, Improviser",mythic,G,4,Legendary Creature - Mutant Ninja Turtle,False
+101089,TMT,Dark Leo & Shredder,mythic,BW,2,Legendary Creature - Mutant Ninja Turtle Human,False
+101090,TMT,"Krang, Utrom Warlord",mythic,,9,Legendary Artifact Creature - Utrom Robot,False
+101091,TMT,Technodrome,mythic,,2,Artifact Creature - Construct,False
+100653,TTMT,Copy,token,,0,,False
+100654,TTMT,Dinosaur Soldier,token,,0,Creature - Dinosaur Soldier,False
+100655,TTMT,Ninja Turtle Spirit,token,,0,Creature - Ninja Turtle Spirit,False
+100656,TTMT,Insect Warrior,token,,0,Creature - Insect Warrior,False
+100657,TTMT,Ninja,token,,0,Creature - Ninja,False
+100658,TTMT,Rat,token,,0,Creature - Rat,False
+100659,TTMT,Mutant,token,,0,Creature - Mutant,False
+100660,TTMT,Food,token,,0,Artifact - Food,False
+100661,TTMT,Mutagen,token,,0,Artifact - Mutagen,False
+100662,TTMT,Robot,token,,0,Artifact Creature - Robot,False

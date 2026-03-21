@@ -22,4 +22,4 @@ Older frontend [![Open in Colab](https://colab.research.google.com/assets/colab-
 
 For training new models when new sets are released, see the [model_refresh](./model_refresh) directory.
 
-GitHub Actions automatically checks for new data nightly. When updates are detected, train new models with `python model_refresh/refresh_models.py`, then manually deploy ONNX models to the website repository.
+GitHub Actions automatically checks for new data nightly. When updates are detected, train new models with `cd model_fresh, python refresh_models.py`, then manually deploy ONNX models to the website repository.

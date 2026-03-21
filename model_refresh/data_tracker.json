@@ -1,21 +1,21 @@
 {
-  "most_recent_set": "ECL",
-  "last_cards_update": "2026-03-02",
-  "premier_draft_last_updated": "2026-02-17",
+  "most_recent_set": "TMT",
+  "last_cards_update": "2026-03-20",
+  "premier_draft_last_updated": "2026-03-18",
   "traditional_draft_last_updated": "2026-01-10",
-  "last_check_timestamp": "2026-03-02T07:45:38.566183",
+  "last_check_timestamp": "2026-03-20T17:20:23.750585",
   "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing.",
   "picktwodraft_last_updated": null,
   "picktwodraft_set": "OM1",
   "last_training_logs": [
     {
-      "experiment_name": "ECL_Premier",
-      "training_picks": 78888,
-      "validation_picks": 19722,
-      "validation_accuracy": 70.22107291349762,
-      "num_epochs": 74,
-      "training_date": "2026-03-02 07:36:54"
+      "experiment_name": "TMT_Premier",
+      "training_picks": 47004,
+      "validation_picks": 11752,
+      "validation_accuracy": 70.26889040163377,
+      "num_epochs": 44,
+      "training_date": "2026-03-20 17:20:23"
     }
   ],
-  "last_training_timestamp": "2026-03-02T07:36:54.466119"
+  "last_training_timestamp": "2026-03-20T17:20:23.750576"
 }

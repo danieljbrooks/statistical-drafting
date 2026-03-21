@@ -1,0 +1,8 @@
+{
+  "most_recent_set": "TMT",
+  "last_cards_update": "2026-03-20",
+  "premier_draft_last_updated": "2026-03-18",
+  "picktwodraft_last_updated": null,
+  "last_check_timestamp": "2026-03-20T17:17:09.025876",
+  "notes": "This file tracks the most recent MTG set and update dates for Premier and PickTwoDraft data to avoid redundant downloads and processing. Only Premier models are trained, with PickTwo as fallback."
+}
