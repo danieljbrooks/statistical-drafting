@@ -462,5 +462,21 @@
     "validation_accuracy": 70.74598998557244,
     "num_epochs": 68,
     "training_date": "2026-03-20 17:58:10"
+  },
+  {
+    "experiment_name": "TMT_Premier",
+    "training_picks": 46973,
+    "validation_picks": 11783,
+    "validation_accuracy": 71.42493422727658,
+    "num_epochs": 54,
+    "training_date": "2026-03-20 18:46:41"
+  },
+  {
+    "experiment_name": "SOS_Premier",
+    "training_picks": 79173,
+    "validation_picks": 19889,
+    "validation_accuracy": 68.89738046156167,
+    "num_epochs": 40,
+    "training_date": "2026-05-09 06:49:15"
   }
 ]

@@ -9,6 +9,8 @@ Website frontend http://statisticaldrafting.com
 
 Code for website fronted https://github.com/danieljbrooks/statistical-drafting-website
 
+The website repo vendors a copy of this package under `statistical-drafting/statisticaldrafting/` for optional Python workflows (e.g. loading `.pt` weights). After changing **`DraftNet` in `statisticaldrafting/model.py`** or related training code, copy the updated modules into that folder so checkpoints and `load_state_dict` stay aligned.
+
 Older frontend [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/danieljbrooks/statistical-drafting/blob/main/notebooks/colab_draft_assistant.ipynb) [Video Demo](https://www.youtube.com/watch?v=RnHF_pV1Zhw)
 
 ## Summary

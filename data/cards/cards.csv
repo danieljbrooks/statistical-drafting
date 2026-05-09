@@ -24371,3 +24371,555 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 100660,TTMT,Food,token,,0,Artifact - Food,False
 100661,TTMT,Mutagen,token,,0,Artifact - Mutagen,False
 100662,TTMT,Robot,token,,0,Artifact Creature - Robot,False
+100697,TMC,"Bebop, Skull & Crossbones",rare,B,2,Legendary Creature - Boar Mutant,False
+100686,TMC,"Raphael, the Muscle",mythic,R,5,Legendary Creature - Mutant Ninja Turtle,False
+101096,TMC,Commander's Plate,mythic,,1,Artifact - Equipment,False
+101094,TMC,Food Chain,mythic,G,3,Enchantment,False
+101095,TMC,Supreme Verdict,mythic,UW,4,Sorcery,False
+100710,TMC,"Tokka & Rahzar, Unsupervised",rare,R,3,Legendary Creature - Turtle Wolf Mutant,False
+100715,TMC,"Rocksteady, Mutant Marauder",rare,G,3,Legendary Creature - Rhino Mutant,False
+100694,TMC,"Irma, Part-Time Mutant",rare,U,3,Legendary Creature - Human Mutant Shapeshifter,False
+100687,TMC,"Michelangelo, the Heart",mythic,G,2,Legendary Creature - Mutant Ninja Turtle,False
+100688,TMC,Heroes in a Half Shell,mythic,BGRUW,5,Legendary Creature - Mutant Ninja Turtle,False
+100683,TMC,"Leonardo, the Balance",mythic,BGRUW,4,Legendary Creature - Mutant Ninja Turtle,False
+100709,TMC,"Tempestra, Dame of Games",rare,R,2,Legendary Creature - Elemental Illusion,False
+100712,TMC,"Leatherhead, Iron Gator",rare,G,7,Legendary Creature - Crocodile Mutant Rogue,False
+100684,TMC,"Donatello, the Brains",mythic,U,3,Legendary Creature - Mutant Ninja Turtle,False
+100702,TMC,"Shredder, Shadow Master",rare,B,5,Legendary Creature - Human Ninja,False
+100704,TMC,"Casey Jones, Back Alley Brute",rare,R,4,Legendary Creature - Human Berserker,False
+100685,TMC,"Splinter, the Mentor",mythic,B,2,Legendary Creature - Mutant Ninja Rat,False
+101092,TMC,Dark Ritual,mythic,B,1,Instant,False
+100701,TMC,"Rat King, Pale Piper",rare,B,4,Legendary Creature - Rat Avatar,False
+100691,TMC,"April O'Neil, Live on the Scene",mythic,U,2,Legendary Creature - Human Detective,False
+101097,TMC,Sword of Hearth and Home,mythic,,3,Artifact - Equipment,False
+100695,TMC,"Krang, the All-Powerful",rare,U,5,Legendary Artifact Creature - Utrom Robot,False
+100696,TMC,"Ray Fillet, Wave Warrior",rare,U,3,Legendary Creature - Fish Mutant,False
+101093,TMC,Waste Not,mythic,B,2,Enchantment,False
+100692,TMC,"Baxter, Fly in the Ointment",rare,U,4,Legendary Creature - Insect Mutant Scientist,False
+101111,TMC,Heroes in a Half Shell,mythic,BGRUW,5,Legendary Creature - Mutant Ninja Turtle,False
+101098,TMC,"Leonardo, the Balance",mythic,BGRUW,4,Legendary Creature - Mutant Ninja Turtle,False
+101099,TMC,"April O'Neil, Live on the Scene",mythic,U,2,Legendary Creature - Human Detective,False
+101100,TMC,"Donatello, the Brains",mythic,U,3,Legendary Creature - Mutant Ninja Turtle,False
+101101,TMC,"Krang, the All-Powerful",rare,U,5,Legendary Artifact Creature - Utrom Robot,False
+101102,TMC,"Bebop, Skull & Crossbones",rare,B,2,Legendary Creature - Boar Mutant,False
+101103,TMC,"Shredder, Shadow Master",rare,B,5,Legendary Creature - Human Ninja,False
+101104,TMC,"Splinter, the Mentor",mythic,B,2,Legendary Creature - Mutant Ninja Rat,False
+101105,TMC,"Casey Jones, Back Alley Brute",rare,R,4,Legendary Creature - Human Berserker,False
+101106,TMC,"Raphael, the Muscle",mythic,R,5,Legendary Creature - Mutant Ninja Turtle,False
+101107,TMC,"Michelangelo, the Heart",mythic,G,2,Legendary Creature - Mutant Ninja Turtle,False
+101109,TMC,"Rocksteady, Mutant Marauder",rare,G,3,Legendary Creature - Rhino Mutant,False
+102585,SOS,Pigment Wrangler,uncommon,R,5,Creature - Orc Sorcerer,True
+102501,SOS,Deluge Virtuoso,common,U,3,Creature - Human Wizard,True
+102608,SOS,Germination Practicum,mythic,G,5,Sorcery - Lesson,True
+102494,SOS,Stirring Hopesinger,rare,W,3,Creature - Bird Bard,True
+102499,SOS,Campus Composer,uncommon,U,4,Creature - Merfolk Bard,True
+102635,SOS,"Blech, Loafing Pest",rare,BG,3,Legendary Creature - Pest,True
+102567,SOS,Artistic Process,uncommon,R,5,Sorcery,True
+102474,SOS,Erode,rare,W,1,Instant,True
+102505,SOS,Encouraging Aviator,uncommon,U,3,Creature - Bird Wizard,True
+102587,SOS,Rubble Rouser,common,R,3,Creature - Dwarf Sorcerer,True
+102652,SOS,Growth Curve,uncommon,GU,2,Sorcery,True
+102495,SOS,Stone Docent,common,W,2,Creature - Spirit Chimera,True
+102612,SOS,Lumaret's Favor,uncommon,G,2,Instant,True
+102687,SOS,Social Snub,uncommon,BW,3,Sorcery,True
+102695,SOS,Suspend Aggression,rare,RW,3,Instant,True
+102479,SOS,Informed Inkwright,rare,W,2,Creature - Human Wizard,True
+102704,SOS,"Witherbloom, the Balancer",mythic,BG,8,Legendary Creature - Elder Dragon,True
+102473,SOS,"Ennis, Debate Moderator",uncommon,W,2,Legendary Creature - Human Cleric,True
+102554,SOS,Pull from the Grave,common,B,3,Sorcery,True
+102593,SOS,Thunderdrum Soloist,uncommon,R,2,Creature - Dwarf Bard,True
+102561,SOS,Tragedy Feaster,rare,B,4,Creature - Demon,True
+102658,SOS,"Lluwen, Exchange Student",uncommon,BG,4,Legendary Creature - Elf Druid,True
+102722,SOS,Stormcarved Coast,rare,RU,0,Land,True
+102527,SOS,Spellbook Seeker,common,U,4,Creature - Bird Wizard,True
+102656,SOS,Killian's Confidence,uncommon,BW,2,Sorcery,True
+102533,SOS,"Arnyn, Deathbloom Botanist",uncommon,B,3,Legendary Creature - Vampire Druid,True
+102560,SOS,Sneering Shadewriter,common,B,5,Creature - Vampire Warlock,True
+102539,SOS,Emeritus of Woe,mythic,B,4,Creature - Vampire Warlock,True
+102478,SOS,Honorbound Page,common,W,4,Creature - Cat Cleric,True
+102648,SOS,Fractal Mascot,common,GU,6,Creature - Fractal Elk,True
+102683,SOS,Scolding Administrator,uncommon,BW,2,Creature - Dwarf Cleric,True
+102647,SOS,Fix What's Broken,rare,BW,4,Sorcery,True
+102719,SOS,Shattered Sanctum,rare,BW,0,Land,True
+102669,SOS,Practiced Scrollsmith,uncommon,RW,3,Creature - Dwarf Cleric,True
+102489,SOS,Restoration Seminar,mythic,W,7,Sorcery - Lesson,True
+102559,SOS,Send in the Pest,common,B,2,Sorcery,True
+102509,SOS,Fractal Anomaly,uncommon,U,1,Instant,True
+102611,SOS,Infirmary Healer,uncommon,G,2,Creature - Cat Cleric,True
+102674,SOS,Pterafractyl,common,GU,2,Creature - Dinosaur Fractal,True
+102574,SOS,Flashback,rare,R,1,Instant,True
+102477,SOS,Harsh Annotation,uncommon,W,2,Instant,True
+102637,SOS,Borrowed Knowledge,uncommon,RW,4,Sorcery,True
+102466,SOS,Antiquities on the Loose,rare,W,3,Sorcery,True
+102629,SOS,"Abigale, Poet Laureate",uncommon,BW,3,Legendary Creature - Bird Bard,True
+102702,SOS,Wilt in the Heat,common,RW,4,Instant,True
+102681,SOS,Root Manipulation,uncommon,BG,5,Sorcery,True
+102684,SOS,Silverquill Charm,uncommon,BW,2,Instant,True
+102465,SOS,Ajani's Response,common,W,5,Instant,True
+102725,SOS,Titan's Grave,common,BG,0,Land,True
+102598,SOS,Additive Evolution,uncommon,G,5,Enchantment,True
+102623,SOS,Thornfist Striker,uncommon,G,3,Creature - Elf Druid,True
+102508,SOS,Flow State,uncommon,U,2,Sorcery,True
+102573,SOS,Expressive Firedancer,common,R,2,Creature - Human Sorcerer,True
+102552,SOS,Postmortem Professor,rare,B,2,Creature - Zombie Warlock,True
+102568,SOS,Blazing Firesinger,uncommon,R,3,Creature - Dwarf Bard,True
+102541,SOS,Eternal Student,uncommon,B,4,Creature - Zombie Warlock,True
+102575,SOS,Garrison Excavator,uncommon,R,4,Creature - Orc Sorcerer,True
+102528,SOS,Tester of the Tangential,uncommon,U,2,Creature - Djinn Wizard,True
+102712,SOS,Deathcap Glade,rare,BG,0,Land,True
+102665,SOS,"Nita, Forum Conciliator",rare,BW,3,Legendary Creature - Human Advisor,True
+102717,SOS,Paradox Gardens,common,GU,0,Land,True
+102699,SOS,Vibrant Outburst,uncommon,RU,2,Instant,True
+102500,SOS,Chase Inspiration,common,U,1,Instant,True
+102670,SOS,Prismari Charm,uncommon,RU,2,Instant,True
+102551,SOS,Poisoner's Apprentice,uncommon,B,3,Creature - Orc Warlock,True
+102463,SOS,Together as One,rare,,6,Sorcery,True
+102677,SOS,"Quandrix, the Proof",mythic,GU,6,Legendary Creature - Elder Dragon,True
+102678,SOS,Rapturous Moment,uncommon,RU,6,Sorcery,True
+102706,SOS,Biblioplex Tomekeeper,common,,4,Artifact Creature - Construct,True
+102703,SOS,Witherbloom Charm,uncommon,BG,2,Instant,True
+102614,SOS,Noxious Newt,common,G,2,Creature - Salamander,True
+102588,SOS,Seize the Spoils,common,R,3,Sorcery,True
+102492,SOS,Spiritcall Enthusiast,uncommon,W,3,Creature - Cat Cleric,True
+102544,SOS,Grave Researcher,rare,B,3,Creature - Troll Warlock,True
+102472,SOS,Emeritus of Truce,mythic,W,3,Creature - Cat Cleric,True
+102640,SOS,Colossus of the Blood Age,uncommon,RW,6,Artifact Creature - Construct,True
+102524,SOS,Quick Study,common,U,3,Instant,True
+102723,SOS,Sundown Pass,rare,RW,0,Land,True
+102606,SOS,Environmental Scientist,uncommon,G,2,Creature - Human Druid,True
+102511,SOS,Harmonized Trio,rare,U,1,Creature - Merfolk Bard Wizard,True
+102688,SOS,Spectacular Skywhale,uncommon,RU,4,Creature - Elemental Whale,True
+102694,SOS,Stress Dream,uncommon,RU,5,Instant,True
+102711,SOS,Strixhaven Skycoach,uncommon,,3,Artifact - Vehicle,True
+102555,SOS,Rabid Attack,uncommon,B,2,Instant,True
+102650,SOS,Geometer's Arthropod,rare,GU,2,Creature - Fractal Crab,True
+102542,SOS,Foolish Fate,uncommon,B,3,Instant,True
+102518,SOS,Matterbending Mage,uncommon,U,3,Creature - Human Wizard,True
+102601,SOS,Chelonian Tackle,uncommon,G,3,Sorcery,True
+102676,SOS,Quandrix Charm,uncommon,GU,2,Instant,True
+102716,SOS,Great Hall of the Biblioplex,rare,,0,Land,True
+102700,SOS,Vicious Rivalry,rare,BG,4,Sorcery,True
+102672,SOS,Proctor's Gaze,uncommon,GU,4,Instant,True
+102628,SOS,Zimone's Experiment,uncommon,G,4,Sorcery,True
+102685,SOS,"Silverquill, the Disputant",mythic,BW,4,Legendary Creature - Elder Dragon,True
+102580,SOS,Living History,uncommon,R,2,Enchantment,True
+102557,SOS,Scathing Shadelock,uncommon,B,5,Creature - Snake Warlock,True
+102653,SOS,Hardened Academic,rare,RW,2,Creature - Bird Cleric,True
+102668,SOS,Pest Mascot,common,BG,3,Creature - Pest Ape,True
+102548,SOS,Masterful Flourish,common,B,1,Instant,True
+102583,SOS,"Mica, Reader of Ruins",uncommon,R,4,Legendary Creature - Human Artificer,True
+102737,SOS,Mountain,basic,R,0,Basic Land - Mountain,True
+102617,SOS,Planar Engineering,rare,G,4,Sorcery,True
+102654,SOS,Imperious Inkmage,common,BW,3,Creature - Orc Warlock,True
+102572,SOS,Emeritus of Conflict,mythic,R,2,Creature - Human Wizard,True
+102607,SOS,Follow the Lumarets,common,G,2,Sorcery,True
+102515,SOS,Landscape Painter,common,U,2,Creature - Merfolk Wizard,True
+102519,SOS,Muse Seeker,uncommon,U,2,Creature - Elf Wizard,True
+102523,SOS,Procrastinate,common,U,1,Sorcery,True
+102476,SOS,Group Project,uncommon,W,2,Sorcery,True
+102521,SOS,"Orysa, Tide Choreographer",uncommon,U,5,Legendary Creature - Merfolk Bard,True
+102594,SOS,Tome Blast,common,R,2,Sorcery,True
+102693,SOS,Stirring Honormancer,uncommon,BW,5,Creature - Rhino Bard,True
+102579,SOS,Improvisation Capstone,mythic,R,7,Sorcery - Lesson,True
+102710,SOS,Potioner's Trove,common,,3,Artifact,True
+102590,SOS,Strife Scholar,common,R,3,Creature - Orc Sorcerer,True
+102512,SOS,Homesickness,uncommon,U,6,Instant,True
+102531,SOS,Adventurous Eater,common,B,3,Creature - Human Warlock,True
+102571,SOS,Duel Tactics,uncommon,R,1,Sorcery,True
+102615,SOS,Oracle's Restoration,common,G,1,Sorcery,True
+102724,SOS,Terramorphic Expanse,common,,0,Land,True
+102586,SOS,Rearing Embermare,common,R,5,Creature - Horse Beast,True
+102696,SOS,"Tam, Observant Sequencer",uncommon,GU,4,Legendary Creature - Gorgon Wizard,True
+102634,SOS,"Berta, Wise Extrapolator",rare,GU,4,Legendary Creature - Frog Druid,True
+102713,SOS,Dreamroot Cascade,rare,GU,0,Land,True
+102535,SOS,Cheerful Osteomancer,common,B,4,Creature - Orc Warlock,True
+102714,SOS,Fields of Strife,common,RW,0,Land,True
+102553,SOS,Pox Plague,rare,B,5,Sorcery,True
+102565,SOS,Ancestral Anger,common,R,1,Sorcery,True
+102520,SOS,Muse's Encouragement,common,U,5,Instant,True
+102564,SOS,Withering Curse,mythic,B,3,Sorcery,True
+102464,SOS,Transcendent Archaic,uncommon,,7,Creature - Avatar,True
+102576,SOS,Goblin Glasswright,common,R,2,Creature - Goblin Sorcerer,True
+102673,SOS,Professor Dellian Fel,mythic,BG,4,Legendary Planeswalker - Dellian,True
+102624,SOS,Topiary Lecturer,uncommon,G,3,Creature - Elf Druid,True
+102487,SOS,Rapier Wit,common,W,2,Instant,True
+102534,SOS,Burrog Banemaker,common,B,1,Creature - Frog Warlock,True
+102621,SOS,Studious First-Year,common,G,1,Creature - Bear Wizard,True
+102651,SOS,Grapple with Death,common,BG,3,Sorcery,True
+102609,SOS,Glorious Decay,common,G,2,Instant,True
+102631,SOS,Applied Geometry,rare,GU,4,Sorcery,True
+102663,SOS,Molten Note,uncommon,RW,2,Sorcery,True
+102618,SOS,Shopkeeper's Bane,common,G,3,Creature - Badger Pest,True
+102599,SOS,Ambitious Augmenter,rare,G,1,Creature - Turtle Wizard,True
+102506,SOS,Essence Scatter,common,U,2,Instant,True
+102597,SOS,Aberrant Manawurm,uncommon,G,4,Creature - Wurm,True
+102538,SOS,Dissection Practice,uncommon,B,1,Instant,True
+102546,SOS,Lecturing Scornmage,uncommon,B,1,Creature - Human Warlock,True
+102645,SOS,Embrace the Paradox,common,GU,5,Instant,True
+102626,SOS,Wild Hypothesis,common,G,1,Sorcery,True
+102708,SOS,Mage Tower Referee,common,,2,Artifact Creature - Construct,True
+102536,SOS,Cost of Brilliance,common,B,3,Sorcery,True
+102540,SOS,End of the Hunt,uncommon,B,2,Sorcery,True
+102530,SOS,Wisdom of Ages,rare,U,7,Sorcery,True
+102462,SOS,Sundering Archaic,uncommon,,6,Creature - Avatar,True
+102468,SOS,Daydream,uncommon,W,1,Sorcery,True
+102657,SOS,"Kirol, History Buff",uncommon,RW,2,Legendary Creature - Vampire Cleric,True
+102705,SOS,Zaffai and the Tempests,rare,RU,7,Legendary Creature - Human Bard Sorcerer,True
+102709,SOS,"Page, Loose Leaf",common,,2,Legendary Artifact Creature - Construct,True
+102655,SOS,Inkling Mascot,common,BW,2,Creature - Inkling Cat,True
+102666,SOS,Old-Growth Educator,uncommon,BG,4,Creature - Treefolk Druid,True
+102481,SOS,Interjection,common,W,1,Instant,True
+102620,SOS,Snarl Song,uncommon,G,6,Sorcery,True
+102649,SOS,Fractal Tender,uncommon,GU,5,Creature - Elf Wizard,True
+102641,SOS,Conciliator's Duelist,rare,BW,4,Creature - Kor Warlock,True
+102664,SOS,Moment of Reckoning,rare,BW,7,Sorcery,True
+102496,SOS,Summoned Dromedary,uncommon,W,4,Creature - Spirit Camel,True
+102475,SOS,Graduation Day,uncommon,W,1,Enchantment,True
+102603,SOS,Efflorescence,common,G,3,Instant,True
+102471,SOS,Elite Interceptor,common,W,1,Creature - Human Wizard,True
+102493,SOS,Stand Up for Yourself,uncommon,W,3,Instant,True
+102610,SOS,Hungry Graffalon,common,G,4,Creature - Giraffe,True
+102715,SOS,Forum of Amity,common,BW,0,Land,True
+102616,SOS,Pestbrood Sloth,uncommon,G,4,Creature - Plant Sloth,True
+102460,SOS,The Dawning Archaic,mythic,,10,Legendary Creature - Avatar,True
+102562,SOS,Ulna Alley Shopkeep,common,B,3,Creature - Goblin Warlock,True
+102636,SOS,Bogwater Lumaret,common,BG,2,Creature - Spirit Frog,True
+102483,SOS,Owlin Historian,common,W,3,Creature - Bird Cleric,True
+102691,SOS,Stadium Tidalmage,common,RU,4,Creature - Djinn Sorcerer,True
+102596,SOS,Zealous Lorecaster,common,R,6,Creature - Giant Sorcerer,True
+102470,SOS,Eager Glyphmage,common,W,4,Creature - Cat Cleric,True
+102619,SOS,Slumbering Trudge,rare,G,1,Creature - Plant Beast,True
+102638,SOS,Cauldron of Essence,rare,BG,3,Artifact,True
+102644,SOS,Elemental Mascot,common,RU,3,Creature - Elemental Bird,True
+102735,SOS,Swamp,basic,B,0,Basic Land - Swamp,True
+102662,SOS,Mind Roots,uncommon,BG,3,Sorcery,True
+102692,SOS,Startled Relic Sloth,uncommon,RW,4,Creature - Sloth Beast,True
+102543,SOS,Forum Necroscribe,uncommon,B,6,Creature - Troll Warlock,True
+102675,SOS,Pursue the Past,common,RW,2,Sorcery,True
+102570,SOS,Choreographed Sparks,rare,R,2,Instant,True
+102558,SOS,Scheming Silvertongue,rare,B,2,Creature - Vampire Warlock,True
+102498,SOS,Brush Off,uncommon,U,4,Instant,True
+102522,SOS,Pensive Professor,rare,U,3,Creature - Human Wizard,True
+102602,SOS,Comforting Counsel,rare,G,2,Enchantment,True
+102630,SOS,Abstract Paintmage,uncommon,RU,3,Creature - Djinn Sorcerer,True
+102485,SOS,Primary Research,uncommon,W,5,Enchantment,True
+102578,SOS,Impractical Joke,uncommon,R,1,Sorcery,True
+102605,SOS,"Emil, Vastlands Roamer",uncommon,G,3,Legendary Creature - Elf Druid,True
+102642,SOS,Cuboid Colony,uncommon,GU,2,Creature - Insect,True
+102622,SOS,Tenured Concocter,common,G,5,Creature - Troll Druid,True
+102643,SOS,Dina's Guidance,rare,BG,3,Instant,True
+102549,SOS,Melancholic Poet,common,B,2,Creature - Elf Bard,True
+102707,SOS,Diary of Dreams,uncommon,,2,Artifact - Book,True
+102556,SOS,"Ral Zarek, Guest Lecturer",mythic,B,3,Legendary Planeswalker - Ral,True
+102639,SOS,Colorstorm Stallion,rare,RU,3,Creature - Elemental Horse,True
+102497,SOS,Banishing Betrayal,common,U,2,Instant,True
+102592,SOS,Tackle Artist,common,R,4,Creature - Orc Sorcerer,True
+102582,SOS,Magmablood Archaic,rare,R,3,Creature - Avatar,True
+102659,SOS,Lorehold Charm,uncommon,RW,2,Instant,True
+102686,SOS,Snooping Page,uncommon,BW,3,Creature - Human Cleric,True
+102581,SOS,Maelstrom Artisan,rare,R,3,Creature - Minotaur Sorcerer,True
+102566,SOS,Archaic's Agony,uncommon,R,5,Sorcery,True
+102627,SOS,Wildgrowth Archaic,rare,G,2,Creature - Avatar,True
+102589,SOS,Steal the Show,rare,R,3,Sorcery,True
+102698,SOS,Traumatic Critique,rare,RU,2,Instant,True
+102604,SOS,Emeritus of Abundance,mythic,G,3,Creature - Elf Druid,True
+102484,SOS,Practiced Offense,rare,W,3,Sorcery,True
+102613,SOS,Mindful Biomancer,common,G,2,Creature - Dryad Druid,True
+102503,SOS,Echocasting Symposium,mythic,U,6,Sorcery - Lesson,True
+102517,SOS,Mathemagics,mythic,U,2,Sorcery,True
+102697,SOS,Teacher's Pest,uncommon,BG,2,Creature - Skeleton Pest,True
+102490,SOS,Shattered Acolyte,common,W,2,Creature - Dwarf Warlock,True
+102632,SOS,Ark of Hunger,rare,RW,4,Artifact,True
+102469,SOS,Dig Site Inventory,common,W,1,Sorcery,True
+102488,SOS,Rehearsed Debater,common,W,3,Creature - Djinn Bard,True
+102733,SOS,Island,basic,U,0,Basic Land - Island,True
+102502,SOS,Divergent Equation,uncommon,U,1,Instant,True
+102633,SOS,"Aziza, Mage Tower Captain",rare,RW,2,Legendary Creature - Djinn Sorcerer,True
+102507,SOS,Exhibition Tidecaller,rare,U,1,Creature - Djinn Wizard,True
+102660,SOS,"Lorehold, the Historian",mythic,RW,5,Legendary Creature - Elder Dragon,True
+102491,SOS,Soaring Stoneglider,uncommon,W,3,Creature - Elephant Cleric,True
+102721,SOS,Spectacle Summit,common,RU,0,Land,True
+102600,SOS,Burrog Barrage,common,G,2,Instant,True
+102513,SOS,Hydro-Channeler,common,U,2,Creature - Merfolk Wizard,True
+102545,SOS,Last Gasp,common,B,2,Instant,True
+102525,SOS,Run Behind,common,U,4,Instant,True
+102689,SOS,Spirit Mascot,common,RW,2,Creature - Spirit Ox,True
+102482,SOS,Joined Researchers,rare,W,2,Creature - Human Cleric Wizard,True
+102739,SOS,Forest,basic,G,0,Basic Land - Forest,True
+102550,SOS,"Moseo, Vein's New Dean",rare,B,3,Legendary Creature - Bird Skeleton Warlock,True
+102569,SOS,Charging Strifeknight,uncommon,R,3,Creature - Spirit Knight,True
+102646,SOS,Essenceknit Scholar,uncommon,BG,3,Creature - Dryad Warlock,True
+102591,SOS,Tablet of Discovery,uncommon,R,3,Artifact,True
+102486,SOS,Quill-Blade Laureate,uncommon,W,2,Creature - Human Cleric,True
+102537,SOS,Decorum Dissertation,mythic,B,5,Sorcery - Lesson,True
+102461,SOS,Rancorous Archaic,common,,5,Creature - Avatar,True
+102690,SOS,Splatter Technique,rare,RU,5,Sorcery,True
+102584,SOS,Molten-Core Maestro,rare,R,2,Creature - Goblin Bard,True
+102514,SOS,"Jadzi, Steward of Fate",rare,U,3,Legendary Creature - Human Wizard,True
+102625,SOS,Vastlands Scavenger,rare,G,3,Creature - Bear Druid,True
+102680,SOS,Resonating Lute,rare,RU,4,Artifact,True
+102682,SOS,"Sanar, Unfinished Genius",uncommon,RU,2,Legendary Creature - Goblin Sorcerer,True
+102510,SOS,Fractalize,uncommon,U,1,Instant,True
+102532,SOS,Arcane Omens,uncommon,B,5,Sorcery,True
+102667,SOS,Paradox Surveyor,uncommon,GU,3,Creature - Elf Druid,True
+102504,SOS,Emeritus of Ideation,mythic,U,5,Creature - Human Wizard,True
+102661,SOS,Mind into Matter,rare,GU,2,Sorcery,True
+102526,SOS,Skycoach Conductor,rare,U,3,Creature - Bird Pilot,True
+102529,SOS,Textbook Tabulator,common,U,3,Creature - Frog Wizard,True
+102563,SOS,Wander Off,common,B,4,Instant,True
+102467,SOS,Ascendant Dustspeaker,common,W,5,Creature - Orc Cleric,True
+102595,SOS,Unsubtle Mockery,common,R,3,Instant,True
+102731,SOS,Plains,basic,W,0,Basic Land - Plains,True
+102547,SOS,Leech Collector,uncommon,B,2,Creature - Human Warlock,True
+102671,SOS,"Prismari, the Inspiration",mythic,RU,7,Legendary Creature - Elder Dragon,True
+102679,SOS,Render Speechless,common,BW,4,Sorcery,True
+102720,SOS,Skycoach Waypoint,uncommon,,0,Land,True
+102516,SOS,Mana Sculpt,rare,U,3,Instant,True
+102577,SOS,Heated Argument,common,R,5,Instant,True
+102701,SOS,Visionary's Dance,common,RU,7,Sorcery,True
+102480,SOS,Inkshape Demonstrator,uncommon,W,4,Creature - Elephant Cleric,True
+102718,SOS,Petrified Hamlet,rare,,0,Land,True
+102830,SPG,Dualcaster Mage,rare,R,3,Creature - Human Wizard,True
+102827,SPG,Archmage Emeritus,rare,U,4,Creature - Human Wizard,True
+102831,SPG,Magus of the Library,rare,G,2,Creature - Human Wizard,True
+102832,SPG,Sylvan Library,mythic,G,2,Enchantment,True
+102829,SPG,Grim Haruspex,rare,B,3,Creature - Human Wizard,True
+102828,SPG,Murmuring Mystic,uncommon,U,4,Creature - Human Wizard,True
+102826,SPG,Archaeomancer,common,U,4,Creature - Human Wizard,True
+102834,SPG,"Codie, Vociferous Codex",rare,BGRUW,3,Legendary Artifact Creature - Book Construct,True
+102833,SPG,"Adrix and Nev, Twincasters",mythic,GU,4,Legendary Creature - Merfolk Wizard,True
+104126,SPG,Library of Alexandria,mythic,,0,Land,True
+102794,SOA,Crackle with Power,mythic,R,2,Sorcery,True
+102813,SOA,Bring to Light,rare,GU,5,Sorcery,True
+102785,SOA,Smallpox,rare,B,2,Sorcery,True
+102787,SOA,Vampiric Tutor,mythic,B,1,Instant,True
+102757,SOA,Helping Hand,uncommon,W,1,Sorcery,True
+102792,SOA,Bulk Up,uncommon,R,2,Instant,True
+102780,SOA,Dismember,rare,B,3,Instant,True
+102765,SOA,Brain Freeze,rare,U,2,Instant,True
+102777,SOA,Ad Nauseam,mythic,B,5,Instant,True
+102817,SOA,Fracture,rare,BW,2,Instant,True
+102796,SOA,Jeska's Will,mythic,R,3,Sorcery,True
+102804,SOA,Giant Growth,uncommon,G,1,Instant,True
+102810,SOA,Shared Roots,uncommon,G,2,Sorcery - Lesson,True
+102783,SOA,Locust Spray,uncommon,B,1,Instant,True
+102767,SOA,Daze,rare,U,2,Instant,True
+102799,SOA,Return the Favor,uncommon,R,2,Instant,True
+102798,SOA,Pyretic Ritual,rare,R,2,Instant,True
+102762,SOA,Requisition Raid,uncommon,W,1,Sorcery,True
+102788,SOA,Zombify,uncommon,B,4,Sorcery,True
+102781,SOA,Feed the Swarm,uncommon,B,2,Sorcery,True
+102795,SOA,Empty the Warrens,rare,R,4,Sorcery,True
+102772,SOA,Pongify,rare,U,1,Instant,True
+102800,SOA,Subterranean Tremors,mythic,R,1,Sorcery,True
+102766,SOA,Cyclonic Rift,mythic,U,2,Instant,True
+102784,SOA,Sheoldred's Edict,rare,B,2,Instant,True
+102811,SOA,Triumph of the Hordes,mythic,G,4,Sorcery,True
+102755,SOA,Armageddon,mythic,W,4,Sorcery,True
+102806,SOA,Knockout Maneuver,uncommon,G,3,Sorcery,True
+102761,SOA,Reprieve,rare,W,2,Instant,True
+102771,SOA,Force of Will,mythic,U,5,Instant,True
+102774,SOA,Sleight of Hand,uncommon,U,1,Sorcery,True
+102775,SOA,Spell Pierce,uncommon,U,1,Instant,True
+102789,SOA,Abrade,uncommon,R,2,Instant,True
+102782,SOA,Living End,mythic,B,0,Sorcery,True
+102768,SOA,Deduce,uncommon,U,2,Instant,True
+102764,SOA,Winds of Abandon,mythic,W,2,Sorcery,True
+102786,SOA,Stargaze,uncommon,B,2,Sorcery,True
+102802,SOA,Berserk,mythic,G,1,Instant,True
+102779,SOA,Culling the Weak,rare,B,1,Instant,True
+102753,SOA,Akroma's Will,mythic,W,4,Instant,True
+102808,SOA,Royal Treatment,uncommon,G,1,Instant,True
+102770,SOA,Flusterstorm,mythic,U,1,Instant,True
+102754,SOA,Angel's Grace,rare,W,1,Instant,True
+102812,SOA,Veil of Summer,rare,G,1,Instant,True
+102759,SOA,Prismatic Ending,rare,W,1,Sorcery,True
+102776,SOA,Stock Up,uncommon,U,3,Sorcery,True
+102807,SOA,Pick Your Poison,uncommon,G,1,Sorcery,True
+102816,SOA,Expressive Iteration,rare,RU,2,Sorcery,True
+102814,SOA,Culling Ritual,rare,BG,4,Sorcery,True
+102769,SOA,Disdainful Stroke,uncommon,U,2,Instant,True
+102763,SOA,Return to the Ranks,rare,W,2,Sorcery,True
+102803,SOA,Crop Rotation,rare,G,1,Instant,True
+102805,SOA,Glimpse of Nature,rare,G,1,Sorcery,True
+102758,SOA,Hop to It,uncommon,W,3,Sorcery,True
+102791,SOA,Brotherhood's End,rare,R,3,Sorcery,True
+102815,SOA,Deflecting Palm,rare,RW,2,Instant,True
+102797,SOA,Monstrous Rage,uncommon,R,1,Instant,True
+102801,SOA,Awaken the Woods,mythic,G,2,Sorcery,True
+102778,SOA,Bitter Triumph,uncommon,B,2,Instant,True
+102760,SOA,Repel Calamity,uncommon,W,2,Instant,True
+102793,SOA,Burst Lightning,uncommon,R,1,Instant,True
+102809,SOA,Shamanic Revelation,rare,G,5,Sorcery,True
+102773,SOA,Preordain,rare,U,1,Sorcery,True
+102756,SOA,Duty Beyond Death,uncommon,W,2,Instant,True
+102790,SOA,Big Score,rare,R,4,Instant,True
+102734,SOS,Island,basic,U,0,Basic Land - Island,True
+102727,SOS,Island,basic,U,0,Basic Land - Island,True
+102738,SOS,Mountain,basic,R,0,Basic Land - Mountain,True
+102728,SOS,Swamp,basic,B,0,Basic Land - Swamp,True
+102729,SOS,Mountain,basic,R,0,Basic Land - Mountain,True
+102730,SOS,Forest,basic,G,0,Basic Land - Forest,True
+102726,SOS,Plains,basic,W,0,Basic Land - Plains,True
+102740,SOS,Forest,basic,G,0,Basic Land - Forest,True
+102732,SOS,Plains,basic,W,0,Basic Land - Plains,True
+102736,SOS,Swamp,basic,B,0,Basic Land - Swamp,True
+104056,SOS,Rejoinder,common,W,2,Sorcery,False
+104057,SOS,Swords to Plowshares,mythic,W,1,Instant,False
+104058,SOS,Forum's Favor,common,W,1,Sorcery,False
+104059,SOS,Secret Rendezvous,rare,W,3,Sorcery,False
+104060,SOS,Twofold Intent,uncommon,W,2,Sorcery,False
+104061,SOS,Scrollboost,uncommon,W,2,Sorcery,False
+104062,SOS,Aqueous Aria,uncommon,U,5,Sorcery,False
+104063,SOS,Ancestral Recall,mythic,U,1,Instant,False
+104064,SOS,Jump,uncommon,U,1,Instant,False
+104065,SOS,Brainstorm,rare,U,1,Instant,False
+104066,SOS,Oracle's Gift,rare,U,1,Sorcery,False
+104067,SOS,Vibrant Idea,common,U,5,Sorcery,False
+104068,SOS,All Aboard,rare,U,1,Instant,False
+104069,SOS,Careful Study,common,U,1,Sorcery,False
+104070,SOS,Have a Bite,common,B,1,Sorcery,False
+104071,SOS,Raise Dead,common,B,1,Sorcery,False
+104072,SOS,Demonic Tutor,mythic,B,2,Sorcery,False
+104073,SOS,Reanimate,rare,B,1,Sorcery,False
+104074,SOS,Bloodletting,uncommon,B,1,Sorcery,False
+104075,SOS,Venomous Words,uncommon,B,1,Sorcery,False
+104076,SOS,Sign in Blood,rare,B,2,Sorcery,False
+104077,SOS,Seething Song,uncommon,R,3,Instant,False
+104078,SOS,Lightning Bolt,mythic,R,1,Instant,False
+104079,SOS,Craft with Pride,common,R,1,Sorcery,False
+104080,SOS,Rocket Volley,rare,R,2,Sorcery,False
+104081,SOS,Striking Palette,uncommon,R,1,Sorcery,False
+104082,SOS,Awaken the Ages,common,R,6,Sorcery,False
+104083,SOS,Regrowth,mythic,G,2,Sorcery,False
+104084,SOS,Stream of Life,uncommon,G,1,Sorcery,False
+104085,SOS,Rampant Growth,common,G,2,Sorcery,False
+104086,SOS,Bind to Life,rare,G,5,Instant,False
+104087,SOS,Heroic Stanza,uncommon,BW,2,Sorcery,False
+104088,SOS,Pack a Punch,uncommon,RW,3,Sorcery,False
+104089,SOS,Pest Friend,uncommon,BG,1,Sorcery,False
+104090,SOS,Wild Idea,uncommon,RU,5,Sorcery,False
+104091,SOS,Deep Sight,uncommon,GU,2,Sorcery,False
+104102,SOS,"Lorehold, the Historian",mythic,RW,5,Legendary Creature - Elder Dragon,False
+104103,SOS,"Prismari, the Inspiration",mythic,RU,7,Legendary Creature - Elder Dragon,False
+104104,SOS,"Quandrix, the Proof",mythic,GU,6,Legendary Creature - Elder Dragon,False
+104105,SOS,"Silverquill, the Disputant",mythic,BW,4,Legendary Creature - Elder Dragon,False
+104106,SOS,"Witherbloom, the Balancer",mythic,BG,8,Legendary Creature - Elder Dragon,False
+104107,SOS,The Dawning Archaic,mythic,,10,Legendary Creature - Avatar,False
+104108,SOS,Restoration Seminar,mythic,W,7,Sorcery - Lesson,False
+104109,SOS,Echocasting Symposium,mythic,U,6,Sorcery - Lesson,False
+104110,SOS,Decorum Dissertation,mythic,B,5,Sorcery - Lesson,False
+104111,SOS,Tragedy Feaster,rare,B,4,Creature - Demon,False
+104112,SOS,Improvisation Capstone,mythic,R,7,Sorcery - Lesson,False
+104113,SOS,Magmablood Archaic,rare,R,3,Creature - Avatar,False
+104114,SOS,Germination Practicum,mythic,G,5,Sorcery - Lesson,False
+104115,SOS,Wildgrowth Archaic,rare,G,2,Creature - Avatar,False
+104116,SOS,"Blech, Loafing Pest",rare,BG,3,Legendary Creature - Pest,False
+104117,SOS,Colorstorm Stallion,rare,RU,3,Creature - Elemental Horse,False
+104118,SOS,Geometer's Arthropod,rare,GU,2,Creature - Fractal Crab,False
+104119,SOS,"Ral Zarek, Guest Lecturer",mythic,B,3,Legendary Planeswalker - Ral,False
+104120,SOS,Professor Dellian Fel,mythic,BG,4,Legendary Planeswalker - Dellian,False
+104121,SOS,Deathcap Glade,rare,BG,0,Land,False
+104122,SOS,Dreamroot Cascade,rare,GU,0,Land,False
+104123,SOS,Shattered Sanctum,rare,BW,0,Land,False
+104124,SOS,Stormcarved Coast,rare,RU,0,Land,False
+104125,SOS,Sundown Pass,rare,RW,0,Land,False
+102835,TSPG,Bird Illusion,token,,0,Creature - Bird Illusion,False
+102818,TSOA,Monster,token,,0,Enchantment - Aura Role,False
+102819,TSOA,Royal,token,,0,Enchantment - Aura Role,False
+102820,TSOA,Rabbit,token,,0,Creature - Rabbit,False
+102821,TSOA,Goblin,token,,0,Creature - Goblin,False
+102822,TSOA,Lizard,token,,0,Creature - Lizard,False
+102823,TSOA,Ape,token,,0,Creature - Ape,False
+102824,TSOA,Forest Dryad,token,G,0,Land Creature - Forest Dryad,False
+102825,TSOA,Clue,token,,0,Artifact - Clue,False
+103279,TSOC,Elemental,token,,0,Creature - Elemental,False
+103285,TSOC,Spirit,token,,0,Creature - Spirit,False
+103263,TSOC,Contract,token,,0,Enchantment - Aura,False
+102752,TSOS,Treasure,token,,0,Artifact - Treasure,False
+102741,TSOS,Copy,token,,0,,False
+102742,TSOS,Elemental,token,,0,Creature - Elemental,False
+102743,TSOS,Elemental,token,,0,Creature - Elemental,False
+102744,TSOS,Fractal,token,,0,Creature - Fractal,False
+102745,TSOS,Fractal,token,,0,Creature - Fractal,False
+102746,TSOS,Inkling,token,,0,Creature - Inkling,False
+102747,TSOS,Inkling,token,,0,Creature - Inkling,False
+102748,TSOS,Pest,token,,0,Creature - Pest,False
+102749,TSOS,Pest,token,,0,Creature - Pest,False
+102750,TSOS,Spirit,token,,0,Creature - Spirit,False
+102751,TSOS,Spirit,token,,0,Creature - Spirit,False
+104578,SOA,Akroma's Will,mythic,W,4,Instant,False
+104579,SOA,Angel's Grace,rare,W,1,Instant,False
+104580,SOA,Armageddon,mythic,W,4,Sorcery,False
+104581,SOA,Duty Beyond Death,uncommon,W,2,Instant,False
+104582,SOA,Helping Hand,uncommon,W,1,Sorcery,False
+104583,SOA,Hop to It,uncommon,W,3,Sorcery,False
+104584,SOA,Prismatic Ending,rare,W,1,Sorcery,False
+104585,SOA,Repel Calamity,uncommon,W,2,Instant,False
+104586,SOA,Reprieve,rare,W,2,Instant,False
+104587,SOA,Requisition Raid,uncommon,W,1,Sorcery,False
+104588,SOA,Return to the Ranks,rare,W,2,Sorcery,False
+104589,SOA,Winds of Abandon,mythic,W,2,Sorcery,False
+104590,SOA,Brain Freeze,rare,U,2,Instant,False
+104591,SOA,Cyclonic Rift,mythic,U,2,Instant,False
+104592,SOA,Daze,rare,U,2,Instant,False
+104593,SOA,Deduce,uncommon,U,2,Instant,False
+104594,SOA,Disdainful Stroke,uncommon,U,2,Instant,False
+104595,SOA,Flusterstorm,mythic,U,1,Instant,False
+104596,SOA,Force of Will,mythic,U,5,Instant,False
+104597,SOA,Pongify,rare,U,1,Instant,False
+104598,SOA,Preordain,rare,U,1,Sorcery,False
+104599,SOA,Sleight of Hand,uncommon,U,1,Sorcery,False
+104600,SOA,Spell Pierce,uncommon,U,1,Instant,False
+104601,SOA,Stock Up,uncommon,U,3,Sorcery,False
+104602,SOA,Ad Nauseam,mythic,B,5,Instant,False
+104603,SOA,Bitter Triumph,uncommon,B,2,Instant,False
+104604,SOA,Culling the Weak,rare,B,1,Instant,False
+104605,SOA,Dismember,rare,B,3,Instant,False
+104606,SOA,Feed the Swarm,uncommon,B,2,Sorcery,False
+104607,SOA,Living End,mythic,B,0,Sorcery,False
+104608,SOA,Locust Spray,uncommon,B,1,Instant,False
+104609,SOA,Sheoldred's Edict,rare,B,2,Instant,False
+104610,SOA,Smallpox,rare,B,2,Sorcery,False
+104611,SOA,Stargaze,uncommon,B,2,Sorcery,False
+104612,SOA,Vampiric Tutor,mythic,B,1,Instant,False
+104613,SOA,Zombify,uncommon,B,4,Sorcery,False
+104614,SOA,Abrade,uncommon,R,2,Instant,False
+104615,SOA,Big Score,rare,R,4,Instant,False
+104616,SOA,Brotherhood's End,rare,R,3,Sorcery,False
+104617,SOA,Bulk Up,uncommon,R,2,Instant,False
+104618,SOA,Burst Lightning,uncommon,R,1,Instant,False
+104619,SOA,Crackle with Power,mythic,R,2,Sorcery,False
+104620,SOA,Empty the Warrens,rare,R,4,Sorcery,False
+104621,SOA,Jeska's Will,mythic,R,3,Sorcery,False
+104622,SOA,Monstrous Rage,uncommon,R,1,Instant,False
+104623,SOA,Pyretic Ritual,rare,R,2,Instant,False
+104624,SOA,Return the Favor,uncommon,R,2,Instant,False
+104625,SOA,Subterranean Tremors,mythic,R,1,Sorcery,False
+104626,SOA,Awaken the Woods,mythic,G,2,Sorcery,False
+104627,SOA,Berserk,mythic,G,1,Instant,False
+104628,SOA,Crop Rotation,rare,G,1,Instant,False
+104629,SOA,Giant Growth,uncommon,G,1,Instant,False
+104630,SOA,Glimpse of Nature,rare,G,1,Sorcery,False
+104631,SOA,Knockout Maneuver,uncommon,G,3,Sorcery,False
+104632,SOA,Pick Your Poison,uncommon,G,1,Sorcery,False
+104633,SOA,Royal Treatment,uncommon,G,1,Instant,False
+104634,SOA,Shamanic Revelation,rare,G,5,Sorcery,False
+104635,SOA,Shared Roots,uncommon,G,2,Sorcery - Lesson,False
+104636,SOA,Triumph of the Hordes,mythic,G,4,Sorcery,False
+104637,SOA,Veil of Summer,rare,G,1,Instant,False
+104638,SOA,Bring to Light,rare,GU,5,Sorcery,False
+104639,SOA,Culling Ritual,rare,BG,4,Sorcery,False
+104640,SOA,Deflecting Palm,rare,RW,2,Instant,False
+104641,SOA,Expressive Iteration,rare,RU,2,Sorcery,False
+104642,SOA,Fracture,rare,BW,2,Instant,False
+102839,SOC,"Killian, Decisive Mentor",mythic,BW,3,Legendary Creature - Human Warlock,False
+102837,SOC,"Excava, the Risen Past",mythic,RW,4,Legendary Creature - Spirit Horse,False
+102841,SOC,"Primo, the Unbounded",mythic,GU,3,Legendary Creature - Fractal Wolf,False
+102842,SOC,"Quintorius, History Chaser",mythic,RW,4,Legendary Planeswalker - Quintorius,False
+102838,SOC,"Gorma, the Gullet",mythic,BG,3,Legendary Creature - Pest Frog,False
+102845,SOC,"Zimone, Infinite Analyst",mythic,GU,3,Legendary Creature - Human Wizard,False
+102844,SOC,"Scriv, the Obligator",mythic,BW,4,Legendary Creature - Inkling Bird,False
+102840,SOC,"Muddle, the Ever-Changing",mythic,RU,4,Legendary Creature - Elemental Otter Shapeshifter,False
+102836,SOC,"Dina, Essence Brewer",mythic,BG,3,Legendary Creature - Dryad Druid,False
+102843,SOC,"Rootha, Mastering the Moment",mythic,RU,4,Legendary Creature - Orc Sorcerer,False
