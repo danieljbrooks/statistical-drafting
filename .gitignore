@@ -16,10 +16,9 @@ __pycache__
 build/*
 training_sets/*
 
-# Ignore trained models (stored in GitHub Releases instead)
+# Ignore trained PyTorch checkpoints
 data/models/*.pt
-data/onnx/*.onnx
-# PyTorch/ONNX external weight shards (use single-file .onnx in repo instead)
+# PyTorch/ONNX external weight shards (orphans from export; single-file .onnx is committed)
 *.onnx.data
 
 # Ignore CI training reports
