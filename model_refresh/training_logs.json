@@ -478,5 +478,13 @@
     "validation_accuracy": 68.89738046156167,
     "num_epochs": 40,
     "training_date": "2026-05-09 06:49:15"
+  },
+  {
+    "experiment_name": "MSH_Premier",
+    "training_picks": 78342,
+    "validation_picks": 19648,
+    "validation_accuracy": 67.75753257328991,
+    "num_epochs": 40,
+    "training_date": "2026-07-09 07:19:29"
   }
 ]

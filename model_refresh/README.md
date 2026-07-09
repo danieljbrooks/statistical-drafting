@@ -2,6 +2,19 @@
 
 This automates the process of detecting and downloading new datasets for model training from 17lands. Efforts have been made to make the minimal number of requests.
 
+## Setup
+
+Use the project virtual environment so training dependencies (`onnx`, `torch`, etc.) are available. Running with global Python often fails with `ModuleNotFoundError: No module named 'onnx'`.
+
+```bash
+cd statistical-drafting
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r model_refresh/requirements.txt
+```
+
+Confirm your shell is using the venv (`which python` should point to `.venv/bin/python`).
+
 ## Training Workflow
 
 ### 1. Email Notification (Automated)
@@ -18,6 +31,7 @@ GitHub Actions runs nightly to check for new data on 17lands.com. When new data 
 When you receive the email notification:
 
 ```bash
+source .venv/bin/activate   # from repo root
 cd model_refresh
 python ./refresh_models.py
 ```

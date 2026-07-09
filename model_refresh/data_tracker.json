@@ -1,25 +1,21 @@
 {
-  "most_recent_set": "SOS",
-<<<<<<< HEAD
-  "last_cards_update": "2026-05-09",
-=======
-  "last_cards_update": "2026-03-20",
->>>>>>> d8d8b63c7bd871dd434e05434ecb04fbd9b0214f
-  "premier_draft_last_updated": "2026-05-07",
+  "most_recent_set": "MSH",
+  "last_cards_update": "2026-07-09",
+  "premier_draft_last_updated": "2026-07-07",
   "traditional_draft_last_updated": "2026-01-10",
-  "last_check_timestamp": "2026-05-09T06:49:15.659736",
+  "last_check_timestamp": "2026-07-09T07:19:30.938726",
   "notes": "This file tracks the most recent MTG set and update dates for Premier & Traditional draft data to avoid redundant downloads and processing.",
   "picktwodraft_last_updated": null,
   "picktwodraft_set": "OM1",
   "last_training_logs": [
     {
-      "experiment_name": "SOS_Premier",
-      "training_picks": 79173,
-      "validation_picks": 19889,
-      "validation_accuracy": 68.89738046156167,
+      "experiment_name": "MSH_Premier",
+      "training_picks": 78342,
+      "validation_picks": 19648,
+      "validation_accuracy": 67.75753257328991,
       "num_epochs": 40,
-      "training_date": "2026-05-09 06:49:15"
+      "training_date": "2026-07-09 07:19:29"
     }
   ],
-  "last_training_timestamp": "2026-05-09T06:49:15.659726"
+  "last_training_timestamp": "2026-07-09T07:19:30.938713"
 }
