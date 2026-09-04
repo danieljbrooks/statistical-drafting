@@ -36,13 +36,18 @@ All commands run from the repo root.
 ## Scoring a pool
 
 `predict_pool.py` takes a list of cardnames and prints the predicted match winrate,
-expected match wins, and where the pool sits against held-out pools. The default `POOL` is
-a real completed 42-pick FIN pool (0.580, 85th percentile, actual record 7-2). Four more
-are included commented out — a 23-card mid-draft pool, and the strongest, a median and the
-weakest completed pools in the test split — so predictions can be sanity-checked against
-decks with known records.
+expected match wins, and where the pool sits against held-out pools. Set `SET` at the top
+of the file (or pass `--set`) to choose which set's model to score with; the cards in
+`POOL` have to belong to it.
 
-Unknown cardnames are reported with close-match suggestions rather than silently dropped.
+The default is a typical completed FDN pool — all 42 picks, no basics taken — which the
+model puts at 0.514, dead on the median. Real pools from the held-out splits are included
+commented out for both FDN (strong / weak / mid-draft) and FIN (typical / strong), so
+predictions can be sanity-checked against decks with known records.
+
+Unknown cardnames are reported with close-match suggestions rather than silently dropped;
+if *nothing* matches, it says the pool is probably from a different set rather than
+printing 42 individual errors.
 Partial pools are supported: pass fewer cards and the estimate is pulled toward the
 population average, which is correct, because an 8-card pool genuinely says less than a
 finished one.
@@ -70,10 +75,11 @@ models.
 
 Datasets are tagged by rank filter so several can coexist:
 
-| rank filter | drafts | share of FIN | population winrate | mean games |
-|---|---|---|---|---|
-| `diamond` (Diamond + Mythic) | 31,371 | 22.4% | 0.538 | 5.55 |
-| `allranks` (every rank, incl. unranked) | 118,958 | 84.8% | 0.551 | 5.47 |
+| set | rank filter | drafts | share of set | population winrate | mean games |
+|---|---|---|---|---|---|
+| FIN | `diamond` (Diamond + Mythic) | 31,371 | 22.4% | 0.538 | 5.55 |
+| FIN | `allranks` (every rank, incl. unranked) | 118,958 | 84.8% | 0.551 | 5.47 |
+| FDN | `diamond` | 24,847 | 18.8% | 0.538 | 5.53 |
 
 358 cards, 42 picks. All-ranks has a slightly *lower* true winrate spread (0.061 vs
 0.065) — Arena matchmaking is rank-based, so each player faces similar opponents and the
@@ -167,6 +173,23 @@ all-ranks split — their 400-d and 358-d features are too large to cache, and r
 them per batch over 3.5M examples per epoch was not worth the hours. Given how close they
 sit to `dn_scalars_collection` on Diamond+Mythic, that is a gap in the table rather than a
 result.
+
+### A second set: FDN (Foundations)
+
+`dn_all_features` trained the same way on FDN Premier, Diamond+Mythic (17,393 train
+drafts, 281 cards). Its noise ceiling is nearly identical to FIN's — gain 0.00814,
+r 0.2475 — but the model captures less of it:
+
+| set | train drafts | cards | gain | % of ceiling | r@pool | % of r ceiling |
+|---|---|---|---|---|---|---|
+| FIN | 21,960 | 358 | 0.00377 | 44.9% | 0.2415 | 96.0% |
+| FDN | 17,393 | 281 | 0.00273 | 33.5% | 0.2081 | 84.1% |
+
+The true winrate spread is the same in both (0.064), so the signal is there — FDN just has
+21% fewer labelled drafts, which is the same bottleneck as everywhere else in this
+project. Whether Foundations is also a genuinely flatter format (it is designed as an
+entry-point set, and its predictions span 0.42–0.60 against FIN's 0.45–0.61) is not
+separable from the label count without an all-ranks FDN run.
 
 ## Findings
 

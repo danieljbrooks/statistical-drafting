@@ -5,8 +5,14 @@ Edit POOL below and run it from the repo root:
 
     python winrate_sandbox/predict_pool.py
 
+Set the SET constant below (or pass --set) to choose which set's model to score with.
+The cardnames in POOL have to belong to that set.
+
 Options:
-    --model NAME     model to load from data/winrate_models/ (default: the FIN one)
+    --set ABBREV     three letter set code, e.g. FDN or FIN (default: the SET constant)
+    --rank-tag TAG   which rank filter the model was trained with (default: diamond)
+    --architecture A which architecture to load (default: dn_all_features)
+    --model NAME     load an exact model name, overriding the three options above
     --per-card       show what each card is worth, by leaving it out one at a time
     --cards-file F   read the pool from a file (one cardname per line) instead of POOL
 
@@ -29,74 +35,104 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import statisticaldrafting as sd
 from architectures import build_network
 
-DEFAULT_MODEL = "FIN_Premier_diamond_dn_all_features"
 MODEL_FOLDER = "data/winrate_models/"
+
+# Which set to score against. Models are per set, so this has to match the cards in POOL.
+SET = "FDN"
+DRAFT_MODE = "Premier"
+RANK_TAG = "diamond"
+ARCHITECTURE = "dn_all_features"
 
 # ---------------------------------------------------------------------------
 # Edit this list. Duplicates are counted, basic lands are ignored.
+# The cards must belong to the set named in SET above.
 #
-# The default is a real completed pool from the FIN test split: all 42 picks, no
-# basics taken. Model says 0.580 (85th percentile); this player went 7-2.
+# Default is a typical completed FDN pool from the held-out split: all 42 picks, no
+# basics taken, white-black. Model says 0.514 — dead on the median pool — and this
+# player went 2-3.
 # ---------------------------------------------------------------------------
 POOL = [
-    "Adventurer's Airship", "Astrologian's Planisphere",
-    "Baron, Airship Kingdom", "Baron, Airship Kingdom",
-    "Blitzball", "Chocobo Kick",
-    "Combat Tutorial", "Dovin's Veto",
-    "Dragoon's Wyvern", "Dragoon's Wyvern",
-    "Eject", "Eject",
-    "Eject", "Elixir",
-    "Gongaga, Reactor Town", "Guadosalam, Farplane Gateway",
-    "Guadosalam, Farplane Gateway", "Ice Magic",
-    "Ice Magic", "Insomnia, Crown City",
-    "Loporrit Scout", "Lunatic Pandora",
-    "Magic Damper", "Resentful Revelation",
-    "Retrieve the Esper", "Ring of the Lucii",
-    "Sahagin", "Sahagin",
-    "Samurai's Katana", "Sazh Katzroy",
-    "Scorpion Sentinel", "Sidequest: Card Collection",
-    "Sidequest: Card Collection", "Sidequest: Hunt the Mark",
-    "Stuck in Summoner's Sanctum", "Swallowed by Leviathan",
-    "The Emperor of Palamecia", "The Emperor of Palamecia",
-    "Thunder Magic", "Vector, Imperial Capital",
-    "Vector, Imperial Capital", "Windurst, Federation Center",
+    "Bake into a Pie", "Bigfin Bouncer",
+    "Blasphemous Edict", "Burglar Rat",
+    "Burglar Rat", "Campus Guide",
+    "Cat Collector", "Claws Out",
+    "Crypt Feaster", "Crypt Feaster",
+    "Crypt Feaster", "Dazzling Angel",
+    "Dazzling Angel", "Diregraf Ghoul",
+    "Dismal Backwater", "Eaten Alive",
+    "Evolving Wilds", "Fake Your Own Death",
+    "Fanatical Firebrand", "Fiendish Panda",
+    "Fleeting Flight", "Helpful Hunter",
+    "Herald of Eternal Dawn", "Hungry Ghoul",
+    "Hungry Ghoul", "Hungry Ghoul",
+    "Inspiring Paladin", "Joust Through",
+    "Luminous Rebuke", "Macabre Waltz",
+    "Make Your Move", "Pilfer",
+    "Prideful Parent", "Rogue's Passage",
+    "Sanguine Syphoner", "Squad Rallier",
+    "Sun-Blessed Healer", "Tranquil Cove",
+    "Valkyrie's Call", "Vampire Soulcaller",
+    "Wind-Scarred Crag", "Youthful Valkyrie",
 ]
 
-# PARTIAL - a 23-card pool, to see how a mid-draft collection scores. Fewer cards
-# means the estimate is pulled toward the population average, which is correct.
-# POOL = [
-#     "Sephiroth, Fabled SOLDIER", "Dion, Bahamut's Dominant", "Traveling Chocobo",
-#     "Summon: Primal Odin", "Nibelheim Aflame", "Ardyn, the Usurper",
-#     "Adeline, Resplendent Cathar", "Sazh Katzroy", "Smuggler's Copter",
-#     "Cornered by Black Mages", "Cornered by Black Mages", "Black Mage's Rod",
-#     "Black Mage's Rod", "Dark Knight's Greatsword", "Red Mage's Rapier",
-#     "Vayne's Treachery", "Garland, Knight of Cornelia", "Choco-Comet",
-#     "Blazing Bomb", "Malboro", "Tonberry", "Sabotender", "Loporrit Scout",
-# ]
-
-# --- More pools from held-out FIN drafts, for calibration against real data. ---
-# These three are 41 cards rather than 42: in each of them one pick was a basic land,
-# which is a real pick but not part of the collection.
+# ===========================================================================
+# More real pools from held-out drafts, for calibration against known records.
+# FDN predictions span roughly 0.42 (5th percentile) to 0.60 (95th).
+# ===========================================================================
 #
-# STRONG - the highest-rated pool in the FIN test split.
-# Model says 0.724; this player actually went 6-3.
+# FDN STRONG — a focused blue-black tempo pool. Model says 0.617 (97th percentile);
+# this player went 1-0 and stopped, which is why the record says so little.
 # POOL = [
-#     "Adventurer's Airship", "Bard's Bow", "Black Mage's Rod", "Black Mage's Rod",
-#     "Black Mage's Rod", "Blazing Bomb", "Call the Mountain Chocobo",
-#     "Captain Lannery Storm", "Choco-Comet", "Circle of Power", "Circle of Power",
-#     "Coral Sword", "Cornered by Black Mages", "Cornered by Black Mages",
-#     "Dark Knight's Greatsword", "Dark Knight's Greatsword", "Fatal Push",
-#     "Garland, Knight of Cornelia", "Garland, Knight of Cornelia", "Gladiolus Amicitia",
-#     "Hecteyes", "Lion Heart", "Loporrit Scout", "Malboro", "Mysidian Elder",
-#     "Namazu Trader", "Namazu Trader", "Nibelheim Aflame", "Qutrub Forayer",
-#     "Red Mage's Rapier", "Red Mage's Rapier", "Reno and Rude",
-#     "Resentful Revelation", "Rook Turret", "Sabotender", "Sephiroth's Intervention",
-#     "Sidequest: Hunt the Mark", "Sorceress's Schemes", "Tonberry",
-#     "Vayne's Treachery", "Vayne's Treachery",
+#     "Aegis Turtle", "Aegis Turtle", "Aegis Turtle",
+#     "Arcane Epiphany", "Arcane Epiphany", "Archmage of Runes",
+#     "Bake into a Pie", "Bake into a Pie", "Bigfin Bouncer",
+#     "Bigfin Bouncer", "Broken Wings", "Dreadwing Scavenger",
+#     "Essence Scatter", "Evolving Wilds", "Fake Your Own Death",
+#     "Fleeting Distraction", "High Fae Trickster", "Hungry Ghoul",
+#     "Hungry Ghoul", "Infernal Vessel", "Inspiration from Beyond",
+#     "Inspiration from Beyond", "Involuntary Employment", "Micromancer",
+#     "Perforating Artist", "Ravenous Amulet", "Refute",
+#     "Refute", "Rune-Sealed Wall", "Searslicer Goblin",
+#     "Secluded Courtyard", "Solemn Simulacrum", "Spectral Sailor",
+#     "Spectral Sailor", "Spectral Sailor", "Stromkirk Bloodthief",
+#     "Swiftwater Cliffs", "Tinybones, Bauble Burglar", "Tinybones, Bauble Burglar",
+#     "Tranquil Cove", "Vanguard Seraph", "Witness Protection",
 # ]
 #
-# TYPICAL - a median pool. Model says 0.528; this player went 1-3, which is the
-# point of the noise ceiling: one event of five matches says very little.
+# FDN WEAK — four colours, no direction. Model says 0.412 (3rd percentile);
+# this player went 1-3.
+# POOL = [
+#     "Bake into a Pie", "Banishing Light", "Battlesong Berserker",
+#     "Battlesong Berserker", "Boltwave", "Burglar Rat",
+#     "Burst Lightning", "Courageous Goblin", "Crypt Feaster",
+#     "Crypt Feaster", "Dragon Trainer", "Eaten Alive",
+#     "Eaten Alive", "Fanatical Firebrand", "Fanatical Firebrand",
+#     "Felidar Savior", "Fiery Annihilation", "Firebrand Archer",
+#     "Goblin Boarders", "Goblin Negotiation", "Goblin Surprise",
+#     "Goblin Surprise", "Gorehorn Raider", "Gorehorn Raider",
+#     "Gutless Plunderer", "Healer's Hawk", "Helpful Hunter",
+#     "Infestation Sage", "Inspiring Paladin", "Inspiring Paladin",
+#     "Involuntary Employment", "Juggernaut", "Kellan, Planar Trailblazer",
+#     "Macabre Waltz", "Mocking Sprite", "Quick-Draw Katana",
+#     "Slumbering Cerberus", "Sower of Chaos", "Stab",
+#     "Think Twice", "Time Stop", "Youthful Valkyrie",
+# ]
+#
+# FDN PARTIAL — a mid-draft collection. Fewer cards means the estimate is pulled
+# toward the population average, which is correct.
+# POOL = [
+#     "Bake into a Pie", "Crypt Feaster", "Crypt Feaster", "Hungry Ghoul",
+#     "Hungry Ghoul", "Dazzling Angel", "Inspiring Paladin", "Prideful Parent",
+#     "Eaten Alive", "Pilfer", "Burglar Rat", "Diregraf Ghoul",
+# ]
+#
+# ---------------------------------------------------------------------------
+# FIN pools — set SET = "FIN" above, or run with --set FIN.
+# These are 41 cards, not 42: in each, one pick was a basic land, which is a real
+# pick but not part of the collection.
+# ---------------------------------------------------------------------------
+#
+# FIN TYPICAL — model says 0.528; this player went 1-3.
 # POOL = [
 #     "Adventurer's Airship", "Black Mage's Rod", "Black Mage's Rod", "Black Mage's Rod",
 #     "Blitzball", "Blitzball Shot", "Brainstorm", "Choco-Comet", "Combat Tutorial",
@@ -111,21 +147,21 @@ POOL = [
 #     "Vector, Imperial Capital", "Vincent's Limit Break",
 # ]
 #
-# WEAK - the lowest-rated pool in the test split: five colours, no direction.
-# Model says 0.332; this player went 4-3 anyway.
+# FIN STRONG — the highest-rated pool in the FIN test split. Model says 0.724;
+# this player went 6-3.
 # POOL = [
-#     "Adventurer's Airship", "Airship Crash", "Ashe, Princess of Dalmasca",
-#     "Battle Menu", "Black Waltz No. 3", "Blitzball Shot", "Captain Lannery Storm",
-#     "Chocobo Racetrack", "Cid, Timeless Artificer", "Coeurl", "Crossroads Village",
-#     "Fynn, the Fangbearer", "G'raha Tia", "Gaelicat", "Gigantoad",
-#     "Goobbue Gardener", "Gysahl Greens", "Ice Flan", "Light of Judgment",
-#     "Locke Cole", "Magic Damper", "Monk's Fist", "Noctis, Prince of Lucis",
-#     "Paladin's Arms", "Paladin's Arms", "Rinoa Heartilly", "Sage's Nouliths",
-#     "Serah Farron", "Shambling Cie'th", "Stiltzkin, Moogle Merchant",
-#     "Summon: Fat Chocobo", "Summon: G.F. Cerberus", "Summon: G.F. Ifrit",
-#     "Summon: Shiva", "Suplex", "The Fire Crystal", "Thief's Knife",
-#     "Torgal, A Fine Hound", "Ultima, Origin of Oblivion", "You're Not Alone",
-#     "Zack Fair",
+#     "Adventurer's Airship", "Bard's Bow", "Black Mage's Rod", "Black Mage's Rod",
+#     "Black Mage's Rod", "Blazing Bomb", "Call the Mountain Chocobo",
+#     "Captain Lannery Storm", "Choco-Comet", "Circle of Power", "Circle of Power",
+#     "Coral Sword", "Cornered by Black Mages", "Cornered by Black Mages",
+#     "Dark Knight's Greatsword", "Dark Knight's Greatsword", "Fatal Push",
+#     "Garland, Knight of Cornelia", "Garland, Knight of Cornelia", "Gladiolus Amicitia",
+#     "Hecteyes", "Lion Heart", "Loporrit Scout", "Malboro", "Mysidian Elder",
+#     "Namazu Trader", "Namazu Trader", "Nibelheim Aflame", "Qutrub Forayer",
+#     "Red Mage's Rapier", "Red Mage's Rapier", "Reno and Rude",
+#     "Resentful Revelation", "Rook Turret", "Sabotender", "Sephiroth's Intervention",
+#     "Sidequest: Hunt the Mark", "Sorceress's Schemes", "Tonberry",
+#     "Vayne's Treachery", "Vayne's Treachery",
 # ]
 
 
@@ -153,7 +189,7 @@ def load_model(model_name, device):
     return network, sidecar
 
 
-def build_collection(cards, cardnames):
+def build_collection(cards, cardnames, set_abbreviation=None):
     """Card list -> count vector. Reports unknown names instead of dropping them silently."""
     card_to_index = {name: i for i, name in enumerate(cardnames)}
     counts = np.zeros(len(cardnames), dtype=np.float32)
@@ -170,11 +206,21 @@ def build_collection(cards, cardnames):
             continue
         counts[card_to_index[card]] += 1
     if unknown:
+        recognized = len(cards) - len(unknown) - n_basics
+        if recognized == 0 and len(unknown) > 3:
+            # Every card missed: almost certainly the pool belongs to a different set.
+            raise SystemExit(
+                f"None of these {len(unknown)} cards are in "
+                f"{set_abbreviation or 'this set'}. The pool is probably from another "
+                "set — set SET at the top of this file, or pass --set."
+            )
         print(f"{len(unknown)} cardname(s) not in this set:")
-        for card in unknown:
+        for card in unknown[:10]:
             close = difflib.get_close_matches(card, cardnames, n=2, cutoff=0.6)
             hint = f"  did you mean: {', '.join(close)}" if close else ""
             print(f"  {card!r}{hint}")
+        if len(unknown) > 10:
+            print(f"  ... and {len(unknown) - 10} more")
         raise SystemExit("Fix the cardnames above and rerun.")
     return counts, n_basics
 
@@ -200,7 +246,14 @@ def percentile_of(value, percentiles):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--set", dest="set_abbreviation", default=SET)
+    parser.add_argument("--draft-mode", default=DRAFT_MODE)
+    parser.add_argument("--rank-tag", default=RANK_TAG)
+    parser.add_argument("--architecture", default=ARCHITECTURE)
+    parser.add_argument(
+        "--model", default=None,
+        help="Exact model name, overriding --set / --draft-mode / --rank-tag / --architecture.",
+    )
     parser.add_argument("--cards-file", default=None)
     parser.add_argument("--per-card", action="store_true")
     parser.add_argument(
@@ -214,9 +267,14 @@ def main():
         with open(args.cards_file) as f:
             cards = [line for line in f.read().splitlines() if line.strip()]
 
+    model_name = args.model or (
+        f"{args.set_abbreviation}_{args.draft_mode}_{args.rank_tag}_{args.architecture}"
+    )
     device = sd.get_device()
-    network, sidecar = load_model(args.model, device)
-    counts, n_basics = build_collection(cards, sidecar["cardnames"])
+    network, sidecar = load_model(model_name, device)
+    counts, n_basics = build_collection(
+        cards, sidecar["cardnames"], sidecar["set"]
+    )
 
     n_cards = int(counts.sum())
     if n_cards == 0:
