@@ -3,3 +3,6 @@ from .onnx import *
 from .model import *
 from .train import *
 from .trainingset import *
+from .winratedataset import *
+from .winratemodel import *
+from .winratetrain import *

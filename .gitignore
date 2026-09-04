@@ -24,3 +24,7 @@ data/models/*.pt
 # Ignore CI training reports
 model_refresh/training_report.json
 model_refresh/release_notes.md
+# Ignore winrate training sets and checkpoints
+data/winrate_sets/
+data/winrate_models/*.pt
+winrate_sandbox/*.log
