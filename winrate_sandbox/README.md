@@ -29,6 +29,10 @@ python winrate_sandbox/train_final_model.py FIN dn_all_features --rank-tag diamo
 # 7. Score a pool. Edit POOL at the top of the script, or pass a file.
 python winrate_sandbox/predict_pool.py
 python winrate_sandbox/predict_pool.py --per-card
+
+# 8. Rank every card in a set by the winrate of a one-card pool holding it.
+python winrate_sandbox/p1p1_ratings.py FDN
+python winrate_sandbox/p1p1_ratings.py FDN --min-support 20 --csv fdn_p1p1.csv
 ```
 
 All commands run from the repo root.
@@ -52,7 +56,27 @@ Partial pools are supported: pass fewer cards and the estimate is pulled toward 
 population average, which is correct, because an 8-card pool genuinely says less than a
 finished one.
 
-`--per-card` leaves each card out in turn to show what it is worth *in this pool*. Off-colour
+## Ranking a set by one-card pools
+
+`p1p1_ratings.py` scores every card in a set on its own — a collection holding just that
+card, one pick in — and ranks the set by the result. It is the winrate model's answer to
+"how good is this card as a pack-1 pick-1", expressed directly in winrate.
+
+The `p1p1s` column counts how often each card was *actually* taken first in the training
+split, and it matters: 22% of FDN cards and 16% of FIN cards were never first-picked at
+all, so they never appear as a one-card pool during training and their estimates are
+extrapolated from the rest of the draft. The top of the ranking rests on 150–300 real
+first picks per card; the bottom rests on none. `--min-support 20` restricts the table to
+the well-supported part. The extreme low end is where this bites hardest. FIN's
+lowest card is `Wastes` at 0.124: it is a basic land, but not one of the five the
+pipeline filters out, so it counts as draftable while nobody ever takes it first — an
+unsupported estimate landing far outside anything the model observed.
+
+`--all` prints every card, `--csv` writes the full table.
+
+## Per-card contribution
+
+`--per-card` on `predict_pool.py` leaves each card out in turn to show what it is worth *in this pool*. Off-colour
 cards score near zero or negative even when they are strong in the abstract, which is the
 synergy signal doing its job.
 
