@@ -1,6 +1,5 @@
 import os
 
-import onnx
 import pandas as pd
 import statisticaldrafting as sd
 import torch
@@ -12,6 +11,10 @@ def create_onnx_model(model_path, cardnames, onnx_path):
     """
     Creates an ONNX model of the network for use in browser code. 
     """
+    # Imported here rather than at module scope: onnx is only needed for export, and a
+    # top-level import makes every other part of the package unusable without it.
+    import onnx
+
     # Creates an onnx model. 
     network = sd.DraftNet(cardnames=cardnames)
     network.load_state_dict(torch.load(model_path, weights_only=True))

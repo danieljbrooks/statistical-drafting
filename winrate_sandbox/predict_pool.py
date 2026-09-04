@@ -34,34 +34,49 @@ MODEL_FOLDER = "data/winrate_models/"
 
 # ---------------------------------------------------------------------------
 # Edit this list. Duplicates are counted, basic lands are ignored.
+#
+# The default is a real completed pool from the FIN test split: all 42 picks, no
+# basics taken. Model says 0.580 (85th percentile); this player went 7-2.
 # ---------------------------------------------------------------------------
 POOL = [
-    "Sephiroth, Fabled SOLDIER",
-    "Dion, Bahamut's Dominant",
-    "Traveling Chocobo",
-    "Summon: Primal Odin",
-    "Nibelheim Aflame",
-    "Ardyn, the Usurper",
-    "Adeline, Resplendent Cathar",
-    "Sazh Katzroy",
-    "Smuggler's Copter",
-    "Cornered by Black Mages",
-    "Cornered by Black Mages",
-    "Black Mage's Rod",
-    "Black Mage's Rod",
-    "Dark Knight's Greatsword",
-    "Red Mage's Rapier",
-    "Vayne's Treachery",
-    "Garland, Knight of Cornelia",
-    "Choco-Comet",
-    "Blazing Bomb",
-    "Malboro",
-    "Tonberry",
-    "Sabotender",
-    "Loporrit Scout",
+    "Adventurer's Airship", "Astrologian's Planisphere",
+    "Baron, Airship Kingdom", "Baron, Airship Kingdom",
+    "Blitzball", "Chocobo Kick",
+    "Combat Tutorial", "Dovin's Veto",
+    "Dragoon's Wyvern", "Dragoon's Wyvern",
+    "Eject", "Eject",
+    "Eject", "Elixir",
+    "Gongaga, Reactor Town", "Guadosalam, Farplane Gateway",
+    "Guadosalam, Farplane Gateway", "Ice Magic",
+    "Ice Magic", "Insomnia, Crown City",
+    "Loporrit Scout", "Lunatic Pandora",
+    "Magic Damper", "Resentful Revelation",
+    "Retrieve the Esper", "Ring of the Lucii",
+    "Sahagin", "Sahagin",
+    "Samurai's Katana", "Sazh Katzroy",
+    "Scorpion Sentinel", "Sidequest: Card Collection",
+    "Sidequest: Card Collection", "Sidequest: Hunt the Mark",
+    "Stuck in Summoner's Sanctum", "Swallowed by Leviathan",
+    "The Emperor of Palamecia", "The Emperor of Palamecia",
+    "Thunder Magic", "Vector, Imperial Capital",
+    "Vector, Imperial Capital", "Windurst, Federation Center",
 ]
 
-# --- Sample pools from held-out FIN drafts, for calibration against real data. ---
+# PARTIAL - a 23-card pool, to see how a mid-draft collection scores. Fewer cards
+# means the estimate is pulled toward the population average, which is correct.
+# POOL = [
+#     "Sephiroth, Fabled SOLDIER", "Dion, Bahamut's Dominant", "Traveling Chocobo",
+#     "Summon: Primal Odin", "Nibelheim Aflame", "Ardyn, the Usurper",
+#     "Adeline, Resplendent Cathar", "Sazh Katzroy", "Smuggler's Copter",
+#     "Cornered by Black Mages", "Cornered by Black Mages", "Black Mage's Rod",
+#     "Black Mage's Rod", "Dark Knight's Greatsword", "Red Mage's Rapier",
+#     "Vayne's Treachery", "Garland, Knight of Cornelia", "Choco-Comet",
+#     "Blazing Bomb", "Malboro", "Tonberry", "Sabotender", "Loporrit Scout",
+# ]
+
+# --- More pools from held-out FIN drafts, for calibration against real data. ---
+# These three are 41 cards rather than 42: in each of them one pick was a basic land,
+# which is a real pick but not part of the collection.
 #
 # STRONG - the highest-rated pool in the FIN test split.
 # Model says 0.724; this player actually went 6-3.

@@ -36,9 +36,11 @@ All commands run from the repo root.
 ## Scoring a pool
 
 `predict_pool.py` takes a list of cardnames and prints the predicted match winrate,
-expected match wins, and where the pool sits against held-out pools. Three real pools
-from the FIN test split are included commented out — the strongest, a median one, and the
-weakest — so predictions can be sanity-checked against decks with known records.
+expected match wins, and where the pool sits against held-out pools. The default `POOL` is
+a real completed 42-pick FIN pool (0.580, 85th percentile, actual record 7-2). Four more
+are included commented out — a 23-card mid-draft pool, and the strongest, a median and the
+weakest completed pools in the test split — so predictions can be sanity-checked against
+decks with known records.
 
 Unknown cardnames are reported with close-match suggestions rather than silently dropped.
 Partial pools are supported: pass fewer cards and the estimate is pulled toward the
