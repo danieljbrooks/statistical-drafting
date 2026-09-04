@@ -121,6 +121,7 @@ def main():
         feature_modes = cacheable_feature_modes(name)
         for split_data in data.values():
             split_data.extra_features = None
+        sd.free_device_memory(device)
         if feature_modes is not None:
             module = sd.DraftNetFeatures(
                 cardnames, args.set_abbreviation, args.draft_mode, feature_modes
@@ -196,6 +197,7 @@ def main():
                 m["by_n_picks"][picks_per_draft]["skill_spread"] for m in seed_metrics
             ),
         }
+        sd.free_device_memory(device)
         results = [r for r in results if r["architecture"] != name]
         results.append(record)
         with open(args.results, "w") as f:

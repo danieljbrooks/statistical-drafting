@@ -1,3 +1,4 @@
+import gc
 import json
 import math
 import os
@@ -13,11 +14,15 @@ from .winratedataset import CollectionWinrateDataset, build_collections
 
 
 @torch.no_grad()
-def precompute_features(data: "DeviceTensors", features_module) -> torch.Tensor:
+def precompute_features(
+    data: "DeviceTensors", features_module, batch_size: int = 8192
+) -> torch.Tensor:
     """
     Evaluate a frozen feature module on every (draft, prefix length) pair.
 
     Returns a (n_drafts, picks_per_draft, n_features) tensor for DeviceTensors to hold.
+    Chunked over drafts, since materializing every collection at once is a large set of
+    dense vectors.
     """
     features_module = features_module.to(data.device).eval()
     picks_per_draft = data.pick_sequences.shape[1]
@@ -26,10 +31,34 @@ def precompute_features(data: "DeviceTensors", features_module) -> torch.Tensor:
         device=data.device,
     )
     for n in range(1, picks_per_draft + 1):
-        n_picks = torch.full((data.n_drafts,), n, dtype=torch.long, device=data.device)
-        collection = build_collections(data.pick_sequences, n_picks, data.num_cards)
-        out[:, n - 1] = features_module(collection)
+        for start in range(0, data.n_drafts, batch_size):
+            sequences = data.pick_sequences[start : start + batch_size]
+            n_picks = torch.full(
+                (sequences.shape[0],), n, dtype=torch.long, device=data.device
+            )
+            collection = build_collections(sequences, n_picks, data.num_cards)
+            out[start : start + batch_size, n - 1] = features_module(collection)
+        # Without a sync the backend queues every intermediate buffer for the whole
+        # loop, which exhausts device memory on larger datasets.
+        synchronize_device(data.device)
     return out
+
+
+def synchronize_device(device: torch.device) -> None:
+    """Wait for queued device work so intermediate buffers can be released."""
+    if device.type == "mps":
+        torch.mps.synchronize()
+    elif device.type == "cuda":
+        torch.cuda.synchronize()
+
+
+def free_device_memory(device: torch.device) -> None:
+    """Release cached allocations between experiments so long sweeps do not accumulate."""
+    gc.collect()
+    if device.type == "mps":
+        torch.mps.empty_cache()
+    elif device.type == "cuda":
+        torch.cuda.empty_cache()
 
 
 def get_device(device: Optional[str] = None) -> torch.device:

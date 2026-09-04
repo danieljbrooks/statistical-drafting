@@ -8,16 +8,20 @@ for a 7-win / 3-loss Arena event.
 
 ```bash
 # 1. Build train/val/test splits from raw 17lands data (~1 min per set).
+#    min_rank=None keeps every rank, including unranked drafts.
 python -c "import statisticaldrafting as sd; sd.create_winrate_dataset('FIN', 'Premier', min_rank='diamond')"
 
-# 2. Compare architectures (regularization grid on val, 3 seeds scored on test).
-python winrate_sandbox/run_architecture_comparison.py FIN
+# 2. Compare architectures (regularization grid on val, several seeds scored on test).
+python winrate_sandbox/run_architecture_comparison.py FIN --rank-tag diamond
 
 # 3. Per-pick-count skill and calibration for one model.
-python winrate_sandbox/analyze_winrate_model.py FIN mlp_400x2
+python winrate_sandbox/analyze_winrate_model.py FIN dn_all_features --dropout 0.7 --input-dropout 0.4
 
 # 4. How much signal is even there.
-python winrate_sandbox/noise_ceiling.py FIN
+python winrate_sandbox/noise_ceiling.py FIN --rank-tag diamond
+
+# 5. Both comparisons, normalized by each dataset's noise ceiling.
+python winrate_sandbox/summarize_results.py FIN
 ```
 
 All commands run from the repo root.
@@ -25,8 +29,8 @@ All commands run from the repo root.
 ## Data
 
 - Label is the draft's event record: `event_match_wins / (wins + losses)`.
-- Filter is Diamond + Mythic only, first 2 days of the format dropped, drafts with zero
-  games dropped. No filtering on player winrate or games played.
+- Rank filter is configurable (`min_rank`); first 2 days of the format are dropped, as
+  are drafts with zero games played. No filtering on player winrate or games played.
 - Basic lands are real picks but not part of the collection, so they are routed to a pad
   slot. Dropping those rows instead would truncate ~55% of drafts (basics wheel to the
   last pick of a pack) and silently bias the sample.
@@ -35,8 +39,16 @@ All commands run from the repo root.
 - Split is **by draft** into 70/15/15 train/val/test. Val drives early stopping and
   architecture selection; test is only ever read for reporting.
 
-FIN Premier, Diamond+Mythic: 31,371 drafts (22.4% of all FIN drafts), 21,960 / 4,706 /
-4,705, 358 cards, mean 5.55 games per draft, population winrate 0.538.
+Datasets are tagged by rank filter so several can coexist:
+
+| rank filter | drafts | share of FIN | population winrate | mean games |
+|---|---|---|---|---|
+| `diamond` (Diamond + Mythic) | 31,371 | 22.4% | 0.538 | 5.55 |
+| `allranks` (every rank, incl. unranked) | 118,958 | 84.8% | 0.551 | 5.47 |
+
+358 cards, 42 picks. All-ranks has a slightly *lower* true winrate spread (0.061 vs
+0.065) — Arena matchmaking is rank-based, so each player faces similar opponents and the
+spread compresses rather than widening.
 
 ## Objective
 
@@ -44,76 +56,131 @@ Binomial NLL per game, `-(wins·log p + losses·log(1-p)) / games`. Arena events
 fixed win or loss count, and that stopping rule does not depend on `p`, so the record's
 likelihood is still `p^wins · (1-p)^losses` up to a constant — this is the right
 objective, and it automatically weights a 7-2 more than an 0-3. Regressing MSE on the
-observed winrate instead costs about 80% of the signal (see ablations).
+observed winrate instead costs most of the signal (see finding 8).
 
-## Results (FIN Premier, test split, mean of 3 seeds)
+## Transferring DraftNet into the winrate model
 
-`gain` = nats/game better than predicting the population winrate for every deck.
-`@pool` = evaluated on completed 42-card pools only.
+DraftNet is fit to millions of picks by strong drafters. The winrate model has tens of
+thousands of labelled drafts. Anything DraftNet already knows about card quality and
+synergy is signal the winrate model should not have to rediscover.
 
-| architecture | params | test NLL/game | gain | r (all prefixes) | gain@pool | r@pool |
+`DraftNetFeatures` exposes a frozen DraftNet three ways:
+
+- **power** — scores with an *empty* pool: context-free card power (DraftNet's p1p1 order).
+- **context** — scores with the *current collection* as the pool: what DraftNet wants
+  next, which also says how well the collection's own cards fit each other.
+- **hidden** — the 400-d penultimate activation: DraftNet's representation of the
+  collection itself.
+
+Eight scalars distil these: `power_sum/mean/max`, `context_sum/mean`, `synergy_sum`
+(context minus power), and **`power_top23` / `context_top23`** — the sum over the best 23
+cards, counting duplicates. A 42-card pool becomes a ~23-spell deck, so the top-23 sum is
+a much better proxy for what actually gets played than the whole pool, and ranking is a
+nonlinearity the winrate model cannot express over raw counts.
+
+Frozen features are precomputed once per dataset (`precompute_features`) rather than
+recomputed every batch; on the all-ranks split that is the difference between a 10-minute
+and an hour-long run.
+
+## Results
+
+Raw log loss is not comparable across rank filters — different base winrates, different
+amounts of binomial noise. What is comparable is the fraction of the achievable signal
+each model captures, so both tables are normalized by that split's own ceiling.
+`gain` = nats/game better than predicting the population winrate. `@pool` = completed
+42-card pools only. `dn_*` are DraftNet transfer models.
+
+### Diamond + Mythic (21,960 train drafts, 3 seeds)
+
+Ceiling: gain 0.00839, r 0.2515.
+
+| architecture | params | gain | % of ceiling | gain@pool | r@pool | % of r ceiling |
 |---|---|---|---|---|---|---|
-| **mlp_400x2** | 313k | **0.68732** | **0.00296** | **0.172** | **0.00498** | **0.221** |
-| mlp_400x2_no_pick_cond | 306k | 0.68744 | 0.00284 | 0.168 | 0.00467 | 0.213 |
-| mlp_256x2 | 164k | 0.68747 | 0.00281 | 0.169 | 0.00466 | 0.216 |
-| mlp_1024x2 | 1.44M | 0.68753 | 0.00275 | 0.167 | 0.00449 | 0.212 |
-| embed_32 | 15k | 0.68762 | 0.00267 | 0.163 | 0.00431 | 0.204 |
-| mlp_1024x3_res | 2.49M | 0.68762 | 0.00266 | 0.166 | 0.00449 | 0.216 |
-| mlp_2048x2 | 4.98M | 0.68769 | 0.00259 | 0.165 | 0.00454 | 0.215 |
-| linear | 445 | 0.68785 | 0.00244 | 0.157 | 0.00382 | 0.193 |
-| mlp_400x2_full_pool_only | 313k | 0.68794 | 0.00234 | 0.164 | 0.00457 | 0.213 |
-| embed_128 | 82k | 0.68811 | 0.00217 | 0.151 | 0.00352 | 0.192 |
-| mlp_400x2_mse_loss | 313k | 0.68971 | 0.00057 | 0.151 | 0.00374 | 0.201 |
+| **dn_all_features** | 621k | **0.00377** | **44.9%** | **0.00587** | **0.2415** | **96.0%** |
+| dn_scalars_collection | 316k | 0.00366 | 43.6% | 0.00549 | 0.2357 | 93.7% |
+| dn_context_collection | 457k | 0.00364 | 43.3% | 0.00559 | 0.2349 | 93.4% |
+| dn_hidden_collection | 474k | 0.00360 | 42.9% | 0.00556 | 0.2358 | 93.7% |
+| dn_trunk_finetune | 307k | 0.00348 | 41.5% | 0.00547 | 0.2312 | 91.9% |
+| dn_scalars_mlp | 6.8k | 0.00335 | 40.0% | 0.00503 | 0.2203 | 87.6% |
+| dn_scalars_only | **729** | 0.00320 | 38.1% | 0.00510 | 0.2270 | 90.2% |
+| mlp_400x2 | 313k | 0.00296 | 35.3% | 0.00498 | 0.2211 | 87.9% |
+| dn_hidden_only | 331k | 0.00288 | 34.3% | 0.00447 | 0.2110 | 83.9% |
+| mlp_400x2_no_pick_cond | 306k | 0.00284 | 33.9% | 0.00467 | 0.2131 | 84.7% |
+| mlp_256x2 | 164k | 0.00281 | 33.5% | 0.00466 | 0.2162 | 85.9% |
+| mlp_1024x2 | 1.44M | 0.00275 | 32.8% | 0.00449 | 0.2124 | 84.4% |
+| embed_32 | 15k | 0.00267 | 31.8% | 0.00431 | 0.2038 | 81.0% |
+| mlp_1024x3_res | 2.49M | 0.00266 | 31.7% | 0.00449 | 0.2155 | 85.7% |
+| mlp_2048x2 | 4.98M | 0.00259 | 30.9% | 0.00454 | 0.2152 | 85.6% |
+| linear | 445 | 0.00244 | 29.0% | 0.00382 | 0.1934 | 76.9% |
+| mlp_400x2_full_pool_only | 313k | 0.00234 | 27.9% | 0.00457 | 0.2134 | 84.8% |
+| embed_128 | 82k | 0.00217 | 25.9% | 0.00352 | 0.1917 | 76.2% |
+| dn_trunk_frozen | 1.1k | 0.00210 | 25.0% | 0.00322 | 0.1985 | 78.9% |
+| mlp_400x2_mse_loss | 313k | 0.00057 | 6.8% | 0.00374 | 0.2011 | 79.9% |
 
-Seed-to-seed sd of test NLL is 0.0001 or less, so the ordering above is stable.
+### All ranks (83,271 train drafts, 2 seeds)
 
-Every model needed `dropout=0.5, input_dropout=0.2, weight_decay=1e-4` (the middle of the
-grid) except `embed_128`, which preferred the heaviest setting.
+Ceiling: gain 0.00761, r 0.2326.
 
-## What the numbers mean
+| architecture | params | gain | % of ceiling | gain@pool | r@pool | % of r ceiling |
+|---|---|---|---|---|---|---|
+| **dn_scalars_collection** | 316k | **0.00386** | **50.7%** | **0.00576** | **0.2257** | **97.0%** |
+| dn_trunk_finetune | 307k | 0.00378 | 49.7% | 0.00570 | 0.2215 | 95.2% |
+| mlp_400x2 | 313k | 0.00366 | 48.1% | 0.00551 | 0.2217 | 95.3% |
+| mlp_1024x2 | 1.44M | 0.00353 | 46.4% | 0.00540 | 0.2188 | 94.0% |
+| mlp_2048x2 | 4.98M | 0.00351 | 46.2% | 0.00539 | 0.2183 | 93.9% |
+| linear | 445 | 0.00297 | 39.1% | 0.00411 | 0.1926 | 82.8% |
+| dn_scalars_mlp | 6.8k | 0.00295 | 38.7% | 0.00437 | 0.1981 | 85.1% |
+| dn_scalars_only | 729 | 0.00284 | 37.3% | 0.00443 | 0.2035 | 87.5% |
 
-There are only ~22k labelled drafts and each is worth ~5.5 games, so the labels are
-extremely noisy. Method of moments on the test split (`noise_ceiling.py`):
-
-- Observed winrate sd: 0.221, of which 0.212 is pure binomial noise.
-- Implied **true** winrate sd across drafts: **0.065** — and that mixes deck quality with
-  player skill, which the collection cannot see.
-- Ceiling on log loss gain for a perfect model of the true winrate: **0.0084 nats/game**.
-- Ceiling on Pearson r against the observed winrate: **0.25**.
-
-`mlp_400x2` reaches 0.0050 of the 0.0084 gain ceiling and r=0.22 of the 0.25 r ceiling on
-completed pools. Most of the remaining headroom is player skill, not deck quality.
+Seed-to-seed sd of test NLL is 0.0002 or less throughout, so these orderings are stable.
+`dn_all_features`, `dn_context_collection` and `dn_hidden_collection` were not run on the
+all-ranks split — their 400-d and 358-d features are too large to cache, and recomputing
+them per batch over 3.5M examples per epoch was not worth the hours. Given how close they
+sit to `dn_scalars_collection` on Diamond+Mythic, that is a gap in the table rather than a
+result.
 
 ## Findings
 
-1. **Capacity does not help.** 400x400 (DraftNet's size) is the sweet spot; 1024x2,
-   1024x3-residual and 2048x2 are all *worse* on test. The binding constraint is 22k
-   labels, not model expressiveness. Without heavy regularization the wide nets overfit
-   inside the first epoch — train NLL 0.626 against val 0.719 — which is why training
-   evaluates every 25 batches rather than once per epoch.
-2. **Nonlinearity buys a real but modest amount.** The 445-parameter linear model (one
-   weight per card, i.e. "every card has a fixed value") already gets most of the way:
-   gain@pool 0.0038 vs 0.0050. Synergy is worth roughly 30% on top of card quality.
-3. **Training on all prefix lengths beats training on completed pools only**, even when
-   scored on completed pools: gain@pool 0.0050 vs 0.0046. The intermediate collections
-   act as augmentation.
-4. **Binomial NLL matters a lot.** Swapping to MSE on the observed winrate drops overall
-   gain from 0.0030 to 0.0006, because MSE treats an 0-3 and a 2-3 as equally informative
-   and chases binomial noise.
-5. **Pick-count conditioning is a small win** (gain 0.00296 vs 0.00284). The collection's
-   L1 norm already leaks the pick count, so the embedding mostly helps calibration.
+1. **DraftNet transfer works, and it works hardest where labels are scarce.** On
+   Diamond+Mythic it lifts the best model from 35.3% to 44.9% of the ceiling — a 27%
+   relative gain — with no new labels. On all-ranks, where there are 3.8x more labels, the
+   same idea buys only 48.1% → 50.7%.
+2. **Transfer and data are substitutes.** Expanding to all ranks alone lifts `mlp_400x2`
+   from 35.3% to 48.1%; transfer alone lifts it to 44.9%. Together, 50.7%. Both attack the
+   same bottleneck, which is why they do not stack cleanly — and which confirms the
+   bottleneck really is labels.
+3. **Both of the intuitions behind the transfer idea pay off, and combining them pays
+   most.** Empty-pool power and current-pool context each carry signal on their own; the
+   full feature set (`dn_all_features`) beats every single-view variant.
+4. **Eight numbers beat a 313k-parameter network.** `dn_scalars_only` — 729 trainable
+   parameters, no raw collection at all, just 8 scalars read off a frozen DraftNet — gets
+   38.1% of the ceiling against `mlp_400x2`'s 35.3%. Individually, `context_top23`
+   correlates at r≈0.18 with realized winrate using *zero* winrate labels.
+5. **DraftNet's representation alone is not the win; the combination is.** `dn_hidden_only`
+   (34.3%) is no better than the raw collection, and `dn_trunk_frozen` (25.0%) is much
+   worse. DraftNet's features have to sit *alongside* the collection, or the trunk has to
+   be fine-tuned, to help.
+6. **Capacity still does not help, at either data scale.** 400x400 stays the sweet spot;
+   1024x2 and 2048x2 are worse on test even with 83k training drafts.
+7. **Training on all prefix lengths beats training on completed pools only**, even when
+   scored on completed pools (gain@pool 0.00498 vs 0.00457). Intermediate collections act
+   as augmentation.
+8. **Binomial NLL matters more than any architecture choice.** Swapping to MSE on the
+   observed winrate drops gain from 35.3% to 6.8% of ceiling, because MSE treats an 0-3
+   and a 2-3 as equally informative and chases binomial noise.
 
-## Calibration and usable output (`mlp_400x2`, test split, 42-card pools)
+## Calibration and usable output (`dn_all_features`, Diamond+Mythic test, 42-card pools)
 
 | decile | predicted | actual | E[match wins] |
 |---|---|---|---|
-| 1 | 0.4402 | 0.4439 | 2.32 |
-| 5 | 0.5281 | 0.5105 | 3.15 |
-| 10 | 0.6248 | 0.6279 | 4.24 |
+| 1 | 0.4452 | 0.4216 | 2.36 |
+| 5 | 0.5275 | 0.5276 | 3.15 |
+| 10 | 0.6191 | 0.6202 | 4.18 |
 
-Predicted winrate spans 0.447 (p5) to 0.619 (p95). Top-decile pools actually won 3.87
-matches on average against 2.18 for bottom-decile pools — a 1.7 match spread that the
-model identifies from the collection alone.
+Predicted winrate spans 0.451 (p5) to 0.614 (p95). Top-decile pools actually won 3.85
+matches on average against 1.97 for bottom-decile pools — a 1.9 match spread that the
+model identifies from the collection alone (`mlp_400x2` separates the same deciles by
+1.7 matches).
 
 Skill rises monotonically through the draft: r = 0.05 after one pick, 0.15 by pick 10,
 0.22 by pick 35, then flat. The last ~7 picks add nothing, which is what you would expect
@@ -134,10 +201,15 @@ are usually off-color speculative picks rather than deck cards.
 ## Known limitations / next steps
 
 - The input is the **pool**, not the deck. `pick_maindeck_rate` in the raw data would let
-  us weight cards by how often they were maindecked, which should be a straight upgrade.
+  us weight cards by how often they were maindecked, which should be a straight upgrade —
+  and the `*_top23` features working as well as they do is evidence for it.
 - Player skill is baked into the label. `user_game_win_rate_bucket` is deliberately not
   filtered on, but it could be used as an auxiliary input at training time and zeroed at
   inference to strip skill out of the deck estimate.
 - Only one set is trained here. Pooling sets (with a shared per-set bias) would multiply
   the label count, which is the binding constraint.
-- Lower ranks would roughly 4x the data at the cost of a different skill population.
+- The transferred DraftNet is trained on *top-player* picks, which suits the
+  Diamond+Mythic population better than the all-ranks one. That may be part of why
+  transfer buys less on all-ranks; a like-for-like comparison would need an all-ranks
+  DraftNet.
+- `dn_all_features` needs an all-ranks run (see the note under Results).
