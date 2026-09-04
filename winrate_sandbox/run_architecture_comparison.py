@@ -48,7 +48,9 @@ def run_one(name, cardnames, picks_per_draft, base_winrate, regularization,
         patience=args.patience,
         eval_every_batches=args.eval_every,
         val_n_picks=args.val_n_picks,
-        experiment_name=f"{args.set_abbreviation}_{name}",
+        experiment_name=(
+            f"{args.set_abbreviation}_{args.draft_mode}_{args.rank_tag}_{name}"
+        ),
         model_folder="data/winrate_models/",
         seed=seed,
         verbose=args.verbose,

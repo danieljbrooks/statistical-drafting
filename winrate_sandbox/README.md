@@ -22,9 +22,36 @@ python winrate_sandbox/noise_ceiling.py FIN --rank-tag diamond
 
 # 5. Both comparisons, normalized by each dataset's noise ceiling.
 python winrate_sandbox/summarize_results.py FIN
+
+# 6. Train one model for actual use, with a JSON sidecar describing it.
+python winrate_sandbox/train_final_model.py FIN dn_all_features --rank-tag diamond
+
+# 7. Score a pool. Edit POOL at the top of the script, or pass a file.
+python winrate_sandbox/predict_pool.py
+python winrate_sandbox/predict_pool.py --per-card
 ```
 
 All commands run from the repo root.
+
+## Scoring a pool
+
+`predict_pool.py` takes a list of cardnames and prints the predicted match winrate,
+expected match wins, and where the pool sits against held-out pools. Three real pools
+from the FIN test split are included commented out — the strongest, a median one, and the
+weakest — so predictions can be sanity-checked against decks with known records.
+
+Unknown cardnames are reported with close-match suggestions rather than silently dropped.
+Partial pools are supported: pass fewer cards and the estimate is pulled toward the
+population average, which is correct, because an 8-card pool genuinely says less than a
+finished one.
+
+`--per-card` leaves each card out in turn to show what it is worth *in this pool*. Off-colour
+cards score near zero or negative even when they are strong in the abstract, which is the
+synergy signal doing its job.
+
+Checkpoints are named `<SET>_<mode>_<rank_tag>_<architecture>.pt`; the rank tag matters,
+because the same architecture trained on Diamond+Mythic and on all ranks are different
+models.
 
 ## Data
 

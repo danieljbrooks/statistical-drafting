@@ -51,7 +51,10 @@ def main():
         args.architecture, train_dataset.cardnames, picks_per_draft, base_winrate,
         args.dropout, args.input_dropout, args.set_abbreviation, args.draft_mode,
     ).to(device)
-    weights_path = f"data/winrate_models/{args.set_abbreviation}_{args.architecture}.pt"
+    weights_path = (
+        f"data/winrate_models/{args.set_abbreviation}_{args.draft_mode}"
+        f"_{args.rank_tag}_{args.architecture}.pt"
+    )
     network.load_state_dict(torch.load(weights_path))
     network.eval()
     print(f"Loaded {weights_path}; reporting on the {args.split} split.\n")
