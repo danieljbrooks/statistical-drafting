@@ -72,7 +72,36 @@ lowest card is `Wastes` at 0.124: it is a basic land, but not one of the five th
 pipeline filters out, so it counts as draftable while nobody ever takes it first — an
 unsupported estimate landing far outside anything the model observed.
 
-`--all` prints every card, `--csv` writes the full table.
+`--all` prints every card, `--csv` writes the full table. `--architecture` picks which
+model answers.
+
+### Which model you ask matters enormously here
+
+The transfer models take DraftNet's context-free card power as a literal input feature, so
+asking `dn_all_features` about a *one-card* pool mostly asks DraftNet. Spearman rank
+correlation between each model's one-card ranking and DraftNet's own p1p1 score, over all
+358 FIN cards:
+
+| model | vs DraftNet p1p1 | vs DraftNet p1p1 (163 well-supported cards) | spread (sd) |
+|---|---|---|---|
+| `dn_all_features` | **0.986** | **0.961** | 0.0609 |
+| `mlp_400x2` | 0.560 | 0.656 | 0.0118 |
+| `linear` | 0.554 | 0.649 | 0.0067 |
+
+At one pick in, `dn_all_features` is very nearly DraftNet's pick order restated in winrate
+units — not independent evidence about winning. `mlp_400x2` and `linear` see only match
+records, so their ranking is genuinely a different opinion; they rank 0.95 with each other
+and only ~0.6 with DraftNet.
+
+The trade-off is confidence. The non-transfer models barely separate single cards (sd
+0.012 and 0.007, spanning 0.50–0.58 and 0.51–0.57) because one card out of 42 really does
+say very little, and 22k labelled drafts is not much to learn it from. That flatness is
+honest. The transfer model's much wider spread is borrowed from a model fit to millions of
+picks, which is worth having — as long as it is not mistaken for the winrate data speaking.
+
+Use `--architecture mlp_400x2` when the question is "what do the win/loss records alone
+say about this card", and `dn_all_features` when the question is "what is the best
+available estimate". They are different questions.
 
 ## Per-card contribution
 
