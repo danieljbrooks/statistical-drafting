@@ -27,10 +27,63 @@ ARCHITECTURES = {
     "mlp_400x2_full_pool_only": (
         sd.WinrateNet, dict(hidden_dims=[400, 400]), 5e-4, {"train_n_picks_final_only": True},
     ),
+    # --- Transfer from a trained DraftNet (frozen unless noted). ---
+    # Scalar summaries only: 8 numbers distilled from DraftNet, no raw collection.
+    "dn_scalars_only": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["scalars"], use_collection=False, hidden_dims=[]),
+        3e-3, {},
+    ),
+    "dn_scalars_mlp": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["scalars"], use_collection=False, hidden_dims=[64, 64]),
+        1e-3, {},
+    ),
+    # Scalars alongside the raw collection.
+    "dn_scalars_collection": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["scalars"], use_collection=True, hidden_dims=[400, 400]),
+        5e-4, {},
+    ),
+    # DraftNet's 400-d representation of the collection.
+    "dn_hidden_only": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["hidden"], use_collection=False, hidden_dims=[400, 400]),
+        5e-4, {},
+    ),
+    "dn_hidden_collection": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["hidden"], use_collection=True, hidden_dims=[400, 400]),
+        5e-4, {},
+    ),
+    # Per-card contextual pick scores.
+    "dn_context_collection": (
+        sd.WinrateTransferNet,
+        dict(feature_modes=["context"], use_collection=True, hidden_dims=[400, 400]),
+        5e-4, {},
+    ),
+    "dn_all_features": (
+        sd.WinrateTransferNet,
+        dict(
+            feature_modes=["scalars", "hidden", "context"],
+            use_collection=True,
+            hidden_dims=[400, 400],
+        ),
+        5e-4, {},
+    ),
+    # DraftNet's own trunk as the winrate model's trunk.
+    "dn_trunk_frozen": (sd.WinrateFineTuneNet, dict(freeze_trunk=True), 1e-3, {}),
+    "dn_trunk_finetune": (sd.WinrateFineTuneNet, dict(freeze_trunk=False), 1e-4, {}),
 }
 
+# Architectures that need to know which set's DraftNet to load.
+TRANSFER_CLASSES = (sd.WinrateTransferNet, sd.WinrateFineTuneNet)
 
-def build_network(name, cardnames, picks_per_draft, base_winrate, dropout, input_dropout):
+
+def build_network(
+    name, cardnames, picks_per_draft, base_winrate, dropout, input_dropout,
+    set_abbreviation="FIN", draft_mode="Premier",
+):
     """Instantiate an architecture by name at a given regularization strength."""
     network_class, fixed, _, _ = ARCHITECTURES[name]
     kwargs = dict(
@@ -42,7 +95,30 @@ def build_network(name, cardnames, picks_per_draft, base_winrate, dropout, input
     )
     if network_class is not sd.WinrateLinear:
         kwargs["dropout"] = dropout
+    if network_class in TRANSFER_CLASSES:
+        kwargs["set_abbreviation"] = set_abbreviation
+        kwargs["draft_mode"] = draft_mode
     return network_class(**kwargs)
+
+
+def is_transfer(name):
+    return ARCHITECTURES[name][0] in TRANSFER_CLASSES
+
+
+# Caching costs (n_drafts x picks x n_features) floats, so only the compact feature sets
+# are worth holding; the 400-d hidden and 358-d context vectors are recomputed per batch.
+MAX_CACHED_FEATURES = 32
+
+
+def cacheable_feature_modes(name):
+    """Feature modes to precompute for this architecture, or None to compute per batch."""
+    network_class, fixed, _, _ = ARCHITECTURES[name]
+    if network_class is not sd.WinrateTransferNet:
+        return None
+    modes = fixed.get("feature_modes", ["scalars"])
+    if modes == ["scalars"]:
+        return modes
+    return None
 
 
 def train_overrides(name, picks_per_draft):

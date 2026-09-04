@@ -23,11 +23,13 @@ def main():
     parser.add_argument("set_abbreviation", nargs="?", default="FIN")
     parser.add_argument("--draft-mode", default="Premier")
     parser.add_argument("--split", default="test")
+    parser.add_argument("--rank-tag", default="diamond")
     args = parser.parse_args()
 
-    path = (
-        f"data/winrate_sets/{args.set_abbreviation}_{args.draft_mode}"
-        f"_winrate_{args.split}.pth"
+    import statisticaldrafting as sd
+
+    path = sd.winrate_dataset_path(
+        args.set_abbreviation, args.draft_mode, args.split, args.rank_tag
     )
     dataset = torch.load(path, weights_only=False)
     wins = dataset.wins.astype(np.float64)

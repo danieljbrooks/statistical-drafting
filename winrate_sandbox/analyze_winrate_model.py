@@ -23,14 +23,21 @@ def main():
     parser.add_argument("set_abbreviation", nargs="?", default="FIN")
     parser.add_argument("architecture", nargs="?", default="mlp_1024x2")
     parser.add_argument("--draft-mode", default="Premier")
+    parser.add_argument("--rank-tag", default="diamond", help='Rank filter the dataset was built with ("diamond" or "allranks").')
     parser.add_argument("--split", default="test")
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--input-dropout", type=float, default=0.2)
     args = parser.parse_args()
 
-    prefix = f"data/winrate_sets/{args.set_abbreviation}_{args.draft_mode}_winrate"
-    train_dataset = torch.load(f"{prefix}_train.pth", weights_only=False)
-    eval_dataset = torch.load(f"{prefix}_{args.split}.pth", weights_only=False)
+    def load(split):
+        return torch.load(
+            sd.winrate_dataset_path(
+                args.set_abbreviation, args.draft_mode, split, args.rank_tag
+            ),
+            weights_only=False,
+        )
+
+    train_dataset, eval_dataset = load("train"), load(args.split)
 
     device = sd.get_device()
     train_data = sd.DeviceTensors(train_dataset, device)
@@ -42,7 +49,7 @@ def main():
 
     network = build_network(
         args.architecture, train_dataset.cardnames, picks_per_draft, base_winrate,
-        args.dropout, args.input_dropout,
+        args.dropout, args.input_dropout, args.set_abbreviation, args.draft_mode,
     ).to(device)
     weights_path = f"data/winrate_models/{args.set_abbreviation}_{args.architecture}.pt"
     network.load_state_dict(torch.load(weights_path))

@@ -19,7 +19,9 @@ import torch
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import statisticaldrafting as sd
-from architectures import ARCHITECTURES, build_network, learning_rate, train_overrides
+from architectures import (
+    ARCHITECTURES, build_network, cacheable_feature_modes, learning_rate, train_overrides,
+)
 
 # (dropout, input_dropout, weight_decay) - collections are dropped card-by-card because
 # there are only ~22k labelled drafts to fit.
@@ -27,6 +29,7 @@ REGULARIZATION_GRID = [
     (0.3, 0.0, 0.0),
     (0.5, 0.2, 1e-4),
     (0.7, 0.4, 1e-3),
+    (0.8, 0.5, 3e-3),
 ]
 
 
@@ -34,7 +37,8 @@ def run_one(name, cardnames, picks_per_draft, base_winrate, regularization,
             train_data, val_data, seed, args):
     dropout, input_dropout, weight_decay = regularization
     network = build_network(
-        name, cardnames, picks_per_draft, base_winrate, dropout, input_dropout
+        name, cardnames, picks_per_draft, base_winrate, dropout, input_dropout,
+        args.set_abbreviation, args.draft_mode,
     )
     settings = dict(
         learning_rate=learning_rate(name),
@@ -58,6 +62,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("set_abbreviation", nargs="?", default="FIN")
     parser.add_argument("--draft-mode", default="Premier")
+    parser.add_argument("--rank-tag", default="diamond", help='Rank filter the dataset was built with ("diamond" or "allranks").')
     parser.add_argument("--max-epochs", type=int, default=25)
     parser.add_argument("--patience", type=int, default=30, help="Evaluations without improvement.")
     parser.add_argument("--eval-every", type=int, default=25, help="Batches between evaluations.")
@@ -68,9 +73,13 @@ def main():
     parser.add_argument("--results", default="winrate_sandbox/results/architecture_comparison.json")
     args = parser.parse_args()
 
-    prefix = f"data/winrate_sets/{args.set_abbreviation}_{args.draft_mode}_winrate"
     datasets = {
-        split: torch.load(f"{prefix}_{split}.pth", weights_only=False)
+        split: torch.load(
+            sd.winrate_dataset_path(
+                args.set_abbreviation, args.draft_mode, split, args.rank_tag
+            ),
+            weights_only=False,
+        )
         for split in ["train", "val", "test"]
     }
     device = sd.get_device()
@@ -106,6 +115,19 @@ def main():
 
     for name in chosen:
         print(f"\n########## {name} ##########", flush=True)
+
+        # Frozen DraftNet features do not change during training, so compute them once
+        # per architecture instead of once per batch (about 5x faster end to end).
+        feature_modes = cacheable_feature_modes(name)
+        for split_data in data.values():
+            split_data.extra_features = None
+        if feature_modes is not None:
+            module = sd.DraftNetFeatures(
+                cardnames, args.set_abbreviation, args.draft_mode, feature_modes
+            )
+            for split_data in data.values():
+                split_data.extra_features = sd.precompute_features(split_data, module)
+            print(f"  cached {module.output_dim} frozen features per collection", flush=True)
 
         # 1. Pick regularization on the validation split.
         best_regularization, best_val = None, float("inf")

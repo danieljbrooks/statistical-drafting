@@ -12,6 +12,26 @@ import torch.nn.functional as F
 from .winratedataset import CollectionWinrateDataset, build_collections
 
 
+@torch.no_grad()
+def precompute_features(data: "DeviceTensors", features_module) -> torch.Tensor:
+    """
+    Evaluate a frozen feature module on every (draft, prefix length) pair.
+
+    Returns a (n_drafts, picks_per_draft, n_features) tensor for DeviceTensors to hold.
+    """
+    features_module = features_module.to(data.device).eval()
+    picks_per_draft = data.pick_sequences.shape[1]
+    out = torch.zeros(
+        (data.n_drafts, picks_per_draft, features_module.output_dim),
+        device=data.device,
+    )
+    for n in range(1, picks_per_draft + 1):
+        n_picks = torch.full((data.n_drafts,), n, dtype=torch.long, device=data.device)
+        collection = build_collections(data.pick_sequences, n_picks, data.num_cards)
+        out[:, n - 1] = features_module(collection)
+    return out
+
+
 def get_device(device: Optional[str] = None) -> torch.device:
     if device is not None:
         return torch.device(device)
@@ -25,7 +45,17 @@ def get_device(device: Optional[str] = None) -> torch.device:
 class DeviceTensors:
     """Whole dataset held on device - it is small enough that a DataLoader is pure overhead."""
 
-    def __init__(self, dataset: CollectionWinrateDataset, device: torch.device):
+    def __init__(
+        self,
+        dataset: CollectionWinrateDataset,
+        device: torch.device,
+        extra_features: Optional[torch.Tensor] = None,
+    ):
+        # (n_drafts, picks_per_draft, n_features), indexed by [draft, n_picks - 1].
+        # Frozen features of the collection can be computed once instead of every epoch.
+        self.extra_features = (
+            None if extra_features is None else extra_features.to(device)
+        )
         self.pick_sequences = torch.from_numpy(dataset.pick_sequences).to(device)
         self.wins = torch.from_numpy(dataset.wins).to(device)
         self.losses = torch.from_numpy(dataset.losses).to(device)
@@ -45,7 +75,8 @@ def iterate_batches(
     generator: Optional[torch.Generator] = None,
 ):
     """
-    Yields (collection, n_picks, wins, losses) batches over all (draft, n_picks) pairs.
+    Yields (collection, n_picks, wins, losses, extra) batches over all (draft, n_picks)
+    pairs. ``extra`` is None unless the dataset carries precomputed features.
     """
     options = (
         data.n_picks_options
@@ -66,7 +97,12 @@ def iterate_batches(
         n_picks = options[flat % n_options]
         sequences = data.pick_sequences[draft_index]
         collection = build_collections(sequences, n_picks, data.num_cards)
-        yield collection, n_picks, data.wins[draft_index], data.losses[draft_index]
+        extra = (
+            None
+            if data.extra_features is None
+            else data.extra_features[draft_index, n_picks - 1]
+        )
+        yield collection, n_picks, data.wins[draft_index], data.losses[draft_index], extra
 
 
 def binomial_nll(logits, wins, losses):
@@ -95,10 +131,10 @@ def predict(network, data: DeviceTensors, n_picks_values: List[int], batch_size:
     """Returns numpy arrays of (predicted p, wins, losses, n_picks) over the given prefixes."""
     network.eval()
     chunks = {"p": [], "wins": [], "losses": [], "n_picks": []}
-    for collection, n_picks, wins, losses in iterate_batches(
+    for collection, n_picks, wins, losses, extra in iterate_batches(
         data, batch_size, shuffle=False, n_picks_values=n_picks_values
     ):
-        logits = network(collection, n_picks)
+        logits = network(collection, n_picks, extra)
         chunks["p"].append(torch.sigmoid(logits).float().cpu())
         chunks["wins"].append(wins.cpu())
         chunks["losses"].append(losses.cpu())
@@ -226,8 +262,9 @@ def train_winrate_model(
     network = network.to(device)
 
     loss_fn = LOSS_FUNCTIONS[loss_name]
+    trainable = [p for p in network.parameters() if p.requires_grad]
     optimizer = torch.optim.Adam(
-        network.parameters(), lr=learning_rate, weight_decay=weight_decay
+        trainable, lr=learning_rate, weight_decay=weight_decay
     )
     scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=lr_gamma)
 
@@ -238,10 +275,14 @@ def train_winrate_model(
     os.makedirs(model_folder, exist_ok=True)
     weights_path = os.path.join(model_folder, experiment_name + ".pt")
 
-    n_params = sum(param.numel() for param in network.parameters())
+    n_params = sum(param.numel() for param in trainable)
+    n_frozen = sum(
+        param.numel() for param in network.parameters() if not param.requires_grad
+    )
     if verbose:
         print(
-            f"\n=== {experiment_name} === {n_params:,} params, loss={loss_name}, "
+            f"\n=== {experiment_name} === {n_params:,} trainable params "
+            f"({n_frozen:,} frozen), loss={loss_name}, "
             f"lr={learning_rate}, batch={batch_size}, device={device}"
         )
 
@@ -257,11 +298,11 @@ def train_winrate_model(
     for epoch in range(max_epochs):
         network.train()
         epoch_loss, n_batches = 0.0, 0
-        for collection, n_picks, wins, losses in iterate_batches(
+        for collection, n_picks, wins, losses, extra in iterate_batches(
             train_data, batch_size, shuffle=True, n_picks_values=train_n_picks
         ):
             optimizer.zero_grad()
-            logits = network(collection, n_picks)
+            logits = network(collection, n_picks, extra)
             loss = loss_fn(logits, wins, losses)
             loss.backward()
             optimizer.step()
@@ -312,6 +353,7 @@ def train_winrate_model(
     info = {
         "experiment_name": experiment_name,
         "n_parameters": n_params,
+        "n_frozen_parameters": n_frozen,
         "loss": loss_name,
         "learning_rate": learning_rate,
         "weight_decay": weight_decay,

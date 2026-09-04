@@ -6,3 +6,4 @@ from .trainingset import *
 from .winratedataset import *
 from .winratemodel import *
 from .winratetrain import *
+from .winratetransfer import *

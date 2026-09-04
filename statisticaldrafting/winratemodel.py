@@ -66,11 +66,12 @@ class WinrateNet(nn.Module):
             self.output_layer.bias, math.log(base_winrate / (1 - base_winrate))
         )
 
-    def forward(self, collection, n_picks):
+    def forward(self, collection, n_picks, extra=None):
         """
         Args:
             collection: (batch, num_cards) float card counts.
             n_picks: (batch,) long, number of picks made so far.
+            extra: unused here; present so every winrate model shares a call signature.
         """
         x = self.input_dropout_layer(collection)
         if self.use_pick_conditioning:
@@ -119,7 +120,7 @@ class WinrateLinear(nn.Module):
             nn.init.ones_(self.pick_scale.weight)
             nn.init.zeros_(self.pick_bias.weight)
 
-    def forward(self, collection, n_picks):
+    def forward(self, collection, n_picks, extra=None):
         z = self.card_weights(self.input_dropout_layer(collection)).squeeze(1)
         if self.use_pick_conditioning:
             z = z * self.pick_scale(n_picks).squeeze(1) + self.pick_bias(n_picks).squeeze(1)
@@ -169,7 +170,7 @@ class WinrateEmbeddingNet(nn.Module):
         self.num_cards = len(cardnames)
         self.picks_per_draft = picks_per_draft
         self.use_pick_conditioning = use_pick_conditioning
-        self.hidden_dims = list(hidden_dims or [64])
+        self.hidden_dims = [64] if hidden_dims is None else list(hidden_dims)
 
         self.input_dropout_layer = nn.Dropout(input_dropout)
         self.card_embedding = nn.Linear(self.num_cards, embedding_dim, bias=False)
@@ -194,7 +195,7 @@ class WinrateEmbeddingNet(nn.Module):
             self.output_layer.bias, math.log(base_winrate / (1 - base_winrate))
         )
 
-    def forward(self, collection, n_picks):
+    def forward(self, collection, n_picks, extra=None):
         x = self.card_embedding(self.input_dropout_layer(collection))
         if self.use_pick_conditioning:
             x = torch.cat([x, self.pick_embedding(n_picks)], dim=1)

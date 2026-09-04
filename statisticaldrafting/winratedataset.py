@@ -15,6 +15,20 @@ BASIC_NAMES = ["Forest", "Island", "Mountain", "Plains", "Swamp"]
 RANK_ORDER = ["bronze", "silver", "gold", "platinum", "diamond", "mythic"]
 
 
+def winrate_dataset_path(
+    set_abbreviation: str,
+    draft_mode: str,
+    split: str,
+    rank_tag: str = "diamond",
+    data_folder_training_set: str = "data/winrate_sets/",
+) -> str:
+    """Path of a winrate dataset split. ``rank_tag`` names the rank filter it was built with."""
+    return (
+        f"{data_folder_training_set}{set_abbreviation}_{draft_mode}"
+        f"_{rank_tag}_winrate_{split}.pth"
+    )
+
+
 def get_cardnames(csv_path: str) -> List[str]:
     """
     Cardnames for a set, in the same (sorted pack_card_) order used by DraftNet.
@@ -100,7 +114,7 @@ def build_collections(
 def create_winrate_dataset(
     set_abbreviation: str,
     draft_mode: str = "Premier",
-    min_rank: str = "diamond",
+    min_rank: Optional[str] = "diamond",
     omit_first_days: int = 2,
     train_fraction: float = 0.7,
     val_fraction: float = 0.15,
@@ -120,14 +134,19 @@ def create_winrate_dataset(
     Args:
         set_abbreviation (str): Three letter abbreviation of the set.
         draft_mode (str): "Premier", "Trad", "PickTwo", or "PickTwoTrad".
-        min_rank (str): Keep drafts at this 17lands rank or above ("diamond" -> diamond + mythic).
+        min_rank (str | None): Keep drafts at this 17lands rank or above ("diamond" ->
+            diamond + mythic). None keeps every draft, including the ~8% whose rank is
+            not recorded.
         omit_first_days (int): Omit this many days from the beginning of the dataset.
         train_fraction (float): Fraction of drafts used for training.
         val_fraction (float): Fraction of drafts used for early stopping / model selection.
         overwrite (bool): If False, reuse existing files.
     """
+    rank_tag = "allranks" if min_rank is None else min_rank
     paths = {
-        split: f"{data_folder_training_set}{set_abbreviation}_{draft_mode}_winrate_{split}.pth"
+        split: winrate_dataset_path(
+            set_abbreviation, draft_mode, split, rank_tag, data_folder_training_set
+        )
         for split in ["train", "val", "test"]
     }
     if not overwrite and all(os.path.exists(path) for path in paths.values()):
@@ -146,8 +165,12 @@ def create_winrate_dataset(
     card_to_index = {name: i for i, name in enumerate(cardnames)}
     print(f"{len(cardnames)} draftable cards in {set_abbreviation}.")
 
-    allowed_ranks = set(RANK_ORDER[RANK_ORDER.index(min_rank):])
-    print(f"Keeping ranks: {sorted(allowed_ranks)}")
+    if min_rank is None:
+        allowed_ranks = None
+        print("Keeping all ranks, including unranked drafts.")
+    else:
+        allowed_ranks = set(RANK_ORDER[RANK_ORDER.index(min_rank):])
+        print(f"Keeping ranks: {sorted(allowed_ranks)}")
 
     # Only the draft metadata is needed - the collection is reconstructed from the
     # pick sequence, so the (very wide) pack_card_/pool_ columns can be skipped.
@@ -175,7 +198,8 @@ def create_winrate_dataset(
     df = df[df["draft_time"] >= min_date_str]
 
     # Rank filter (no filtering on player winrate or games played).
-    df = df[df["rank"].isin(allowed_ranks)]
+    if allowed_ranks is not None:
+        df = df[df["rank"].isin(allowed_ranks)]
 
     # Drop drafts where no matches were played - they carry no signal.
     df = df[(df["event_match_wins"] + df["event_match_losses"]) > 0]
