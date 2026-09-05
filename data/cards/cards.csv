@@ -25567,3 +25567,757 @@ id,expansion,name,rarity,color_identity,mana_value,types,is_booster
 104845,TSPM,Copy,token,,0,,False
 104846,TSPM,Illusion Villain,token,,0,Creature - Illusion Villain,False
 104847,TSPM,Spider,token,,0,Creature - Spider,False
+105826,MSC,Lurking Lizards,common,G,2,Creature - Lizard Villain,False
+105688,MSC,Asgardian Inspiration,uncommon,R,1,Sorcery,False
+105788,MSC,"Starling, Aerial Ally",common,W,5,Legendary Creature - Human Hero,False
+105723,MSC,Beast Mode,common,G,2,Instant,False
+105646,MSC,"Reed Richards, Smartest Man",rare,U,6,Legendary Creature - Human Scientist Hero,False
+105632,MSC,"Happy Hogan, Bodyguard",uncommon,U,6,Legendary Creature - Human Advisor,False
+105644,MSC,Pharaoh Rama-Tut,uncommon,U,5,Legendary Creature - Human Noble Villain,False
+105833,MSC,Rhino's Rampage,uncommon,GR,1,Sorcery,False
+107383,MSC,Thriving Isle,common,U,0,Land,False
+105825,MSC,Farseek,common,G,2,Sorcery,False
+105548,MSC,"Graviton, Fundamental Force",uncommon,U,3,Legendary Creature - Human Villain,False
+105535,MSC,"Hawkeye, Clint Barton",uncommon,W,4,Legendary Creature - Human Archer Hero,False
+105627,MSC,Collector's Case,common,U,2,Artifact,False
+105678,MSC,Ultron the Annihilator,mythic,B,5,Legendary Artifact Creature - Robot Villain,False
+105720,MSC,"The Whizzer, Classic Speedster",uncommon,R,4,Legendary Creature - Human Hero,False
+105757,MSC,"Tiger Shark, Abyssal Hunter",uncommon,BU,4,Legendary Creature - Shark Human Villain,False
+107380,MSC,Thriving Bluff,common,R,0,Land,False
+105537,MSC,Iconic Shield,uncommon,W,1,Artifact - Equipment,False
+105529,MSC,"Loki, God of Lies",rare,R,3,Legendary Creature - God Sorcerer Villain,False
+105580,MSC,"Moon-Boy, Dino Rider",uncommon,G,2,Legendary Creature - Ape Human,False
+105590,MSC,Team Transmitter,uncommon,,3,Artifact,False
+105640,MSC,Mysterio's Mirage,rare,U,3,Enchantment,False
+105633,MSC,"Immortus, Master of Eternity",mythic,U,4,Legendary Creature - Human Hero Villain,False
+105463,MSC,Director Nick Fury,mythic,RUW,3,Legendary Creature - Human Spy Hero,False
+105840,MSC,"Iron Man, Modern Marvel",mythic,U,4,Legendary Artifact Creature - Human Hero,False
+105750,MSC,Astonishing Spider-Man,rare,RU,4,Legendary Creature - Spider Human Hero,False
+105552,MSC,Doom's Servo-Guards,common,B,2,Artifact Creature - Robot Villain,False
+105699,MSC,"Hulkling, Young Avenger",rare,R,4,Legendary Creature - Kree Skrull Hero,False
+105775,MSC,Sif's Spearmaster,common,R,3,Creature - God Warrior Hero,False
+105677,MSC,Titanium Man,uncommon,B,4,Legendary Artifact Creature - Human Villain,False
+105652,MSC,"Victor Timely, Wily Tycoon",uncommon,U,5,Legendary Creature - Human Artificer Villain,False
+105806,MSC,Doomsday,rare,B,3,Sorcery,False
+105748,MSC,"X-23, Deadly Weapon",uncommon,G,3,Legendary Creature - Mutant Berserker Hero,False
+105752,MSC,Iceman and Firestar,uncommon,RU,4,Legendary Creature - Mutant Hero,False
+105732,MSC,"Giant-Man, Gargantuan Genius",rare,G,5,Legendary Creature - Human Scientist Hero,False
+105811,MSC,Venomized Cat,common,B,3,Creature - Symbiote Cat Villain,False
+105728,MSC,"Darwin, Adaptive Mutant",uncommon,G,2,Legendary Creature - Mutant Hero,False
+105718,MSC,Wanda's Vision,rare,R,5,Enchantment,False
+105549,MSC,Repulsor Bots,rare,U,6,Artifact Creature - Robot Hero,False
+105789,MSC,Sudden Strike,uncommon,W,2,Instant,False
+105618,MSC,Secure Detention,uncommon,W,4,Enchantment - Aura,False
+105572,MSC,Smashing Spree,common,R,2,Instant,False
+105772,MSC,"Songbird, Sonic Screamer",common,B,2,Legendary Creature - Human Villain,False
+105823,MSC,Wisecrack,uncommon,R,3,Instant,False
+105828,MSC,"Spider-Rex, Daring Dino",common,G,6,Legendary Creature - Spider Dinosaur Hero,False
+105649,MSC,"Silver Surfer, Cosmic Voyager",rare,U,6,Legendary Creature - Alien Hero,False
+105611,MSC,Infinity Formula,common,W,3,Artifact - Equipment,False
+105687,MSC,"Alex Wilder, Runaway",uncommon,R,2,Legendary Creature - Human Hero Villain,False
+105412,MSC,Fantastic Elasticity,rare,U,3,Sorcery,False
+105818,MSC,Romantic Rendezvous,common,R,2,Sorcery,False
+105651,MSC,Timeline Inquiry,uncommon,U,4,Instant,False
+105713,MSC,Quinjet Technician,common,R,2,Creature - Human Artificer,False
+105722,MSC,Advancing the Spirit,uncommon,G,3,Enchantment,False
+107379,MSC,"Tombstone, Career Criminal",uncommon,B,3,Legendary Creature - Human Villain,False
+105591,MSC,"Victor Mancha, Runaway",uncommon,,5,Legendary Artifact Creature - Human Hero,False
+105689,MSC,Big Wheel,common,R,3,Artifact - Vehicle,False
+105781,MSC,Daily Bugle Reporters,common,W,4,Creature - Human Citizen,False
+105844,MSC,"Spider-Gwen, Free Spirit",common,R,3,Legendary Creature - Spider Human Hero,False
+105555,MSC,"Madame Hydra, Reanimated",rare,B,4,Legendary Creature - Human Horror Villain,False
+105741,MSC,"Sauron, Dino Devotee",mythic,G,5,Legendary Creature - Dinosaur Vampire Villain,False
+105545,MSC,Wondrous Revival,rare,W,6,Sorcery,False
+105550,MSC,Stark's Ingenuity,rare,U,3,Enchantment - Aura,False
+105787,MSC,Spider-UK,uncommon,W,4,Legendary Creature - Spider Human Hero,False
+105696,MSC,Daredevil's Billy Club,uncommon,R,2,Artifact - Equipment,False
+105595,MSC,Blur of Heroism,uncommon,W,3,Enchantment,False
+105519,MSC,"Hulk, Always Angry",rare,R,7,Legendary Creature - Gamma Berserker Hero,False
+105650,MSC,Spaceshift,common,U,2,Instant,False
+105759,MSC,Daily Bugle Newspaper,uncommon,,2,Artifact,False
+105803,MSC,Dark Ritual,uncommon,B,1,Instant,False
+105782,MSC,"Flash Thompson, Spider-Fan",uncommon,W,2,Legendary Creature - Human Citizen,False
+105470,MSC,"Namor, Atlantean King",rare,UW,3,Legendary Creature - Mutant Merfolk Noble,False
+105710,MSC,"Nico Minoru, Runaway",mythic,R,4,Legendary Creature - Human Warlock Hero,False
+105659,MSC,"Bob, Reluctant HYDRA Agent",uncommon,B,2,Legendary Creature - Human Coward Villain,False
+105556,MSC,"Minotaur, Roxxon CEO",rare,B,6,Legendary Creature - Minotaur Villain,False
+105578,MSC,Flora Colossus,rare,G,7,Creature - Treefolk,False
+105685,MSC,Voltaic Whip,common,B,3,Artifact - Equipment,False
+105776,MSC,"Goliath, Mass Manipulator",uncommon,G,2,Legendary Creature - Human Scientist Hero,False
+105520,MSC,"Thor, Guardian of Midgard",rare,R,5,Legendary Creature - God Warrior Hero,False
+105761,MSC,"Machine Man, Model X-51",uncommon,,4,Legendary Artifact Creature - Robot Hero,False
+105690,MSC,Bionic Blow,uncommon,R,2,Sorcery,False
+105589,MSC,"War Machine, James Rhodes",uncommon,UW,4,Legendary Artifact Creature - Human Hero,False
+105679,MSC,Ultron's Auxiliary,uncommon,B,2,Artifact Creature - Robot Villain,False
+105700,MSC,Inspired Fire,common,R,4,Instant,False
+105665,MSC,Doombot Harbinger,uncommon,B,3,Artifact Creature - Robot Villain,False
+105682,MSC,Villainous Syndication,uncommon,B,2,Enchantment - Plan,False
+105392,MSC,"Silver Surfer, Galactus's Herald",rare,,5,Legendary Creature - Alien Hero,False
+105576,MSC,The Fabulous Frog-Man,common,G,3,Legendary Creature - Human Hero,False
+105607,MSC,Heroic Teamwork,common,W,3,Instant,False
+105721,MSC,Accelerated Evolution,common,G,3,Enchantment - Aura,False
+105802,MSC,Common Crook,common,B,2,Creature - Human Rogue Villain,False
+105829,MSC,Terrific Team-Up,uncommon,G,4,Instant,False
+105812,MSC,Big Score,common,R,4,Instant,False
+105525,MSC,"Thanos, Death's Consort",rare,B,4,Legendary Creature - Eternal Villain,False
+105600,MSC,Doctor Spectrum,uncommon,W,5,Legendary Creature - Human Hero,False
+105726,MSC,"Bushmaster, Coiled Henchman",common,G,2,Legendary Creature - Snake Human Villain,False
+105634,MSC,Imperial Cosmographer,uncommon,U,3,Creature - Kree Scientist,False
+105603,MSC,"Falcon, Joaquin Torres",uncommon,W,3,Legendary Creature - Bird Human Hero,False
+105575,MSC,Colossal Collision,common,G,4,Sorcery,False
+105664,MSC,"Doctor Doom, Unrivaled",mythic,B,4,Legendary Creature - Human Sorcerer Villain,False
+105468,MSC,"Loki, the Deceiver",mythic,BRU,4,Legendary Creature - God Sorcerer Villain,False
+105804,MSC,Deadly Dispute,common,B,2,Instant,False
+105798,MSC,Time Warp,rare,U,5,Sorcery,False
+105460,MSC,"Captain Marvel, Apex Avenger",rare,RW,7,Legendary Creature - Human Kree Hero,False
+105742,MSC,"Shang-Chi, Martial Mentor",rare,G,5,Legendary Creature - Human Warrior Hero,False
+105628,MSC,Daughter of the Deep,uncommon,U,2,Creature - Merfolk Noble,False
+105666,MSC,"Fixer, Techno Terror",uncommon,B,2,Legendary Creature - Human Artificer Villain,False
+105744,MSC,"Tippy-Toe, Terrific Partner",uncommon,G,4,Legendary Creature - Squirrel Hero,False
+105778,MSC,Aunt May,uncommon,W,1,Legendary Creature - Human Citizen,False
+105583,MSC,"Atlas, Sizable Stooge",uncommon,BG,4,Legendary Creature - Human Villain,False
+105784,MSC,Selfless Police Captain,common,W,2,Creature - Human Detective,False
+105737,MSC,Mister Immortal,rare,G,2,Legendary Creature - Mutant Hero,False
+105655,MSC,"Vulture, Feathered Fiend",rare,U,4,Legendary Creature - Human Artificer Villain,False
+105674,MSC,Origin of Black Widow,uncommon,B,3,Enchantment - Saga,False
+105774,MSC,"Living Lightning, Charged Up",uncommon,R,5,Legendary Creature - Elemental Hero,False
+105637,MSC,Living Lies of Loki,uncommon,U,2,Creature - Illusion Villain,False
+105779,MSC,City Pigeon,common,W,1,Creature - Bird,False
+105773,MSC,Extremis Elite,common,R,2,Creature - Human Mercenary Villain,False
+105636,MSC,"Iron Man, Bleeding Edge",rare,U,5,Legendary Artifact Creature - Human Hero,False
+105562,MSC,"Happy Hogan, Dauntless Driver",common,R,1,Legendary Creature - Human Pilot,False
+105841,MSC,"Black Widow, Daring Operative",mythic,B,5,Legendary Creature - Human Spy Hero,False
+105712,MSC,Pick Up the Pace,rare,R,2,Enchantment,False
+105792,MSC,The Clone Saga,rare,U,4,Enchantment - Saga,False
+105731,MSC,Flatman,uncommon,G,4,Legendary Creature - Mutant Hero,False
+105719,MSC,"Whirlwind, Killer Cyclone",uncommon,R,3,Legendary Creature - Mutant Villain,False
+105724,MSC,Big Bertha,uncommon,G,1,Legendary Creature - Mutant Hero,False
+105702,MSC,"Iron Fist, Hero for Hire",rare,R,2,Legendary Creature - Human Mercenary Hero,False
+105832,MSC,Pumpkin Bombardment,common,BR,1,Sorcery,False
+105598,MSC,"Captain America, Skybound",rare,W,5,Legendary Creature - Human Soldier Hero,False
+105693,MSC,Contract Hero,common,R,3,Creature - Human Mercenary Hero,False
+105704,MSC,"Karolina Dean, Runaway",uncommon,BGRUW,4,Legendary Creature - Alien Hero,False
+105614,MSC,"Nighthawk, Dark Defender",uncommon,W,2,Legendary Creature - Human Hero,False
+105524,MSC,"Ultron, Machine Overlord",rare,,5,Legendary Artifact Creature - Robot Villain,False
+105604,MSC,"Foggy Nelson, On Retainer",uncommon,W,3,Legendary Creature - Human Advisor,False
+105680,MSC,Undead Hand Ninja,uncommon,B,2,Creature - Zombie Ninja Villain,False
+105691,MSC,Captain America's Motorcycle,common,R,2,Artifact - Vehicle,False
+105795,MSC,Flying Octobot,uncommon,U,2,Artifact Creature - Robot Villain,False
+105822,MSC,Unlucky Witness,uncommon,R,1,Creature - Human Citizen,False
+105523,MSC,"Hawkeye, Trick Shot",rare,R,4,Legendary Creature - Human Archer Hero,False
+105645,MSC,Quantum Reduction,common,U,2,Enchantment - Aura,False
+105593,MSC,Amazing Spider-Girl,rare,W,5,Legendary Creature - Spider Human Hero,False
+105821,MSC,Taxi Driver,common,R,2,Creature - Human Pilot,False
+105807,MSC,Inner Demons Gangsters,common,B,4,Creature - Human Rogue Villain,False
+105801,MSC,Alien Symbiosis,uncommon,B,2,Enchantment - Aura,False
+105554,MSC,Infernal Rebirth,common,B,4,Instant,False
+105734,MSC,"Hulk, Strongest There Is",rare,G,4,Legendary Creature - Gamma Berserker Hero,False
+105654,MSC,"Vision, Spectral Synthezoid",rare,U,8,Legendary Artifact Creature - Robot Hero,False
+105809,MSC,"Swarm, Being of Bees",common,B,3,Legendary Creature - Insect Villain,False
+105620,MSC,Stunning Shot,uncommon,W,2,Sorcery,False
+105661,MSC,Count Nefaria,uncommon,B,7,Legendary Creature - Human Villain,False
+105560,MSC,Experimental Armor,uncommon,R,3,Artifact - Equipment,False
+105695,MSC,"Daredevil, Fearless Fighter",rare,R,3,Legendary Creature - Human Hero,False
+107378,MSC,Doom Blade,uncommon,B,2,Instant,False
+105709,MSC,Molten Lavamancer,uncommon,R,3,Creature - Elemental Warlock Villain,False
+105727,MSC,"Colossus, Steel Stalwart",uncommon,G,5,Legendary Creature - Mutant Hero,False
+105564,MSC,The Immortal Weapons,rare,R,5,Legendary Creature - Human Warrior Hero,False
+105579,MSC,Gamma Grotesque,rare,G,3,Creature - Gamma Horror Villain,False
+105601,MSC,"Doctor Strange, Surgeon",rare,W,5,Legendary Creature - Human Doctor Hero,False
+105668,MSC,Grim Reaper's Scythe,rare,B,3,Legendary Artifact,False
+105736,MSC,Lucky the Pizza Dog,rare,G,2,Legendary Creature - Dog,False
+105676,MSC,Sadistic Slash,uncommon,B,4,Instant,False
+105810,MSC,"Venom, Evil Unleashed",common,B,5,Legendary Creature - Symbiote Villain,False
+105606,MSC,"Hawkeye, Bowslinger",rare,W,3,Legendary Creature - Human Archer Hero,False
+105657,MSC,Armed Assailant,common,B,3,Creature - Human Villain,False
+105706,MSC,"Luke Cage, Hero for Hire",rare,R,4,Legendary Creature - Human Mercenary Hero,False
+105768,MSC,Virtuous Variant,common,W,3,Creature - Spider Human Hero,False
+105843,MSC,"Hulk, Brutal Brawler",mythic,G,4,Legendary Creature - Gamma Berserker Hero,False
+105839,MSC,"Black Panther, Claws of Bast",mythic,W,3,Legendary Creature - Human Warrior Hero,False
+105609,MSC,"Hyperion, Supreme Hero",mythic,W,7,Legendary Creature - Eternal Hero,False
+105717,MSC,The Vision and Scarlet Witch,mythic,R,4,Legendary Artifact Creature - Mutant Hero,False
+105698,MSC,Heroes for Hire,uncommon,R,5,Enchantment,False
+105819,MSC,Shock,common,R,1,Instant,False
+105577,MSC,Feral Ferocity,common,G,2,Instant,False
+105586,MSC,"Iron Lad, Young Avenger",uncommon,RU,3,Legendary Artifact Creature - Human Hero,False
+105658,MSC,"Black Widow, Deadly Hunter",rare,B,3,Legendary Creature - Human Assassin Hero,False
+105824,MSC,Commune with Dinosaurs,common,G,1,Sorcery,False
+105764,MSC,Fogwell's Gym,uncommon,R,0,Land,False
+105551,MSC,"Boomerang, Blade Flinger",common,B,2,Legendary Creature - Human Villain,False
+105663,MSC,"Crimson Cowl, Master of Evil",rare,B,3,Legendary Creature - Human Villain,False
+105584,MSC,"Brawn, Amadeus Cho",uncommon,GU,2,Legendary Creature - Gamma Scientist Hero,False
+105747,MSC,"Wolverine, Claws Out",rare,G,4,Legendary Creature - Mutant Berserker Hero,False
+105546,MSC,A.I.M. Bot,common,U,3,Artifact Creature - Robot Villain,False
+105662,MSC,Criminal Enterprise,uncommon,B,3,Enchantment,False
+105786,MSC,"Spider-Man, Web-Slinger",common,W,3,Legendary Creature - Spider Human Hero,False
+107384,MSC,Thriving Moor,common,B,0,Land,False
+105385,MSC,Human Torch,mythic,GRUW,4,Legendary Creature - Human Hero,False
+105528,MSC,"Abomination, Irradiated Brute",rare,G,4,Legendary Creature - Gamma Villain,False
+105733,MSC,Hit-Monkey,rare,G,4,Legendary Creature - Monkey Assassin,False
+105797,MSC,Think Twice,common,U,2,Instant,False
+105708,MSC,"Molly Hayes, Runaway",common,R,3,Legendary Creature - Mutant Hero,False
+105763,MSC,The Thanos-Copter,rare,,6,Legendary Artifact - Vehicle,False
+105670,MSC,HYDRA Disintegrator,uncommon,B,5,Artifact - Equipment,False
+105547,MSC,"Blue Marvel, Adam Brashear",uncommon,U,5,Legendary Creature - Human Scientist Hero,False
+105542,MSC,Valkyrior Skyrider,common,W,5,Creature - God Warrior Hero,False
+105683,MSC,"Viper, Cruel Conspirator",rare,B,2,Legendary Creature - Human Assassin Villain,False
+105745,MSC,Voracious Brood,uncommon,G,3,Creature - Alien Insect,False
+105557,MSC,"Ultimo, Civilization's End",uncommon,B,6,Legendary Artifact Creature - Robot Villain,False
+105623,MSC,Wakandan Shield Guard,common,W,2,Creature - Human Soldier,False
+107382,MSC,Thriving Heath,common,W,0,Land,False
+105673,MSC,Minion Missile,common,B,2,Sorcery,False
+105613,MSC,"Nick Fury, Spymaster",rare,W,5,Legendary Creature - Human Spy Hero,False
+105743,MSC,"Storm, Shaker of Skies",uncommon,G,6,Legendary Creature - Mutant Hero,False
+105686,MSC,"White Widow, Yelena Belova",uncommon,B,2,Legendary Creature - Human Assassin Villain,False
+105769,MSC,Ant-Man's Air Force,uncommon,U,2,Creature - Insect,False
+105608,MSC,The Howling Commandos,common,W,2,Legendary Creature - Human Soldier Hero,False
+105622,MSC,Vault Guardsman,uncommon,W,6,Artifact Creature - Human Advisor,False
+105629,MSC,Dismissive Denial,common,U,4,Instant,False
+105740,MSC,"Rhino, Terrible Trampler",rare,G,6,Legendary Creature - Human Villain,False
+105527,MSC,Absorbing Man and Titania,rare,GR,5,Legendary Creature - Human Villain,False
+105780,MSC,Costume Closet,uncommon,W,2,Artifact,False
+105602,MSC,"Donald Blake, Guise of Thor",uncommon,W,2,Legendary Creature - Human Doctor,False
+105777,MSC,"Wolfsbane, Highland Hero",common,G,2,Legendary Creature - Mutant Werewolf Hero,False
+105566,MSC,Marvelous Melee,common,R,5,Instant,False
+105816,MSC,Lightning Bolt,uncommon,R,1,Instant,False
+105820,MSC,Stegron the Dinosaur Man,common,R,5,Legendary Creature - Dinosaur Villain,False
+105642,MSC,"Namora, the Sea Queen",uncommon,U,3,Legendary Creature - Mutant Merfolk Hero,False
+105815,MSC,"Hobgoblin, Mantled Marauder",uncommon,R,2,Legendary Creature - Goblin Human Villain,False
+105794,MSC,Doc Ock's Henchmen,common,U,3,Creature - Human Villain,False
+105437,MSC,Living Laser,rare,R,5,Legendary Creature - Elemental Villain,False
+105790,MSC,Thwip!,common,W,1,Instant,False
+105756,MSC,"Shuri, Vibranium Technologist",uncommon,UW,3,Legendary Creature - Human Artificer Hero,False
+105730,MSC,Doorman,uncommon,G,2,Legendary Creature - Mutant Hero,False
+105390,MSC,"Galactus, Devourer of Worlds",rare,,10,Legendary Creature - Elder Alien,False
+105754,MSC,"Ms. Marvel, Elastic Ally",uncommon,GW,3,Legendary Creature - Mutant Inhuman Hero,False
+105653,MSC,Virtual Assistant,uncommon,U,2,Artifact Creature - Illusion Advisor,False
+105635,MSC,Impossible Man,uncommon,U,3,Legendary Creature - Alien Shapeshifter,False
+105648,MSC,Shipwreck Patrol,common,U,4,Creature - Merfolk Warrior,False
+105631,MSC,Flying Drone,common,U,2,Artifact Creature - Robot Scout,False
+105553,MSC,Glamorous Grapplers,common,B,4,Creature - Human Performer Villain,False
+105701,MSC,Intrepid Ace,uncommon,R,1,Creature - Human Pilot,False
+105771,MSC,TVA Bureaucrat,common,U,2,Creature - Human Advisor,False
+105791,MSC,Wild Pack Squad,common,W,3,Creature - Human Mercenary,False
+105641,MSC,"Namor, Scourge of the Seas",rare,U,5,Legendary Creature - Mutant Merfolk Villain,False
+105605,MSC,General Thunderbolt Ross,uncommon,W,1,Legendary Creature - Human Soldier,False
+105714,MSC,Sky Cycle,uncommon,R,5,Artifact - Vehicle,False
+105596,MSC,"Bucky Barnes, Eager Ally",uncommon,W,2,Legendary Creature - Human Soldier Hero,False
+105837,MSC,Savage Lands,uncommon,BGR,0,Land,False
+105785,MSC,Spectacular Tactics,common,W,2,Instant,False
+105765,MSC,"Rescue, Pepper Potts",uncommon,U,2,Legendary Artifact Creature - Human Hero,False
+105766,MSC,"Thor, Asgard's Avenger",rare,R,4,Legendary Creature - God Warrior Hero,False
+105836,MSC,Spider-Mobile,uncommon,,3,Artifact - Vehicle,False
+105621,MSC,Ultimate Alliance,common,W,1,Instant,False
+105386,MSC,The Thing,mythic,GRUW,6,Legendary Creature - Human Hero,False
+105585,MSC,"Gert and Old Lace, Runaways",uncommon,GR,3,Legendary Creature - Human Dinosaur Hero,False
+105725,MSC,Black Tom Cassidy,common,G,2,Legendary Creature - Mutant Villain,False
+105456,MSC,Archnemesis,rare,BU,3,Enchantment - Aura,False
+105561,MSC,Furious Strength,common,R,3,Enchantment - Aura,False
+105568,MSC,"Quicksilver, Pietro Maximoff",common,R,3,Legendary Creature - Mutant Hero,False
+105626,MSC,Atlantean Skirmisher,uncommon,U,2,Creature - Merfolk Rogue,False
+105681,MSC,Valentina Allegra de Fontaine,uncommon,B,3,Legendary Creature - Human Spy Villain,False
+105831,MSC,Mob Lookout,common,BU,2,Creature - Human Rogue Villain,False
+105574,MSC,"Wiccan, Young Avenger",uncommon,R,4,Legendary Creature - Mutant Warlock Hero,False
+105588,MSC,"Stature, Young Avenger",uncommon,GR,2,Legendary Creature - Human Hero,False
+105639,MSC,Multiversal Recruitment,uncommon,U,4,Sorcery,False
+105660,MSC,"Citizen V, Helmut Zemo",rare,B,3,Legendary Creature - Human Noble Villain,False
+105692,MSC,"Chase Stein, Runaway",common,R,2,Legendary Creature - Human Hero,False
+105610,MSC,Hyperion's Atomic Vision,uncommon,W,2,Instant,False
+105753,MSC,"Marvel Boy, Noh-Varr",uncommon,RW,2,Legendary Creature - Kree Soldier Hero,False
+105388,MSC,"Doctor Doom, King of Latveria",mythic,BRU,4,Legendary Creature - Human Noble Villain,False
+105477,MSC,"Shuri, the Black Panther",mythic,GW,2,Legendary Creature - Human Noble Hero,False
+105707,MSC,Mjölnir's Might,common,R,4,Sorcery,False
+105647,MSC,Shi'ar Soldier,uncommon,U,2,Creature - Shi'ar Soldier,False
+105638,MSC,"Loki, Lord of Misrule",mythic,U,4,Legendary Creature - God Sorcerer Villain,False
+105539,MSC,"Mockingbird, Bobbi Morse",common,W,4,Legendary Creature - Human Hero,False
+105534,MSC,Fall to Earth,common,W,5,Instant,False
+105783,MSC,"MJ, Rising Star",uncommon,W,3,Legendary Creature - Human Performer,False
+105799,MSC,Unstable Experiment,common,U,2,Instant,False
+105838,MSC,Terramorphic Expanse,common,,0,Land,False
+105800,MSC,Whoosh!,common,U,2,Instant,False
+105767,MSC,Doctor Jane Foster,uncommon,W,4,Legendary Creature - Human Doctor,False
+107381,MSC,Thriving Grove,common,G,0,Land,False
+105738,MSC,Origin of the Hulk,uncommon,G,3,Enchantment - Saga,False
+105384,MSC,Mister Fantastic,mythic,GRUW,3,Legendary Creature - Human Scientist Hero,False
+105735,MSC,Hulk's Thunderclap,uncommon,G,2,Sorcery,False
+105716,MSC,"Stick, Fearless Mentor",uncommon,R,2,Legendary Creature - Human Monk Hero,False
+105597,MSC,"Captain America, Liberator",rare,W,5,Legendary Creature - Human Soldier Hero,False
+105835,MSC,Rocket-Powered Goblin Glider,rare,,3,Artifact - Equipment,False
+105715,MSC,"Spider-Man, New Champion",rare,R,3,Legendary Creature - Spider Human Hero,False
+105746,MSC,"White Tiger, Amulet Keeper",uncommon,G,2,Legendary Creature - Human Hero,False
+105669,MSC,"Hammerhead, Maggia Boss",uncommon,B,2,Legendary Creature - Human Rogue Villain,False
+105705,MSC,"Lady Spider, Maybelle Reilly",uncommon,R,2,Legendary Creature - Spider Human Hero,False
+105540,MSC,"Peggy Carter, Secret Agent",uncommon,W,2,Legendary Creature - Human Spy Hero,False
+105617,MSC,Quantum Entanglement,rare,W,2,Enchantment,False
+105387,MSC,"Captain America, Team Leader",mythic,RUW,3,Legendary Creature - Human Soldier Hero,False
+105624,MSC,Wall Off,common,W,4,Instant,False
+105729,MSC,Devil Dinosaur,rare,G,4,Legendary Creature - Dinosaur,False
+105760,MSC,Iron Suitcase,uncommon,,1,Artifact,False
+105383,MSC,Invisible Woman,mythic,GRUW,3,Legendary Creature - Human Hero,False
+105440,MSC,"Photon, Mighty Marvel",rare,R,4,Legendary Creature - Human Hero,False
+105762,MSC,Swordsman's Steel,rare,,4,Artifact - Equipment,False
+105711,MSC,Origin of Thor,uncommon,R,3,Enchantment - Saga,False
+105619,MSC,Strategic Intervention,uncommon,W,2,Enchantment,False
+105522,MSC,"Captain America, Unbowed",rare,W,4,Legendary Creature - Human Soldier Hero,False
+105518,MSC,"Iron Man, Futurist Paragon",rare,U,6,Legendary Artifact Creature - Human Hero,False
+105571,MSC,"She-Hulk, Jennifer Walters",uncommon,R,4,Legendary Creature - Gamma Berserker Hero,False
+105616,MSC,"Photon, Lady of Light",uncommon,W,4,Legendary Creature - Human Hero,False
+105817,MSC,Masked Meower,common,R,1,Creature - Spider Cat Hero,False
+105749,MSC,"Ant-Man, Reformed Rogue",uncommon,GU,3,Legendary Creature - Human Rogue Hero,False
+105813,MSC,Grapeshot,common,R,2,Sorcery,False
+105751,MSC,The Fantastic Four,mythic,GRUW,4,Legendary Creature - Human Hero,False
+105675,MSC,Radioactive Man,uncommon,B,5,Legendary Creature - Human Scientist Villain,False
+105630,MSC,Fantastic Bounce,common,U,4,Sorcery,False
+105599,MSC,"Captain Marvel, Shooting Star",mythic,W,7,Legendary Creature - Human Kree Hero,False
+105582,MSC,Warriors of Wakanda,common,G,4,Creature - Human Warrior,False
+105389,MSC,"T'Challa, the Black Panther",mythic,GW,3,Legendary Creature - Human Noble Hero,False
+105615,MSC,Origin of Captain America,uncommon,W,3,Enchantment - Saga,False
+105526,MSC,"M.O.D.O.K., Evil Intellect",rare,B,5,Legendary Artifact Creature - Villain,False
+105643,MSC,Origin of Iron Man,uncommon,U,5,Enchantment - Saga,False
+105587,MSC,"Patriot, Young Avenger",uncommon,RW,3,Legendary Creature - Human Hero,False
+105755,MSC,"She-Hulk, Attorney-at-Law",uncommon,GW,3,Legendary Creature - Gamma Advisor Hero,False
+105770,MSC,Mist-Cloaked Herald,common,U,1,Creature - Merfolk Warrior,False
+105672,MSC,"MACH-1, Swooping Scoundrel",common,B,2,Legendary Artifact Creature - Human Villain,False
+105667,MSC,"Green Goblin, Back for More",rare,B,5,Legendary Creature - Goblin Human Villain,False
+105581,MSC,Thing Swing,common,G,4,Instant,False
+105805,MSC,Doomfall,uncommon,B,3,Sorcery,False
+105671,MSC,"Kingpin, Wilson Fisk",rare,B,4,Legendary Creature - Human Villain,False
+105703,MSC,"Jack of Hearts, Volatile Hero",rare,R,3,Legendary Creature - Alien Human Hero,False
+105834,MSC,Eerie Gravestone,common,B,2,Artifact,False
+105697,MSC,"Elektra, Femme Fatale",uncommon,R,4,Legendary Creature - Human Assassin Hero,False
+105684,MSC,Void Helix,uncommon,B,6,Instant,False
+105796,MSC,Robotics Mastery,uncommon,U,5,Enchantment - Aura,False
+105814,MSC,Heroes' Hangout,uncommon,R,1,Sorcery,False
+105612,MSC,"Matt Murdock, Justice Seeker",rare,W,2,Legendary Creature - Human Advisor Hero,False
+105625,MSC,"Zarda, the Power Princess",uncommon,W,4,Legendary Creature - Human Warrior Hero,False
+105830,MSC,Gallant Citizen,common,GW,2,Creature - Human Citizen,False
+105808,MSC,The Spot's Portal,uncommon,B,3,Instant,False
+105594,MSC,"Black Panther, Most Dangerous",rare,W,3,Legendary Creature - Human Warrior Hero,False
+105793,MSC,"Doc Ock, Sinister Scientist",common,U,5,Legendary Creature - Human Scientist Villain,False
+105656,MSC,"Wasp, Shrinking Savior",rare,U,3,Legendary Creature - Human Hero,False
+105521,MSC,"Black Widow, Intel Expert",rare,W,3,Legendary Creature - Human Spy Hero,False
+105827,MSC,Scout the City,common,G,2,Sorcery,False
+105758,MSC,Wakandan Tusker,uncommon,GW,2,Creature - Elephant,False
+105739,MSC,Return of the Mole Man,mythic,G,2,Enchantment,False
+105842,MSC,"Spider-Man, Web-Spinner",mythic,R,4,Legendary Creature - Spider Human Hero,False
+105694,MSC,Crossover Collaboration,common,R,3,Instant,False
+105531,MSC,"Captain America, Steve Rogers",rare,W,5,Legendary Creature - Human Soldier Hero,False
+105559,MSC,Concentrated Fire,common,R,4,Instant,False
+105565,MSC,"Iron Man, Tony Stark",rare,R,5,Legendary Artifact Creature - Human Hero,False
+105558,MSC,"Black Widow, Natasha Romanoff",common,R,2,Legendary Creature - Human Assassin Hero,False
+105544,MSC,"Winter Soldier, Bucky Barnes",common,W,1,Legendary Creature - Human Soldier Hero,False
+105532,MSC,Captain's Defense,common,W,1,Instant,False
+105567,MSC,Power Boost,uncommon,R,3,Enchantment,False
+105563,MSC,"Hulk, Bruce Banner",uncommon,R,5,Legendary Creature - Gamma Berserker Hero,False
+105536,MSC,Hawkeye's Shot,common,W,5,Sorcery,False
+105530,MSC,"Ant-Man, Scott Lang",common,W,2,Legendary Creature - Human Hero,False
+105533,MSC,"The Falcon, Sam Wilson",uncommon,W,5,Legendary Creature - Human Hero,False
+105541,MSC,Soldier On,common,W,3,Instant,False
+105569,MSC,Repulsor Rays,common,R,1,Sorcery,False
+105538,MSC,Mandroid Squadron,common,W,2,Artifact Creature - Human Soldier,False
+105570,MSC,"Scarlet Witch, Wanda Maximoff",uncommon,R,3,Legendary Creature - Mutant Warlock Hero,False
+105573,MSC,"Spider-Man, Hometown Hero",common,R,5,Legendary Creature - Spider Human Hero,False
+105543,MSC,"The Wasp, Janet Van Dyne",uncommon,W,3,Legendary Creature - Human Hero,False
+103405,HOB,"Bilbo Baggins, Burglar",common,U,3,Legendary Creature - Halfling Rogue,True
+103455,HOB,Rage into the Valley,common,B,3,Sorcery,True
+103487,HOB,"Smaug, the Great Calamity",common,R,7,Legendary Creature - Dragon,True
+103427,HOB,Riddles in the Dark,rare,U,3,Instant,True
+103522,HOB,Wood Elves,common,G,3,Creature - Elf Scout,True
+103550,HOB,"Tom, Bert, and William",rare,BG,5,Legendary Creature - Troll,True
+103435,HOB,"Azog, Moria's Ruin",rare,B,3,Legendary Creature - Goblin Soldier,True
+103516,HOB,Radagast of Rhosgobel,rare,G,4,Legendary Creature - Avatar Wizard,True
+103443,HOB,Gnashing of Teeth,uncommon,B,3,Sorcery,True
+103536,HOB,Fearsome Goblin Pair,uncommon,BR,3,Creature - Goblin Soldier,True
+103464,HOB,"Bombur, Gentle Dreamer",uncommon,R,3,Legendary Creature - Dwarf Bard,True
+103485,HOB,Pinecone Strike,common,R,2,Instant,True
+103571,HOB,The Lonely Mountain,rare,R,0,Land - Mountain,True
+103404,HOB,"Bilbo, Thief in the Night",mythic,U,2,Legendary Creature - Halfling Rogue,True
+103509,HOB,Mirkwood Pathmaker,uncommon,G,3,Creature - Elf Ranger,True
+103510,HOB,Nasty Little Rabbit,uncommon,G,1,Creature - Rabbit,True
+103432,HOB,Uneasy Partings,common,U,4,Instant,True
+103489,HOB,Smaug the Magnificent,mythic,R,4,Legendary Creature - Dragon,True
+103388,HOB,Magnificent End,common,W,5,Instant,True
+103497,HOB,"Beorn, Reluctant Host",common,G,5,Legendary Creature - Human Bear Shapeshifter,True
+103441,HOB,Front Porch Sentries,common,B,2,Creature - Goblin Soldier,True
+103570,HOB,Lake-town,common,UW,0,Land,True
+103370,HOB,Troop of Ponies,uncommon,,2,Creature - Horse,True
+103503,HOB,Dancing from Dark to Dawn,mythic,G,5,Enchantment,True
+103481,HOB,Last Light of Durin's Day,rare,R,2,Enchantment,True
+103569,HOB,Iron Hills,common,RW,0,Land,True
+103520,HOB,Wargling,common,G,2,Creature - Wolf,True
+103579,HOB,Island,basic,U,0,Basic Land - Island,True
+103529,HOB,Bolg's Company,rare,BR,2,Creature - Goblin Soldier,True
+103437,HOB,Crude Bent Blade,common,B,3,Artifact - Equipment,True
+103384,HOB,Iron Hills Blacksmith,uncommon,W,2,Creature - Dwarf Artificer,True
+103442,HOB,Gathering of Darkness,uncommon,B,4,Sorcery,True
+103555,HOB,Giant's Boulder,common,,1,Artifact,True
+103472,HOB,"Gandalf, Goblins' Bane",mythic,R,3,Legendary Creature - Avatar Wizard,True
+103479,HOB,Gundabad Opportunist,common,R,4,Creature - Goblin Rogue,True
+103506,HOB,Gigantic Big Bear,rare,G,7,Creature - Bear,True
+103426,HOB,Ravenhill Flock,uncommon,U,4,Creature - Bird,True
+103521,HOB,Wilderland Scrounger,uncommon,G,5,Creature - Wolf,True
+103409,HOB,Elven Raft-Steerer,uncommon,U,3,Creature - Elf Pilot,True
+103527,HOB,"Bifur, Melodic Rider",uncommon,RW,6,Legendary Creature - Dwarf Bard,True
+103554,HOB,Dwarven Mattock,uncommon,,2,Artifact - Equipment,True
+103454,HOB,Nighthowl Pursuer,uncommon,B,1,Creature - Wolf,True
+103394,HOB,Settle the Wreckage,rare,W,4,Instant,True
+103461,HOB,Stony-Voiced Goblins,common,B,2,Creature - Goblin Bard,True
+103491,HOB,Snowslope Hunter,uncommon,R,3,Creature - Goblin Ranger,True
+103475,HOB,Getaway Barrel,rare,R,4,Artifact,True
+103372,HOB,Bilbo's Gambit,rare,W,2,Instant,True
+103431,HOB,Uncover the Moon-Letters,rare,U,4,Enchantment,True
+103525,HOB,Bard the Bowman,uncommon,UW,3,Legendary Creature - Human Archer,True
+103519,HOB,Warg Tactics,common,G,2,Instant,True
+103484,HOB,Óin the Brave,common,R,2,Legendary Creature - Dwarf Warrior,True
+103379,HOB,Eagle of the Great Shelf,uncommon,W,5,Creature - Bird Soldier,True
+103476,HOB,Glóin the Mighty,uncommon,R,4,Legendary Creature - Dwarf Warrior,True
+103500,HOB,Beorn's Hospitality,uncommon,G,2,Enchantment,True
+103524,HOB,"Bard, King of Dale",mythic,UW,6,Legendary Creature - Human Noble Archer,True
+103389,HOB,Moment of Glory,common,W,1,Sorcery,True
+103582,HOB,Forest,basic,G,0,Basic Land - Forest,True
+103425,HOB,Plunder the Trollshaws,common,U,2,Instant,True
+103457,HOB,Reverent Howl,common,B,3,Instant,True
+103468,HOB,Desert Were-Worm,rare,R,6,Creature - Dragon Wurm,True
+103380,HOB,The Eagles Are Coming!,rare,W,2,Instant,True
+103445,HOB,"Gollum, Silent Slinker",common,B,4,Legendary Creature - Halfling Horror,True
+103451,HOB,Head of the Hunt,rare,B,4,Creature - Wolf,True
+103402,HOB,"Bilbo, Luckwearer",uncommon,U,2,Legendary Creature - Halfling Rogue,True
+103474,HOB,"Gandalf, Spark Starter",uncommon,R,6,Legendary Creature - Avatar Wizard,True
+103511,HOB,The Notary Hobbits,rare,G,5,Legendary Creature - Halfling Advisor,True
+103368,HOB,Long-Bodied Grey Dog,common,,3,Creature - Dog,True
+103434,HOB,Along the Crooked Way,rare,B,3,Enchantment,True
+103381,HOB,Esgaroth Garrison,common,W,5,Creature - Human Soldier,True
+103496,HOB,Bejeweled Warg,rare,G,2,Creature - Wolf,True
+103428,HOB,Roll-Roll-Roll-Roll,rare,U,3,Enchantment - Saga,True
+103523,HOB,Woodland Weavemaster,uncommon,G,2,Creature - Elf Druid,True
+103439,HOB,"Down, Down to Goblin-town",uncommon,B,3,Enchantment - Saga,True
+103542,HOB,Patient Instructor,common,UW,3,Creature - Human Citizen,True
+103408,HOB,"Elrond, Moon-Reader",mythic,U,3,Legendary Creature - Elf Noble,True
+103556,HOB,"Glamdring, Foe-hammer",rare,U,2,Legendary Artifact - Equipment,True
+103459,HOB,The Sackville-Bagginses,rare,B,2,Legendary Creature - Halfling Citizen,True
+103466,HOB,"Burn, Burn, Tree and Fern",uncommon,R,4,Enchantment - Saga,True
+103531,HOB,Chief Warg's Company,rare,BG,3,Creature - Wolf,True
+103518,HOB,Troll Negotiations,uncommon,G,4,Sorcery,True
+103373,HOB,"Bofur, Reliable Guardian",uncommon,W,1,Legendary Creature - Dwarf Scout,True
+103419,HOB,The Lord of the Eagles,rare,U,9,Legendary Creature - Bird Noble,True
+103375,HOB,Celebrate the Mountain-king,uncommon,W,4,Enchantment,True
+103532,HOB,Dáin's Company,rare,RW,2,Creature - Dwarf Warrior,True
+103416,HOB,Lake-town Mariners,uncommon,U,6,Creature - Human Citizen,True
+103422,HOB,Most Decrepit Old Bird,rare,U,1,Creature - Bird,True
+103458,HOB,Rhovanion Rampager,rare,B,3,Creature - Wolf,True
+103469,HOB,Desolation of Smaug,rare,R,4,Sorcery,True
+103572,HOB,Mirkwood,common,BG,0,Land,True
+103505,HOB,"Galion, Elvenking's Butler",uncommon,G,4,Legendary Creature - Elf Advisor,True
+103478,HOB,Goblin-town Flunkies,common,R,2,Creature - Goblin Soldier,True
+103386,HOB,Lake-town Lookout,common,W,1,Creature - Human Scout,True
+103486,HOB,Ragged Short Spear,common,R,2,Artifact - Equipment,True
+103559,HOB,My Precious,rare,B,3,Legendary Artifact - Equipment,True
+103440,HOB,Dreaded Bat-Cloud,uncommon,B,5,Creature - Bat,True
+103533,HOB,Duskwatch Hunter,common,BG,3,Creature - Wolf,True
+103393,HOB,"Roads Go Ever, Ever On",rare,W,2,Enchantment - Saga,True
+103420,HOB,Master's Councillors,uncommon,U,2,Creature - Human Advisor,True
+103433,HOB,Wizard's Staff,rare,U,2,Artifact - Equipment,True
+103495,HOB,Attercop,common,G,2,Creature - Spider,True
+103502,HOB,Cantankerous Keepers,rare,G,6,Creature - Elf Soldier,True
+103385,HOB,Kíli the Resourceful,rare,W,2,Legendary Creature - Dwarf Scout,True
+103543,HOB,Silvan Reveler,uncommon,GU,4,Creature - Elf Citizen,True
+103407,HOB,Confusticate and Bebother,common,U,3,Instant,True
+103564,HOB,Well-Worn Spatula,common,,1,Artifact - Equipment,True
+103391,HOB,"Ori, Keeper of Songs",common,W,3,Legendary Creature - Dwarf Bard,True
+103413,HOB,"Gandalf, Wandering Wizard",common,U,5,Legendary Creature - Avatar Wizard,True
+103456,HOB,Ravening Warg,common,B,2,Creature - Wolf,True
+103382,HOB,Fíli the Pathfinder,rare,W,4,Legendary Creature - Dwarf Scout,True
+103397,HOB,An Unexpected Party,rare,W,4,Enchantment,True
+103501,HOB,Boughside Wanderers,common,G,6,Creature - Elf Scout,True
+103534,HOB,"Dwalin, Weaponmaster",rare,RW,2,Legendary Creature - Dwarf Warrior,True
+103581,HOB,Mountain,basic,R,0,Basic Land - Mountain,True
+103494,HOB,Tidings of War,common,R,1,Sorcery,True
+103540,HOB,Mirkwood Nurturer,common,GU,3,Creature - Elf Ranger,True
+103424,HOB,Old Fat Spider Can't See Me,uncommon,U,3,Enchantment - Saga,True
+103369,HOB,Old Thrush,common,,2,Creature - Bird,True
+103415,HOB,Lakeshore Apothecary,common,U,2,Creature - Human Cleric,True
+103448,HOB,Great Fierce Bee,common,B,3,Creature - Insect,True
+103480,HOB,Iron Hills Stalwart,common,R,5,Creature - Dwarf Warrior,True
+103578,HOB,Plains,basic,W,0,Basic Land - Plains,True
+103438,HOB,Desolation Prowler,uncommon,B,2,Creature - Wolf,True
+103453,HOB,The Master of Lake-town,rare,B,3,Legendary Creature - Human Advisor,True
+103545,HOB,Thorin Oakenshield,uncommon,RW,2,Legendary Creature - Dwarf Noble,True
+103526,HOB,Bard's Company,rare,UW,4,Creature - Human Citizen,True
+103528,HOB,Bolg of the North,uncommon,BR,5,Legendary Creature - Goblin Soldier,True
+103544,HOB,"Smaug, Wicked Worm",rare,BR,5,Legendary Creature - Dragon,True
+103548,HOB,"Thranduil, the Elvenking",rare,BGU,5,Legendary Creature - Elf Noble,True
+103568,HOB,Hobbit Hole,common,,0,Land,True
+103539,HOB,Large Bear,uncommon,BG,5,Creature - Bear,True
+103515,HOB,Quarrel,common,G,2,Instant,True
+103567,HOB,Goblin-town,common,BR,0,Land,True
+103444,HOB,"Gollum, Riddle Master",mythic,B,2,Legendary Creature - Halfling Horror,True
+103401,HOB,Vow to Erebor,common,W,2,Instant,True
+103387,HOB,Lake-town Toymaker,uncommon,W,4,Creature - Human Artificer,True
+103549,HOB,Thranduil's Company,rare,GU,4,Creature - Elf Soldier,True
+103378,HOB,Dwarven Shortsword,common,W,4,Artifact - Equipment,True
+103558,HOB,Key to the Side-Door,uncommon,,1,Artifact,True
+103421,HOB,Mirkwood Meditator,common,U,3,Creature - Elf Druid,True
+103371,HOB,Belladonna Took,rare,W,2,Legendary Creature - Halfling Citizen,True
+103396,HOB,Thorin's Last Stand,common,W,4,Instant,True
+103376,HOB,"Dáin, Lord of the Iron Hills",uncommon,W,2,Legendary Creature - Dwarf Noble,True
+103535,HOB,Eagle's Rescue,uncommon,UW,4,Enchantment - Aura,True
+103541,HOB,"Nori, Teller of Tales",common,RW,2,Legendary Creature - Dwarf Bard,True
+103483,HOB,Misty Mountains Raider,uncommon,R,5,Creature - Goblin Soldier,True
+103418,HOB,Long Lake Nuisance,common,U,4,Creature - Bird,True
+103538,HOB,The Great Goblin,rare,BR,3,Legendary Creature - Goblin Noble,True
+103449,HOB,Great Ugly-Looking Goblin,uncommon,B,6,Creature - Goblin Soldier,True
+103462,HOB,Supper for Spiders,rare,B,2,Instant,True
+103504,HOB,Down in the Valley,rare,G,3,Enchantment - Saga,True
+103452,HOB,Inside Information,mythic,B,2,Sorcery,True
+103512,HOB,Old Fat Spider,uncommon,G,6,Creature - Spider,True
+103553,HOB,The Black Arrow,uncommon,,3,Legendary Artifact - Equipment,True
+103517,HOB,Through the Forest Gate,rare,G,8,Sorcery,True
+103390,HOB,The Mountain-king's Return,uncommon,W,3,Enchantment - Saga,True
+103482,HOB,The Misty Mountains Cold,rare,R,3,Enchantment - Saga,True
+103463,HOB,"Balin, Loremaster",rare,R,5,Legendary Creature - Dwarf Bard,True
+103471,HOB,Dwarven Mauler,uncommon,R,1,Creature - Dwarf Warrior,True
+103561,HOB,"Orcrist, Goblin-cleaver",mythic,,3,Legendary Artifact - Equipment,True
+103562,HOB,"Sting, Bilbo's Sword",rare,,2,Legendary Artifact - Equipment,True
+103395,HOB,Stone by Sunlight,uncommon,W,2,Instant,True
+103514,HOB,Part in Friendship,rare,G,5,Enchantment,True
+103460,HOB,Stir Up Trouble,common,B,1,Sorcery,True
+103470,HOB,"Dori, Bearer of Friends",common,R,3,Legendary Creature - Dwarf Warrior,True
+103492,HOB,Stone-Giant of High Pass,rare,R,7,Creature - Giant,True
+103499,HOB,Beorn the Fierce,mythic,G,5,Legendary Creature - Bear Shapeshifter Warrior,True
+103508,HOB,Little Bear,common,G,3,Creature - Bear,True
+103493,HOB,"Thorin, Mountain-king",mythic,R,4,Legendary Creature - Dwarf Noble,True
+103563,HOB,Thrór's Map,uncommon,,2,Legendary Artifact,True
+103412,HOB,Fateful Discovery,mythic,U,5,Enchantment,True
+103580,HOB,Swamp,basic,B,0,Basic Land - Swamp,True
+103551,HOB,The Arkenstone,mythic,W,5,Legendary Artifact,True
+103411,HOB,Enchanted River's Grasp,common,U,3,Enchantment - Aura,True
+103429,HOB,Sound the Trumpets,uncommon,U,3,Instant,True
+103467,HOB,Dáin Ironfoot,rare,R,3,Legendary Creature - Dwarf Warrior,True
+103377,HOB,Dwarven Provisioner,common,W,2,Creature - Dwarf Citizen,True
+103566,HOB,Elvenking's Halls,common,GU,0,Land,True
+103513,HOB,Ordinary Bear,common,G,4,Creature - Bear,True
+103507,HOB,Guardian of the Halls,common,G,2,Creature - Elf Soldier,True
+103430,HOB,Thranduil's Decree,uncommon,U,6,Instant,True
+103546,HOB,"Thranduil, Sindarin Liege",uncommon,GU,4,Legendary Creature - Elf Noble,True
+103436,HOB,Bilbo's Deadly Slice,common,B,3,Instant,True
+103383,HOB,Gleaming Splendor,mythic,W,2,Enchantment,True
+103537,HOB,Goblin Plate Mail,common,BR,2,Artifact - Equipment,True
+103414,HOB,Great Gilded Boat,rare,U,3,Artifact - Vehicle,True
+103410,HOB,Elvenking's Harper,common,U,2,Creature - Elf Bard,True
+103490,HOB,Smaug's Fury,common,R,2,Instant,True
+103565,HOB,Elven Passage,rare,,0,Land,True
+103392,HOB,The Queen of Dale,mythic,W,2,Legendary Creature - Human Noble,True
+103399,HOB,Velvetwing Butterflies,common,W,3,Creature - Insect,True
+103447,HOB,Gollum the Abandoned,uncommon,B,2,Legendary Creature - Halfling Horror,True
+103530,HOB,The Chief Warg,uncommon,BG,4,Legendary Creature - Wolf,True
+103465,HOB,Bothersome Noisemaker,uncommon,R,2,Creature - Goblin Bard,True
+103584,THOB,Human Soldier,token,,0,Creature - Human Soldier,False
+103585,THOB,Goblin Army,token,,0,Creature - Goblin Army,False
+103586,THOB,Goblin Army,token,,0,Creature - Goblin Army,False
+103587,THOB,Dragon,token,,0,Creature - Dragon,False
+103588,THOB,Dwarf,token,,0,Creature - Dwarf,False
+103589,THOB,Bear,token,,0,Creature - Bear,False
+103590,THOB,Elf,token,,0,Creature - Elf,False
+103591,THOB,Wolf,token,,0,Creature - Wolf,False
+103592,THOB,Axe,token,,0,Artifact - Equipment,False
+103593,THOB,Stone Boulder,token,,0,Artifact Creature - Wall,False
+103594,THOB,Treasure,token,,0,Artifact - Treasure,False
+103595,THOB,Treasure,token,,0,Artifact - Treasure,False
+107221,THOB,Enduring Story,token,,0,,False
+103583,THOB,Bird Soldier,token,,0,Creature - Bird Soldier,False
+107387,HOB,Plains,basic,W,0,Basic Land - Plains,False
+103575,HOB,Swamp,basic,B,0,Basic Land - Swamp,False
+103574,HOB,Island,basic,U,0,Basic Land - Island,False
+107386,HOB,Plains,basic,W,0,Basic Land - Plains,False
+103573,HOB,Plains,basic,W,0,Basic Land - Plains,False
+103576,HOB,Mountain,basic,R,0,Basic Land - Mountain,False
+107388,HOB,Plains,basic,W,0,Basic Land - Plains,False
+107385,HOB,Plains,basic,W,0,Basic Land - Plains,False
+103577,HOB,Forest,basic,G,0,Basic Land - Forest,False
+103446,HOB,Meager Meal,common,B,1,Sorcery - Adventure,False
+103450,HOB,Clap! Snap!,uncommon,B,2,Sorcery - Adventure,False
+103473,HOB,Flameshape,mythic,R,2,Sorcery - Adventure,False
+103477,HOB,Easy Pickings,uncommon,R,3,Sorcery - Adventure,False
+103488,HOB,Spew Flame,common,R,5,Sorcery - Adventure,False
+103498,HOB,Till and Tend,common,G,2,Sorcery - Adventure,False
+103547,HOB,Silvan Rally,uncommon,GU,3,Sorcery - Adventure,False
+103552,HOB,Seek the Heart,mythic,W,3,Sorcery - Adventure,False
+103557,HOB,Gleam of Death,rare,U,4,Sorcery - Adventure,False
+103560,HOB,Allure of Power,rare,B,2,Instant - Adventure,False
+107389,HOB,Troop of Ponies,uncommon,,2,Creature - Horse,False
+107390,HOB,Rage into the Valley,common,B,3,Sorcery,False
+107391,HOB,The Great Goblin,rare,BR,3,Legendary Creature - Goblin Noble,False
+107392,HOB,Thorin Oakenshield,uncommon,RW,2,Legendary Creature - Dwarf Noble,False
+107393,HOB,"Gandalf, Spark Starter",uncommon,R,6,Legendary Creature - Avatar Wizard,False
+107394,HOB,"Glamdring, Foe-hammer",rare,U,2,Legendary Artifact - Equipment,False
+107395,HOB,Gleam of Death,rare,U,4,Sorcery - Adventure,False
+107396,HOB,The Eagles Are Coming!,rare,W,2,Instant,False
+107397,HOB,Dreaded Bat-Cloud,uncommon,B,5,Creature - Bat,False
+107398,HOB,The Lonely Mountain,rare,R,0,Land - Mountain,False
+107399,HOB,Chief Warg's Company,rare,BG,3,Creature - Wolf,False
+107400,HOB,Thorin's Last Stand,common,W,4,Instant,False
+107401,HOB,Bard's Company,rare,UW,4,Creature - Human Citizen,False
+107402,HOB,Bolg's Company,rare,BR,2,Creature - Goblin Soldier,False
+107403,HOB,Dáin's Company,rare,RW,2,Creature - Dwarf Warrior,False
+107404,HOB,Thranduil's Company,rare,GU,4,Creature - Elf Soldier,False
+107405,HOB,Belladonna Took,rare,W,2,Legendary Creature - Halfling Citizen,False
+107406,HOB,"Bofur, Reliable Guardian",uncommon,W,1,Legendary Creature - Dwarf Scout,False
+107407,HOB,Concerted Care,uncommon,W,2,Instant - Adventure,False
+107408,HOB,Iron Hills Blacksmith,uncommon,W,2,Creature - Dwarf Artificer,False
+107409,HOB,The Queen of Dale,mythic,W,2,Legendary Creature - Human Noble,False
+107410,HOB,"Bilbo, Luckwearer",uncommon,U,2,Legendary Creature - Halfling Rogue,False
+107411,HOB,Burglar's Plot,uncommon,U,5,Sorcery - Adventure,False
+107412,HOB,"Bilbo, Thief in the Night",mythic,U,2,Legendary Creature - Halfling Rogue,False
+107413,HOB,Fateful Discovery,mythic,U,5,Enchantment,False
+107414,HOB,Most Decrepit Old Bird,rare,U,1,Creature - Bird,False
+107415,HOB,Speak Secrets,rare,U,2,Sorcery - Adventure,False
+107416,HOB,"Azog, Moria's Ruin",rare,B,3,Legendary Creature - Goblin Soldier,False
+107417,HOB,Great Ugly-Looking Goblin,uncommon,B,6,Creature - Goblin Soldier,False
+107418,HOB,Clap! Snap!,uncommon,B,2,Sorcery - Adventure,False
+107419,HOB,Head of the Hunt,rare,B,4,Creature - Wolf,False
+107420,HOB,Desert Were-Worm,rare,R,6,Creature - Dragon Wurm,False
+107421,HOB,Desolation of Smaug,rare,R,4,Sorcery,False
+107422,HOB,Glóin the Mighty,uncommon,R,4,Legendary Creature - Dwarf Warrior,False
+107423,HOB,Easy Pickings,uncommon,R,3,Sorcery - Adventure,False
+107424,HOB,Last Light of Durin's Day,rare,R,2,Enchantment,False
+107425,HOB,Smaug the Magnificent,mythic,R,4,Legendary Creature - Dragon,False
+107426,HOB,Beorn the Fierce,mythic,G,5,Legendary Creature - Bear Shapeshifter Warrior,False
+107427,HOB,Dancing from Dark to Dawn,mythic,G,5,Enchantment,False
+107428,HOB,The Notary Hobbits,rare,G,5,Legendary Creature - Halfling Advisor,False
+107429,HOB,"Thranduil, Sindarin Liege",uncommon,GU,4,Legendary Creature - Elf Noble,False
+107430,HOB,Silvan Rally,uncommon,GU,3,Sorcery - Adventure,False
+107431,HOB,The Arkenstone,mythic,W,5,Legendary Artifact,False
+107432,HOB,Seek the Heart,mythic,W,3,Sorcery - Adventure,False
+107433,HOB,My Precious,rare,B,3,Legendary Artifact - Equipment,False
+107434,HOB,Allure of Power,rare,B,2,Instant - Adventure,False
+107435,HOB,"Orcrist, Goblin-cleaver",mythic,,3,Legendary Artifact - Equipment,False
+107436,HOB,"Sting, Bilbo's Sword",rare,,2,Legendary Artifact - Equipment,False
+107437,HOB,Elven Passage,rare,,0,Land,False
+107438,HOB,Gleaming Splendor,mythic,W,2,Enchantment,False
+107439,HOB,The Lord of the Eagles,rare,U,9,Legendary Creature - Bird Noble,False
+107440,HOB,"Gollum, Riddle Master",mythic,B,2,Legendary Creature - Halfling Horror,False
+107441,HOB,"Gandalf, Goblins' Bane",mythic,R,3,Legendary Creature - Avatar Wizard,False
+107442,HOB,Flameshape,mythic,R,2,Sorcery - Adventure,False
+107443,HOB,"Thorin, Mountain-king",mythic,R,4,Legendary Creature - Dwarf Noble,False
+107444,HOB,"Bard, King of Dale",mythic,UW,6,Legendary Creature - Human Noble Archer,False
+107445,HOB,"Smaug, Wicked Worm",rare,BR,5,Legendary Creature - Dragon,False
+107446,HOB,"Thranduil, the Elvenking",rare,BGU,5,Legendary Creature - Elf Noble,False
+107447,HOB,The Arkenstone,mythic,W,5,Legendary Artifact,False
+107448,HOB,Seek the Heart,mythic,W,3,Sorcery - Adventure,False
+107449,HOB,The Lonely Mountain,rare,R,0,Land - Mountain,False
+103374,HOB,Concerted Care,uncommon,W,2,Instant - Adventure,False
+103398,HOB,At the Door,rare,W,3,Sorcery - Adventure,False
+103400,HOB,Gaze in Wonder,common,W,2,Instant - Adventure,False
+103403,HOB,Burglar's Plot,uncommon,U,5,Sorcery - Adventure,False
+103406,HOB,Take a Glance,common,U,1,Sorcery - Adventure,False
+103417,HOB,Gone Fishing,uncommon,U,4,Instant - Adventure,False
+103423,HOB,Speak Secrets,rare,U,2,Sorcery - Adventure,False
+104644,THOC,Spirit,token,,0,Creature - Spirit,False
+104645,THOC,Orc Army,token,,0,Creature - Orc Army,False
+104646,THOC,Food,token,,0,Artifact - Food,False
+107458,HOC,"Witch-king, Bringer of Ruin",mythic,B,6,Legendary Creature - Wraith Noble,False
+107465,HOC,"Aragorn and Arwen, Wed",mythic,GW,6,Legendary Creature - Human Elf Noble,False
+108006,HOC,Shadow of the Enemy,mythic,B,6,Sorcery,False
+107990,HOC,Colossal Whale,rare,U,7,Creature - Whale,False
+103596,HOC,"Fíli and Kíli, Joyous",rare,R,3,Legendary Creature - Dwarf Bard,False
+108019,HOC,Celeborn the Wise,uncommon,G,4,Legendary Creature - Elf Noble,False
+107994,HOC,Knights of Dol Amroth,common,U,4,Creature - Human Knight,False
+107460,HOC,Cavern-Hoard Dragon,mythic,R,9,Creature - Dragon,False
+103606,HOC,Dragon's Desire,rare,R,4,Sorcery,False
+107467,HOC,"Arwen, Mortal Queen",mythic,GW,3,Legendary Creature - Elf Noble,False
+103603,HOC,Dragon-Cursed Halls,rare,,0,Land,False
+107993,HOC,Ithilien Kingfisher,common,U,3,Creature - Bird,False
+107488,HOC,Rivendell,mythic,U,0,Legendary Land,False
+108017,HOC,Orcish Siegemaster,rare,R,3,Creature - Orc Soldier,False
+108022,HOC,Elvish Visionary,common,G,2,Creature - Elf Shaman,False
+107988,HOC,Westfold Rider,common,W,2,Creature - Human Knight,False
+107999,HOC,Stern Scolding,uncommon,U,1,Instant,False
+108018,HOC,Smite the Deathless,common,R,2,Instant,False
+107486,HOC,Minas Tirith,mythic,W,0,Legendary Land,False
+108024,HOC,Gift of Strands,uncommon,G,4,Enchantment - Aura,False
+107459,HOC,Call Forth the Tempest,mythic,R,8,Sorcery,False
+107980,HOC,Eagles of the North,common,W,6,Creature - Bird Soldier,False
+107463,HOC,Elven Chorus,mythic,G,4,Enchantment,False
+108014,HOC,Inferno Titan,mythic,R,6,Creature - Giant,False
+107462,HOC,Delighted Halfling,mythic,G,1,Creature - Halfling Citizen,False
+107479,HOC,Glamdring,mythic,,2,Legendary Artifact - Equipment,False
+107453,HOC,Galadriel's Dismissal,mythic,W,1,Instant,False
+108020,HOC,Elvish Archdruid,rare,G,3,Creature - Elf Druid,False
+108005,HOC,Night's Whisper,common,B,2,Sorcery,False
+107985,HOC,"Landroval, Horizon Witness",uncommon,W,5,Legendary Creature - Bird Noble,False
+103607,HOC,Necklace of Girion,rare,G,3,Legendary Artifact,False
+107997,HOC,Nimrodel Watcher,common,U,2,Creature - Elf Scout,False
+107991,HOC,Grey Havens Navigator,common,U,3,Creature - Elf Pilot,False
+107481,HOC,The One Ring,mythic,,4,Legendary Artifact,False
+107983,HOC,Fiend Hunter,uncommon,W,3,Creature - Human Cleric,False
+107451,HOC,Flowering of the White Tree,mythic,W,2,Legendary Enchantment,False
+107466,HOC,"Aragorn, the Uniter",mythic,GRUW,4,Legendary Creature - Human Noble,False
+108026,HOC,Mirkwood Elk,rare,G,6,Creature - Elk,False
+108010,HOC,Goblin Cratermaker,uncommon,R,2,Creature - Goblin Warrior,False
+107484,HOC,The Black Gate,mythic,B,0,Legendary Land - Gate,False
+107476,HOC,"Andúril, Flame of the West",mythic,,3,Legendary Artifact - Equipment,False
+108009,HOC,Fire of Orthanc,common,R,4,Sorcery,False
+107981,HOC,Errand-Rider of Gondor,common,W,3,Creature - Human Soldier,False
+107473,HOC,"Sauron, the Dark Lord",mythic,BRU,6,Legendary Creature - Avatar Horror,False
+107982,HOC,Esquire of the King,common,W,1,Creature - Human Soldier,False
+107986,HOC,Mentor of the Meek,rare,W,3,Creature - Human Soldier,False
+107474,HOC,"Sauron, the Lidless Eye",mythic,BR,5,Legendary Creature - Avatar Horror,False
+108004,HOC,Merciless Executioner,uncommon,B,3,Creature - Orc Warrior,False
+103599,HOC,"Bilbo, Fellow Conspirator",rare,G,3,Legendary Creature - Halfling Citizen,False
+107487,HOC,Mount Doom,mythic,BR,0,Legendary Land,False
+107461,HOC,"Arwen, Weaver of Hope",mythic,G,3,Legendary Creature - Elf Noble,False
+103598,HOC,"Thorin, King of Durin's Folk",rare,RW,5,Legendary Creature - Dwarf Noble,False
+108000,HOC,Willow-Wind,common,U,5,Creature - Elemental,False
+107452,HOC,The Gaffer,mythic,W,3,Legendary Creature - Halfling Peasant,False
+107987,HOC,Soldier of the Grey Host,common,W,4,Creature - Spirit Soldier,False
+108003,HOC,Languish,rare,B,4,Sorcery,False
+108028,HOC,Rogue's Passage,uncommon,,0,Land,False
+107457,HOC,Witch-king of Angmar,mythic,B,5,Legendary Creature - Wraith Noble,False
+108015,HOC,Oliphaunt,common,R,6,Creature - Elephant,False
+107977,HOC,Banishing Light,uncommon,W,3,Enchantment,False
+107472,HOC,Saruman of Many Colors,mythic,BUW,6,Legendary Creature - Avatar Wizard,False
+107992,HOC,Hithlain Knots,common,U,2,Instant,False
+108027,HOC,Wayfarer's Bauble,common,,1,Artifact,False
+107998,HOC,Pelargir Survivor,common,U,2,Creature - Human Peasant,False
+103600,HOC,Bag End Banquet,rare,,6,Artifact,False
+108016,HOC,Olog-hai Crusher,common,R,4,Creature - Troll Soldier,False
+107475,HOC,Tom Bombadil,mythic,BGRUW,5,Legendary Creature - God Bard,False
+107455,HOC,Raise the Palisade,mythic,U,5,Sorcery,False
+107468,HOC,Flame of Anor,mythic,RU,3,Instant,False
+108023,HOC,Galadhrim Guide,common,G,4,Creature - Elf Scout,False
+107995,HOC,Lórien Revealed,common,U,5,Sorcery,False
+107477,HOC,"Andúril, Narsil Reforged",mythic,,2,Legendary Artifact - Equipment,False
+107485,HOC,"Minas Morgul, Dark Fortress",mythic,B,0,Legendary Land,False
+107979,HOC,Dúnedain Blade,common,W,2,Artifact - Equipment,False
+108002,HOC,Haunt of the Dead Marshes,common,B,1,Creature - Nightmare Elf,False
+108012,HOC,Guttersnipe,uncommon,R,3,Creature - Goblin Shaman,False
+103597,HOC,"Gandalf, Party Guest",rare,RUW,4,Legendary Creature - Avatar Wizard,False
+107480,HOC,Mithril Coat,mythic,,3,Legendary Artifact - Equipment,False
+107978,HOC,Dawn of a New Age,mythic,W,2,Enchantment,False
+107450,HOC,Dawn of a New Age,mythic,W,2,Enchantment,False
+108013,HOC,Improvised Club,common,R,2,Instant,False
+103601,HOC,"Ori, Plate Stacker",rare,W,7,Legendary Creature - Dwarf Bard,False
+108007,HOC,Troll of Khazad-dûm,common,B,6,Creature - Troll,False
+107456,HOC,Orcish Bowmasters,mythic,B,2,Creature - Orc Archer,False
+103604,HOC,Smaug the Impenetrable,rare,BR,7,Legendary Creature - Dragon,False
+107478,HOC,Bilbo's Ring,mythic,,3,Legendary Artifact - Equipment,False
+108025,HOC,Lothlórien Lookout,common,G,2,Creature - Elf Scout,False
+103602,HOC,Long-Lost Lances,rare,,2,Artifact - Equipment,False
+107483,HOC,Relic of Sauron,mythic,BRU,4,Artifact,False
+107454,HOC,Reprieve,mythic,W,2,Instant,False
+103605,HOC,Bilbo's Burglaring,rare,U,6,Sorcery,False
+107470,HOC,"Gríma, Saruman's Footman",mythic,BU,4,Legendary Creature - Human Advisor,False
+108008,HOC,Battle-Scarred Goblin,common,R,2,Creature - Goblin Warrior,False
+107464,HOC,Last March of the Ents,mythic,G,8,Sorcery,False
+107469,HOC,"Galadriel, Light of Valinor",mythic,GUW,5,Legendary Creature - Elf Noble,False
+108011,HOC,Goblin Fireleaper,uncommon,R,2,Creature - Goblin Warrior,False
+107984,HOC,Fog on the Barrow-Downs,common,W,3,Enchantment - Aura,False
+108001,HOC,Bitter Downfall,uncommon,B,4,Instant,False
+107989,HOC,Captain of Umbar,common,U,3,Creature - Human Pirate,False
+107471,HOC,"Lotho, Corrupt Shirriff",mythic,BW,2,Legendary Creature - Halfling Rogue,False
+107482,HOC,Palantír of Orthanc,mythic,,3,Legendary Artifact,False
+107489,HOC,The Shire,mythic,G,0,Legendary Land,False
+108021,HOC,Elvish Mystic,common,G,1,Creature - Elf Druid,False
+107996,HOC,Minas Tirith Garrison,rare,U,4,Creature - Human Soldier,False
+107491,HOC,A-The One Ring,mythic,,4,Legendary Artifact,False
+107490,HOC,A-Orcish Bowmasters,mythic,B,2,Creature - Orc Archer,False

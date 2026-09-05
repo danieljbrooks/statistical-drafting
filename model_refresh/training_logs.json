@@ -486,5 +486,13 @@
     "validation_accuracy": 67.75753257328991,
     "num_epochs": 40,
     "training_date": "2026-07-09 07:19:29"
+  },
+  {
+    "experiment_name": "HOB_Premier",
+    "training_picks": 74625,
+    "validation_picks": 18724,
+    "validation_accuracy": 70.99978637043367,
+    "num_epochs": 108,
+    "training_date": "2026-09-04 17:40:05"
   }
 ]
