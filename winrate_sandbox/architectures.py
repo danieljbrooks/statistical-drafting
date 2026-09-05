@@ -71,6 +71,19 @@ ARCHITECTURES = {
         ),
         5e-4, {},
     ),
+    # --- Explicit learnable colour-structure term, added to the logit. ---
+    "mlp_400x2_colour": (
+        sd.WinrateColourNet, dict(hidden_dims=[400, 400]), 5e-4, {},
+    ),
+    "dn_all_features_colour": (
+        sd.WinrateTransferColourNet,
+        dict(
+            feature_modes=["scalars", "hidden", "context"],
+            use_collection=True,
+            hidden_dims=[400, 400],
+        ),
+        5e-4, {},
+    ),
     # DraftNet's own trunk as the winrate model's trunk.
     "dn_trunk_frozen": (sd.WinrateFineTuneNet, dict(freeze_trunk=True), 1e-3, {}),
     "dn_trunk_finetune": (sd.WinrateFineTuneNet, dict(freeze_trunk=False), 1e-4, {}),
@@ -78,6 +91,8 @@ ARCHITECTURES = {
 
 # Architectures that need to know which set's DraftNet to load.
 TRANSFER_CLASSES = (sd.WinrateTransferNet, sd.WinrateFineTuneNet)
+# Architectures that need the set's card colours.
+COLOUR_CLASSES = (sd.WinrateColourNet, sd.WinrateTransferColourNet)
 
 
 def build_network(
@@ -95,14 +110,14 @@ def build_network(
     )
     if network_class is not sd.WinrateLinear:
         kwargs["dropout"] = dropout
-    if network_class in TRANSFER_CLASSES:
+    if issubclass(network_class, TRANSFER_CLASSES) or issubclass(network_class, COLOUR_CLASSES):
         kwargs["set_abbreviation"] = set_abbreviation
         kwargs["draft_mode"] = draft_mode
     return network_class(**kwargs)
 
 
 def is_transfer(name):
-    return ARCHITECTURES[name][0] in TRANSFER_CLASSES
+    return issubclass(ARCHITECTURES[name][0], TRANSFER_CLASSES)
 
 
 # Caching costs (n_drafts x picks x n_features) floats, so only the compact feature sets
@@ -113,7 +128,7 @@ MAX_CACHED_FEATURES = 32
 def cacheable_feature_modes(name):
     """Feature modes to precompute for this architecture, or None to compute per batch."""
     network_class, fixed, _, _ = ARCHITECTURES[name]
-    if network_class is not sd.WinrateTransferNet:
+    if not issubclass(network_class, sd.WinrateTransferNet):
         return None
     modes = fixed.get("feature_modes", ["scalars"])
     if modes == ["scalars"]:

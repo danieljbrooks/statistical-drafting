@@ -1,0 +1,1103 @@
+[
+  {
+    "architecture": "linear",
+    "set": "FDN",
+    "draft_mode": "Premier",
+    "n_parameters": 368,
+    "loss": "binomial_nll",
+    "learning_rate": 0.003,
+    "dropout": 0.5,
+    "input_dropout": 0.2,
+    "weight_decay": 0.0001,
+    "val_log_loss": 0.6871727705001831,
+    "baseline_winrate": 0.5390278697013855,
+    "test_metrics_by_seed": [
+      {
+        "log_loss_per_game": 0.6886124610900879,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.0025075674057006836,
+        "pearson_r": 0.15033660002901655,
+        "rmse_vs_observed": 0.26221764087677,
+        "skill_spread": 0.033051811158657074,
+        "mean_prediction": 0.5376186370849609,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6911125779151917,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.04405641494948,
+            "skill_spread": 0.00855710543692112
+          },
+          "7": {
+            "log_loss_per_game": 0.689847469329834,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.10721994636142812,
+            "skill_spread": 0.021237798035144806
+          },
+          "14": {
+            "log_loss_per_game": 0.6895058751106262,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11539032642032432,
+            "skill_spread": 0.02532980963587761
+          },
+          "21": {
+            "log_loss_per_game": 0.6882312893867493,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16013375200330715,
+            "skill_spread": 0.03476400673389435
+          },
+          "28": {
+            "log_loss_per_game": 0.6882880926132202,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16043183899300453,
+            "skill_spread": 0.03553950414061546
+          },
+          "35": {
+            "log_loss_per_game": 0.6874266862869263,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.18606733606428602,
+            "skill_spread": 0.04306914284825325
+          },
+          "42": {
+            "log_loss_per_game": 0.6874496936798096,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.18576467790207013,
+            "skill_spread": 0.0409562885761261
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4655688405036926,
+            "actual_winrate": 0.44612884521484375,
+            "games": 1847
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.49538397789001465,
+            "actual_winrate": 0.50201815366745,
+            "games": 1982
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5112355947494507,
+            "actual_winrate": 0.4931437373161316,
+            "games": 1969
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5239383578300476,
+            "actual_winrate": 0.517946183681488,
+            "games": 2006
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.534549355506897,
+            "actual_winrate": 0.5290034413337708,
+            "games": 2017
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5443927645683289,
+            "actual_winrate": 0.5290640592575073,
+            "games": 2030
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5551125407218933,
+            "actual_winrate": 0.5666049718856812,
+            "games": 2162
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5668272972106934,
+            "actual_winrate": 0.5196656584739685,
+            "games": 2034
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5811635255813599,
+            "actual_winrate": 0.5969272255897522,
+            "games": 2213
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6092779636383057,
+            "actual_winrate": 0.6006346344947815,
+            "games": 2206
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6887872219085693,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.0023328065872192383,
+        "pearson_r": 0.14805408253734303,
+        "rmse_vs_observed": 0.2620430588722229,
+        "skill_spread": 0.032907526940107346,
+        "mean_prediction": 0.5365793108940125,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6908538937568665,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.04010609805088274,
+            "skill_spread": 0.008086214773356915
+          },
+          "7": {
+            "log_loss_per_game": 0.6898122429847717,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.10575783608471659,
+            "skill_spread": 0.01958521269261837
+          },
+          "14": {
+            "log_loss_per_game": 0.6896917819976807,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11195659611569969,
+            "skill_spread": 0.024583688005805016
+          },
+          "21": {
+            "log_loss_per_game": 0.6883699893951416,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.15929771590932232,
+            "skill_spread": 0.03406418487429619
+          },
+          "28": {
+            "log_loss_per_game": 0.6884438991546631,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.15911262515502464,
+            "skill_spread": 0.03592956066131592
+          },
+          "35": {
+            "log_loss_per_game": 0.6877384185791016,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1828787289934035,
+            "skill_spread": 0.04213113337755203
+          },
+          "42": {
+            "log_loss_per_game": 0.6876212358474731,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.183460102326855,
+            "skill_spread": 0.04236835613846779
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.45982396602630615,
+            "actual_winrate": 0.45817989110946655,
+            "games": 1901
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4904818832874298,
+            "actual_winrate": 0.4893062114715576,
+            "games": 1917
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5063436627388,
+            "actual_winrate": 0.4913088083267212,
+            "games": 1956
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5196318626403809,
+            "actual_winrate": 0.5244140625,
+            "games": 2048
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.530550479888916,
+            "actual_winrate": 0.5363457798957825,
+            "games": 2036
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5409700274467468,
+            "actual_winrate": 0.5365141034126282,
+            "games": 2054
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5521478652954102,
+            "actual_winrate": 0.5403341054916382,
+            "games": 2095
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5642543435096741,
+            "actual_winrate": 0.552217423915863,
+            "games": 2097
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5791206955909729,
+            "actual_winrate": 0.5719625949859619,
+            "games": 2140
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6085858345031738,
+            "actual_winrate": 0.6057605743408203,
+            "games": 2222
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6886662840843201,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.002453744411468506,
+        "pearson_r": 0.1509589728879959,
+        "rmse_vs_observed": 0.2624647617340088,
+        "skill_spread": 0.03305656462907791,
+        "mean_prediction": 0.5387067198753357,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6908610463142395,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.03962290560458099,
+            "skill_spread": 0.006102728191763163
+          },
+          "7": {
+            "log_loss_per_game": 0.6897085905075073,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.10981653160505214,
+            "skill_spread": 0.022178243845701218
+          },
+          "14": {
+            "log_loss_per_game": 0.6896344423294067,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1165440829968156,
+            "skill_spread": 0.028071749955415726
+          },
+          "21": {
+            "log_loss_per_game": 0.6882665157318115,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1608485040355953,
+            "skill_spread": 0.03384428471326828
+          },
+          "28": {
+            "log_loss_per_game": 0.6884031295776367,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16072270975927402,
+            "skill_spread": 0.03728418052196503
+          },
+          "35": {
+            "log_loss_per_game": 0.687686026096344,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.18649471021211872,
+            "skill_spread": 0.04265329986810684
+          },
+          "42": {
+            "log_loss_per_game": 0.6874161958694458,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.18561941006321384,
+            "skill_spread": 0.04145093634724617
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.46176862716674805,
+            "actual_winrate": 0.4524572789669037,
+            "games": 1872
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4912288188934326,
+            "actual_winrate": 0.484089732170105,
+            "games": 1917
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5070816874504089,
+            "actual_winrate": 0.4979979991912842,
+            "games": 1998
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5200533866882324,
+            "actual_winrate": 0.5420560836791992,
+            "games": 2033
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5310115218162537,
+            "actual_winrate": 0.5213082432746887,
+            "games": 2018
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.541601300239563,
+            "actual_winrate": 0.5252822637557983,
+            "games": 2037
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5523110032081604,
+            "actual_winrate": 0.5507996082305908,
+            "games": 2126
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5639088749885559,
+            "actual_winrate": 0.5377175807952881,
+            "games": 2068
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.577958881855011,
+            "actual_winrate": 0.58298659324646,
+            "games": 2163
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6069076657295227,
+            "actual_winrate": 0.6087735295295715,
+            "games": 2234
+          }
+        ]
+      }
+    ],
+    "test_log_loss_mean": 0.6886886556943258,
+    "test_log_loss_sd": 8.950252856630033e-05,
+    "test_gain_mean": 0.002431372801462809,
+    "test_r_mean": 0.14978321848478515,
+    "test_r_pool_mean": 0.184948063430713,
+    "test_gain_pool_mean": 0.0036242828125426785,
+    "test_sd_pool_mean": 0.041591860353946686
+  },
+  {
+    "architecture": "mlp_400x2",
+    "set": "FDN",
+    "draft_mode": "Premier",
+    "n_parameters": 282289,
+    "loss": "binomial_nll",
+    "learning_rate": 0.0005,
+    "dropout": 0.5,
+    "input_dropout": 0.2,
+    "weight_decay": 0.0001,
+    "val_log_loss": 0.6871731877326965,
+    "baseline_winrate": 0.5390278697013855,
+    "test_metrics_by_seed": [
+      {
+        "log_loss_per_game": 0.6885566115379333,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.0025634169578552246,
+        "pearson_r": 0.15162453382351643,
+        "rmse_vs_observed": 0.26079797744750977,
+        "skill_spread": 0.037288375198841095,
+        "mean_prediction": 0.531987726688385,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6911611557006836,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.04404505897269474,
+            "skill_spread": 0.011118466034531593
+          },
+          "7": {
+            "log_loss_per_game": 0.6898163557052612,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11133059900167268,
+            "skill_spread": 0.024533694609999657
+          },
+          "14": {
+            "log_loss_per_game": 0.6896874308586121,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11485579643258884,
+            "skill_spread": 0.03176083788275719
+          },
+          "21": {
+            "log_loss_per_game": 0.6882386207580566,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.15769404996415154,
+            "skill_spread": 0.03749705106019974
+          },
+          "28": {
+            "log_loss_per_game": 0.6882425546646118,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16142004358124903,
+            "skill_spread": 0.04001304507255554
+          },
+          "35": {
+            "log_loss_per_game": 0.6872472167015076,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1892242775422079,
+            "skill_spread": 0.0464249923825264
+          },
+          "42": {
+            "log_loss_per_game": 0.6871364712715149,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.19388795564933883,
+            "skill_spread": 0.046549905091524124
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4422457814216614,
+            "actual_winrate": 0.4530830979347229,
+            "games": 1865
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4789702892303467,
+            "actual_winrate": 0.48736461997032166,
+            "games": 1939
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4968772232532501,
+            "actual_winrate": 0.4825819730758667,
+            "games": 1952
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5106833577156067,
+            "actual_winrate": 0.5123885273933411,
+            "games": 2018
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5226624608039856,
+            "actual_winrate": 0.5384231805801392,
+            "games": 2004
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.534134030342102,
+            "actual_winrate": 0.5497814416885376,
+            "games": 2059
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5458217859268188,
+            "actual_winrate": 0.560093879699707,
+            "games": 2130
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5582441091537476,
+            "actual_winrate": 0.5534531474113464,
+            "games": 2114
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5745454430580139,
+            "actual_winrate": 0.5508395433425903,
+            "games": 2144
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6070201992988586,
+            "actual_winrate": 0.6144578456878662,
+            "games": 2241
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6884915828704834,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.0026284456253051758,
+        "pearson_r": 0.1563968577021744,
+        "rmse_vs_observed": 0.2617834210395813,
+        "skill_spread": 0.034693267196416855,
+        "mean_prediction": 0.5368025302886963,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6907864809036255,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.04376555114109731,
+            "skill_spread": 0.01020658016204834
+          },
+          "7": {
+            "log_loss_per_game": 0.6896001696586609,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1129671686453358,
+            "skill_spread": 0.022160477936267853
+          },
+          "14": {
+            "log_loss_per_game": 0.6894221901893616,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1214524178582592,
+            "skill_spread": 0.02919607423245907
+          },
+          "21": {
+            "log_loss_per_game": 0.6887301206588745,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16335127100737404,
+            "skill_spread": 0.03185884281992912
+          },
+          "28": {
+            "log_loss_per_game": 0.6882299780845642,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16175137656262037,
+            "skill_spread": 0.035048361867666245
+          },
+          "35": {
+            "log_loss_per_game": 0.6872484683990479,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.19864054547879206,
+            "skill_spread": 0.042343880981206894
+          },
+          "42": {
+            "log_loss_per_game": 0.6873517632484436,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.19851360200915277,
+            "skill_spread": 0.04352949559688568
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4651459753513336,
+            "actual_winrate": 0.4399779736995697,
+            "games": 1816
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.49967169761657715,
+            "actual_winrate": 0.4949031472206116,
+            "games": 1962
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.516956627368927,
+            "actual_winrate": 0.4949899911880493,
+            "games": 1996
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5300472378730774,
+            "actual_winrate": 0.5138818621635437,
+            "games": 1981
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5417348742485046,
+            "actual_winrate": 0.5249878764152527,
+            "games": 2061
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5523154139518738,
+            "actual_winrate": 0.539667010307312,
+            "games": 2042
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5627669095993042,
+            "actual_winrate": 0.54736328125,
+            "games": 2048
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5745581984519958,
+            "actual_winrate": 0.5519203543663025,
+            "games": 2109
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5896410942077637,
+            "actual_winrate": 0.5870059132575989,
+            "games": 2201
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6187635660171509,
+            "actual_winrate": 0.604888916015625,
+            "games": 2250
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6884864568710327,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.0026335716247558594,
+        "pearson_r": 0.15576592995701705,
+        "rmse_vs_observed": 0.2616800367832184,
+        "skill_spread": 0.03554776683449745,
+        "mean_prediction": 0.5363498330116272,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6908090114593506,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.0446327073771805,
+            "skill_spread": 0.010328447446227074
+          },
+          "7": {
+            "log_loss_per_game": 0.6896015405654907,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11381456484233766,
+            "skill_spread": 0.02259380929172039
+          },
+          "14": {
+            "log_loss_per_game": 0.6894752383232117,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1219262831751377,
+            "skill_spread": 0.02793392725288868
+          },
+          "21": {
+            "log_loss_per_game": 0.6881063580513,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16553535751536064,
+            "skill_spread": 0.03723530471324921
+          },
+          "28": {
+            "log_loss_per_game": 0.6882787942886353,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16047327018943694,
+            "skill_spread": 0.03783239424228668
+          },
+          "35": {
+            "log_loss_per_game": 0.6873714327812195,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.19216668449797017,
+            "skill_spread": 0.043795760720968246
+          },
+          "42": {
+            "log_loss_per_game": 0.6871880292892456,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.19347832287180372,
+            "skill_spread": 0.045986805111169815
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4534672796726227,
+            "actual_winrate": 0.4542066156864166,
+            "games": 1878
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.48880520462989807,
+            "actual_winrate": 0.47494781017303467,
+            "games": 1916
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5083546042442322,
+            "actual_winrate": 0.5087000727653503,
+            "games": 1954
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5223270654678345,
+            "actual_winrate": 0.5178748965263367,
+            "games": 2014
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5347062349319458,
+            "actual_winrate": 0.5262126326560974,
+            "games": 2041
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5455488562583923,
+            "actual_winrate": 0.5359606146812439,
+            "games": 2030
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5559976100921631,
+            "actual_winrate": 0.5431279540061951,
+            "games": 2110
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5687265992164612,
+            "actual_winrate": 0.5632346272468567,
+            "games": 2127
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5839821696281433,
+            "actual_winrate": 0.5714285969734192,
+            "games": 2156
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6160534024238586,
+            "actual_winrate": 0.6071428656578064,
+            "games": 2240
+          }
+        ]
+      }
+    ],
+    "test_log_loss_mean": 0.6885115504264832,
+    "test_log_loss_sd": 3.910814226522777e-05,
+    "test_gain_mean": 0.00260847806930542,
+    "test_r_mean": 0.15459577382756928,
+    "test_r_pool_mean": 0.19529329351009844,
+    "test_gain_pool_mean": 0.0038945700083841497,
+    "test_sd_pool_mean": 0.04535540193319321
+  },
+  {
+    "architecture": "mlp_400x2_colour",
+    "set": "FDN",
+    "draft_mode": "Premier",
+    "n_parameters": 283500,
+    "loss": "binomial_nll",
+    "learning_rate": 0.0005,
+    "dropout": 0.5,
+    "input_dropout": 0.2,
+    "weight_decay": 0.0001,
+    "val_log_loss": 0.686938464641571,
+    "baseline_winrate": 0.5390278697013855,
+    "test_metrics_by_seed": [
+      {
+        "log_loss_per_game": 0.688488781452179,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.002631247043609619,
+        "pearson_r": 0.15814600205957555,
+        "rmse_vs_observed": 0.2605617642402649,
+        "skill_spread": 0.03987216576933861,
+        "mean_prediction": 0.5320966243743896,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6909496188163757,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.05170376304980987,
+            "skill_spread": 0.0118092717602849
+          },
+          "7": {
+            "log_loss_per_game": 0.6900111436843872,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1084367202279111,
+            "skill_spread": 0.02695615589618683
+          },
+          "14": {
+            "log_loss_per_game": 0.689731776714325,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11749746562541073,
+            "skill_spread": 0.03438768535852432
+          },
+          "21": {
+            "log_loss_per_game": 0.6881186962127686,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16569477726125414,
+            "skill_spread": 0.039951715618371964
+          },
+          "28": {
+            "log_loss_per_game": 0.6882187724113464,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.16783141118617698,
+            "skill_spread": 0.043229810893535614
+          },
+          "35": {
+            "log_loss_per_game": 0.68706214427948,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1993811969576509,
+            "skill_spread": 0.04953467473387718
+          },
+          "42": {
+            "log_loss_per_game": 0.6869034767150879,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.2040246953498177,
+            "skill_spread": 0.05070924386382103
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.43383967876434326,
+            "actual_winrate": 0.4416438341140747,
+            "games": 1825
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4719277620315552,
+            "actual_winrate": 0.4878803491592407,
+            "games": 1939
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4915749728679657,
+            "actual_winrate": 0.489943265914917,
+            "games": 1939
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5069941282272339,
+            "actual_winrate": 0.523244321346283,
+            "games": 2022
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5200368165969849,
+            "actual_winrate": 0.5246791839599609,
+            "games": 2026
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5331210494041443,
+            "actual_winrate": 0.5412843823432922,
+            "games": 2071
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5457841157913208,
+            "actual_winrate": 0.5698113441467285,
+            "games": 2120
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5596060156822205,
+            "actual_winrate": 0.5492891073226929,
+            "games": 2110
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5770055055618286,
+            "actual_winrate": 0.5528185963630676,
+            "games": 2111
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6122853755950928,
+            "actual_winrate": 0.6165870428085327,
+            "games": 2303
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6884132623672485,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.002706766128540039,
+        "pearson_r": 0.16194082302263121,
+        "rmse_vs_observed": 0.26135221123695374,
+        "skill_spread": 0.036905888468027115,
+        "mean_prediction": 0.535999059677124,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.690711498260498,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.05122951396432869,
+            "skill_spread": 0.010570923797786236
+          },
+          "7": {
+            "log_loss_per_game": 0.6897764205932617,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.10853855365434553,
+            "skill_spread": 0.024034792557358742
+          },
+          "14": {
+            "log_loss_per_game": 0.6894832849502563,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.12264246052829637,
+            "skill_spread": 0.03185238316655159
+          },
+          "21": {
+            "log_loss_per_game": 0.6886135935783386,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1683876367659399,
+            "skill_spread": 0.03407347947359085
+          },
+          "28": {
+            "log_loss_per_game": 0.688159167766571,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.1683004330037626,
+            "skill_spread": 0.03813828527927399
+          },
+          "35": {
+            "log_loss_per_game": 0.6869573593139648,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.20749840446985626,
+            "skill_spread": 0.04477384686470032
+          },
+          "42": {
+            "log_loss_per_game": 0.6869052648544312,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.20815383224044057,
+            "skill_spread": 0.04705922305583954
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4562704265117645,
+            "actual_winrate": 0.43117743730545044,
+            "games": 1809
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4914070963859558,
+            "actual_winrate": 0.49481865763664246,
+            "games": 1930
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5113540887832642,
+            "actual_winrate": 0.4945736527442932,
+            "games": 1935
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5256450772285461,
+            "actual_winrate": 0.5211473107337952,
+            "games": 2057
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5374740958213806,
+            "actual_winrate": 0.5125125050544739,
+            "games": 1998
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5488418936729431,
+            "actual_winrate": 0.5499049425125122,
+            "games": 2104
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5602389574050903,
+            "actual_winrate": 0.5475266575813293,
+            "games": 2062
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5733844637870789,
+            "actual_winrate": 0.5715630650520325,
+            "games": 2124
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5904337763786316,
+            "actual_winrate": 0.5539839863777161,
+            "games": 2121
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.62177973985672,
+            "actual_winrate": 0.6169389486312866,
+            "games": 2326
+          }
+        ]
+      },
+      {
+        "log_loss_per_game": 0.6883992552757263,
+        "baseline_log_loss_per_game": 0.6911200284957886,
+        "log_loss_improvement": 0.002720773220062256,
+        "pearson_r": 0.1616155549775226,
+        "rmse_vs_observed": 0.26086586713790894,
+        "skill_spread": 0.03810087591409683,
+        "mean_prediction": 0.533955454826355,
+        "by_n_picks": {
+          "1": {
+            "log_loss_per_game": 0.6906678080558777,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.05339026897804561,
+            "skill_spread": 0.0125789949670434
+          },
+          "7": {
+            "log_loss_per_game": 0.6897504925727844,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.11033122087090388,
+            "skill_spread": 0.024887794628739357
+          },
+          "14": {
+            "log_loss_per_game": 0.6894697546958923,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.12297688553761746,
+            "skill_spread": 0.03059433400630951
+          },
+          "21": {
+            "log_loss_per_game": 0.6879640817642212,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.17210152989386784,
+            "skill_spread": 0.039984285831451416
+          },
+          "28": {
+            "log_loss_per_game": 0.6882010698318481,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.167767334971671,
+            "skill_spread": 0.04106702283024788
+          },
+          "35": {
+            "log_loss_per_game": 0.6871069669723511,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.20164857575523418,
+            "skill_spread": 0.04686616361141205
+          },
+          "42": {
+            "log_loss_per_game": 0.6868515610694885,
+            "baseline_log_loss_per_game": 0.6911199912781189,
+            "pearson_r": 0.2034942022817087,
+            "skill_spread": 0.04937802627682686
+          }
+        },
+        "calibration_full_pool": [
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.44322267174720764,
+            "actual_winrate": 0.43845316767692566,
+            "games": 1836
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.4802636504173279,
+            "actual_winrate": 0.4853709638118744,
+            "games": 1914
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5007471442222595,
+            "actual_winrate": 0.4989680051803589,
+            "games": 1938
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5158938765525818,
+            "actual_winrate": 0.5237624049186707,
+            "games": 2020
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5289937257766724,
+            "actual_winrate": 0.5348499417304993,
+            "games": 2066
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5402336716651917,
+            "actual_winrate": 0.5365736484527588,
+            "games": 2078
+          },
+          {
+            "n_decks": 373,
+            "mean_predicted": 0.5524312853813171,
+            "actual_winrate": 0.5472235679626465,
+            "games": 2107
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5659067034721375,
+            "actual_winrate": 0.5542747378349304,
+            "games": 2082
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.5831283926963806,
+            "actual_winrate": 0.5614696145057678,
+            "games": 2123
+          },
+          {
+            "n_decks": 372,
+            "mean_predicted": 0.6175508499145508,
+            "actual_winrate": 0.6168549060821533,
+            "games": 2302
+          }
+        ]
+      }
+    ],
+    "test_log_loss_mean": 0.6884337663650513,
+    "test_log_loss_sd": 4.815645867355762e-05,
+    "test_gain_mean": 0.0026862621307373047,
+    "test_r_mean": 0.1605674600199098,
+    "test_r_pool_mean": 0.20522424329065567,
+    "test_gain_pool_mean": 0.004233223731782994,
+    "test_sd_pool_mean": 0.04904883106549581
+  }
+]

@@ -115,6 +115,7 @@ def create_winrate_dataset(
     set_abbreviation: str,
     draft_mode: str = "Premier",
     min_rank: Optional[str] = "diamond",
+    player_filter: Optional[str] = None,
     omit_first_days: int = 2,
     train_fraction: float = 0.7,
     val_fraction: float = 0.15,
@@ -136,13 +137,25 @@ def create_winrate_dataset(
         draft_mode (str): "Premier", "Trad", "PickTwo", or "PickTwoTrad".
         min_rank (str | None): Keep drafts at this 17lands rank or above ("diamond" ->
             diamond + mythic). None keeps every draft, including the ~8% whose rank is
-            not recorded.
+            not recorded. Ignored when ``player_filter`` is set.
+        player_filter (str | None): "draftnet" selects players the way DraftNet's own
+            training set does - 95% confidence (stdev=1.5) that the player's true
+            winrate exceeds 0.55, from their winrate and games-played buckets - instead
+            of filtering on rank. The two select very different populations: on FDN the
+            rank filter keeps 20% of drafts and this keeps 4.7%, overlapping in only
+            1,698 of them, because a high-winrate player who does not grind ladder stays
+            at platinum or gold. Tagged "topplayer".
         omit_first_days (int): Omit this many days from the beginning of the dataset.
         train_fraction (float): Fraction of drafts used for training.
         val_fraction (float): Fraction of drafts used for early stopping / model selection.
         overwrite (bool): If False, reuse existing files.
     """
-    rank_tag = "allranks" if min_rank is None else min_rank
+    if player_filter is not None and player_filter != "draftnet":
+        raise ValueError(f"unknown player_filter {player_filter!r}")
+    if player_filter == "draftnet":
+        rank_tag = "topplayer"
+    else:
+        rank_tag = "allranks" if min_rank is None else min_rank
     paths = {
         split: winrate_dataset_path(
             set_abbreviation, draft_mode, split, rank_tag, data_folder_training_set
@@ -165,7 +178,10 @@ def create_winrate_dataset(
     card_to_index = {name: i for i, name in enumerate(cardnames)}
     print(f"{len(cardnames)} draftable cards in {set_abbreviation}.")
 
-    if min_rank is None:
+    if player_filter == "draftnet":
+        allowed_ranks = None
+        print("Selecting players by DraftNet's winrate criterion, not by rank.")
+    elif min_rank is None:
         allowed_ranks = None
         print("Keeping all ranks, including unranked drafts.")
     else:
@@ -184,6 +200,8 @@ def create_winrate_dataset(
         "pick_number",
         "pick",
     ]
+    if player_filter == "draftnet":
+        usecols += ["user_n_games_bucket", "user_game_win_rate_bucket"]
     t0 = time.time()
     df = pd.read_csv(csv_path, usecols=usecols)
     print(f"Read {len(df)} picks in {round(time.time() - t0, 1)}s.")
@@ -200,6 +218,15 @@ def create_winrate_dataset(
     # Rank filter (no filtering on player winrate or games played).
     if allowed_ranks is not None:
         df = df[df["rank"].isin(allowed_ranks)]
+
+    if player_filter == "draftnet":
+        # The same criterion DraftNet's pick model is trained on, so the reward and the
+        # opponents are fit to one population instead of two.
+        from .trainingset import get_min_winrate
+
+        threshold = df["user_n_games_bucket"].apply(get_min_winrate, p=0.55, stdev=1.5)
+        df = df[df["user_game_win_rate_bucket"] >= threshold]
+        print(f"Top-player filter kept {df['draft_id'].nunique()} drafts.")
 
     # Drop drafts where no matches were played - they carry no signal.
     df = df[(df["event_match_wins"] + df["event_match_losses"]) > 0]

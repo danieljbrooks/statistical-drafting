@@ -28,3 +28,11 @@ model_refresh/release_notes.md
 data/winrate_sets/
 data/winrate_models/*.pt
 winrate_sandbox/*.log
+
+# Ignore RL artifacts: pack banks are regenerated from the 17lands data by
+# rl_sandbox/packbank.py, and policy checkpoints are large. The per-run JSON sidecars
+# (args + training history) are small and worth keeping.
+data/packs/
+data/rl_models/*.pt
+data/rl_models/*_iter*.json
+rl_sandbox/logs/

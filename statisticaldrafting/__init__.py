@@ -7,3 +7,4 @@ from .winratedataset import *
 from .winratemodel import *
 from .winratetrain import *
 from .winratetransfer import *
+from .winratecolour import *

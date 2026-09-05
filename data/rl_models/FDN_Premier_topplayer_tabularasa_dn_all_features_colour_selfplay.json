@@ -1,0 +1,34 @@
+{
+  "args": {
+    "set_abbreviation": "FDN",
+    "draft_mode": "Premier",
+    "rank_tag": "topplayer",
+    "reward": "dn_all_features_colour",
+    "iterations": 1,
+    "n_drafts": 32,
+    "n_timesteps": 2,
+    "beta_scale": 1.0,
+    "beta_absolute": 0.0,
+    "kl_reference": "draftnet",
+    "kl_lambda": 0.0,
+    "learning_rate": 0.001,
+    "dropout": 0.1,
+    "explore_temperature": 1.0,
+    "init_draftnet": false,
+    "seed": 0,
+    "out": "data/rl_models/"
+  },
+  "history": [
+    {
+      "iteration": 1,
+      "winrate": 0.6280323266983032,
+      "vs_frozen": 0.6441090106964111,
+      "field": 0.6267242431640625,
+      "loss": 2.4101433753967285,
+      "advantage_sd": 0.008192693814635277,
+      "kl": 0.38001495599746704,
+      "kl_ref": 2.613989233970642,
+      "beta": 0.008192693814635277
+    }
+  ]
+}
